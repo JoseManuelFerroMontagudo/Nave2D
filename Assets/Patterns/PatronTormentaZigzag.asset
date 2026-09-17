@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d37524636b90cfb4db97a1f0ad38e5cd, type: 3}
+  m_Name: PatronTormentaZigzag
+  m_EditorClassIdentifier: Assembly-CSharp::PatronTormentaZigzag
+  oleadas: 10
+  balasPorOleada: 20
+  intervaloEntreOleadas: 0.7
+  separacionEntreBalas: 18
+  anguloZigzagPorOleada: 0
+  anguloZigzagInterno: 0
+  amplitudZigzag: 5
+  frecuenciaZigzag: 10
+  aceleracionPorOleada: 0
+  opciones:
+    modo: 0
+    velocidad: 4
+    tiempoVuelo: 2.5
+    vidaUtil: 14
+    color: {r: 1, g: 0.5, b: 0, a: 1}
+    amplitudOnda: 80
+    frecuenciaOnda: 8
+    fuerzaPersecucion: 1.5
+    regresaAlOrigen: 0
+    multiplicadorVelocidadRetorno: 0.7
+    tiempoFrenado: 0.4
+    pausaAntesDeRegresar: 0.25
+    rebotaEnParedes: 0
+    rebotesMaximos: 1

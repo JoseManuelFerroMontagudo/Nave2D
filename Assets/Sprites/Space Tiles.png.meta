@@ -1,0 +1,3997 @@
+fileFormatVersion: 2
+guid: 6ed2b390a8015244bb51bb206c33f7fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8983028530603367279
+    second: Space Tiles_0
+  - first:
+      213: 111480310110499129
+    second: Space Tiles_1
+  - first:
+      213: -3269080667428558809
+    second: Space Tiles_2
+  - first:
+      213: 4860953358193662782
+    second: Space Tiles_3
+  - first:
+      213: -7362887349715048912
+    second: Space Tiles_4
+  - first:
+      213: -6272602339727594355
+    second: Space Tiles_5
+  - first:
+      213: -99288262714038839
+    second: Space Tiles_6
+  - first:
+      213: -3176026902612566402
+    second: Space Tiles_7
+  - first:
+      213: 4395620978190412193
+    second: Space Tiles_8
+  - first:
+      213: 2426847868432853077
+    second: Space Tiles_9
+  - first:
+      213: 3757215427114703696
+    second: Space Tiles_10
+  - first:
+      213: 4305974812856467573
+    second: Space Tiles_11
+  - first:
+      213: 1532838545318838243
+    second: Space Tiles_12
+  - first:
+      213: -5474535868893966736
+    second: Space Tiles_13
+  - first:
+      213: -3176882339271363584
+    second: Space Tiles_14
+  - first:
+      213: -6700477972516481229
+    second: Space Tiles_15
+  - first:
+      213: -866321885854434641
+    second: Space Tiles_16
+  - first:
+      213: -7823611275825430608
+    second: Space Tiles_17
+  - first:
+      213: -7109739245966178882
+    second: Space Tiles_18
+  - first:
+      213: -3660613706630624231
+    second: Space Tiles_19
+  - first:
+      213: 7688945763278613233
+    second: Space Tiles_20
+  - first:
+      213: 1929453783246367269
+    second: Space Tiles_21
+  - first:
+      213: -1517703472315440454
+    second: Space Tiles_22
+  - first:
+      213: 6411913249256746
+    second: Space Tiles_23
+  - first:
+      213: -6518081616945980391
+    second: Space Tiles_24
+  - first:
+      213: -8728248946933296943
+    second: Space Tiles_25
+  - first:
+      213: -625911488155638067
+    second: Space Tiles_26
+  - first:
+      213: -8643471099119255841
+    second: Space Tiles_27
+  - first:
+      213: -5290520210754634926
+    second: Space Tiles_28
+  - first:
+      213: 1621360456771257842
+    second: Space Tiles_29
+  - first:
+      213: 1650588931750289560
+    second: Space Tiles_30
+  - first:
+      213: -8495488686504288801
+    second: Space Tiles_31
+  - first:
+      213: 3468797856418926102
+    second: Space Tiles_32
+  - first:
+      213: -5046591705446910141
+    second: Space Tiles_33
+  - first:
+      213: -9012671292806154945
+    second: Space Tiles_34
+  - first:
+      213: -2963804092165766516
+    second: Space Tiles_35
+  - first:
+      213: -7668613056882171138
+    second: Space Tiles_36
+  - first:
+      213: -3806277074115947527
+    second: Space Tiles_37
+  - first:
+      213: -5661982386468231758
+    second: Space Tiles_38
+  - first:
+      213: -418277496295397392
+    second: Space Tiles_39
+  - first:
+      213: -4145016227482847520
+    second: Space Tiles_40
+  - first:
+      213: -6548361765694367015
+    second: Space Tiles_41
+  - first:
+      213: -887909877374092728
+    second: Space Tiles_42
+  - first:
+      213: -5013861897084855674
+    second: Space Tiles_43
+  - first:
+      213: -5647069058085952777
+    second: Space Tiles_44
+  - first:
+      213: 946829800215944521
+    second: Space Tiles_45
+  - first:
+      213: -3988602070863269015
+    second: Space Tiles_46
+  - first:
+      213: 4015664022554849500
+    second: Space Tiles_47
+  - first:
+      213: -8978829169722520173
+    second: Space Tiles_48
+  - first:
+      213: 5641913255705827529
+    second: Space Tiles_49
+  - first:
+      213: -5160515580166283931
+    second: Space Tiles_50
+  - first:
+      213: 5049995540973697118
+    second: Space Tiles_51
+  - first:
+      213: 1596466850725621774
+    second: Space Tiles_52
+  - first:
+      213: 7632425178955742651
+    second: Space Tiles_53
+  - first:
+      213: -3694420259262609637
+    second: Space Tiles_54
+  - first:
+      213: 2791555599986266076
+    second: Space Tiles_55
+  - first:
+      213: 965611624409243017
+    second: Space Tiles_56
+  - first:
+      213: -7662922984478441037
+    second: Space Tiles_57
+  - first:
+      213: -3846505146500242956
+    second: Space Tiles_58
+  - first:
+      213: 7792696495132535739
+    second: Space Tiles_59
+  - first:
+      213: 3847579837220915867
+    second: Space Tiles_60
+  - first:
+      213: 8762645912704395647
+    second: Space Tiles_61
+  - first:
+      213: 2297703383437288642
+    second: Space Tiles_62
+  - first:
+      213: -8455406123600227066
+    second: Space Tiles_63
+  - first:
+      213: -1475650949111540177
+    second: Space Tiles_64
+  - first:
+      213: 1405311766813430068
+    second: Space Tiles_65
+  - first:
+      213: 2514868474819679704
+    second: Space Tiles_66
+  - first:
+      213: -3318389544579734513
+    second: Space Tiles_67
+  - first:
+      213: 5975032496290987869
+    second: Space Tiles_68
+  - first:
+      213: 7969320734887861656
+    second: Space Tiles_69
+  - first:
+      213: -5306215554990375024
+    second: Space Tiles_70
+  - first:
+      213: -3632270222172611963
+    second: Space Tiles_71
+  - first:
+      213: 596616701474974058
+    second: Space Tiles_72
+  - first:
+      213: -1539341721703630098
+    second: Space Tiles_73
+  - first:
+      213: 3303537777703586966
+    second: Space Tiles_74
+  - first:
+      213: -1597882631823983154
+    second: Space Tiles_75
+  - first:
+      213: -1292210194948024114
+    second: Space Tiles_76
+  - first:
+      213: 4386297904558433653
+    second: Space Tiles_77
+  - first:
+      213: -5137017003746042217
+    second: Space Tiles_78
+  - first:
+      213: -8048039322063183695
+    second: Space Tiles_79
+  - first:
+      213: 6893542127427060398
+    second: Space Tiles_80
+  - first:
+      213: 2048706892778825212
+    second: Space Tiles_81
+  - first:
+      213: -5310306071049180647
+    second: Space Tiles_82
+  - first:
+      213: 4719577105685955371
+    second: Space Tiles_83
+  - first:
+      213: -2978454674277874765
+    second: Space Tiles_84
+  - first:
+      213: 5365768330411902828
+    second: Space Tiles_85
+  - first:
+      213: 5144225060135802589
+    second: Space Tiles_86
+  - first:
+      213: 5091774642147231036
+    second: Space Tiles_87
+  - first:
+      213: -6847429794971604617
+    second: Space Tiles_88
+  - first:
+      213: -6987156963795512262
+    second: Space Tiles_89
+  - first:
+      213: -8361113264415346481
+    second: Space Tiles_90
+  - first:
+      213: -6373039800889887167
+    second: Space Tiles_91
+  - first:
+      213: -8889989652867333282
+    second: Space Tiles_92
+  - first:
+      213: 6073324898009177376
+    second: Space Tiles_93
+  - first:
+      213: 7789080152843013995
+    second: Space Tiles_94
+  - first:
+      213: 5887743007993172573
+    second: Space Tiles_95
+  - first:
+      213: -6627667460213257842
+    second: Space Tiles_96
+  - first:
+      213: 3873552073539780134
+    second: Space Tiles_97
+  - first:
+      213: -388949972828197817
+    second: Space Tiles_98
+  - first:
+      213: 8770123023703870569
+    second: Space Tiles_99
+  - first:
+      213: -3733603025881997277
+    second: Space Tiles_100
+  - first:
+      213: 8215608957499729607
+    second: Space Tiles_101
+  - first:
+      213: 5221657507381925984
+    second: Space Tiles_102
+  - first:
+      213: 6863573688131264270
+    second: Space Tiles_103
+  - first:
+      213: 6497360437345666816
+    second: Space Tiles_104
+  - first:
+      213: 1486594518274257829
+    second: Space Tiles_105
+  - first:
+      213: 6006286470847931096
+    second: Space Tiles_106
+  - first:
+      213: -41689100320977495
+    second: Space Tiles_107
+  - first:
+      213: -2222096354681062333
+    second: Space Tiles_108
+  - first:
+      213: -5035985707702385241
+    second: Space Tiles_109
+  - first:
+      213: -518955917382493824
+    second: Space Tiles_110
+  - first:
+      213: -8607214475258179121
+    second: Space Tiles_111
+  - first:
+      213: -6974830543076768703
+    second: Space Tiles_112
+  - first:
+      213: 6790257653057350502
+    second: Space Tiles_113
+  - first:
+      213: -3680312148065412691
+    second: Space Tiles_114
+  - first:
+      213: -1392534248243957061
+    second: Space Tiles_115
+  - first:
+      213: -8821482983788423730
+    second: Space Tiles_116
+  - first:
+      213: -8841412665554246801
+    second: Space Tiles_117
+  - first:
+      213: 5197457619018301596
+    second: Space Tiles_118
+  - first:
+      213: -4895066867810443097
+    second: Space Tiles_119
+  - first:
+      213: 1541913489293058671
+    second: Space Tiles_120
+  - first:
+      213: -2677861387908818089
+    second: Space Tiles_121
+  - first:
+      213: 1462889280098051400
+    second: Space Tiles_122
+  - first:
+      213: 4672348489646283219
+    second: Space Tiles_123
+  - first:
+      213: 6221345746925210886
+    second: Space Tiles_124
+  - first:
+      213: -5859625057148680925
+    second: Space Tiles_125
+  - first:
+      213: 2752964558062825828
+    second: Space Tiles_126
+  - first:
+      213: -159005710918618018
+    second: Space Tiles_127
+  - first:
+      213: -3184115878827343987
+    second: Space Tiles_128
+  - first:
+      213: 794096607075006808
+    second: Space Tiles_129
+  - first:
+      213: -7264866892623402843
+    second: Space Tiles_130
+  - first:
+      213: -3292070932127980559
+    second: Space Tiles_131
+  - first:
+      213: -3568182644847221211
+    second: Space Tiles_132
+  - first:
+      213: -2905383025875522130
+    second: Space Tiles_133
+  - first:
+      213: -1846787009344410913
+    second: Space Tiles_134
+  - first:
+      213: -6310890811495329274
+    second: Space Tiles_135
+  - first:
+      213: 5669545156654405692
+    second: Space Tiles_136
+  - first:
+      213: -3788933044551886624
+    second: Space Tiles_137
+  - first:
+      213: 3372070491423514733
+    second: Space Tiles_138
+  - first:
+      213: -7981110483668020314
+    second: Space Tiles_139
+  - first:
+      213: 1033199388722646037
+    second: Space Tiles_140
+  - first:
+      213: -8337907091533729431
+    second: Space Tiles_141
+  - first:
+      213: -3059770722763408411
+    second: Space Tiles_142
+  - first:
+      213: -6328191527710142078
+    second: Space Tiles_143
+  - first:
+      213: 3997228523274118509
+    second: Space Tiles_144
+  - first:
+      213: -106961356893637365
+    second: Space Tiles_145
+  - first:
+      213: 8520607501855137357
+    second: Space Tiles_146
+  - first:
+      213: -1837688596077863450
+    second: Space Tiles_147
+  - first:
+      213: 7690995230200047966
+    second: Space Tiles_148
+  - first:
+      213: 8419486503641828394
+    second: Space Tiles_149
+  - first:
+      213: 4208450572362924764
+    second: Space Tiles_150
+  - first:
+      213: 5059076596460256465
+    second: Space Tiles_151
+  - first:
+      213: -2848704214253347696
+    second: Space Tiles_152
+  - first:
+      213: 5965530623189053623
+    second: Space Tiles_153
+  - first:
+      213: 7665242064174216541
+    second: Space Tiles_154
+  - first:
+      213: 6848468363680865489
+    second: Space Tiles_155
+  - first:
+      213: 5436659904335445203
+    second: Space Tiles_156
+  - first:
+      213: -3783036219424857191
+    second: Space Tiles_157
+  - first:
+      213: 2707022721752590892
+    second: Space Tiles_158
+  - first:
+      213: 687063556783904184
+    second: Space Tiles_159
+  - first:
+      213: 769829130581711847
+    second: Space Tiles_160
+  - first:
+      213: -6862658320385775725
+    second: Space Tiles_161
+  - first:
+      213: 6798557434805282675
+    second: Space Tiles_162
+  - first:
+      213: 8102830007083971708
+    second: Space Tiles_163
+  - first:
+      213: -4809226449459355724
+    second: Space Tiles_164
+  - first:
+      213: 8773002869211043301
+    second: Space Tiles_165
+  - first:
+      213: 6465960420411085615
+    second: Space Tiles_166
+  - first:
+      213: -6921690947033897724
+    second: Space Tiles_167
+  - first:
+      213: -4994112142259191208
+    second: Space Tiles_168
+  - first:
+      213: 2674495451044175558
+    second: Space Tiles_169
+  - first:
+      213: 5604776696471087456
+    second: Space Tiles_170
+  - first:
+      213: 2046651518448977986
+    second: Space Tiles_171
+  - first:
+      213: -4398679864102323757
+    second: Space Tiles_172
+  - first:
+      213: 3810189668338412113
+    second: Space Tiles_173
+  - first:
+      213: -4865614471396810554
+    second: Space Tiles_174
+  - first:
+      213: 153355647746945736
+    second: Space Tiles_175
+  - first:
+      213: 8872017610484478269
+    second: Space Tiles_176
+  - first:
+      213: 6784017489774820162
+    second: Space Tiles_177
+  - first:
+      213: -6906125803454628291
+    second: Space Tiles_178
+  - first:
+      213: -8996649352837848176
+    second: Space Tiles_179
+  - first:
+      213: -1898779033704351991
+    second: Space Tiles_180
+  - first:
+      213: -9085844944750065275
+    second: Space Tiles_181
+  - first:
+      213: 758402019027621697
+    second: Space Tiles_182
+  - first:
+      213: 6791927516539277618
+    second: Space Tiles_183
+  - first:
+      213: -6860108656762793220
+    second: Space Tiles_184
+  - first:
+      213: 4097381384501514616
+    second: Space Tiles_185
+  - first:
+      213: 7361528277994024934
+    second: Space Tiles_186
+  - first:
+      213: -6161926286353768675
+    second: Space Tiles_187
+  - first:
+      213: -6654668388114735003
+    second: Space Tiles_188
+  - first:
+      213: -9211749665006344120
+    second: Space Tiles_189
+  - first:
+      213: 7961093437559941352
+    second: Space Tiles_190
+  - first:
+      213: -4986990008576612214
+    second: Space Tiles_191
+  - first:
+      213: -4340869430706143602
+    second: Space Tiles_192
+  - first:
+      213: 4410962750748893453
+    second: Space Tiles_193
+  - first:
+      213: 7041919408325019839
+    second: Space Tiles_194
+  - first:
+      213: -951465096243760789
+    second: Space Tiles_195
+  - first:
+      213: 3053277972092786771
+    second: Space Tiles_196
+  - first:
+      213: 815163524264370765
+    second: Space Tiles_197
+  - first:
+      213: 1257692471909286381
+    second: Space Tiles_198
+  - first:
+      213: -4329300579273387062
+    second: Space Tiles_199
+  - first:
+      213: 7363016434254430019
+    second: Space Tiles_200
+  - first:
+      213: -4419850935137288166
+    second: Space Tiles_201
+  - first:
+      213: -4740831819688533157
+    second: Space Tiles_202
+  - first:
+      213: 8965874024226087986
+    second: Space Tiles_203
+  - first:
+      213: 4827967427256506242
+    second: Space Tiles_204
+  - first:
+      213: 3841307006114211039
+    second: Space Tiles_205
+  - first:
+      213: -1208836251401463409
+    second: Space Tiles_206
+  - first:
+      213: 592068311000641439
+    second: Space Tiles_207
+  - first:
+      213: -117366550874116064
+    second: Space Tiles_208
+  - first:
+      213: 5399793113485956397
+    second: Space Tiles_209
+  - first:
+      213: 7220678107027170958
+    second: Space Tiles_210
+  - first:
+      213: 2566120151783840279
+    second: Space Tiles_211
+  - first:
+      213: 3738443523558526409
+    second: Space Tiles_212
+  - first:
+      213: -8629946552846441682
+    second: Space Tiles_213
+  - first:
+      213: -1757491045680618668
+    second: Space Tiles_214
+  - first:
+      213: -1676911721540297371
+    second: Space Tiles_215
+  - first:
+      213: 6011725548446104094
+    second: Space Tiles_216
+  - first:
+      213: 4980465640566607066
+    second: Space Tiles_217
+  - first:
+      213: 7570683573901370918
+    second: Space Tiles_218
+  - first:
+      213: -4656596700606566240
+    second: Space Tiles_219
+  - first:
+      213: 2197693995769686635
+    second: Space Tiles_220
+  - first:
+      213: -8012892909594179366
+    second: Space Tiles_221
+  - first:
+      213: 4161262469437542227
+    second: Space Tiles_222
+  - first:
+      213: 6696761581628308839
+    second: Space Tiles_223
+  - first:
+      213: 8935524677883794705
+    second: Space Tiles_224
+  - first:
+      213: 4338162729814013681
+    second: Space Tiles_225
+  - first:
+      213: -8172482473338192166
+    second: Space Tiles_226
+  - first:
+      213: 7871260747754238143
+    second: Space Tiles_227
+  - first:
+      213: 5876502306551527457
+    second: Space Tiles_228
+  - first:
+      213: -1027237352780523629
+    second: Space Tiles_229
+  - first:
+      213: 4571332632948117324
+    second: Space Tiles_230
+  - first:
+      213: 7003042363226254367
+    second: Space Tiles_231
+  - first:
+      213: -5126647425562431540
+    second: Space Tiles_232
+  - first:
+      213: 3977743454272694637
+    second: Space Tiles_233
+  - first:
+      213: -150440734176580524
+    second: Space Tiles_234
+  - first:
+      213: 8727461168240495614
+    second: Space Tiles_235
+  - first:
+      213: 5649301063319326161
+    second: Space Tiles_236
+  - first:
+      213: -5923119609642011090
+    second: Space Tiles_237
+  - first:
+      213: -3275537098249268851
+    second: Space Tiles_238
+  - first:
+      213: 47047650158300824
+    second: Space Tiles_239
+  - first:
+      213: 8406889398379081683
+    second: Space Tiles_240
+  - first:
+      213: -2517548420283182347
+    second: Space Tiles_241
+  - first:
+      213: 4836832283570218156
+    second: Space Tiles_242
+  - first:
+      213: 8714908098230438118
+    second: Space Tiles_243
+  - first:
+      213: 5312704032566136237
+    second: Space Tiles_244
+  - first:
+      213: -2872902206585967000
+    second: Space Tiles_245
+  - first:
+      213: -7998058846040953476
+    second: Space Tiles_246
+  - first:
+      213: 7922802633261515391
+    second: Space Tiles_247
+  - first:
+      213: 7848109074551600491
+    second: Space Tiles_248
+  - first:
+      213: 6329081699537484494
+    second: Space Tiles_249
+  - first:
+      213: -2038027174468179252
+    second: Space Tiles_250
+  - first:
+      213: 3177243398342673726
+    second: Space Tiles_251
+  - first:
+      213: 4232570065938939382
+    second: Space Tiles_252
+  - first:
+      213: -208715009303984469
+    second: Space Tiles_253
+  - first:
+      213: -4897260286268067737
+    second: Space Tiles_254
+  - first:
+      213: -1035657030496187025
+    second: Space Tiles_255
+  - first:
+      213: 8295924815982142800
+    second: Space Tiles_256
+  - first:
+      213: 1864211460829394221
+    second: Space Tiles_257
+  - first:
+      213: -965071092241521043
+    second: Space Tiles_258
+  - first:
+      213: -4336999852501099475
+    second: Space Tiles_259
+  - first:
+      213: 5545961006253144109
+    second: Space Tiles_260
+  - first:
+      213: -2444472954664076600
+    second: Space Tiles_261
+  - first:
+      213: 6953070295697489017
+    second: Space Tiles_262
+  - first:
+      213: 7061828336150556646
+    second: Space Tiles_263
+  - first:
+      213: 7257536697838938895
+    second: Space Tiles_264
+  - first:
+      213: 8317181112692034089
+    second: Space Tiles_265
+  - first:
+      213: 1026969547078447330
+    second: Space Tiles_266
+  - first:
+      213: 8710478253778002300
+    second: Space Tiles_267
+  - first:
+      213: -8761200252861204646
+    second: Space Tiles_268
+  - first:
+      213: 6554914073821466561
+    second: Space Tiles_269
+  - first:
+      213: -9023263963555515869
+    second: Space Tiles_270
+  - first:
+      213: -8244814960123920854
+    second: Space Tiles_271
+  - first:
+      213: -6236482123326014763
+    second: Space Tiles_272
+  - first:
+      213: 7672083284386980237
+    second: Space Tiles_273
+  - first:
+      213: -4337874471643625789
+    second: Space Tiles_274
+  - first:
+      213: -405670976795685241
+    second: Space Tiles_275
+  - first:
+      213: -9096945280500151175
+    second: Space Tiles_276
+  - first:
+      213: 1106828913939059274
+    second: Space Tiles_277
+  - first:
+      213: 9201521614449018732
+    second: Space Tiles_278
+  - first:
+      213: 5967097167999452950
+    second: Space Tiles_279
+  - first:
+      213: 6175182216098169412
+    second: Space Tiles_280
+  - first:
+      213: -7197727011287720371
+    second: Space Tiles_281
+  - first:
+      213: -6458894860624520913
+    second: Space Tiles_282
+  - first:
+      213: -3275218392125102846
+    second: Space Tiles_283
+  - first:
+      213: -7476903927450149789
+    second: Space Tiles_284
+  - first:
+      213: -2959388019636141185
+    second: Space Tiles_285
+  - first:
+      213: -1001159164719436712
+    second: Space Tiles_286
+  - first:
+      213: 6926210397168319301
+    second: Space Tiles_287
+  - first:
+      213: 2341941676477411914
+    second: Space Tiles_288
+  - first:
+      213: 3936400638001135858
+    second: Space Tiles_289
+  - first:
+      213: -2608915833574755113
+    second: Space Tiles_290
+  - first:
+      213: -3000021572520129245
+    second: Space Tiles_291
+  - first:
+      213: -3662414699705545566
+    second: Space Tiles_292
+  - first:
+      213: 3126149558827582945
+    second: Space Tiles_293
+  - first:
+      213: -5969493128474169908
+    second: Space Tiles_294
+  - first:
+      213: 8952613320762742564
+    second: Space Tiles_295
+  - first:
+      213: 6757283108461142393
+    second: Space Tiles_296
+  - first:
+      213: 2916403215973281920
+    second: Space Tiles_297
+  - first:
+      213: 8493015967788991953
+    second: Space Tiles_298
+  - first:
+      213: 1095460056497679494
+    second: Space Tiles_299
+  - first:
+      213: 8107329575450185490
+    second: Space Tiles_300
+  - first:
+      213: 3607707198231687859
+    second: Space Tiles_301
+  - first:
+      213: -3685645658718293491
+    second: Space Tiles_302
+  - first:
+      213: -9142753579355893967
+    second: Space Tiles_303
+  - first:
+      213: -3115728650004095632
+    second: Space Tiles_304
+  - first:
+      213: -9187255474694069891
+    second: Space Tiles_305
+  - first:
+      213: -975582877619004664
+    second: Space Tiles_306
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Space Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194ef22452fd55380800000000000000
+      internalID: -8983028530603367279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931369b50ce0c8100800000000000000
+      internalID: 111480310110499129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728e2db0474e1a2d0800000000000000
+      internalID: -3269080667428558809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b10e82353957340800000000000000
+      internalID: 4860953358193662782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036640737f4c1d990800000000000000
+      internalID: -7362887349715048912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ca04bd76d33f8a0800000000000000
+      internalID: -6272602339727594355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c56092e9d14f9ef0800000000000000
+      internalID: -99288262714038839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e91b00c5c7ce3d0800000000000000
+      internalID: -3176026902612566402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a96b4c9df1600d30800000000000000
+      internalID: 4395620978190412193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558aad14745eda120800000000000000
+      internalID: 2426847868432853077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b1acd368f442430800000000000000
+      internalID: 3757215427114703696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570c61c3745e1cb30800000000000000
+      internalID: 4305974812856467573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef71cf198cb54510800000000000000
+      internalID: 1532838545318838243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ec070f1aa8604b0800000000000000
+      internalID: -5474535868893966736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004b482285279e3d0800000000000000
+      internalID: -3176882339271363584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33753ded8ce1303a0800000000000000
+      internalID: -6700477972516481229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaff74b5d43af3f0800000000000000
+      internalID: -866321885854434641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf3fa3fef2fc6390800000000000000
+      internalID: -7823611275825430608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5488623d1255d90800000000000000
+      internalID: -7109739245966178882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c0b548a33e23dc0800000000000000
+      internalID: -3660613706630624231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa67751f6f94ba60800000000000000
+      internalID: 7688945763278613233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52aeee04efbc6ca10800000000000000
+      internalID: 1929453783246367269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2e24aabb800fae0800000000000000
+      internalID: -1517703472315440454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a257d83e997c61000800000000000000
+      internalID: 6411913249256746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c5eecbd4f1b85a0800000000000000
+      internalID: -6518081616945980391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d01dd6b3d70fd680800000000000000
+      internalID: -8728248946933296943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6a5a751d05057f0800000000000000
+      internalID: -625911488155638067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde34a694d83c0880800000000000000
+      internalID: -8643471099119255841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bf1f016eb4496b0800000000000000
+      internalID: -5290520210754634926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f547bebeba308610800000000000000
+      internalID: 1621360456771257842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890ea2363e118e610800000000000000
+      internalID: 1650588931750289560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdddf87fc06f91a80800000000000000
+      internalID: -8495488686504288801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e8c7d9545a32030800000000000000
+      internalID: 3468797856418926102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3477766f497e6f9b0800000000000000
+      internalID: -5046591705446910141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35bdead53f8ce280800000000000000
+      internalID: -9012671292806154945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c824c9e81e37ed6d0800000000000000
+      internalID: -2963804092165766516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2ad980e0d939590800000000000000
+      internalID: -7668613056882171138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f31b98ea236d2bc0800000000000000
+      internalID: -3806277074115947527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5ea0a94099c61b0800000000000000
+      internalID: -5661982386468231758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7e5cf45daf13af0800000000000000
+      internalID: -418277496295397392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6b7acc3b1f976c0800000000000000
+      internalID: -4145016227482847520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da99073bab8f15a0800000000000000
+      internalID: -6548361765694367015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a7e8ebba28da3f0800000000000000
+      internalID: -887909877374092728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a146f4b2f2b6ab0800000000000000
+      internalID: -5013861897084855674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2efa27c9491a1b0800000000000000
+      internalID: -5647069058085952777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d10a0dfa0d32d00800000000000000
+      internalID: 946829800215944521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963becf8c83a5a8c0800000000000000
+      internalID: -3988602070863269015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0b2b117218ab730800000000000000
+      internalID: 4015664022554849500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d06c7217ac46380800000000000000
+      internalID: -8978829169722520173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8d9e3c63a1c4e40800000000000000
+      internalID: 5641913255705827529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dd152eb6a2268b0800000000000000
+      internalID: -5160515580166283931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e583b014030351640800000000000000
+      internalID: 5049995540973697118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00ff2d642ac72610800000000000000
+      internalID: 1596466850725621774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd776e0342dbe960800000000000000
+      internalID: 7632425178955742651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1745ab1958cabcc0800000000000000
+      internalID: -3694420259262609637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf0fe327099db620800000000000000
+      internalID: 2791555599986266076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d96e708aa866d00800000000000000
+      internalID: 965611624409243017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_57
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b18cf04524d7a590800000000000000
+      internalID: -7662922984478441037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_58
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1242ce2f77e9ac0800000000000000
+      internalID: -3846505146500242956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb6ec2cc28352c60800000000000000
+      internalID: 7792696495132535739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_60
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a02820a79556530800000000000000
+      internalID: 3847579837220915867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_61
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f792647f70c2b9970800000000000000
+      internalID: 8762645912704395647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_62
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c42ef0bd0513ef10800000000000000
+      internalID: 2297703383437288642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_63
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6055523edec58aa80800000000000000
+      internalID: -8455406123600227066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f261db5b74f658be0800000000000000
+      internalID: -1475650949111540177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_65
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43157933b9ba08310800000000000000
+      internalID: 1405311766813430068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_66
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d59472bd8b96e220800000000000000
+      internalID: 2514868474819679704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_67
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0464f07a46b2f1d0800000000000000
+      internalID: -3318389544579734513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ff6d6f5649be250800000000000000
+      internalID: 5975032496290987869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_69
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d55203cf6b89e60800000000000000
+      internalID: 7969320734887861656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_70
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f7527f0198c56b0800000000000000
+      internalID: -5306215554990375024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_71
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a1c2f3a75979dc0800000000000000
+      internalID: -3632270222172611963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_72
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a692b7e9abb974800800000000000000
+      internalID: 596616701474974058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_73
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeabae12cd823aae0800000000000000
+      internalID: -1539341721703630098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c0b1e1b1688dd20800000000000000
+      internalID: 3303537777703586966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_75
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd7d59563e23d9e0800000000000000
+      internalID: -1597882631823983154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_76
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec81cf29ca5211ee0800000000000000
+      internalID: -1292210194948024114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_77
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575ee3064b24fdc30800000000000000
+      internalID: 4386297904558433653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_78
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e539e8046a5b8b0800000000000000
+      internalID: -5137017003746042217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_79
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b06c0e70ee9f4090800000000000000
+      internalID: -8048039322063183695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea20b759a08caaf50800000000000000
+      internalID: 6893542127427060398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5e9f080187e6c10800000000000000
+      internalID: 2048706892778825212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a638a73c00e46b0800000000000000
+      internalID: -5310306071049180647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_83
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b234a7a4f5e4f7140800000000000000
+      internalID: 4719577105685955371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_84
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3c01811476aa6d0800000000000000
+      internalID: -2978454674277874765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_85
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c670e311ed9077a40800000000000000
+      internalID: 5365768330411902828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_86
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd69e0adf65f36740800000000000000
+      internalID: 5144225060135802589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_87
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3507854f0e99a640800000000000000
+      internalID: 5091774642147231036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_88
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779aa4671ea09f0a0800000000000000
+      internalID: -6847429794971604617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_89
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34521fc2c1a80f90800000000000000
+      internalID: -6987156963795512262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_90
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc077bbf8cb57fb80800000000000000
+      internalID: -8361113264415346481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_91
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1463880211a6e87a0800000000000000
+      internalID: -6373039800889887167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_92
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53c1fb038960a480800000000000000
+      internalID: -8889989652867333282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_93
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d5f5f11d8c84450800000000000000
+      internalID: 6073324898009177376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_94
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fc045712f581c60800000000000000
+      internalID: 7789080152843013995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_95
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d521938321775b150800000000000000
+      internalID: 5887743007993172573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89c2905f8bc504a0800000000000000
+      internalID: -6627667460213257842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_97
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ef052861f91c530800000000000000
+      internalID: 3873552073539780134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_98
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c6d2a7f0c2a9af0800000000000000
+      internalID: -388949972828197817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_99
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c08588c6cb5b970800000000000000
+      internalID: 8770123023703870569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_100
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320eaf554d39f2cc0800000000000000
+      internalID: -3733603025881997277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_101
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6e94591d4b30270800000000000000
+      internalID: 8215608957499729607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_102
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068504266dd077840800000000000000
+      internalID: 5221657507381925984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_103
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f18c297ef404f50800000000000000
+      internalID: 6863573688131264270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_104
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0074aada4e24b2a50800000000000000
+      internalID: 6497360437345666816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_105
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3b7ca86d171a410800000000000000
+      internalID: 1486594518274257829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_106
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2202af8bd9a5350800000000000000
+      internalID: 6006286470847931096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_107
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9adcc50fbf3eb6ff0800000000000000
+      internalID: -41689100320977495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_108
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c7b8a73278921e0800000000000000
+      internalID: -2222096354681062333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_109
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5847e3ea59c1ab0800000000000000
+      internalID: -5035985707702385241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_110
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089545ab75c4cc8f0800000000000000
+      internalID: -518955917382493824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_111
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1d2a8a9080d8880800000000000000
+      internalID: -8607214475258179121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1444d57439c643f90800000000000000
+      internalID: -6974830543076768703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_113
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b6cdfeb57db3e50800000000000000
+      internalID: 6790257653057350502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_114
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da99108b997ececc0800000000000000
+      internalID: -3680312148065412691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_115
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb27adbaa79bcace0800000000000000
+      internalID: -1392534248243957061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_116
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec55327e6fbc39580800000000000000
+      internalID: -8821482983788423730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_117
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63eff4460efc4580800000000000000
+      internalID: -8841412665554246801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_118
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90cbbcca24112840800000000000000
+      internalID: 5197457619018301596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_119
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0ef507e9a311cb0800000000000000
+      internalID: -4895066867810443097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_120
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6222bb262af56510800000000000000
+      internalID: 1541913489293058671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_121
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bd5ff614356dad0800000000000000
+      internalID: -2677861387908818089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_122
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845a8fdac0a3d4410800000000000000
+      internalID: 1462889280098051400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_123
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d91338323487d040800000000000000
+      internalID: 4672348489646283219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_124
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d4d56aef8a65650800000000000000
+      internalID: 6221345746925210886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_125
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325ccaf5e0e6eaea0800000000000000
+      internalID: -5859625057148680925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_126
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46133920eae743620800000000000000
+      internalID: 2752964558062825828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space Tiles_127
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54ff6bf5291bcdf0800000000000000
+      internalID: -159005710918618018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5dc732dcb0bbea24687871eed928369d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":16.0,"y":8.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Space Tiles_0: -8983028530603367279
+      Space Tiles_1: 111480310110499129
+      Space Tiles_10: 3757215427114703696
+      Space Tiles_100: -3733603025881997277
+      Space Tiles_101: 8215608957499729607
+      Space Tiles_102: 5221657507381925984
+      Space Tiles_103: 6863573688131264270
+      Space Tiles_104: 6497360437345666816
+      Space Tiles_105: 1486594518274257829
+      Space Tiles_106: 6006286470847931096
+      Space Tiles_107: -41689100320977495
+      Space Tiles_108: -2222096354681062333
+      Space Tiles_109: -5035985707702385241
+      Space Tiles_11: 4305974812856467573
+      Space Tiles_110: -518955917382493824
+      Space Tiles_111: -8607214475258179121
+      Space Tiles_112: -6974830543076768703
+      Space Tiles_113: 6790257653057350502
+      Space Tiles_114: -3680312148065412691
+      Space Tiles_115: -1392534248243957061
+      Space Tiles_116: -8821482983788423730
+      Space Tiles_117: -8841412665554246801
+      Space Tiles_118: 5197457619018301596
+      Space Tiles_119: -4895066867810443097
+      Space Tiles_12: 1532838545318838243
+      Space Tiles_120: 1541913489293058671
+      Space Tiles_121: -2677861387908818089
+      Space Tiles_122: 1462889280098051400
+      Space Tiles_123: 4672348489646283219
+      Space Tiles_124: 6221345746925210886
+      Space Tiles_125: -5859625057148680925
+      Space Tiles_126: 2752964558062825828
+      Space Tiles_127: -159005710918618018
+      Space Tiles_13: -5474535868893966736
+      Space Tiles_14: -3176882339271363584
+      Space Tiles_15: -6700477972516481229
+      Space Tiles_16: -866321885854434641
+      Space Tiles_17: -7823611275825430608
+      Space Tiles_18: -7109739245966178882
+      Space Tiles_19: -3660613706630624231
+      Space Tiles_2: -3269080667428558809
+      Space Tiles_20: 7688945763278613233
+      Space Tiles_21: 1929453783246367269
+      Space Tiles_22: -1517703472315440454
+      Space Tiles_23: 6411913249256746
+      Space Tiles_24: -6518081616945980391
+      Space Tiles_25: -8728248946933296943
+      Space Tiles_26: -625911488155638067
+      Space Tiles_27: -8643471099119255841
+      Space Tiles_28: -5290520210754634926
+      Space Tiles_29: 1621360456771257842
+      Space Tiles_3: 4860953358193662782
+      Space Tiles_30: 1650588931750289560
+      Space Tiles_31: -8495488686504288801
+      Space Tiles_32: 3468797856418926102
+      Space Tiles_33: -5046591705446910141
+      Space Tiles_34: -9012671292806154945
+      Space Tiles_35: -2963804092165766516
+      Space Tiles_36: -7668613056882171138
+      Space Tiles_37: -3806277074115947527
+      Space Tiles_38: -5661982386468231758
+      Space Tiles_39: -418277496295397392
+      Space Tiles_4: -7362887349715048912
+      Space Tiles_40: -4145016227482847520
+      Space Tiles_41: -6548361765694367015
+      Space Tiles_42: -887909877374092728
+      Space Tiles_43: -5013861897084855674
+      Space Tiles_44: -5647069058085952777
+      Space Tiles_45: 946829800215944521
+      Space Tiles_46: -3988602070863269015
+      Space Tiles_47: 4015664022554849500
+      Space Tiles_48: -8978829169722520173
+      Space Tiles_49: 5641913255705827529
+      Space Tiles_5: -6272602339727594355
+      Space Tiles_50: -5160515580166283931
+      Space Tiles_51: 5049995540973697118
+      Space Tiles_52: 1596466850725621774
+      Space Tiles_53: 7632425178955742651
+      Space Tiles_54: -3694420259262609637
+      Space Tiles_55: 2791555599986266076
+      Space Tiles_56: 965611624409243017
+      Space Tiles_57: -7662922984478441037
+      Space Tiles_58: -3846505146500242956
+      Space Tiles_59: 7792696495132535739
+      Space Tiles_6: -99288262714038839
+      Space Tiles_60: 3847579837220915867
+      Space Tiles_61: 8762645912704395647
+      Space Tiles_62: 2297703383437288642
+      Space Tiles_63: -8455406123600227066
+      Space Tiles_64: -1475650949111540177
+      Space Tiles_65: 1405311766813430068
+      Space Tiles_66: 2514868474819679704
+      Space Tiles_67: -3318389544579734513
+      Space Tiles_68: 5975032496290987869
+      Space Tiles_69: 7969320734887861656
+      Space Tiles_7: -3176026902612566402
+      Space Tiles_70: -5306215554990375024
+      Space Tiles_71: -3632270222172611963
+      Space Tiles_72: 596616701474974058
+      Space Tiles_73: -1539341721703630098
+      Space Tiles_74: 3303537777703586966
+      Space Tiles_75: -1597882631823983154
+      Space Tiles_76: -1292210194948024114
+      Space Tiles_77: 4386297904558433653
+      Space Tiles_78: -5137017003746042217
+      Space Tiles_79: -8048039322063183695
+      Space Tiles_8: 4395620978190412193
+      Space Tiles_80: 6893542127427060398
+      Space Tiles_81: 2048706892778825212
+      Space Tiles_82: -5310306071049180647
+      Space Tiles_83: 4719577105685955371
+      Space Tiles_84: -2978454674277874765
+      Space Tiles_85: 5365768330411902828
+      Space Tiles_86: 5144225060135802589
+      Space Tiles_87: 5091774642147231036
+      Space Tiles_88: -6847429794971604617
+      Space Tiles_89: -6987156963795512262
+      Space Tiles_9: 2426847868432853077
+      Space Tiles_90: -8361113264415346481
+      Space Tiles_91: -6373039800889887167
+      Space Tiles_92: -8889989652867333282
+      Space Tiles_93: 6073324898009177376
+      Space Tiles_94: 7789080152843013995
+      Space Tiles_95: 5887743007993172573
+      Space Tiles_96: -6627667460213257842
+      Space Tiles_97: 3873552073539780134
+      Space Tiles_98: -388949972828197817
+      Space Tiles_99: 8770123023703870569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
