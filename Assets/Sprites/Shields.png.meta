@@ -1,0 +1,996 @@
+fileFormatVersion: 2
+guid: 8a96ba6c0b06b34489436b24f9fab0e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6548013873084474947
+    second: Shields_waifu2x_art_noise1_scale_0
+  - first:
+      213: 3694414973420587866
+    second: Shields_waifu2x_art_noise1_scale_1
+  - first:
+      213: -7124113884979966435
+    second: Shields_waifu2x_art_noise1_scale_2
+  - first:
+      213: -2215748975286409283
+    second: Shields_waifu2x_art_noise1_scale_3
+  - first:
+      213: -2089985001020345037
+    second: Shields_waifu2x_art_noise1_scale_4
+  - first:
+      213: 7962921678837767497
+    second: Shields_waifu2x_art_noise1_scale_5
+  - first:
+      213: 1014830011785333646
+    second: Shields_waifu2x_art_noise1_scale_6
+  - first:
+      213: 5420261039250034980
+    second: Shields_waifu2x_art_noise1_scale_7
+  - first:
+      213: 2361168098640608239
+    second: Shields_waifu2x_art_noise1_scale_8
+  - first:
+      213: 2840835617738963514
+    second: Shields_waifu2x_art_noise1_scale_9
+  - first:
+      213: -4486926353520962554
+    second: Shields_waifu2x_art_noise1_scale_10
+  - first:
+      213: -1729164012344890857
+    second: Shields_waifu2x_art_noise1_scale_11
+  - first:
+      213: -3571499676984225128
+    second: Shields_waifu2x_art_noise1_scale_12
+  - first:
+      213: -6643394577258786277
+    second: Shields_waifu2x_art_noise1_scale_13
+  - first:
+      213: -8716929094277502753
+    second: Shields_waifu2x_art_noise1_scale_14
+  - first:
+      213: -7109484430579782819
+    second: Shields_waifu2x_art_noise1_scale_15
+  - first:
+      213: 7982278002021228682
+    second: Shields_waifu2x_art_noise1_scale_16
+  - first:
+      213: 1290955614468777819
+    second: Shields_waifu2x_art_noise1_scale_17
+  - first:
+      213: -5074088550776353239
+    second: Shields_waifu2x_art_noise1_scale_18
+  - first:
+      213: -6631137637626108394
+    second: Shields_waifu2x_art_noise1_scale_19
+  - first:
+      213: -163436233757749551
+    second: Shields_waifu2x_art_noise1_scale_20
+  - first:
+      213: -4816474602163783906
+    second: Shields_waifu2x_art_noise1_scale_21
+  - first:
+      213: 4024047152717561444
+    second: Shields_waifu2x_art_noise1_scale_22
+  - first:
+      213: 5470362271753171513
+    second: Shields_waifu2x_art_noise1_scale_23
+  - first:
+      213: 3425499721157916454
+    second: Shields_waifu2x_art_noise1_scale_24
+  - first:
+      213: 5090713563771626522
+    second: Shields_waifu2x_art_noise1_scale_25
+  - first:
+      213: 2783319320864201183
+    second: Shields_waifu2x_art_noise1_scale_26
+  - first:
+      213: -6167816742780865206
+    second: Shields_waifu2x_art_noise1_scale_27
+  - first:
+      213: -3700866658273114923
+    second: Shields_waifu2x_art_noise1_scale_28
+  - first:
+      213: -3300448352443681931
+    second: Shields_waifu2x_art_noise1_scale_29
+  - first:
+      213: -46340648256102772
+    second: Shields_waifu2x_art_noise1_scale_30
+  - first:
+      213: -7052222508702362726
+    second: Shields_waifu2x_art_noise1_scale_31
+  - first:
+      213: 1608220631130431660
+    second: Shields_waifu2x_art_noise1_scale_32
+  - first:
+      213: 138625294163741594
+    second: Shields_waifu2x_art_noise1_scale_33
+  - first:
+      213: 8989222323653267114
+    second: Shields_waifu2x_art_noise1_scale_34
+  - first:
+      213: -730768742098969079
+    second: Shields_waifu2x_art_noise1_scale_35
+  - first:
+      213: 4730629164918576878
+    second: Shields_waifu2x_art_noise1_scale_36
+  - first:
+      213: -4409263026091626896
+    second: Shields_waifu2x_art_noise1_scale_37
+  - first:
+      213: 5938043651724404540
+    second: Shields_waifu2x_art_noise1_scale_38
+  - first:
+      213: 4181688817566959529
+    second: Shields_waifu2x_art_noise1_scale_39
+  - first:
+      213: -2915847579276560889
+    second: Shields_waifu2x_art_noise1_scale_40
+  - first:
+      213: 3984069221826386845
+    second: Shields_waifu2x_art_noise1_scale_41
+  - first:
+      213: 1116309181777092826
+    second: Shields_waifu2x_art_noise1_scale_42
+  - first:
+      213: 2303970651392181026
+    second: Shields_waifu2x_art_noise1_scale_43
+  - first:
+      213: 4814409726196017718
+    second: Shields_waifu2x_art_noise1_scale_44
+  - first:
+      213: 3458399083132368036
+    second: Shields_waifu2x_art_noise1_scale_45
+  - first:
+      213: 3575910574903088246
+    second: Shields_waifu2x_art_noise1_scale_46
+  - first:
+      213: -7807264916142927055
+    second: Shields_waifu2x_art_noise1_scale_47
+  - first:
+      213: 4564186513419341005
+    second: Shields_waifu2x_art_noise1_scale_48
+  - first:
+      213: -6208028336106099054
+    second: Shields_waifu2x_art_noise1_scale_49
+  - first:
+      213: -2656130979463487350
+    second: Shields_waifu2x_art_noise1_scale_50
+  - first:
+      213: -4889476554574455423
+    second: Shields_waifu2x_art_noise1_scale_51
+  - first:
+      213: 4615848913600342470
+    second: Shields_waifu2x_art_noise1_scale_52
+  - first:
+      213: -2808656023197166237
+    second: Shields_waifu2x_art_noise1_scale_53
+  - first:
+      213: -580950369389614637
+    second: Shields_waifu2x_art_noise1_scale_54
+  - first:
+      213: 6989617985587389234
+    second: Shields_waifu2x_art_noise1_scale_55
+  - first:
+      213: -1927537615015927408
+    second: Shields_waifu2x_art_noise1_scale_56
+  - first:
+      213: -2560580111075512977
+    second: Shields_waifu2x_art_noise1_scale_57
+  - first:
+      213: 9191891365116854912
+    second: Shields_waifu2x_art_noise1_scale_58
+  - first:
+      213: -9090108276862817545
+    second: Shields_waifu2x_art_noise1_scale_59
+  - first:
+      213: 1611287357240634577
+    second: Shields_waifu2x_art_noise1_scale_60
+  - first:
+      213: 8121109814605465998
+    second: Shields_waifu2x_art_noise1_scale_61
+  - first:
+      213: -5168143921398786609
+    second: Shields_waifu2x_art_noise1_scale_62
+  - first:
+      213: -686267850304168449
+    second: Shields_waifu2x_art_noise1_scale_63
+  - first:
+      213: 453472853941043106
+    second: Shields_waifu2x_art_noise1_scale_64
+  - first:
+      213: 5091389062707816259
+    second: Shields_waifu2x_art_noise1_scale_65
+  - first:
+      213: 3302535580381308518
+    second: Shields_waifu2x_art_noise1_scale_66
+  - first:
+      213: 5554538190691923983
+    second: Shields_waifu2x_art_noise1_scale_67
+  - first:
+      213: -5712731389115937112
+    second: Shields_waifu2x_art_noise1_scale_68
+  - first:
+      213: -23617154213044204
+    second: Shields_waifu2x_art_noise1_scale_69
+  - first:
+      213: 2617062478692944282
+    second: Shields_waifu2x_art_noise1_scale_70
+  - first:
+      213: -6061188355929175559
+    second: Shields_waifu2x_art_noise1_scale_71
+  - first:
+      213: 282160311967026128
+    second: Shields_waifu2x_art_noise1_scale_72
+  - first:
+      213: 5102453099199958034
+    second: Shields_waifu2x_art_noise1_scale_73
+  - first:
+      213: -8191236960829456986
+    second: Shields_waifu2x_art_noise1_scale_74
+  - first:
+      213: -1696593727501912649
+    second: Shields_waifu2x_art_noise1_scale_75
+  - first:
+      213: -5665628270406595380
+    second: Shields_waifu2x_art_noise1_scale_76
+  - first:
+      213: -1555173471039462686
+    second: Shields_waifu2x_art_noise1_scale_77
+  - first:
+      213: -3669252988487220862
+    second: Shields_waifu2x_art_noise1_scale_78
+  - first:
+      213: 230783498493778909
+    second: Shields_waifu2x_art_noise1_scale_79
+  - first:
+      213: -8791316647846277762
+    second: Shields_waifu2x_art_noise1_scale_80
+  - first:
+      213: 945623394389715337
+    second: Shields_waifu2x_art_noise1_scale_81
+  - first:
+      213: -2395475991253039742
+    second: Shields_waifu2x_art_noise1_scale_82
+  - first:
+      213: -4928411568281373363
+    second: Shields_waifu2x_art_noise1_scale_83
+  - first:
+      213: -2658618601557530681
+    second: Shields_waifu2x_art_noise1_scale_84
+  - first:
+      213: 1679510996400976893
+    second: Shields_waifu2x_art_noise1_scale_85
+  - first:
+      213: -1226501006750429305
+    second: Shields_waifu2x_art_noise1_scale_86
+  - first:
+      213: -4277734464071757146
+    second: Shields_waifu2x_art_noise1_scale_87
+  - first:
+      213: 4949518629103632711
+    second: Shields_waifu2x_art_noise1_scale_88
+  - first:
+      213: 4471678267821507236
+    second: Shields_waifu2x_art_noise1_scale_89
+  - first:
+      213: 2981978232087253232
+    second: Shields_waifu2x_art_noise1_scale_90
+  - first:
+      213: 497188487626586006
+    second: Shields_waifu2x_art_noise1_scale_91
+  - first:
+      213: -306925245304006539
+    second: Shields_waifu2x_art_noise1_scale_92
+  - first:
+      213: -293470137363876699
+    second: Shields_waifu2x_art_noise1_scale_93
+  - first:
+      213: 6319361470700483451
+    second: Shields_waifu2x_art_noise1_scale_94
+  - first:
+      213: 4789105731562130967
+    second: Shields_waifu2x_art_noise1_scale_95
+  - first:
+      213: 7703798841072822350
+    second: Shields_waifu2x_art_noise1_scale_96
+  - first:
+      213: -3915712076236605149
+    second: Shields_waifu2x_art_noise1_scale_97
+  - first:
+      213: 1957031891709293258
+    second: Shields_waifu2x_art_noise1_scale_98
+  - first:
+      213: 8993160548258765391
+    second: Shields_waifu2x_art_noise1_scale_99
+  - first:
+      213: -7675539783608488559
+    second: Shields_waifu2x_art_noise1_scale_100
+  - first:
+      213: -2008423454299182112
+    second: Shields_waifu2x_art_noise1_scale_101
+  - first:
+      213: -8115073854611136757
+    second: Shields_waifu2x_art_noise1_scale_102
+  - first:
+      213: 4802600152965056732
+    second: Shields_waifu2x_art_noise1_scale_103
+  - first:
+      213: -8847402416469997173
+    second: Shields_waifu2x_art_noise1_scale_104
+  - first:
+      213: -398226658788336312
+    second: Shields_waifu2x_art_noise1_scale_105
+  - first:
+      213: -3394182926075160646
+    second: Shields_waifu2x_art_noise1_scale_106
+  - first:
+      213: -8136283837907734121
+    second: Shields_waifu2x_art_noise1_scale_107
+  - first:
+      213: -6873363873983781668
+    second: Shields_waifu2x_art_noise1_scale_108
+  - first:
+      213: -2737155750808388358
+    second: Shields_waifu2x_art_noise1_scale_109
+  - first:
+      213: -715756576985083482
+    second: Shields_waifu2x_art_noise1_scale_110
+  - first:
+      213: -6428358597298140383
+    second: Shields_waifu2x_art_noise1_scale_111
+  - first:
+      213: 4802049943608688635
+    second: Shields_waifu2x_art_noise1_scale_112
+  - first:
+      213: 8196799173888070143
+    second: Shields_waifu2x_art_noise1_scale_113
+  - first:
+      213: 5785184617060700517
+    second: Shields_waifu2x_art_noise1_scale_114
+  - first:
+      213: -1111828611247647651
+    second: Shields_waifu2x_art_noise1_scale_115
+  - first:
+      213: 5322289094779108841
+    second: Shields_waifu2x_art_noise1_scale_116
+  - first:
+      213: -6559930604732010225
+    second: Shields_waifu2x_art_noise1_scale_117
+  - first:
+      213: 6430284236697334614
+    second: Shields_waifu2x_art_noise1_scale_118
+  - first:
+      213: 8936740788786638007
+    second: Shields_waifu2x_art_noise1_scale_119
+  - first:
+      213: 6009432818413978134
+    second: Shields_waifu2x_art_noise1_scale_120
+  - first:
+      213: -2400940480917606232
+    second: Shields_waifu2x_art_noise1_scale_121
+  - first:
+      213: -4293155652452771879
+    second: Shields_waifu2x_art_noise1_scale_122
+  - first:
+      213: -3773719842279590230
+    second: Shields_waifu2x_art_noise1_scale_123
+  - first:
+      213: -6523749603522518634
+    second: Shields_waifu2x_art_noise1_scale_124
+  - first:
+      213: -1014386678276747368
+    second: Shields_waifu2x_art_noise1_scale_125
+  - first:
+      213: -3438908737707337503
+    second: Shields_waifu2x_art_noise1_scale_126
+  - first:
+      213: 8275316820128029293
+    second: Shields_waifu2x_art_noise1_scale_127
+  - first:
+      213: 4489998602604819535
+    second: Shields_waifu2x_art_noise1_scale_128
+  - first:
+      213: 4416217090514637144
+    second: Shields_waifu2x_art_noise1_scale_129
+  - first:
+      213: -4570002339569427891
+    second: Shields_waifu2x_art_noise1_scale_130
+  - first:
+      213: -6708504552799555390
+    second: Shields_waifu2x_art_noise1_scale_131
+  - first:
+      213: 9217342807238031639
+    second: Shields_waifu2x_art_noise1_scale_132
+  - first:
+      213: -6555354660602252439
+    second: Shields_waifu2x_art_noise1_scale_133
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shields5
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 1403
+        width: 437
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346a789bce73fda50800000000000000
+      internalID: 6548013873084474947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shields6
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1390
+        width: 507
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db72e98eb041041e0800000000000000
+      internalID: -2215748975286409283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shields4
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1409
+        width: 386
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335b94cf6b1eef2e0800000000000000
+      internalID: -2089985001020345037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shields3
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1441
+        width: 318
+        height: 322
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bced7d486651e00800000000000000
+      internalID: 1014830011785333646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shields2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1470
+        width: 248
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb357e20ed84c020800000000000000
+      internalID: 2361168098640608239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shields1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1462
+        width: 254
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892dee567fb7f6ec0800000000000000
+      internalID: -3571499676984225128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsA1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 745
+        width: 604
+        height: 528
+      alignment: 9
+      pivot: {x: 0.5652208, y: 0.49892008}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17365c3ed1782db0800000000000000
+      internalID: -4816474602163783906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsA2
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 763
+        width: 549
+        height: 496
+      alignment: 9
+      pivot: {x: 0.54983604, y: 0.49225026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ef629a09948d730800000000000000
+      internalID: 4024047152717561444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsA3
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 747
+        width: 555
+        height: 527
+      alignment: 9
+      pivot: {x: 0.51475555, y: 0.4941141}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932fb80c081aaeb40800000000000000
+      internalID: 5470362271753171513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsA4
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 741
+        width: 525
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62731d9e8d1d98f20800000000000000
+      internalID: 3425499721157916454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsE1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 59
+        width: 507
+        height: 514
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e5b3a63b9cbd5f0800000000000000
+      internalID: -730768742098969079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsE2
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 99
+        width: 413
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67459adc8bf20a130800000000000000
+      internalID: 3575910574903088246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsE3
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 91
+        width: 391
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1335ee56ce507a390800000000000000
+      internalID: -7807264916142927055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsE4
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 59
+        width: 452
+        height: 501
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6de96c94fdf67cd0800000000000000
+      internalID: -2560580111075512977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShieldsE5
+      rect:
+        serializedVersion: 2
+        x: 2446
+        y: 43
+        width: 551
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45b9ad5ac3ca9bb0800000000000000
+      internalID: -4928411568281373363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 956fa275fc671744f93ad02626811903
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Shields1: -3571499676984225128
+      Shields2: 2361168098640608239
+      Shields3: 1014830011785333646
+      Shields4: -2089985001020345037
+      Shields5: 6548013873084474947
+      Shields6: -2215748975286409283
+      ShieldsA1: -4816474602163783906
+      ShieldsA2: 4024047152717561444
+      ShieldsA3: 5470362271753171513
+      ShieldsA4: 3425499721157916454
+      ShieldsE1: -730768742098969079
+      ShieldsE2: 3575910574903088246
+      ShieldsE3: -7807264916142927055
+      ShieldsE4: -2560580111075512977
+      ShieldsE5: -4928411568281373363
+      Shields_waifu2x_art_noise1_scale_1: 3694414973420587866
+      Shields_waifu2x_art_noise1_scale_10: -4486926353520962554
+      Shields_waifu2x_art_noise1_scale_100: -7675539783608488559
+      Shields_waifu2x_art_noise1_scale_101: -2008423454299182112
+      Shields_waifu2x_art_noise1_scale_102: -8115073854611136757
+      Shields_waifu2x_art_noise1_scale_103: 4802600152965056732
+      Shields_waifu2x_art_noise1_scale_104: -8847402416469997173
+      Shields_waifu2x_art_noise1_scale_105: -398226658788336312
+      Shields_waifu2x_art_noise1_scale_106: -3394182926075160646
+      Shields_waifu2x_art_noise1_scale_107: -8136283837907734121
+      Shields_waifu2x_art_noise1_scale_108: -6873363873983781668
+      Shields_waifu2x_art_noise1_scale_109: -2737155750808388358
+      Shields_waifu2x_art_noise1_scale_11: -1729164012344890857
+      Shields_waifu2x_art_noise1_scale_110: -715756576985083482
+      Shields_waifu2x_art_noise1_scale_111: -6428358597298140383
+      Shields_waifu2x_art_noise1_scale_112: 4802049943608688635
+      Shields_waifu2x_art_noise1_scale_113: 8196799173888070143
+      Shields_waifu2x_art_noise1_scale_114: 5785184617060700517
+      Shields_waifu2x_art_noise1_scale_115: -1111828611247647651
+      Shields_waifu2x_art_noise1_scale_116: 5322289094779108841
+      Shields_waifu2x_art_noise1_scale_117: -6559930604732010225
+      Shields_waifu2x_art_noise1_scale_118: 6430284236697334614
+      Shields_waifu2x_art_noise1_scale_119: 8936740788786638007
+      Shields_waifu2x_art_noise1_scale_120: 6009432818413978134
+      Shields_waifu2x_art_noise1_scale_121: -2400940480917606232
+      Shields_waifu2x_art_noise1_scale_122: -4293155652452771879
+      Shields_waifu2x_art_noise1_scale_123: -3773719842279590230
+      Shields_waifu2x_art_noise1_scale_124: -6523749603522518634
+      Shields_waifu2x_art_noise1_scale_125: -1014386678276747368
+      Shields_waifu2x_art_noise1_scale_126: -3438908737707337503
+      Shields_waifu2x_art_noise1_scale_127: 8275316820128029293
+      Shields_waifu2x_art_noise1_scale_128: 4489998602604819535
+      Shields_waifu2x_art_noise1_scale_129: 4416217090514637144
+      Shields_waifu2x_art_noise1_scale_13: -6643394577258786277
+      Shields_waifu2x_art_noise1_scale_130: -4570002339569427891
+      Shields_waifu2x_art_noise1_scale_131: -6708504552799555390
+      Shields_waifu2x_art_noise1_scale_132: 9217342807238031639
+      Shields_waifu2x_art_noise1_scale_133: -6555354660602252439
+      Shields_waifu2x_art_noise1_scale_14: -8716929094277502753
+      Shields_waifu2x_art_noise1_scale_15: -7109484430579782819
+      Shields_waifu2x_art_noise1_scale_16: 7982278002021228682
+      Shields_waifu2x_art_noise1_scale_17: 1290955614468777819
+      Shields_waifu2x_art_noise1_scale_18: -5074088550776353239
+      Shields_waifu2x_art_noise1_scale_19: -6631137637626108394
+      Shields_waifu2x_art_noise1_scale_2: -7124113884979966435
+      Shields_waifu2x_art_noise1_scale_20: -163436233757749551
+      Shields_waifu2x_art_noise1_scale_25: 5090713563771626522
+      Shields_waifu2x_art_noise1_scale_26: 2783319320864201183
+      Shields_waifu2x_art_noise1_scale_27: -6167816742780865206
+      Shields_waifu2x_art_noise1_scale_28: -3700866658273114923
+      Shields_waifu2x_art_noise1_scale_29: -3300448352443681931
+      Shields_waifu2x_art_noise1_scale_30: -46340648256102772
+      Shields_waifu2x_art_noise1_scale_31: -7052222508702362726
+      Shields_waifu2x_art_noise1_scale_32: 1608220631130431660
+      Shields_waifu2x_art_noise1_scale_33: 138625294163741594
+      Shields_waifu2x_art_noise1_scale_34: 8989222323653267114
+      Shields_waifu2x_art_noise1_scale_36: 4730629164918576878
+      Shields_waifu2x_art_noise1_scale_37: -4409263026091626896
+      Shields_waifu2x_art_noise1_scale_38: 5938043651724404540
+      Shields_waifu2x_art_noise1_scale_39: 4181688817566959529
+      Shields_waifu2x_art_noise1_scale_40: -2915847579276560889
+      Shields_waifu2x_art_noise1_scale_41: 3984069221826386845
+      Shields_waifu2x_art_noise1_scale_42: 1116309181777092826
+      Shields_waifu2x_art_noise1_scale_43: 2303970651392181026
+      Shields_waifu2x_art_noise1_scale_44: 4814409726196017718
+      Shields_waifu2x_art_noise1_scale_45: 3458399083132368036
+      Shields_waifu2x_art_noise1_scale_48: 4564186513419341005
+      Shields_waifu2x_art_noise1_scale_49: -6208028336106099054
+      Shields_waifu2x_art_noise1_scale_5: 7962921678837767497
+      Shields_waifu2x_art_noise1_scale_50: -2656130979463487350
+      Shields_waifu2x_art_noise1_scale_51: -4889476554574455423
+      Shields_waifu2x_art_noise1_scale_52: 4615848913600342470
+      Shields_waifu2x_art_noise1_scale_53: -2808656023197166237
+      Shields_waifu2x_art_noise1_scale_54: -580950369389614637
+      Shields_waifu2x_art_noise1_scale_55: 6989617985587389234
+      Shields_waifu2x_art_noise1_scale_56: -1927537615015927408
+      Shields_waifu2x_art_noise1_scale_58: 9191891365116854912
+      Shields_waifu2x_art_noise1_scale_59: -9090108276862817545
+      Shields_waifu2x_art_noise1_scale_60: 1611287357240634577
+      Shields_waifu2x_art_noise1_scale_61: 8121109814605465998
+      Shields_waifu2x_art_noise1_scale_62: -5168143921398786609
+      Shields_waifu2x_art_noise1_scale_63: -686267850304168449
+      Shields_waifu2x_art_noise1_scale_64: 453472853941043106
+      Shields_waifu2x_art_noise1_scale_65: 5091389062707816259
+      Shields_waifu2x_art_noise1_scale_66: 3302535580381308518
+      Shields_waifu2x_art_noise1_scale_67: 5554538190691923983
+      Shields_waifu2x_art_noise1_scale_68: -5712731389115937112
+      Shields_waifu2x_art_noise1_scale_69: -23617154213044204
+      Shields_waifu2x_art_noise1_scale_7: 5420261039250034980
+      Shields_waifu2x_art_noise1_scale_70: 2617062478692944282
+      Shields_waifu2x_art_noise1_scale_71: -6061188355929175559
+      Shields_waifu2x_art_noise1_scale_72: 282160311967026128
+      Shields_waifu2x_art_noise1_scale_73: 5102453099199958034
+      Shields_waifu2x_art_noise1_scale_74: -8191236960829456986
+      Shields_waifu2x_art_noise1_scale_75: -1696593727501912649
+      Shields_waifu2x_art_noise1_scale_76: -5665628270406595380
+      Shields_waifu2x_art_noise1_scale_77: -1555173471039462686
+      Shields_waifu2x_art_noise1_scale_78: -3669252988487220862
+      Shields_waifu2x_art_noise1_scale_79: 230783498493778909
+      Shields_waifu2x_art_noise1_scale_80: -8791316647846277762
+      Shields_waifu2x_art_noise1_scale_81: 945623394389715337
+      Shields_waifu2x_art_noise1_scale_82: -2395475991253039742
+      Shields_waifu2x_art_noise1_scale_84: -2658618601557530681
+      Shields_waifu2x_art_noise1_scale_85: 1679510996400976893
+      Shields_waifu2x_art_noise1_scale_86: -1226501006750429305
+      Shields_waifu2x_art_noise1_scale_87: -4277734464071757146
+      Shields_waifu2x_art_noise1_scale_88: 4949518629103632711
+      Shields_waifu2x_art_noise1_scale_89: 4471678267821507236
+      Shields_waifu2x_art_noise1_scale_9: 2840835617738963514
+      Shields_waifu2x_art_noise1_scale_90: 2981978232087253232
+      Shields_waifu2x_art_noise1_scale_91: 497188487626586006
+      Shields_waifu2x_art_noise1_scale_92: -306925245304006539
+      Shields_waifu2x_art_noise1_scale_93: -293470137363876699
+      Shields_waifu2x_art_noise1_scale_94: 6319361470700483451
+      Shields_waifu2x_art_noise1_scale_95: 4789105731562130967
+      Shields_waifu2x_art_noise1_scale_96: 7703798841072822350
+      Shields_waifu2x_art_noise1_scale_97: -3915712076236605149
+      Shields_waifu2x_art_noise1_scale_98: 1957031891709293258
+      Shields_waifu2x_art_noise1_scale_99: 8993160548258765391
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
