@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo_Espacial
+    uniqueID: 264901167
+    locked: 0
+  - name: Elementos_Juego
+    uniqueID: 1882219063
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
