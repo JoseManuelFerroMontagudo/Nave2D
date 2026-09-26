@@ -349,7 +349,7 @@ MonoBehaviour:
       Enabled: 0
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
-  CenterOnActivate: 1
+  CenterOnActivate: 0
   TargetOffset: {x: 0, y: 4, z: 0}
   Damping: {x: 0, y: 0}
   Lookahead:
@@ -373,7 +373,7 @@ MonoBehaviour:
     BindingMode: 3
     PositionDamping: {x: 0, y: 0, z: 0}
     AngularDampingMode: 0
-    RotationDamping: {x: 0, y: 0, z: 0.3}
+    RotationDamping: {x: 0, y: 0, z: 0.2}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: -8, z: -10}
 --- !u!114 &391085750
