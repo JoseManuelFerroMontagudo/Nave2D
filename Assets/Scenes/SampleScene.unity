@@ -2296,7 +2296,7 @@ Transform:
   m_GameObject: {fileID: 947042758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 376}
+  m_LocalPosition: {x: 172, y: -1, z: 387}
   m_LocalScale: {x: 101.948715, y: 101.948715, z: 101.948715}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2388,8 +2388,8 @@ Transform:
   m_GameObject: {fileID: 963720478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.53882444, w: 0.84241813}
-  m_LocalPosition: {x: 213, y: 32, z: 124}
-  m_LocalScale: {x: 4.301558, y: 4.301558, z: 4.301558}
+  m_LocalPosition: {x: 213, y: 32, z: 129}
+  m_LocalScale: {x: 5.593504, y: 5.593504, z: 5.593504}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2520,6 +2520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153706106}
   - component: {fileID: 1153706105}
+  - component: {fileID: 1153706107}
   m_Layer: 0
   m_Name: estrella roja_0
   m_TagString: Untagged
@@ -2553,7 +2554,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 834e9e559085dbb4eb1d25a7afe047a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2596,12 +2597,25 @@ Transform:
   m_GameObject: {fileID: 1153706104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -662, y: 159, z: 245}
-  m_LocalScale: {x: 18.585356, y: 18.585356, z: 18.585356}
+  m_LocalPosition: {x: -583, y: 190, z: 235}
+  m_LocalScale: {x: 24.499216, y: 24.499216, z: 24.499216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153706107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153706104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0742e5c53d57f04db7da3f6cfccd146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotacionPlaneta
+  velocidadRotacion: 9
 --- !u!1 &1253788202
 GameObject:
   m_ObjectHideFlags: 0
