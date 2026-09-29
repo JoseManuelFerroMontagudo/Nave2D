@@ -247,7 +247,8 @@ public class ControladorJefe : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D colision)
     {
-        if (colision.gameObject.CompareTag("Player") && !estaMuerto)
-            colision.gameObject.GetComponent<PlayerShip2D>()?.ApplyDamage(2f);
+        if (colision.gameObject.CompareTag("Player") && !estaMuerto) { }
+        ;
+        //colision.gameObject.GetComponent<PlayerShip2D>()?.ApplyDamage(2f);
     }
 }

@@ -126,8 +126,8 @@ public class ProyectilJefe : MonoBehaviour
     {
         if (otro.CompareTag("Player"))
         {
-            var nave = otro.GetComponent<PlayerShip2D>();
-            if (nave != null) nave.ApplyDamage(daño);
+            //var nave = otro.GetComponent<PlayerShip2D>();
+            //if (nave != null) nave.ApplyDamage(daño);
             Destroy(gameObject);
         }
         else if (otro.CompareTag("Enemy")) { /* ignorar */ }
