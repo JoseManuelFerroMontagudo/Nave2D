@@ -22,15 +22,15 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2215748975286409283, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
-    - time: 0.06666667
+    - time: 0.05
       value: {fileID: 6548013873084474947, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
-    - time: 0.11666667
+    - time: 0.083333336
       value: {fileID: -2089985001020345037, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
-    - time: 0.2
+    - time: 0.15
       value: {fileID: 1014830011785333646, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
-    - time: 0.25
+    - time: 0.18333334
       value: {fileID: 2361168098640608239, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
-    - time: 0.33333334
+    - time: 0.25
       value: {fileID: -3571499676984225128, guid: 8a96ba6c0b06b34489436b24f9fab0e4, type: 3}
     attribute: m_Sprite
     path: 
@@ -66,7 +66,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,4 +85,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.25
+    functionName: AE_DeactivateFinished
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
