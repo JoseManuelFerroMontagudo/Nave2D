@@ -12,8 +12,15 @@ public class HomingMissile : MonoBehaviour
     [Header("Homing")]
     [SerializeField] string targetTag = "Enemy";
     [SerializeField] float detectionRadius = 6f;
-    [Tooltip("Grados por segundo. Más bajo = más esquivable.")]
+    [Tooltip("Grados por segundo iniciales. Más bajo = más esquivable.")]
     [SerializeField] float turnRate = 90f;
+
+    [Tooltip("Grados/seg que aumenta el giro mientras el misil sigue enganchado.")]
+    [SerializeField] float turnRateGrowth = 120f;
+
+    [Tooltip("Tope máximo de giro (grados/seg). Evita misiles imposibles de esquivar.")]
+    [SerializeField] float maxTurnRate = 360f;
+
     [Tooltip("Cada cuánto re-evalúa el objetivo (permite re-enganche).")]
     [SerializeField] float reacquireInterval = 0.25f;
     [SerializeField] LayerMask targetLayers = ~0;
@@ -26,6 +33,7 @@ public class HomingMissile : MonoBehaviour
     Transform target;
     float lifeRemaining;
     float nextReacquireTime;
+    float currentTurnRate;
 
     // ---- API pública para el arma ----
     public void Initialize(Vector2 initialVelocity, Transform explicitTarget = null)
@@ -43,6 +51,7 @@ public class HomingMissile : MonoBehaviour
         rb.linearDamping = 0f;
         rb.angularDamping = 0f;
         lifeRemaining = lifetime;
+        currentTurnRate = turnRate;
     }
 
     void FixedUpdate()
@@ -61,11 +70,23 @@ public class HomingMissile : MonoBehaviour
         // --- Giro suave hacia el objetivo ---
         if (target != null)
         {
+            // Mientras sigue enganchado, el giro crece progresivamente.
+            // Esto rompe las órbitas estables: tarde o temprano cierra el ángulo
+            // y termina impactando.
+            currentTurnRate = Mathf.Min(
+                currentTurnRate + turnRateGrowth * Time.fixedDeltaTime,
+                maxTurnRate);
+
             Vector2 toTarget = ((Vector2)target.position - rb.position).normalized;
             float signedAngle = Vector2.SignedAngle(direction, toTarget);
-            float maxStep = turnRate * Time.fixedDeltaTime;
+            float maxStep = currentTurnRate * Time.fixedDeltaTime;
             float step = Mathf.Clamp(signedAngle, -maxStep, maxStep);
             direction = Rotate(direction, step);
+        }
+        else
+        {
+            // Se desvinculó: reinicia la agresividad del giro.
+            currentTurnRate = turnRate;
         }
 
         // --- Movimiento a velocidad CONSTANTE en la dirección actual ---
