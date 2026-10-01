@@ -133,6 +133,7 @@ public class HomingMissile : MonoBehaviour
         // TODO: aplicar daño
         if (other.CompareTag("Shield")) return;
         if (other.CompareTag("Muros")) return;
+        if (other.CompareTag("Attacks")) return;
         if (hitEffectPrefab != null)
             Instantiate(hitEffectPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
