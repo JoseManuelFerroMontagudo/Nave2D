@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 146501786}
   - component: {fileID: 146501788}
   - component: {fileID: 146501787}
+  - component: {fileID: 146501790}
+  - component: {fileID: 146501791}
   m_Layer: 0
   m_Name: Nave
   m_TagString: Untagged
@@ -149,7 +151,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1999691639}
   m_Father: {fileID: 1486331330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &146501787
@@ -235,6 +238,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!50 &146501790
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146501785}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &146501791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146501785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
+  vida: 50
+  velocidad: 0
+  rangoAtaque: 10
+  rangoDetencion: 4
+  prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
+  puntoDisparo: {fileID: 1999691639}
+  "da\xF1oProyectil": 2
+  patrones:
+  - patron: {fileID: 11400000, guid: b15f5558f89dfef4cbca40113ce2ca93, type: 2}
+    retardoAntes: 1
+    retardoDespues: 5
+  repetirCiclo: 1
+  esperaInicial: 0.5
+  lluviaActivada: 0
+  lluviaBalasPorAnillo: 10
+  lluviaIntervalo: 0.35
+  lluviaOpciones:
+    modo: 0
+    velocidad: 4.95
+    tiempoVuelo: 3
+    vidaUtil: 14
+    color: {r: 0.7, g: 0.2, b: 1, a: 0.7}
+    amplitudOnda: 2
+    frecuenciaOnda: 8
+    fuerzaPersecucion: 1.5
+    regresaAlOrigen: 1
+    multiplicadorVelocidadRetorno: 0.7
+    tiempoFrenado: 0.4
+    pausaAntesDeRegresar: 0.25
+    rebotaEnParedes: 1
+    rebotesMaximos: 1
+  esInvulnerable: 0
 --- !u!1 &391085747
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +540,7 @@ GameObject:
   - component: {fileID: 462603969}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Muros
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,10 +1871,9 @@ GameObject:
   - component: {fileID: 578236109}
   - component: {fileID: 578236111}
   - component: {fileID: 578236112}
-  - component: {fileID: 578236113}
   m_Layer: 0
-  m_Name: Shield
-  m_TagString: Shield
+  m_Name: Shields6
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1874,7 +1947,7 @@ Transform:
   m_GameObject: {fileID: 578236108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0, y: -0.043, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1936,29 +2009,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.012550116, y: 0}
   m_Radius: 1.2552593
---- !u!114 &578236113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578236108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a734c689385064f9d6054c42424f26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShieldController
-  shieldAction: {fileID: -2707731519951491704, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
-  maxEnergy: 100
-  drainRate: 5
-  regenRate: 4
-  overloadCooldown: 3
-  spinWhileActive: 1
-  spinDegreesPerSecond: 60
-  impactAngleOffset: 180
-  impactHoldSeconds: 0.4
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2128,7 @@ GameObject:
   - component: {fileID: 710879507}
   m_Layer: 0
   m_Name: Mapa
-  m_TagString: Muros
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,37 +2160,6 @@ Transform:
   m_Children:
   - {fileID: 462603968}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &718687284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 718687285}
-  m_Layer: 0
-  m_Name: firePointRoot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &718687285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718687284}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.274, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1982281054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &853554980
 GameObject:
@@ -2243,7 +2264,7 @@ GameObject:
   - component: {fileID: 936344658}
   - component: {fileID: 936344657}
   m_Layer: 0
-  m_Name: Asteroides2
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3354,10 +3375,9 @@ GameObject:
   - component: {fileID: 1486331330}
   - component: {fileID: 1486331333}
   - component: {fileID: 1486331332}
-  - component: {fileID: 1486331334}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3376,7 +3396,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 146501786}
-  - {fileID: 1999691639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1486331332
@@ -3394,7 +3413,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3452,50 +3471,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1486331334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486331328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
-  vida: 50
-  velocidad: 0
-  rangoAtaque: 10
-  rangoDetencion: 4
-  prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
-  puntoDisparo: {fileID: 1999691639}
-  "da\xF1oProyectil": 2
-  patrones:
-  - patron: {fileID: 11400000, guid: b15f5558f89dfef4cbca40113ce2ca93, type: 2}
-    retardoAntes: 1
-    retardoDespues: 5
-  repetirCiclo: 1
-  esperaInicial: 0.5
-  lluviaActivada: 0
-  lluviaBalasPorAnillo: 10
-  lluviaIntervalo: 0.35
-  lluviaOpciones:
-    modo: 0
-    velocidad: 4.95
-    tiempoVuelo: 3
-    vidaUtil: 14
-    color: {r: 0.7, g: 0.2, b: 1, a: 0.7}
-    amplitudOnda: 2
-    frecuenciaOnda: 8
-    fuerzaPersecucion: 1.5
-    regresaAlOrigen: 1
-    multiplicadorVelocidadRetorno: 0.7
-    tiempoFrenado: 0.4
-    pausaAntesDeRegresar: 0.25
-    rebotaEnParedes: 1
-    rebotesMaximos: 1
-  esInvulnerable: 0
 --- !u!1 &1609913969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3482,7 @@ GameObject:
   - component: {fileID: 1609913971}
   - component: {fileID: 1609913970}
   m_Layer: 0
-  m_Name: Asteroides1
+  m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4279,11 +4254,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982281054}
-  - component: {fileID: 1982281057}
-  - component: {fileID: 1982281068}
   - component: {fileID: 1982281056}
-  - component: {fileID: 1982281066}
-  - component: {fileID: 1982281067}
+  - component: {fileID: 1982281057}
+  - component: {fileID: 1982281058}
+  - component: {fileID: 1982281060}
+  - component: {fileID: 1982281059}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4306,7 +4281,6 @@ Transform:
   m_Children:
   - {fileID: 578236110}
   - {fileID: 1014422396}
-  - {fileID: 718687285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1982281056
@@ -4321,7 +4295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -4333,34 +4307,10 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 969936bc-5886-4f9d-9e69-3c7ff59bf865
-    m_ActionName: 'Ship/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 54c256b3-1a11-4f74-93ed-8dab25a08829
-    m_ActionName: 'Ship/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9689327f-cc74-4e9a-90fd-d65d95f594c9
-    m_ActionName: 'Ship/UTurn[/Keyboard/r]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4c63d749-e590-4546-9b4c-2d52dd2a020e
-    m_ActionName: 'Ship/Brake[/Keyboard/f]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e24de742-89ef-4c02-a0f8-bbbc5ddd355d
-    m_ActionName: 'Ship/PrimaryAttack[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 530768fd-127c-440c-82d0-012e4ade2fba
-    m_ActionName: 'Ship/SecondaryAttack[/Mouse/rightButton]'
+  m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Ship
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!50 &1982281057
@@ -4377,7 +4327,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0
+  m_AngularDamping: 100
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -4389,59 +4339,9 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &1982281066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982281053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42c91e7eec8d244ebe7d22541a617cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShipController
-  thrustAcceleration: 24
-  maxSpeed: 20
-  linearDamping: 0.15
-  mouseSensitivity: 0.2
-  rotationSmoothTime: 0.08
-  maxRotationSpeed: 720
-  uTurnSpeed: 540
-  dashSpeed: 50
-  dashDuration: 0.3
-  doubleTapWindow: 0.2
-  brakeDeceleration: 15
-  brakeStopThreshold: 0.05
---- !u!114 &1982281067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982281053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5836b3b0fb3c6147812b88fd05cca67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
-  firePointRoot: {fileID: 718687285}
-  barrelCount: 2
-  barrelSpacing: 1.5
-  fireMode: 1
-  primaryAttackAction: {fileID: 305889997595794582, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
-  secondaryAttackAction: {fileID: -7971107942362836314, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
-  primaryProjectilePrefab: {fileID: 1647063897390558238, guid: 9218515626db4784db7e776d0a904a59, type: 3}
-  primaryFireRate: 10
-  primaryProjectileSpeed: 40
-  primaryInheritVelocity: 0
-  secondaryProjectilePrefab: {fileID: 6997285835846201165, guid: a21fc12ab0b0ed942b4cc8e29043f3b2, type: 3}
-  secondaryFireRate: 1.5
-  secondaryProjectileSpeed: 12
-  secondaryInheritVelocity: 0
---- !u!58 &1982281068
-CircleCollider2D:
+  m_Constraints: 0
+--- !u!60 &1982281058
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4475,7 +4375,73 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.95105654, y: 0.30901697}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.58778536, y: -0.80901694}
+      - {x: 0.9510565, y: 0.30901712}
+  m_UseDelaunayMesh: 1
+--- !u!114 &1982281059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982281053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5836b3b0fb3c6147812b88fd05cca67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
+  firePointRoot: {fileID: 0}
+  barrelCount: 2
+  barrelSpacing: 0.25
+  fireMode: 0
+  primaryAttackAction: {fileID: 305889997595794582, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
+  secondaryAttackAction: {fileID: -2707731519951491704, guid: 1306ba526cbd3274881cd97de73c4c28, type: 3}
+  primaryProjectilePrefab: {fileID: 1647063897390558238, guid: 9218515626db4784db7e776d0a904a59, type: 3}
+  primaryFireRate: 6
+  primaryProjectileSpeed: 20
+  primaryInheritVelocity: 1
+  secondaryProjectilePrefab: {fileID: 6997285835846201165, guid: a21fc12ab0b0ed942b4cc8e29043f3b2, type: 3}
+  secondaryFireRate: 1.5
+  secondaryProjectileSpeed: 12
+  secondaryInheritVelocity: 0
+--- !u!114 &1982281060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982281053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42c91e7eec8d244ebe7d22541a617cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipController
+  thrustAcceleration: 12
+  maxSpeed: 10
+  linearDamping: 0.15
+  mouseSensitivity: 0.15
+  rotationSmoothTime: 0.08
+  maxRotationSpeed: 720
+  uTurnSpeed: 540
+  dashSpeed: 25
+  dashDuration: 0.15
+  doubleTapWindow: 0.3
+  brakeDeceleration: 15
+  brakeStopThreshold: 0.05
 --- !u!1 &1999691638
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,12 +4466,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999691638}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1486331330}
+  m_Father: {fileID: 146501786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
