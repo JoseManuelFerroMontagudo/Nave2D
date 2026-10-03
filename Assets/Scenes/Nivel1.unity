@@ -3343,6 +3343,59 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1474685379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474685381}
+  - component: {fileID: 1474685380}
+  m_Layer: 0
+  m_Name: SpawnerPatrullas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1474685380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474685379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06d48d71f400e4695e1c2e1a171bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerPatrullas
+  prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+  enemigosPorPatrulla: 5
+  tiempoEntrePatrullas: 8
+  retardoInicial: 5
+  distanciaFueraDeCamara: 25
+  separacionLateral: 1.5
+  profundidadV: 1.2
+  dispersionAngular: 20
+  jugador: {fileID: 1982281054}
+--- !u!4 &1474685381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474685379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.88072, y: 2.67957, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486331328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,7 +3424,7 @@ Transform:
   m_GameObject: {fileID: 1486331328}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.03, y: 6.2, z: 0}
+  m_LocalPosition: {x: 5.38, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4524,3 +4577,4 @@ SceneRoots:
   - {fileID: 947042760}
   - {fileID: 853554982}
   - {fileID: 391085751}
+  - {fileID: 1474685381}

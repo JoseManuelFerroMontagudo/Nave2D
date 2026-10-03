@@ -44,6 +44,31 @@ public class ProyectilJefe : MonoBehaviour
         if (jugadorObj != null) jugador = jugadorObj.transform;
 
         if (opciones.regresaAlOrigen) StartCoroutine(CicloDeVida());
+
+        // =========================================================================
+        // NUEVO CÓDIGO GOSU: IGNORAR BALAS DEL MISMO TIPO ENTRE SÍ
+        // =========================================================================
+        // Buscamos todos los proyectiles del mismo tipo que ya existan en el mapa
+        ProyectilJefe[] proyectilesActivos = FindObjectsByType<ProyectilJefe>(FindObjectsSortMode.None);
+        Collider2D miCollider = GetComponent<Collider2D>();
+
+        if (miCollider != null)
+        {
+            foreach (ProyectilJefe otroProyectil in proyectilesActivos)
+            {
+                // Si el otro proyectil no soy yo mismo y compartimos el mismo nombre de objeto...
+                if (otroProyectil != this && otroProyectil.gameObject.name == this.gameObject.name)
+                {
+                    Collider2D otroCollider = otroProyectil.GetComponent<Collider2D>();
+                    if (otroCollider != null)
+                    {
+                        // Le ordenamos al motor físico ignorar estrictamente este choque
+                        Physics2D.IgnoreCollision(miCollider, otroCollider);
+                    }
+                }
+            }
+        }
+        // =========================================================================
     }
 
     IEnumerator ActivarColisionParedes()
@@ -139,4 +164,6 @@ public class ProyectilJefe : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, rot);
         }
     }
+
+
 }
