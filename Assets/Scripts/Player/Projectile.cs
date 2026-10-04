@@ -40,6 +40,7 @@ public class Projectile : MonoBehaviour
         // Ignora al que disparó: filtra por tag, layer, o componente
         if (other.CompareTag("Player")) return;
         if (other.CompareTag("Shield")) return;
+        if (other.CompareTag("Bullet")) return;
         // TODO: aplicar daño aquí cuando exista sistema de vida
         // other.GetComponent<IDamageable>()?.TakeDamage(damage);
 

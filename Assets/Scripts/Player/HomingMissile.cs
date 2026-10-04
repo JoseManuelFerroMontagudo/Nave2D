@@ -132,6 +132,7 @@ public class HomingMissile : MonoBehaviour
         if (other.CompareTag("Player")) return;   // red de seguridad
         // TODO: aplicar daño
         if (other.CompareTag("Shield")) return;
+        if (other.CompareTag("Bullet")) return;
         if (other.CompareTag("Muros")) return;
         if (other.CompareTag("Attacks")) return;
         if (hitEffectPrefab != null)
