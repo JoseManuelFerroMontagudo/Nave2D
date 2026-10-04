@@ -116,4 +116,15 @@ public class ControladorEnemyNv1 : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         estaAtacando = false;
     }
+
+    public void TakeDamage(float daño) => AplicarDaño(daño);
+
+    public void AplicarDaño(float daño)
+    {
+        vida -= Mathf.Abs(daño);
+        if (vida <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

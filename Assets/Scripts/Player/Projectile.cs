@@ -40,11 +40,18 @@ public class Projectile : MonoBehaviour
         // Ignora al que disparó: filtra por tag, layer, o componente
         if (other.CompareTag("Player")) return;
         if (other.CompareTag("Shield")) return;
-        // Aplicar daño al Boss o Enemigo
+        // Aplicar daño al Boss
         var jefe = other.GetComponentInParent<ControladorJefe>();
         if (jefe != null)
         {
             jefe.AplicarDaño(damage);
+        }
+
+        // Aplicar daño a Enemigos Normales
+        var enemigo = other.GetComponentInParent<ControladorEnemyNv1>();
+        if (enemigo != null)
+        {
+            enemigo.AplicarDaño(damage);
         }
 
         if (hitEffectPrefab != null)

@@ -4,17 +4,18 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Controlador del Boss para un shooter espacial 2D con vista isométrica.
-/// Movimiento omnidireccional (sin gravedad), persigue al jugador agresivamente
-/// manteniéndose dentro de la cámara, usa 8 sprites direccionales y 3 tipos de proyectiles.
+/// Mantiene al boss posicionado en la parte superior del encuadre del jugador,
+/// moviéndose con un vaivén sinusoidal suave y fluido (estilo arcade espacial)
+/// mientras dispara patrones dinámicos de alta velocidad.
 /// </summary>
 public class ControladorJefe : MonoBehaviour
 {
     [Header("Estadísticas")]
-    public float vida = 100f;
-    public float velocidadMovimiento = 6.5f;
-    public float distanciaOrbitaIdeal = 3.5f;
-    public float distanciaOrbitaMinima = 2.0f;
-    public float velocidadOrbita = 45f;
+    public float vida = 300f; // 300 HP para una pelea épica y duradera
+    public float velocidadMovimiento = 9f;
+    public float distanciaFrenteJugador = 4.0f; // Distancia fija al frente del encuadre
+    public float amplitudOndaHorizontal = 3.2f; // Ancho del vaivén izquierda-derecha
+    public float frecuenciaOndaHorizontal = 1.6f; // Velocidad de la onda
 
     [Header("Disparo — Proyectil Principal (Energía)")]
     public GameObject prefabProyectil;
@@ -41,12 +42,12 @@ public class ControladorJefe : MonoBehaviour
 
     [Header("Lluvia de fondo")]
     public bool lluviaActivada = true;
-    public int lluviaBalasPorAnillo = 10;
-    public float lluviaIntervalo = 0.35f;
+    public int lluviaBalasPorAnillo = 12;
+    public float lluviaIntervalo = 0.28f;
     public OpcionesProyectil lluviaOpciones = new OpcionesProyectil
     {
         modo = ModoMovimiento.Recto,
-        velocidad = 5.5f,
+        velocidad = 6.0f,
         tiempoVuelo = 3f,
         color = new Color(0.7f, 0.2f, 1f, 0.7f)
     };
@@ -56,13 +57,10 @@ public class ControladorJefe : MonoBehaviour
     public float umbralFase3 = 0.33f;
 
     [Header("Comportamiento de Movimiento")]
-    public float velocidadPersecucion = 8.5f;
-    public float suavizadoMovimiento = 6f;
-    public float amplitudVariacionOrbita = 0.8f;
-    public float frecuenciaVariacionOrbita = 0.4f;
+    public float suavizadoMovimiento = 8f;
 
     private float vidaMaxima;
-    public float VidaMaxima => vidaMaxima > 0 ? vidaMaxima : 100f;
+    public float VidaMaxima => vidaMaxima > 0 ? vidaMaxima : 300f;
 
     private bool estaMuerto = false;
     private bool estaAtacando = false;
@@ -70,7 +68,6 @@ public class ControladorJefe : MonoBehaviour
     [HideInInspector] public bool esInvulnerable = false;
     private bool lluviaActiva = false;
     private int faseActual = 1;
-    private float anguloOrbita = 0f;
     private float tiempoVivo = 0f;
 
     private Transform jugador;
@@ -100,7 +97,7 @@ public class ControladorJefe : MonoBehaviour
 
     void Start()
     {
-        anguloOrbita = Random.Range(0f, 360f);
+        tiempoVivo = 0f;
     }
 
     void FixedUpdate()
@@ -115,49 +112,55 @@ public class ControladorJefe : MonoBehaviour
         }
 
         tiempoVivo += Time.fixedDeltaTime;
+
+        // Movimiento estilizado (vaivén sinusoidal en frente del jugador)
         MoverHaciaObjetivo();
+
+        // Orientación del sprite hacia abajo / jugador
         ActualizarSpriteDir();
+
+        // Fases
         VerificarFaseCombate();
 
+        // Ataques
         if (!estaAtacando && !estaGolpeado)
             StartCoroutine(RutinaAtaque());
     }
 
+    /// <summary>
+    /// Posiciona al boss frente al jugador en la pantalla y se mueve en ondas sinusoides suaves (izquierda-derecha).
+    /// </summary>
     void MoverHaciaObjetivo()
     {
-        if (estaGolpeado) return;
-        float distancia = Vector2.Distance(transform.position, jugador.position);
+        if (estaGolpeado || rb == null) return;
 
-        if (distancia > 5.5f)
+        // Punto base al frente del jugador
+        Vector3 posFrente = jugador.position + Vector3.up * distanciaFrenteJugador;
+
+        // Vaivén sinusoidal elegante izquierda / derecha
+        float offsetHorizontal = Mathf.Sin(tiempoVivo * frecuenciaOndaHorizontal) * amplitudOndaHorizontal;
+        Vector3 posDeseada = posFrente + Vector3.right * offsetHorizontal;
+
+        Vector2 dirHaciaPos = (posDeseada - transform.position);
+        float distancia = dirHaciaPos.magnitude;
+
+        if (distancia > 0.05f)
         {
-            Vector2 dirHaciaJugador = ((Vector2)jugador.position - (Vector2)transform.position).normalized;
-            rb.linearVelocity = dirHaciaJugador * 12f;
-            return;
+            float velActual = Mathf.Min(distancia * 5f, velocidadMovimiento);
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, dirHaciaPos.normalized * velActual, suavizadoMovimiento * Time.fixedDeltaTime);
         }
-
-        float variacion = Mathf.Sin(tiempoVivo * frecuenciaVariacionOrbita * Mathf.PI * 2f) * amplitudVariacionOrbita;
-        float distanciaObjetivo = distanciaOrbitaIdeal + variacion;
-
-        anguloOrbita += velocidadOrbita * Time.fixedDeltaTime;
-        if (anguloOrbita >= 360f) anguloOrbita -= 360f;
-
-        float rad = anguloOrbita * Mathf.Deg2Rad;
-        Vector2 posDeseada = (Vector2)jugador.position + new Vector2(
-            Mathf.Cos(rad) * distanciaObjetivo,
-            Mathf.Sin(rad) * distanciaObjetivo
-        );
-
-        Vector2 dirHaciaOrbita = (posDeseada - (Vector2)transform.position).normalized;
-        float velActual = Mathf.Lerp(velocidadMovimiento, velocidadPersecucion, Mathf.Clamp01((distancia - distanciaOrbitaMinima) / distanciaObjetivo));
-        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, dirHaciaOrbita * velActual, suavizadoMovimiento * Time.fixedDeltaTime);
     }
 
     void ActualizarSpriteDir()
     {
-        if (spritesDirecciones == null || spritesDirecciones.Length < 8 || spriteRenderer == null) return;
+        if (spriteRenderer == null) return;
+
         Vector2 dirAlJugador = ((Vector2)jugador.position - (Vector2)transform.position).normalized;
         float angulo = Mathf.Atan2(dirAlJugador.y, dirAlJugador.x) * Mathf.Rad2Deg;
-        spriteRenderer.sprite = spritesDirecciones[4];
+
+        if (spritesDirecciones != null && spritesDirecciones.Length >= 8)
+            spriteRenderer.sprite = spritesDirecciones[4];
+
         spriteRenderer.transform.rotation = Quaternion.Euler(0, 0, angulo + 90f);
     }
 
@@ -173,11 +176,24 @@ public class ControladorJefe : MonoBehaviour
         {
             faseActual = nuevaFase;
             OnCambioFase?.Invoke(faseActual);
+
             if (estaAtacando)
             {
                 StopAllCoroutines();
                 estaAtacando = false;
                 lluviaActiva = false;
+            }
+
+            switch (faseActual)
+            {
+                case 2:
+                    frecuenciaOndaHorizontal *= 1.3f;
+                    lluviaIntervalo *= 0.75f;
+                    break;
+                case 3:
+                    frecuenciaOndaHorizontal *= 1.5f;
+                    lluviaIntervalo *= 0.5f;
+                    break;
             }
         }
     }
@@ -198,6 +214,7 @@ public class ControladorJefe : MonoBehaviour
         yield return new WaitForSeconds(esperaInicial);
         var patrones = ObtenerPatronesFaseActual();
 
+        // ATAQUE RÁPIDO Arcade (Fallback dinámico si no hay ScriptableObjects)
         if (patrones == null || patrones.Count == 0)
         {
             int patronIndex = 0;
@@ -207,39 +224,42 @@ public class ControladorJefe : MonoBehaviour
                 {
                     Transform origen = puntoDisparo != null ? puntoDisparo : transform;
                     Vector2 dir = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
-                    var opc = new OpcionesProyectil { velocidad = 8.5f, vidaUtil = 3.5f };
+                    var opc = new OpcionesProyectil { velocidad = 9.5f, vidaUtil = 4f };
 
                     if (patronIndex % 3 == 0)
                     {
+                        // Abanico rápido de 5 disparos
                         for (int i = -2; i <= 2; i++)
                         {
-                            Vector2 dirSub = Quaternion.Euler(0, 0, i * 12f) * dir;
+                            Vector2 dirSub = Quaternion.Euler(0, 0, i * 14f) * dir;
                             InstanciarProyectil(origen, dirSub, opc);
                         }
                     }
                     else if (patronIndex % 3 == 1)
                     {
-                        for (int i = 0; i < 10; i++)
+                        // Anillo de plasma expansivo (12 disparos)
+                        for (int i = 0; i < 12; i++)
                         {
-                            float ang = i * 36f;
+                            float ang = i * 30f;
                             Vector2 dirRing = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad));
                             InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirRing, opc);
                         }
                     }
                     else
                     {
-                        for (int i = 0; i < 3; i++)
+                        // Ráfaga perseguidora continua
+                        for (int i = 0; i < 4; i++)
                         {
                             var opcPerseguidor = opc.Clonar();
                             opcPerseguidor.modo = ModoMovimiento.Perseguidor;
-                            opcPerseguidor.fuerzaPersecucion = 3.5f;
+                            opcPerseguidor.fuerzaPersecucion = 4.0f;
                             InstanciarProyectilDeTipo(TipoProyectilBoss.Perseguidor, origen, dir, opcPerseguidor);
-                            yield return new WaitForSeconds(0.12f);
+                            yield return new WaitForSeconds(0.08f);
                         }
                     }
                     patronIndex++;
                 }
-                yield return new WaitForSeconds(0.75f);
+                yield return new WaitForSeconds(0.45f); // Cadencia de disparo ultra-rápida y dinámica
             }
             estaAtacando = false;
             yield break;
@@ -319,7 +339,7 @@ public class ControladorJefe : MonoBehaviour
         {
             Color original = spriteRenderer.color;
             spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(0.04f);
             spriteRenderer.color = original;
         }
         estaGolpeado = false;

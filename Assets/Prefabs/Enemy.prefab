@@ -123,15 +123,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
   vida: 50
   velocidadMovimiento: 6.5
-  distanciaOrbitaIdeal: 3.5
-  distanciaOrbitaMinima: 2
-  velocidadOrbita: 45
+  distanciaFrenteJugador: 4
+  amplitudOndaHorizontal: 3.2
+  frecuenciaOndaHorizontal: 1.6
   prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
   puntoDisparo: {fileID: 2096407744559608148}
   "da\xF1oProyectil": 2
-  prefabProyectilPlasma: {fileID: 0}
+  prefabProyectilPlasma: {fileID: 5924167065734960460, guid: 9e4c4c20200ccefdfa3f054a0c48705d, type: 3}
   "da\xF1oPlasma": 1.5
-  prefabProyectilPerseguidor: {fileID: 0}
+  prefabProyectilPerseguidor: {fileID: 5718189123002576064, guid: 35dc214fcf41907bab950b795718c35e, type: 3}
   "da\xF1oPerseguidor": 3
   spritesDirecciones: []
   patronesFase1: []
@@ -159,10 +159,7 @@ MonoBehaviour:
     rebotesMaximos: 1
   umbralFase2: 0.66
   umbralFase3: 0.33
-  velocidadPersecucion: 8.5
   suavizadoMovimiento: 6
-  amplitudVariacionOrbita: 0.8
-  frecuenciaVariacionOrbita: 0.4
   esInvulnerable: 0
 --- !u!1 &8102855271513198979
 GameObject:

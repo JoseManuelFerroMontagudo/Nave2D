@@ -262,7 +262,7 @@ public class BossEncounterManager : MonoBehaviour
         textRect.offsetMax = Vector2.zero;
 
         runtimeBossNameText = textObj.AddComponent<TextMeshProUGUI>();
-        runtimeBossNameText.text = "⚠️ JEFE: NAVE NODRIZA ⚠️";
+        runtimeBossNameText.text = "JEFE: NAVE NODRIZA";
         runtimeBossNameText.fontSize = 20;
         runtimeBossNameText.alignment = TextAlignmentOptions.Center;
         runtimeBossNameText.color = Color.yellow;
