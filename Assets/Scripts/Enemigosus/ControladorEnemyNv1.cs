@@ -47,13 +47,10 @@ public class ControladorEnemyNv1 : MonoBehaviour
             simuladorJefe.prefabProyectil = prefabProyectilCustom;
             simuladorJefe.puntoDisparo = puntoDisparo;
             simuladorJefe.dañoProyectil = dañoProyectilCustom;
-            simuladorJefe.velocidad = 0f;
-            simuladorJefe.rangoAtaque = 0f;
+            simuladorJefe.velocidadMovimiento = 0f;
             simuladorJefe.lluviaActivada = false;
             simuladorJefe.enabled = false;
         }
-
-
     }
 
     void Update()

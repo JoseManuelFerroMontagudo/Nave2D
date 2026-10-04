@@ -2,108 +2,245 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Controlador del Boss para un shooter espacial 2D con vista isométrica.
+/// Movimiento omnidireccional (sin gravedad), persigue al jugador agresivamente
+/// manteniéndose dentro de la cámara, usa 8 sprites direccionales y 3 tipos de proyectiles.
+/// </summary>
 public class ControladorJefe : MonoBehaviour
 {
     [Header("Estadísticas")]
-    public float vida = 50f;
-    public float velocidad = 2f;
-    public float rangoAtaque = 10f;
-    public float rangoDetencion = 4f;
+    public float vida = 100f;
+    public float velocidadMovimiento = 6.5f;
+    public float distanciaOrbitaIdeal = 3.5f;
+    public float distanciaOrbitaMinima = 2.0f;
+    public float velocidadOrbita = 45f;
 
-    [Header("Disparo")]
+    [Header("Disparo — Proyectil Principal (Energía)")]
     public GameObject prefabProyectil;
     public Transform puntoDisparo;
     public float dañoProyectil = 2f;
 
-    [Header("Secuencia de Patrones (orden y delays)")]
-    public List<EntradaPatron> patrones = new List<EntradaPatron>();
+    [Header("Disparo — Proyectil Plasma")]
+    public GameObject prefabProyectilPlasma;
+    public float dañoPlasma = 1.5f;
+
+    [Header("Disparo — Proyectil Perseguidor")]
+    public GameObject prefabProyectilPerseguidor;
+    public float dañoPerseguidor = 3f;
+
+    [Header("Sprites Direccionales (8 direcciones)")]
+    public Sprite[] spritesDirecciones;
+
+    [Header("Secuencia de Patrones")]
+    public List<EntradaPatron> patronesFase1 = new List<EntradaPatron>();
+    public List<EntradaPatron> patronesFase2 = new List<EntradaPatron>();
+    public List<EntradaPatron> patronesFase3 = new List<EntradaPatron>();
     public bool repetirCiclo = true;
     public float esperaInicial = 0.5f;
 
-    [Header("Lluvia de fondo (paralela a cada patrón)")]
+    [Header("Lluvia de fondo")]
     public bool lluviaActivada = true;
     public int lluviaBalasPorAnillo = 10;
     public float lluviaIntervalo = 0.35f;
     public OpcionesProyectil lluviaOpciones = new OpcionesProyectil
     {
         modo = ModoMovimiento.Recto,
-        velocidad = 4.95f,
+        velocidad = 5.5f,
         tiempoVuelo = 3f,
         color = new Color(0.7f, 0.2f, 1f, 0.7f)
     };
 
-    // --- Estado interno ---
+    [Header("Fases de Combate")]
+    public float umbralFase2 = 0.66f;
+    public float umbralFase3 = 0.33f;
+
+    [Header("Comportamiento de Movimiento")]
+    public float velocidadPersecucion = 8.5f;
+    public float suavizadoMovimiento = 6f;
+    public float amplitudVariacionOrbita = 0.8f;
+    public float frecuenciaVariacionOrbita = 0.4f;
+
+    private float vidaMaxima;
+    public float VidaMaxima => vidaMaxima > 0 ? vidaMaxima : 100f;
+
     private bool estaMuerto = false;
     private bool estaAtacando = false;
-    private bool mirandoDerecha = true;
     private bool estaGolpeado = false;
+    [HideInInspector] public bool esInvulnerable = false;
     private bool lluviaActiva = false;
-    public bool esInvulnerable = false;
+    private int faseActual = 1;
+    private float anguloOrbita = 0f;
+    private float tiempoVivo = 0f;
 
     private Transform jugador;
     private Rigidbody2D rb;
-    private Animator anim;
+    private SpriteRenderer spriteRenderer;
+
+    public event System.Action OnMuerte;
+    public event System.Action<int> OnCambioFase;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        SetAnim("IsMoving", false);
-        SetAnim("IsAttacking", false);
-        SetAnim("Hit", false);
-        SetAnim("IsDead", false);
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        vidaMaxima = vida;
+
+        if (rb != null)
+        {
+            rb.gravityScale = 0f;
+            rb.linearDamping = 1f;
+            rb.angularDamping = 0f;
+            rb.freezeRotation = true;
+        }
 
         var jugadorObj = GameObject.FindGameObjectWithTag("Player");
         if (jugadorObj != null) jugador = jugadorObj.transform;
     }
 
-    void SetAnim(string p, bool v) { if (anim != null) anim.SetBool(p, v); }
+    void Start()
+    {
+        anguloOrbita = Random.Range(0f, 360f);
+    }
 
     void FixedUpdate()
     {
-        if (estaMuerto || estaGolpeado || jugador == null) return;
+        if (estaMuerto) return;
 
+        if (jugador == null)
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) jugador = p.transform;
+            return;
+        }
+
+        tiempoVivo += Time.fixedDeltaTime;
+        MoverHaciaObjetivo();
+        ActualizarSpriteDir();
+        VerificarFaseCombate();
+
+        if (!estaAtacando && !estaGolpeado)
+            StartCoroutine(RutinaAtaque());
+    }
+
+    void MoverHaciaObjetivo()
+    {
+        if (estaGolpeado) return;
         float distancia = Vector2.Distance(transform.position, jugador.position);
 
-        if (distancia < rangoAtaque)
+        if (distancia > 5.5f)
         {
-            bool jugadorALaDerecha = jugador.position.x > transform.position.x;
-            if (jugadorALaDerecha && !mirandoDerecha) Girar();
-            else if (!jugadorALaDerecha && mirandoDerecha) Girar();
+            Vector2 dirHaciaJugador = ((Vector2)jugador.position - (Vector2)transform.position).normalized;
+            rb.linearVelocity = dirHaciaJugador * 12f;
+            return;
+        }
 
-            if (distancia > rangoDetencion && !estaAtacando)
+        float variacion = Mathf.Sin(tiempoVivo * frecuenciaVariacionOrbita * Mathf.PI * 2f) * amplitudVariacionOrbita;
+        float distanciaObjetivo = distanciaOrbitaIdeal + variacion;
+
+        anguloOrbita += velocidadOrbita * Time.fixedDeltaTime;
+        if (anguloOrbita >= 360f) anguloOrbita -= 360f;
+
+        float rad = anguloOrbita * Mathf.Deg2Rad;
+        Vector2 posDeseada = (Vector2)jugador.position + new Vector2(
+            Mathf.Cos(rad) * distanciaObjetivo,
+            Mathf.Sin(rad) * distanciaObjetivo
+        );
+
+        Vector2 dirHaciaOrbita = (posDeseada - (Vector2)transform.position).normalized;
+        float velActual = Mathf.Lerp(velocidadMovimiento, velocidadPersecucion, Mathf.Clamp01((distancia - distanciaOrbitaMinima) / distanciaObjetivo));
+        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, dirHaciaOrbita * velActual, suavizadoMovimiento * Time.fixedDeltaTime);
+    }
+
+    void ActualizarSpriteDir()
+    {
+        if (spritesDirecciones == null || spritesDirecciones.Length < 8 || spriteRenderer == null) return;
+        Vector2 dirAlJugador = ((Vector2)jugador.position - (Vector2)transform.position).normalized;
+        float angulo = Mathf.Atan2(dirAlJugador.y, dirAlJugador.x) * Mathf.Rad2Deg;
+        spriteRenderer.sprite = spritesDirecciones[4];
+        spriteRenderer.transform.rotation = Quaternion.Euler(0, 0, angulo + 90f);
+    }
+
+    void VerificarFaseCombate()
+    {
+        float porcentaje = vida / vidaMaxima;
+        int nuevaFase = 1;
+
+        if (porcentaje <= umbralFase3) nuevaFase = 3;
+        else if (porcentaje <= umbralFase2) nuevaFase = 2;
+
+        if (nuevaFase != faseActual)
+        {
+            faseActual = nuevaFase;
+            OnCambioFase?.Invoke(faseActual);
+            if (estaAtacando)
             {
-                float dir = mirandoDerecha ? -1f : 1f;
-                rb.linearVelocity = new Vector2(dir * velocidad, rb.linearVelocity.y);
-                SetAnim("IsMoving", true);
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-                SetAnim("IsMoving", false);
-                if (!estaAtacando) StartCoroutine(RutinaAtaque());
+                StopAllCoroutines();
+                estaAtacando = false;
+                lluviaActiva = false;
             }
         }
-        else
+    }
+
+    List<EntradaPatron> ObtenerPatronesFaseActual()
+    {
+        switch (faseActual)
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            SetAnim("IsMoving", false);
+            case 2: return (patronesFase2 != null && patronesFase2.Count > 0) ? patronesFase2 : patronesFase1;
+            case 3: return (patronesFase3 != null && patronesFase3.Count > 0) ? patronesFase3 : patronesFase2;
+            default: return patronesFase1;
         }
     }
 
     IEnumerator RutinaAtaque()
     {
         estaAtacando = true;
-        esInvulnerable = true;
-        SetAnim("IsAttacking", true);
-        SetAnim("Hit", false);
-
         yield return new WaitForSeconds(esperaInicial);
-        esInvulnerable = false;
+        var patrones = ObtenerPatronesFaseActual();
 
         if (patrones == null || patrones.Count == 0)
         {
-            SetAnim("IsAttacking", false);
+            int patronIndex = 0;
+            while (!estaMuerto)
+            {
+                if (jugador != null)
+                {
+                    Transform origen = puntoDisparo != null ? puntoDisparo : transform;
+                    Vector2 dir = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
+                    var opc = new OpcionesProyectil { velocidad = 8.5f, vidaUtil = 3.5f };
+
+                    if (patronIndex % 3 == 0)
+                    {
+                        for (int i = -2; i <= 2; i++)
+                        {
+                            Vector2 dirSub = Quaternion.Euler(0, 0, i * 12f) * dir;
+                            InstanciarProyectil(origen, dirSub, opc);
+                        }
+                    }
+                    else if (patronIndex % 3 == 1)
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            float ang = i * 36f;
+                            Vector2 dirRing = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad));
+                            InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirRing, opc);
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            var opcPerseguidor = opc.Clonar();
+                            opcPerseguidor.modo = ModoMovimiento.Perseguidor;
+                            opcPerseguidor.fuerzaPersecucion = 3.5f;
+                            InstanciarProyectilDeTipo(TipoProyectilBoss.Perseguidor, origen, dir, opcPerseguidor);
+                            yield return new WaitForSeconds(0.12f);
+                        }
+                    }
+                    patronIndex++;
+                }
+                yield return new WaitForSeconds(0.75f);
+            }
             estaAtacando = false;
             yield break;
         }
@@ -111,144 +248,104 @@ public class ControladorJefe : MonoBehaviour
         int idx = 0;
         while (true)
         {
+            if (estaMuerto) yield break;
             var entrada = patrones[idx];
-            if (entrada != null)
+            if (entrada != null && entrada.patron != null)
             {
-                if (entrada.retardoAntes > 0f)
-                    yield return new WaitForSeconds(entrada.retardoAntes);
-
-                if (entrada.patron != null)
-                {
-                    var ctx = new ContextoPatron
-                    {
-                        jefe = this,
-                        puntoDisparo = puntoDisparo != null ? puntoDisparo : transform,
-                        jugador = jugador
-                    };
-
-                    if (lluviaActivada) StartCoroutine(LluviaFondo(ctx));
-
-                    yield return StartCoroutine(entrada.patron.Ejecutar(ctx));
-
-                    lluviaActiva = false; // detener lluvia de fondo
-                }
-
-                if (entrada.retardoDespues > 0f)
-                    yield return new WaitForSeconds(entrada.retardoDespues);
+                var ctx = new ContextoPatron { jefe = this, puntoDisparo = puntoDisparo != null ? puntoDisparo : transform, jugador = jugador };
+                yield return StartCoroutine(entrada.patron.Ejecutar(ctx));
             }
-
             idx++;
-            if (idx >= patrones.Count)
-            {
-                if (repetirCiclo) idx = 0;
-                else break;
-            }
+            if (idx >= patrones.Count) { if (repetirCiclo) idx = 0; else break; }
         }
-
-        SetAnim("IsAttacking", false);
         estaAtacando = false;
-    }
-
-    IEnumerator LluviaFondo(ContextoPatron ctx)
-    {
-        lluviaActiva = true;
-        float angulo = 0f;
-        while (lluviaActiva)
-        {
-            ctx.DispararCirculo(lluviaBalasPorAnillo, angulo, lluviaOpciones);
-            angulo += 17f;
-            yield return new WaitForSeconds(lluviaIntervalo);
-        }
     }
 
     public void InstanciarProyectil(Transform origen, Vector2 direccion, OpcionesProyectil opciones)
     {
-        if (prefabProyectil == null) return;
+        InstanciarProyectilDeTipo(TipoProyectilBoss.Energia, origen, direccion, opciones);
+    }
+
+    public void InstanciarProyectilDeTipo(TipoProyectilBoss tipo, Transform origen, Vector2 direccion, OpcionesProyectil opciones)
+    {
+        GameObject prefab = ObtenerPrefabPorTipo(tipo);
+        float daño = ObtenerDañoPorTipo(tipo);
+        if (prefab == null) return;
+
         Vector3 pos = origen != null ? origen.position : transform.position;
-        GameObject go = Instantiate(prefabProyectil, pos, Quaternion.identity);
+        GameObject go = Instantiate(prefab, pos, Quaternion.identity);
         var p = go.GetComponent<ProyectilJefe>();
-        if (p != null) p.Configurar(direccion.normalized, opciones, dañoProyectil);
+        if (p != null) p.Configurar(direccion.normalized, opciones, daño);
 
         float rot = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
         go.transform.rotation = Quaternion.Euler(0, 0, rot);
     }
 
-    void Girar()
+    GameObject ObtenerPrefabPorTipo(TipoProyectilBoss tipo)
     {
-        mirandoDerecha = !mirandoDerecha;
-        var e = transform.localScale; e.x *= -1; transform.localScale = e;
+        switch (tipo)
+        {
+            case TipoProyectilBoss.Plasma: return prefabProyectilPlasma != null ? prefabProyectilPlasma : prefabProyectil;
+            case TipoProyectilBoss.Perseguidor: return prefabProyectilPerseguidor != null ? prefabProyectilPerseguidor : prefabProyectil;
+            default: return prefabProyectil;
+        }
     }
+
+    float ObtenerDañoPorTipo(TipoProyectilBoss tipo)
+    {
+        switch (tipo)
+        {
+            case TipoProyectilBoss.Plasma: return dañoPlasma;
+            case TipoProyectilBoss.Perseguidor: return dañoPerseguidor;
+            default: return dañoProyectil;
+        }
+    }
+
+    public void TakeDamage(float damage) => AplicarDaño(damage);
 
     public void AplicarDaño(float daño)
     {
         if (esInvulnerable || estaMuerto) return;
+        vida -= Mathf.Abs(daño);
 
-        float dir = daño / Mathf.Abs(daño);
-        daño = Mathf.Abs(daño);
-        vida -= daño;
-
-        if (vida <= 0) Morir();
-        else if (estaAtacando) StartCoroutine(ParpadeoDaño());
-        else
-        {
-            SetAnim("Hit", true);
-            rb.linearVelocity = Vector2.zero;
-            rb.AddForce(new Vector2(dir * 400f, 100f));
-            StartCoroutine(TiempoGolpe());
-        }
+        if (vida <= 0f) { vida = 0f; Morir(); }
+        else StartCoroutine(ParpadeoDaño());
     }
 
     IEnumerator ParpadeoDaño()
     {
-        var sr = GetComponentInChildren<SpriteRenderer>();
-        if (sr != null)
+        estaGolpeado = true;
+        if (spriteRenderer != null)
         {
-            Color original = sr.color;
-            sr.color = Color.red;
-            yield return new WaitForSeconds(0.08f);
-            sr.color = original;
+            Color original = spriteRenderer.color;
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.06f);
+            spriteRenderer.color = original;
         }
+        estaGolpeado = false;
     }
 
     void Morir()
     {
         estaMuerto = true;
-        SetAnim("IsDead", true);
-        rb.linearVelocity = Vector2.zero;
         estaAtacando = false;
         StopAllCoroutines();
-        StartCoroutine(DestruirJefe());
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        OnMuerte?.Invoke();
+        StartCoroutine(AnimacionMuerte());
     }
 
-    IEnumerator TiempoGolpe()
+    IEnumerator AnimacionMuerte()
     {
-        estaGolpeado = true;
-        esInvulnerable = true;
-        yield return new WaitForSeconds(0.15f);
-        estaGolpeado = false;
-        esInvulnerable = false;
-        SetAnim("Hit", false);
-    }
-
-    IEnumerator DestruirJefe()
-    {
-        var capsula = GetComponent<CapsuleCollider2D>();
-        if (capsula != null)
+        if (spriteRenderer != null)
         {
-            capsula.size = new Vector2(1f, 0.25f);
-            capsula.offset = new Vector2(0f, -0.8f);
-            capsula.direction = CapsuleDirection2D.Horizontal;
+            for (int i = 0; i < 10; i++)
+            {
+                spriteRenderer.color = (i % 2 == 0) ? Color.white : Color.red;
+                transform.localScale = Vector3.one * (1f + Mathf.Sin(i * 0.5f) * 0.15f);
+                yield return new WaitForSeconds(0.1f);
+            }
         }
-        yield return new WaitForSeconds(0.25f);
-        rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
-    }
-
-    void OnCollisionStay2D(Collision2D colision)
-    {
-        if (colision.gameObject.CompareTag("Player") && !estaMuerto) { }
-        ;
-        //colision.gameObject.GetComponent<PlayerShip2D>()?.ApplyDamage(2f);
     }
 }
