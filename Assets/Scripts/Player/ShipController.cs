@@ -51,7 +51,7 @@ public class ShipController : MonoBehaviour
 
     // --- Velocidad base PERSISTENTE (fuera del dash) ---
     Vector2 baseVelocity;
-
+    void Start() => SceneLoader.Instance.LoadLevel("Nivel1");
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
