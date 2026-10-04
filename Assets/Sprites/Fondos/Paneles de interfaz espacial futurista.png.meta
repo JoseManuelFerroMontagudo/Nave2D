@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 881c0916b4069124fb92fbb84dc25f9f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2327811502592881943
+    second: Paneles de interfaz espacial futurista_0
+  - first:
+      213: -4426986562077248657
+    second: Paneles de interfaz espacial futurista_1
+  - first:
+      213: 5407664061379409022
+    second: Paneles de interfaz espacial futurista_2
+  - first:
+      213: -1930592890455354654
+    second: Paneles de interfaz espacial futurista_3
+  - first:
+      213: 6975033041211706522
+    second: Paneles de interfaz espacial futurista_4
+  - first:
+      213: 1584541016551627044
+    second: Paneles de interfaz espacial futurista_5
+  - first:
+      213: 4788217860501381924
+    second: Paneles de interfaz espacial futurista_6
+  - first:
+      213: 4187937363667061764
+    second: Paneles de interfaz espacial futurista_7
+  - first:
+      213: -5140388438489432733
+    second: Paneles de interfaz espacial futurista_8
+  - first:
+      213: -7905446190185598417
+    second: Paneles de interfaz espacial futurista_9
+  - first:
+      213: -6908687734551045864
+    second: Paneles de interfaz espacial futurista_10
+  - first:
+      213: 641473123656655176
+    second: Paneles de interfaz espacial futurista_11
+  - first:
+      213: 6771826840695960488
+    second: Paneles de interfaz espacial futurista_12
+  - first:
+      213: -1237379261931250029
+    second: Paneles de interfaz espacial futurista_13
+  - first:
+      213: 2574904458109741365
+    second: Paneles de interfaz espacial futurista_14
+  - first:
+      213: 2033237748065293648
+    second: Paneles de interfaz espacial futurista_15
+  - first:
+      213: -3923551690456775954
+    second: Paneles de interfaz espacial futurista_16
+  - first:
+      213: -4513339430165550802
+    second: Paneles de interfaz espacial futurista_17
+  - first:
+      213: -6944478059608436478
+    second: Paneles de interfaz espacial futurista_18
+  - first:
+      213: 4142478763356565599
+    second: Paneles de interfaz espacial futurista_19
+  - first:
+      213: 523920909586838195
+    second: Paneles de interfaz espacial futurista_20
+  - first:
+      213: 8088143646228360659
+    second: Paneles de interfaz espacial futurista_21
+  - first:
+      213: -6485990267617950928
+    second: Paneles de interfaz espacial futurista_22
+  - first:
+      213: 587402632025052069
+    second: Paneles de interfaz espacial futurista_23
+  - first:
+      213: -5650791088565903618
+    second: Paneles de interfaz espacial futurista_24
+  - first:
+      213: -8622208678407868112
+    second: Paneles de interfaz espacial futurista_25
+  - first:
+      213: -4820455811062604525
+    second: Paneles de interfaz espacial futurista_26
+  - first:
+      213: 3698849095389570468
+    second: Paneles de interfaz espacial futurista_27
+  - first:
+      213: 7451312680555768780
+    second: Paneles de interfaz espacial futurista_28
+  - first:
+      213: -1899807502961936765
+    second: Paneles de interfaz espacial futurista_29
+  - first:
+      213: -633916196908600714
+    second: Paneles de interfaz espacial futurista_30
+  - first:
+      213: 779909439032959395
+    second: Paneles de interfaz espacial futurista_31
+  - first:
+      213: -6606551617648108163
+    second: Paneles de interfaz espacial futurista_32
+  - first:
+      213: 1831645910646856511
+    second: Paneles de interfaz espacial futurista_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 674
+        width: 1001
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea02eb85c3f1bfd0800000000000000
+      internalID: -2327811502592881943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_1
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 823
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6335fd4d2f2092c0800000000000000
+      internalID: -4426986562077248657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 791
+        width: 142
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e747a2310d1eb0b40800000000000000
+      internalID: 5407664061379409022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_3
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 718
+        width: 179
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2938eaef72535e0800000000000000
+      internalID: -1930592890455354654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_4
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 763
+        width: 235
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c490e789b4cc060800000000000000
+      internalID: 6975033041211706522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 5
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4299897c8ab6df510800000000000000
+      internalID: 1584541016551627044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187
+        width: 954
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423ad5a66ca237240800000000000000
+      internalID: 4788217860501381924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_7
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 273
+        width: 788
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c06f6f7da8e1a30800000000000000
+      internalID: 4187937363667061764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_8
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 268
+        width: 168
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36dff4c33fba9a8b0800000000000000
+      internalID: -5140388438489432733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_9
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 17
+        width: 446
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22b50b23963a4290800000000000000
+      internalID: -7905446190185598417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_10
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 17
+        width: 512
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8199cf5fb196f10a0800000000000000
+      internalID: -6908687734551045864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_11
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 146
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841e3844868f6e800800000000000000
+      internalID: 641473123656655176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_12
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 150
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3732802ac5afd50800000000000000
+      internalID: 6771826840695960488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_13
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 72
+        width: 32
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e17200e12f3dee0800000000000000
+      internalID: -1237379261931250029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_14
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 161
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539633456f5ebb320800000000000000
+      internalID: 2574904458109741365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_15
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 134
+        width: 81
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055d85595f2873c10800000000000000
+      internalID: 2033237748065293648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_16
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 193
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee2c070868ebc89c0800000000000000
+      internalID: -3923551690456775954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_17
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 88
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29e73273b56d51c0800000000000000
+      internalID: -4513339430165550802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_18
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 102
+        width: 63
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2019b8a8ff140af90800000000000000
+      internalID: -6944478059608436478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_19
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 144
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50b77bcc7a0d7930800000000000000
+      internalID: 4142478763356565599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_20
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 148
+        width: 54
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2b25a9a47554700800000000000000
+      internalID: 523920909586838195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_21
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 66
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd26cd1bcbde3070800000000000000
+      internalID: 8088143646228360659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_22
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 161
+        width: 45
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033cdf147322df5a0800000000000000
+      internalID: -6485990267617950928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_23
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 144
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a39bf5e49fd62800800000000000000
+      internalID: 587402632025052069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_24
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 145
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe1612b17b5491b0800000000000000
+      internalID: -5650791088565903618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_25
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 104
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0317530b3e2c75880800000000000000
+      internalID: -8622208678407868112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_26
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 136
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d552ecafc4a1db0800000000000000
+      internalID: -4820455811062604525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_27
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 137
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a56878a7a3f45330800000000000000
+      internalID: 3698849095389570468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_28
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 98
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbe3ea7761686760800000000000000
+      internalID: 7451312680555768780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_29
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 86
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386f454442782a5e0800000000000000
+      internalID: -1899807502961936765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_30
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 96
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67275e9d390e337f0800000000000000
+      internalID: -633916196908600714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_31
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 102
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1a88ea08bc2da00800000000000000
+      internalID: 779909439032959395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_32
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 55
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d5dc78e40d054a0800000000000000
+      internalID: -6606551617648108163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paneles de interfaz espacial futurista_33
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b176250405b6910800000000000000
+      internalID: 1831645910646856511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paneles de interfaz espacial futurista_0: -2327811502592881943
+      Paneles de interfaz espacial futurista_1: -4426986562077248657
+      Paneles de interfaz espacial futurista_10: -6908687734551045864
+      Paneles de interfaz espacial futurista_11: 641473123656655176
+      Paneles de interfaz espacial futurista_12: 6771826840695960488
+      Paneles de interfaz espacial futurista_13: -1237379261931250029
+      Paneles de interfaz espacial futurista_14: 2574904458109741365
+      Paneles de interfaz espacial futurista_15: 2033237748065293648
+      Paneles de interfaz espacial futurista_16: -3923551690456775954
+      Paneles de interfaz espacial futurista_17: -4513339430165550802
+      Paneles de interfaz espacial futurista_18: -6944478059608436478
+      Paneles de interfaz espacial futurista_19: 4142478763356565599
+      Paneles de interfaz espacial futurista_2: 5407664061379409022
+      Paneles de interfaz espacial futurista_20: 523920909586838195
+      Paneles de interfaz espacial futurista_21: 8088143646228360659
+      Paneles de interfaz espacial futurista_22: -6485990267617950928
+      Paneles de interfaz espacial futurista_23: 587402632025052069
+      Paneles de interfaz espacial futurista_24: -5650791088565903618
+      Paneles de interfaz espacial futurista_25: -8622208678407868112
+      Paneles de interfaz espacial futurista_26: -4820455811062604525
+      Paneles de interfaz espacial futurista_27: 3698849095389570468
+      Paneles de interfaz espacial futurista_28: 7451312680555768780
+      Paneles de interfaz espacial futurista_29: -1899807502961936765
+      Paneles de interfaz espacial futurista_3: -1930592890455354654
+      Paneles de interfaz espacial futurista_30: -633916196908600714
+      Paneles de interfaz espacial futurista_31: 779909439032959395
+      Paneles de interfaz espacial futurista_32: -6606551617648108163
+      Paneles de interfaz espacial futurista_33: 1831645910646856511
+      Paneles de interfaz espacial futurista_4: 6975033041211706522
+      Paneles de interfaz espacial futurista_5: 1584541016551627044
+      Paneles de interfaz espacial futurista_6: 4788217860501381924
+      Paneles de interfaz espacial futurista_7: 4187937363667061764
+      Paneles de interfaz espacial futurista_8: -5140388438489432733
+      Paneles de interfaz espacial futurista_9: -7905446190185598417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
