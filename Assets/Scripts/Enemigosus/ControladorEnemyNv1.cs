@@ -33,6 +33,7 @@ public class ControladorEnemyNv1 : MonoBehaviour
 
     void Awake()
     {
+        if (vida < 30f) vida = 50f;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         simuladorJefe = GetComponent<ControladorJefe>();
 

@@ -5,13 +5,13 @@ using System.Collections.Generic;
 /// <summary>
 /// Controlador del Boss para un shooter espacial 2D con vista isométrica.
 /// Mantiene al boss posicionado en la parte superior del encuadre del jugador,
-/// moviéndose con un vaivén sinusoidal suave y fluido (estilo arcade espacial)
-/// mientras dispara patrones dinámicos de alta velocidad.
+/// moviéndose con un vaivén sinusoidal suave y fluido (estilo arcade espacial).
+/// Incluye patrones de disparo sostenidos en ráfaga continua (Escopeta masiva, Espiral giratoria, etc.).
 /// </summary>
 public class ControladorJefe : MonoBehaviour
 {
     [Header("Estadísticas")]
-    public float vida = 300f; // 300 HP para una pelea épica y duradera
+    public float vida = 1500f; // 1500 HP para una pelea épica y duradera
     public float velocidadMovimiento = 9f;
     public float distanciaFrenteJugador = 4.0f; // Distancia fija al frente del encuadre
     public float amplitudOndaHorizontal = 3.2f; // Ancho del vaivén izquierda-derecha
@@ -60,7 +60,7 @@ public class ControladorJefe : MonoBehaviour
     public float suavizadoMovimiento = 8f;
 
     private float vidaMaxima;
-    public float VidaMaxima => vidaMaxima > 0 ? vidaMaxima : 300f;
+    public float VidaMaxima => vidaMaxima > 0 ? vidaMaxima : 1500f;
 
     private bool estaMuerto = false;
     private bool estaAtacando = false;
@@ -81,6 +81,9 @@ public class ControladorJefe : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        // Forzar mínimo 1500 de vida para asegurar una pelea larga y duradera
+        if (vida < 500f) vida = 1500f;
         vidaMaxima = vida;
 
         if (rb != null)
@@ -127,17 +130,11 @@ public class ControladorJefe : MonoBehaviour
             StartCoroutine(RutinaAtaque());
     }
 
-    /// <summary>
-    /// Posiciona al boss frente al jugador en la pantalla y se mueve en ondas sinusoides suaves (izquierda-derecha).
-    /// </summary>
     void MoverHaciaObjetivo()
     {
         if (estaGolpeado || rb == null) return;
 
-        // Punto base al frente del jugador
         Vector3 posFrente = jugador.position + Vector3.up * distanciaFrenteJugador;
-
-        // Vaivén sinusoidal elegante izquierda / derecha
         float offsetHorizontal = Mathf.Sin(tiempoVivo * frecuenciaOndaHorizontal) * amplitudOndaHorizontal;
         Vector3 posDeseada = posFrente + Vector3.right * offsetHorizontal;
 
@@ -214,7 +211,7 @@ public class ControladorJefe : MonoBehaviour
         yield return new WaitForSeconds(esperaInicial);
         var patrones = ObtenerPatronesFaseActual();
 
-        // ATAQUE RÁPIDO Arcade (Fallback dinámico si no hay ScriptableObjects)
+        // PATRONES LARGOS Y SOSTENIDOS ESTILO ARCADE BARRAGE (Fallback si no hay ScriptableObjects)
         if (patrones == null || patrones.Count == 0)
         {
             int patronIndex = 0;
@@ -224,42 +221,76 @@ public class ControladorJefe : MonoBehaviour
                 {
                     Transform origen = puntoDisparo != null ? puntoDisparo : transform;
                     Vector2 dir = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
-                    var opc = new OpcionesProyectil { velocidad = 9.5f, vidaUtil = 4f };
+                    var opc = new OpcionesProyectil { velocidad = 8.5f, vidaUtil = 4.5f };
 
-                    if (patronIndex % 3 == 0)
+                    int selector = patronIndex % 4;
+
+                    // PATRÓN 1: RÁFAGA CONTINUA DE ESCOPETAS (Sustained Shotgun Waves)
+                    if (selector == 0)
                     {
-                        // Abanico rápido de 5 disparos
-                        for (int i = -2; i <= 2; i++)
+                        for (int wave = 0; wave < 8; wave++)
                         {
-                            Vector2 dirSub = Quaternion.Euler(0, 0, i * 14f) * dir;
-                            InstanciarProyectil(origen, dirSub, opc);
+                            if (estaMuerto || jugador == null) break;
+                            Vector2 dirActual = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
+
+                            // Escopeta masiva de 7 proyectiles en abanico
+                            for (int i = -3; i <= 3; i++)
+                            {
+                                Vector2 dirSub = Quaternion.Euler(0, 0, i * 11f) * dirActual;
+                                InstanciarProyectil(origen, dirSub, opc);
+                            }
+                            yield return new WaitForSeconds(0.14f); // Ráfaga continua de escopetas seguidas
                         }
                     }
-                    else if (patronIndex % 3 == 1)
+                    // PATRÓN 2: ESPIRAL GIRATORIA CONTINUA (360° Rotating Spiral Stream)
+                    else if (selector == 1)
                     {
-                        // Anillo de plasma expansivo (12 disparos)
-                        for (int i = 0; i < 12; i++)
+                        float anguloActual = 0f;
+                        for (int i = 0; i < 30; i++)
                         {
-                            float ang = i * 30f;
-                            Vector2 dirRing = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad));
-                            InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirRing, opc);
-                        }
-                    }
-                    else
-                    {
-                        // Ráfaga perseguidora continua
-                        for (int i = 0; i < 4; i++)
-                        {
-                            var opcPerseguidor = opc.Clonar();
-                            opcPerseguidor.modo = ModoMovimiento.Perseguidor;
-                            opcPerseguidor.fuerzaPersecucion = 4.0f;
-                            InstanciarProyectilDeTipo(TipoProyectilBoss.Perseguidor, origen, dir, opcPerseguidor);
+                            if (estaMuerto) break;
+                            Vector2 dirSpiral = new Vector2(Mathf.Cos(anguloActual * Mathf.Deg2Rad), Mathf.Sin(anguloActual * Mathf.Deg2Rad));
+                            InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirSpiral, opc);
+                            anguloActual += 24f;
                             yield return new WaitForSeconds(0.08f);
                         }
                     }
+                    // PATRÓN 3: LLUVIA DE MISILES PERSEGUIDORES (Homing Salvo)
+                    else if (selector == 2)
+                    {
+                        for (int i = 0; i < 6; i++)
+                        {
+                            if (estaMuerto || jugador == null) break;
+                            Vector2 dirHacia = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
+                            var opcPerseguidor = opc.Clonar();
+                            opcPerseguidor.modo = ModoMovimiento.Perseguidor;
+                            opcPerseguidor.fuerzaPersecucion = 4.5f;
+                            InstanciarProyectilDeTipo(TipoProyectilBoss.Perseguidor, origen, dirHacia, opcPerseguidor);
+                            yield return new WaitForSeconds(0.15f);
+                        }
+                    }
+                    // PATRÓN 4: TRIPLE ANILLO DE PLASMA EXPANSIVO (Ring Waves)
+                    else
+                    {
+                        for (int ring = 0; ring < 3; ring++)
+                        {
+                            if (estaMuerto) break;
+                            float offset = ring * 12f;
+                            for (int i = 0; i < 14; i++)
+                            {
+                                float ang = i * (360f / 14f) + offset;
+                                Vector2 dirRing = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad));
+                                InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirRing, opc);
+                            }
+                            yield return new WaitForSeconds(0.28f);
+                        }
+                    }
+
                     patronIndex++;
                 }
-                yield return new WaitForSeconds(0.45f); // Cadencia de disparo ultra-rápida y dinámica
+
+                // Pausa breve entre patrones sostenidos
+                yield return new WaitForSeconds(0.6f);
             }
             estaAtacando = false;
             yield break;

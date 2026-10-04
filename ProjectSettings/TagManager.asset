@@ -8,6 +8,8 @@ TagManager:
   - Shield
   - Muros
   - Bullet
+  - Attacks
+  - Boss
   layers:
   - Default
   - TransparentFX
