@@ -8,11 +8,6 @@ public class SceneLoader : MonoBehaviour
     private string currentLevel;
 
     void Awake() => Instance = this;
-    /* void Awake()
-    {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
-        Instance = this;
-    } */
 
     public void LoadLevel(string sceneName)
     {

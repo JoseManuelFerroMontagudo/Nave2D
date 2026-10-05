@@ -5,163 +5,132 @@ using UnityEngine.InputSystem;
 public class ShieldController : MonoBehaviour
 {
     [Header("Input")]
-    [SerializeField] InputActionReference shieldAction;
+    public bool escudoMantenido;
 
     [Header("Energía")]
-    [SerializeField] float maxEnergy = 100f;
-    [SerializeField] float drainRate = 25f;
-    [SerializeField] float regenRate = 10f;
-    [SerializeField] float overloadCooldown = 3f;
+    public int drenajePorSegundo = 25;
+    public float enfriamientoSobrecarga = 3f;
 
     [Header("Rotación")]
-    [SerializeField] bool spinWhileActive = true;
-    [SerializeField] float spinDegreesPerSecond = 60f;
-    [SerializeField] float impactAngleOffset = 180f;
-    [SerializeField] float impactHoldSeconds = 0.6f;
+    public bool girarMientrasActivo = true;
+    public float gradosPorSegundo = 60f;
+    public float desfaseAnguloImpacto = 180f;
+    public float duracionImpacto = 0.6f;
 
-    enum Phase { Off, Active, Deactivating, Destroying }
-    Phase phase = Phase.Off;
+    enum Fase { Apagado, Activo, Desactivando, Destruyendo }
+    Fase fase = Fase.Apagado;
 
-    float energy;
-    float cooldownRemaining;
+    float enfriamientoRestante;
+    float acumuladorDrenaje;
+    float anguloGiro;
+    float anguloImpacto;
+    float tiempoImpacto;
 
-    Animator animator;
-    SpriteRenderer shieldVisual;
-    Collider2D shieldCollider;
-
-    float spinAngle;          // ángulo acumulado del giro continuo
-    float impactAngle;        // ángulo objetivo cuando hay impacto
-    float impactTimer;        // >0 significa "estoy orientado al impacto"
-
-    static readonly int P_IsActive = Animator.StringToHash("IsActive");
-    static readonly int P_Impact = Animator.StringToHash("Impact");
-    static readonly int P_Destroy = Animator.StringToHash("Destroy");
+    Animator animador;
+    SpriteRenderer visual;
+    Collider2D colisionador;
+    Stats estadisticas;
 
     void Awake()
     {
-        animator = GetComponent<Animator>();
-        shieldVisual = GetComponent<SpriteRenderer>();
-        shieldCollider = GetComponent<Collider2D>();
+        animador = GetComponent<Animator>();
+        visual = GetComponent<SpriteRenderer>();
+        colisionador = GetComponent<Collider2D>();
+        estadisticas = GetComponentInParent<Stats>();
 
-        energy = maxEnergy;
-        SetShieldVisible(false);
+        if (estadisticas == null)
+            Debug.LogError($"[ShieldController] No se encontró Stats en el padre de {name}");
+
+        MostrarEscudo(false);
     }
+
+    public void OnShield(InputValue valor) => escudoMantenido = valor.isPressed;
 
     void Update()
     {
-        if (cooldownRemaining > 0f) cooldownRemaining -= Time.deltaTime;
-        if (impactTimer > 0f) impactTimer -= Time.deltaTime;
+        if (enfriamientoRestante > 0f) enfriamientoRestante -= Time.deltaTime;
+        if (tiempoImpacto > 0f) tiempoImpacto -= Time.deltaTime;
+        if (estadisticas == null) return;
 
-        bool held = shieldAction != null && shieldAction.action.IsPressed();
+        // Regeneración delegada a Stats (solo cuando NO está activo ni sobrecargado)
+        if (fase == Fase.Apagado || fase == Fase.Desactivando)
+            estadisticas.RegenerarEnergia(Time.deltaTime);
 
-        if (phase == Phase.Off || phase == Phase.Deactivating)
+        if (fase == Fase.Apagado)
         {
-            if (energy < maxEnergy)
-                energy = Mathf.Min(maxEnergy, energy + regenRate * Time.deltaTime);
+            if (escudoMantenido && enfriamientoRestante <= 0f && estadisticas.TieneEnergia)
+                Activar();
+            return;
         }
 
-        switch (phase)
-        {
-            case Phase.Off:
-                if (held && cooldownRemaining <= 0f && energy > 0f)
-                    Activate();
-                break;
+        if (fase != Fase.Activo) return;
 
-            case Phase.Active:
-                if (!held) Deactivate();
-                else
-                {
-                    energy -= drainRate * Time.deltaTime;
-                    if (energy <= 0f)
-                    {
-                        energy = 0f;
-                        Overload();
-                    }
-                }
-                break;
+        if (!escudoMantenido) { Desactivar(); return; }
+
+        acumuladorDrenaje += drenajePorSegundo * Time.deltaTime;
+        int entero = Mathf.FloorToInt(acumuladorDrenaje);
+        if (entero > 0)
+        {
+            estadisticas.DrenarEnergia(entero);
+            acumuladorDrenaje -= entero;
         }
+
+        if (estadisticas.energia <= 0) Sobrecargar();
     }
 
-    // LateUpdate corre DESPUÉS del Animator -> nuestra rotación gana
     void LateUpdate()
     {
-        if (impactTimer > 0f)
-        {
-            // Orientado al impacto
-            transform.rotation = Quaternion.Euler(0f, 0f, impactAngle);
-        }
-        else if (spinWhileActive && phase == Phase.Active)
-        {
-            // Giro continuo (lo que antes hacía la animación)
-            spinAngle += spinDegreesPerSecond * Time.deltaTime;
-            spinAngle %= 360f;
-            transform.rotation = Quaternion.Euler(0f, 0f, spinAngle);
-        }
+        if (tiempoImpacto > 0f)
+            transform.rotation = Quaternion.Euler(0f, 0f, anguloImpacto);
+        else if (girarMientrasActivo && fase == Fase.Activo)
+            transform.rotation = Quaternion.Euler(0f, 0f, anguloGiro += gradosPorSegundo * Time.deltaTime);
     }
 
-    void Activate()
+    void Activar()
     {
-        phase = Phase.Active;
-        spinAngle = 0f;        // reinicia el giro al activar
-        impactTimer = 0f;
-        SetShieldVisible(true);
-        animator.SetBool(P_IsActive, true);
+        fase = Fase.Activo;
+        anguloGiro = 0f;
+        tiempoImpacto = 0f;
+        acumuladorDrenaje = 0f;
+        MostrarEscudo(true);
+        animador.SetBool("IsActive", true);
     }
 
-    void Deactivate()
+    void Desactivar()
     {
-        phase = Phase.Deactivating;
-        animator.SetBool(P_IsActive, false);
-        shieldCollider.enabled = false;
+        fase = Fase.Desactivando;
+        animador.SetBool("IsActive", false);
+        colisionador.enabled = false;
     }
 
-    void Overload()
+    void Sobrecargar()
     {
-        phase = Phase.Destroying;
-        cooldownRemaining = overloadCooldown;
-        animator.SetBool(P_IsActive, false);
-        animator.SetTrigger(P_Destroy);
-        shieldCollider.enabled = false;
+        fase = Fase.Destruyendo;
+        enfriamientoRestante = enfriamientoSobrecarga;
+        acumuladorDrenaje = 0f;
+        animador.SetBool("IsActive", false);
+        animador.SetTrigger("Destroy");
+        colisionador.enabled = false;
     }
 
-    public void AE_ActivateFinished() { }
-
-    public void AE_DeactivateFinished()
+    public void TerminarEscudo()
     {
-        if (phase == Phase.Deactivating)
-        {
-            SetShieldVisible(false);
-            phase = Phase.Off;
-        }
+        if (fase != Fase.Desactivando && fase != Fase.Destruyendo) return;
+        MostrarEscudo(false);
+        fase = Fase.Apagado;
     }
 
-    public void AE_DestroyFinished()
+    void MostrarEscudo(bool activo) => visual.enabled = colisionador.enabled = activo;
+
+    void OnTriggerEnter2D(Collider2D otro)
     {
-        if (phase == Phase.Destroying)
-        {
-            SetShieldVisible(false);
-            phase = Phase.Off;
-        }
-    }
+        if (fase != Fase.Activo || !otro.CompareTag("Bullet")) return;
 
-    void SetShieldVisible(bool on)
-    {
-        shieldVisual.enabled = on;
-        shieldCollider.enabled = on;
-    }
+        Vector2 dir = ((Vector2)otro.transform.position - (Vector2)transform.position).normalized;
+        anguloImpacto = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + desfaseAnguloImpacto;
+        tiempoImpacto = duracionImpacto;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (phase != Phase.Active) return;
-        if (!other.CompareTag("Bullet")) return;
-
-        Vector2 dir = ((Vector2)other.transform.position - (Vector2)transform.position).normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-        impactAngle = angle + impactAngleOffset;
-        impactTimer = impactHoldSeconds;   // durante este rato el escudo mira al impacto
-
-        animator.SetTrigger(P_Impact);
-        Destroy(other.gameObject);  // destruye la bala al impactar con el escudo
+        animador.SetTrigger("Impact");
+        Destroy(otro.gameObject);
     }
 }

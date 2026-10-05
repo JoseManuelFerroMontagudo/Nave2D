@@ -2,211 +2,133 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Stats))]
 public class ShipController : MonoBehaviour
 {
-    [Header("Thrust")]
-    [SerializeField] float thrustAcceleration = 12f;
-    [SerializeField] float maxSpeed = 10f;
-    [SerializeField] float linearDamping = 0.15f;
+    [Header("Propulsión")]
+    public float aceleracionEmpuje = 24f;
+    public float velocidadMaxima = 20f;
 
-    [Header("Rotation")]
-    [SerializeField] float mouseSensitivity = 0.15f;
-    [Header("Rotation Smoothing")]
-    [SerializeField] float rotationSmoothTime = 0.08f;   // 0 = sin suavizado, mayor = más suave
-    [SerializeField] float maxRotationSpeed = 720f;      // grados/seg (evita saltos enormes)
+    [Header("Rotación")]
+    public float zonaMuertaRaton = 0.1f;
+    public float velocidadRotacionMaxima = 120f;
+    const float respuestaRotacion = 18f;
 
-    float targetRotation;
-    float rotationVelocity;   // usado por SmoothDampAngle
+    [Header("Giro 180")]
+    public float respuestaGiro = 10f;   // antes "velocidadGiro"; ahora es constante de suavizado
+    public int costoGiro = 20;
 
-    [Header("U-Turn")]
-    [SerializeField] float uTurnSpeed = 540f;
+    [Header("Impulso lateral")]
+    public float velocidadImpulso = 40f;
+    public float duracionImpulso = 0.15f;
+    public int costoImpulso = 10;
 
-    [Header("Dash (doble tap)")]
-    [SerializeField] float dashSpeed = 25f;
-    [SerializeField] float dashDuration = 0.15f;
-    [SerializeField] float doubleTapWindow = 0.30f;
+    [Header("Freno")]
+    public float desaceleracionFreno = 15f;
+    public float umbralParadaFreno = 0.05f;
 
-    [Header("Brake")]
-    [SerializeField] float brakeDeceleration = 15f;
-    [SerializeField] float brakeStopThreshold = 0.05f;
+    Rigidbody2D cuerpo;
+    Stats estadisticas;
 
-    Rigidbody2D rb;
+    Vector2 entradaMovimiento;
+    Vector2? posRatonPantalla;
+    Vector2 velocidadBase, vectorImpulso;
+    float rotacionObjetivo, objetivoGiro, tiempoImpulsoRestante;
+    bool frenando, girando;
 
-    // --- Estado de input ---
-    Vector2 moveInput;
-    Vector2 lastMoveInput;
-    Vector2 pendingMouseDelta;
-    bool braking;
-
-    // --- U-Turn ---
-    bool uTurning;
-    float uTurnTarget;
-
-    // --- Dash ---
-    Vector2 dashVelocity;
-    bool dashActive;
-    float dashTimeRemaining;
-    readonly float[] lastTapTimes = new float[4];
-    static readonly Vector2[] dirs = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
-
-    // --- Velocidad base PERSISTENTE (fuera del dash) ---
-    Vector2 baseVelocity;
     void Start() => SceneLoader.Instance.LoadLevel("Nivel1");
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-        rb.linearDamping = 0f;
-        rb.angularDamping = 0f;
-        targetRotation = rb.rotation;
-        for (int i = 0; i < lastTapTimes.Length; i++) lastTapTimes[i] = -999f;
+        cuerpo = GetComponent<Rigidbody2D>();
+        estadisticas = GetComponent<Stats>();
+        rotacionObjetivo = cuerpo.rotation;
     }
 
     // ================== INPUT ==================
+    public void OnMove(InputValue valor) => entradaMovimiento = valor.Get<Vector2>();
+    public void OnLook(InputValue valor) => posRatonPantalla = valor.Get<Vector2>();
+    public void OnBrake(InputValue valor) { if (valor.isPressed) frenando = true; }
 
-    public void OnMove(InputValue value)
+    public void OnUTurn(InputValue valor)
     {
-        Vector2 newInput = value.Get<Vector2>();
-        DetectDoubleTap(newInput);
-        moveInput = newInput;
-        lastMoveInput = newInput;
+        if (!valor.isPressed || girando || estadisticas == null || estadisticas.energia < costoGiro) return;
+        estadisticas.DrenarEnergia(costoGiro);
+        girando = true;
+        frenando = false;
+        rotacionObjetivo = objetivoGiro = cuerpo.rotation + 180f;
     }
 
-    public void OnLook(InputValue value)
+    public void OnDash(InputValue valor)
     {
-        Vector2 mouseDelta = value.Get<Vector2>();
-        targetRotation -= mouseDelta.x * mouseSensitivity;
-    }
-
-    public void OnUTurn(InputValue value)
-    {
-        if (!value.isPressed || uTurning) return;
-        uTurning = true;
-        uTurnTarget = rb.rotation + 180f;
-        targetRotation = uTurnTarget;   // ← el ratón ya no manda
-        rotationVelocity = 0f;          // ← evita que SmoothDamp empuje al volver
-        braking = false;
-    }
-
-    // CallbackContext: performed/canceled son 100% fiables para botones
-    public void OnBrake(InputValue value)
-    {
-        if (value.isPressed) braking = true;
-    }
-
-    // ================== DOBLE TAP ==================
-
-    void DetectDoubleTap(Vector2 newInput)
-    {
-        for (int i = 0; i < dirs.Length; i++)
-        {
-            bool nowPressed = Vector2.Dot(newInput, dirs[i]) > 0.5f;
-            bool wasPressed = Vector2.Dot(lastMoveInput, dirs[i]) > 0.5f;
-
-            if (nowPressed && !wasPressed)
-            {
-                if (Time.time - lastTapTimes[i] <= doubleTapWindow)
-                {
-                    TriggerDash(dirs[i]);
-                    lastTapTimes[i] = -999f;
-                }
-                else
-                {
-                    lastTapTimes[i] = Time.time;
-                }
-            }
-        }
-    }
-
-    void TriggerDash(Vector2 localDir)
-    {
-        Vector2 worldDir = transform.TransformDirection(localDir.normalized);
-        dashVelocity = worldDir * dashSpeed;
-        dashActive = true;
-        dashTimeRemaining = dashDuration;
+        float eje = valor.Get<float>();
+        if (Mathf.Abs(eje) < 0.5f || estadisticas == null || estadisticas.energia < costoImpulso) return;
+        estadisticas.DrenarEnergia(costoImpulso);
+        Vector2 direccionLocal = eje < 0f ? Vector2.left : Vector2.right;
+        vectorImpulso = cuerpo.transform.TransformDirection(direccionLocal) * velocidadImpulso;
+        tiempoImpulsoRestante = duracionImpulso;
     }
 
     // ================== FÍSICA ==================
-
     void FixedUpdate()
     {
-        // --- Rotación con ratón ---
-        if (!uTurning)
-        {
-            // SmoothDampAngle se encarga del wrap-around de 360º
-            float newRot = Mathf.SmoothDampAngle(
-                rb.rotation,
-                targetRotation,
-                ref rotationVelocity,
-                rotationSmoothTime,
-                maxRotationSpeed,
-                Time.fixedDeltaTime
-            );
-            rb.MoveRotation(newRot);
-        }
+        ActualizarRotacion();
+        ActualizarEmpujeYFreno();
+        if (tiempoImpulsoRestante > 0f) tiempoImpulsoRestante -= Time.fixedDeltaTime;
 
-        // --- U-Turn ---
-        if (uTurning)
+        cuerpo.linearVelocity = velocidadBase + (tiempoImpulsoRestante > 0f ? vectorImpulso : Vector2.zero);
+    }
+
+    void ActualizarRotacion()
+    {
+        // El giro 180 tiene prioridad y corta el control por ratón.
+        // Usa el mismo suavizado exponencial que la rotación normal.
+        if (girando)
         {
-            float newRot = Mathf.MoveTowardsAngle(rb.rotation, uTurnTarget,
-                                                  uTurnSpeed * Time.fixedDeltaTime);
-            rb.MoveRotation(newRot);
-            if (Mathf.Abs(Mathf.DeltaAngle(newRot, uTurnTarget)) < 0.1f)
+            float suavizado = 1f - Mathf.Exp(-respuestaGiro * Time.fixedDeltaTime);
+            cuerpo.MoveRotation(Mathf.LerpAngle(cuerpo.rotation, objetivoGiro, suavizado));
+
+            if (Mathf.Abs(Mathf.DeltaAngle(cuerpo.rotation, objetivoGiro)) < 0.1f)
             {
-                rb.MoveRotation(uTurnTarget);
-                uTurning = false;
-                targetRotation = uTurnTarget;   // ← resync
-                rotationVelocity = 0f;          // ← resync
+                cuerpo.MoveRotation(objetivoGiro);
+                rotacionObjetivo = objetivoGiro;
+                girando = false;
             }
+            return;
         }
 
-        // --- Thrust aditivo: modifica SOLO baseVelocity ---
-        bool hasThrust = moveInput.sqrMagnitude > 0.001f && !uTurning;
-        if (hasThrust)
+        if (posRatonPantalla is Vector2 pos)
         {
-            Vector2 worldDir = transform.TransformDirection(moveInput.normalized);
-            baseVelocity += worldDir * thrustAcceleration * Time.fixedDeltaTime;
-
-            // El jugador retoma el control: cancelamos el freno
-            braking = false;
+            float mitadAncho = Screen.width * 0.5f;
+            float desvio = (pos.x - mitadAncho) / mitadAncho;
+            float magnitud = Mathf.Abs(desvio);
+            if (magnitud > zonaMuertaRaton)
+            {
+                float factor = Mathf.Clamp01((magnitud - zonaMuertaRaton) / (1f - zonaMuertaRaton));
+                rotacionObjetivo -= Mathf.Sign(desvio) * factor * velocidadRotacionMaxima * Time.fixedDeltaTime;
+            }
+            float suavizado = 1f - Mathf.Exp(-respuestaRotacion * Time.fixedDeltaTime);
+            cuerpo.MoveRotation(Mathf.LerpAngle(cuerpo.rotation, rotacionObjetivo, suavizado));
         }
+    }
 
-
-        // --- Fricción reducida sobre baseVelocity ---
-        baseVelocity *= Mathf.Max(0f, 1f - linearDamping * Time.fixedDeltaTime);
-
-        // --- Freno ---
-        if (braking)
+    void ActualizarEmpujeYFreno()
+    {
+        if (!girando && entradaMovimiento.sqrMagnitude > 0.001f)
         {
-            float speed = baseVelocity.magnitude;
-            if (speed <= brakeStopThreshold)
-            {
-                baseVelocity = Vector2.zero;
-                braking = false;              // termina solo
-            }
-            else
-            {
-                float newSpeed = Mathf.Max(0f, speed - brakeDeceleration * Time.fixedDeltaTime);
-                baseVelocity = baseVelocity.normalized * newSpeed;
-            }
+            velocidadBase += (Vector2)cuerpo.transform.TransformDirection(entradaMovimiento.normalized)
+                             * (aceleracionEmpuje * Time.fixedDeltaTime);
+            frenando = false;
         }
 
-        // --- Clamp ---
-        if (baseVelocity.magnitude > maxSpeed)
-            baseVelocity = baseVelocity.normalized * maxSpeed;
-
-        // --- Timer del dash ---
-        if (dashActive)
+        if (frenando)
         {
-            dashTimeRemaining -= Time.fixedDeltaTime;
-            if (dashTimeRemaining <= 0f)
-            {
-                dashActive = false;
-                dashVelocity = Vector2.zero;
-            }
+            float velocidad = velocidadBase.magnitude;
+            if (velocidad <= umbralParadaFreno) { velocidadBase = Vector2.zero; frenando = false; }
+            else velocidadBase = velocidadBase.normalized
+                               * Mathf.Max(0f, velocidad - desaceleracionFreno * Time.fixedDeltaTime);
         }
 
-        // --- Output: base persistente + dash temporal ---
-        rb.linearVelocity = baseVelocity + (dashActive ? dashVelocity : Vector2.zero);
+        if (velocidadBase.magnitude > velocidadMaxima)
+            velocidadBase = velocidadBase.normalized * velocidadMaxima;
     }
 }

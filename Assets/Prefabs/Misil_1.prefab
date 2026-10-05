@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 294867429194527260}
   - component: {fileID: 5745642181386867751}
   - component: {fileID: 4240948395491884633}
-  - component: {fileID: 9148219181693153933}
+  - component: {fileID: 4724617360367923965}
   - component: {fileID: 5186286795562749960}
   m_Layer: 0
   m_Name: Misil_1
@@ -100,7 +100,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.1}
   m_Size: {x: 0.2, y: 0.6}
   m_Direction: 0
---- !u!114 &9148219181693153933
+--- !u!114 &4724617360367923965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,22 +109,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 6997285835846201165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e838d8ccbba0046ae43cefc0361d71, type: 3}
+  m_Script: {fileID: 11500000, guid: c557f8004122e974eb6330ed121681b4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HomingMissile
-  speed: 12
-  lifetime: 10
-  spriteRotationOffset: -90
-  targetTag: Enemy
-  detectionRadius: 10
-  turnRate: 90
-  turnRateGrowth: 30
-  maxTurnRate: 270
-  reacquireInterval: 0.25
-  targetLayers:
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  vidaUtil: 6
+  prefabEfectoImpacto: {fileID: 0}
+  giroPorSegundo: 60
+  radioDeteccion: 10
+  capasObjetivo:
     serializedVersion: 2
     m_Bits: 4294967295
-  hitEffectPrefab: {fileID: 0}
+  etiquetaObjetivo: Enemy
 --- !u!96 &5186286795562749960
 TrailRenderer:
   serializedVersion: 4

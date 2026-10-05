@@ -124,13 +124,7 @@ public class ProyectilJefe : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Player"))
-        {
-            //var nave = otro.GetComponent<PlayerShip2D>();
-            //if (nave != null) nave.ApplyDamage(daño);
-            Destroy(gameObject);
-        }
-        else if (otro.CompareTag("Enemy")) { /* ignorar */ }
+        if (otro.CompareTag("Enemy")) { /* ignorar */ }
         else if (puedeGolpearParedes && opciones.rebotaEnParedes && rebotesRestantes > 0)
         {
             rebotesRestantes--;
