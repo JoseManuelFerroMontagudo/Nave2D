@@ -2,122 +2,85 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum FireMode { Simultaneous, Sequential }
-
+[RequireComponent(typeof(Stats))]
 public class ShipWeapons : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] Transform firePointRoot;   // child en el frente de la nave
+    [Header("Cañones")]
+    public int cantidadCañones = 2;
+    public float anchoCañones = 2f;   // ancho total que ocupan los cañones
 
-    [Header("Barrels")]
-    [SerializeField] int barrelCount = 2;
-    [SerializeField] float barrelSpacing = 0.25f;   // separación entre cañones
-    [SerializeField] FireMode fireMode = FireMode.Simultaneous;
+    [Header("Primario")]
+    public GameObject prefabProyectilPrimario;
+    public float cadenciaPrimario = 10f;
+    public float velocidadProyectilPrimario = 20f;
 
-    [Header("Input")]
-    [SerializeField] InputActionReference primaryAttackAction;
-    [SerializeField] InputActionReference secondaryAttackAction;
+    [Header("Secundario (misil)")]
+    public GameObject prefabProyectilSecundario;
+    public float cadenciaSecundario = 2f;
+    public float velocidadProyectilSecundario = 12f;
+    public int costoMunicionSecundario = 1;
 
-    [Header("Primary")]
-    [SerializeField] GameObject primaryProjectilePrefab;
-    [SerializeField] float primaryFireRate = 6f;
-    [SerializeField] float primaryProjectileSpeed = 20f;
-    [SerializeField] bool  primaryInheritVelocity = true;
+    readonly List<Transform> cañones = new();
+    float siguienteDisparoPrimario;
+    float siguienteDisparoSecundario;
+    bool primarioMantenido;
 
-    [Header("Secondary (missile)")]
-    [SerializeField] GameObject secondaryProjectilePrefab;
-    [SerializeField] float secondaryFireRate = 1.5f;
-    [SerializeField] float secondaryProjectileSpeed = 12f;
-    [SerializeField] bool  secondaryInheritVelocity = false;
-
-    Rigidbody2D shipRb;
-    readonly List<Transform> barrels = new();
-    int nextBarrelIndex;
-    float nextPrimaryTime;
-    float nextSecondaryTime;
+    Stats estadisticas;
 
     void Awake()
     {
-        shipRb = GetComponent<Rigidbody2D>();
-        if (firePointRoot == null) firePointRoot = transform;
-        BuildBarrels();
+        estadisticas = GetComponent<Stats>();
+        ConstruirCañones();
     }
 
-    void BuildBarrels()
+    void ConstruirCañones()
     {
-        barrels.Clear();
-        int count = Mathf.Max(1, barrelCount);
-        float center = (count - 1) * 0.5f;
+        cañones.Clear();
+        int cantidad = Mathf.Max(1, cantidadCañones);
+        float separacion = anchoCañones / cantidad;
+        float centro = (cantidad - 1) * 0.5f;
 
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < cantidad; i++)
         {
-            var go = new GameObject($"Barrel_{i}");
-            go.transform.SetParent(firePointRoot, false);
-            // Offset perpendicular al frente (a lo largo del eje X local del root)
-            go.transform.localPosition = Vector3.right * (i - center) * barrelSpacing;
-            go.transform.localRotation = Quaternion.identity;
-            barrels.Add(go.transform);
+            var cañon = new GameObject($"Cañon_{i}").transform;
+            cañon.SetParent(transform, false);
+            cañon.localPosition = Vector3.right * (i - centro) * separacion;
+            cañones.Add(cañon);
         }
     }
 
     // ==================== INPUT ====================
 
+    public void OnPrimaryAttack(InputValue valor) => primarioMantenido = valor.isPressed;
+
+    public void OnSecondaryAttack()
+    {
+        if (Time.time < siguienteDisparoSecundario) return;
+        if (prefabProyectilSecundario == null) return;
+        if (estadisticas == null || !estadisticas.ConsumirMunicion(costoMunicionSecundario)) return;
+
+        siguienteDisparoSecundario = Time.time + 1f / cadenciaSecundario;
+        Disparar(prefabProyectilSecundario, velocidadProyectilSecundario, transform);
+    }
+
     void Update()
     {
-        if (primaryAttackAction != null &&
-            primaryAttackAction.action.IsPressed() &&
-            Time.time >= nextPrimaryTime)
-        {
-            nextPrimaryTime = Time.time + 1f / primaryFireRate;
-            FirePrimary();
-        }
+        // Disparo continuo mientras se mantiene el primario
+        if (!primarioMantenido || Time.time < siguienteDisparoPrimario) return;
 
-        if (secondaryAttackAction != null &&
-            secondaryAttackAction.action.WasPressedThisFrame() &&
-            Time.time >= nextSecondaryTime)
-        {
-            nextSecondaryTime = Time.time + 1f / secondaryFireRate;
-            Fire(secondaryProjectilePrefab, secondaryProjectileSpeed,
-                 secondaryInheritVelocity, firePointRoot);
-        }
+        siguienteDisparoPrimario = Time.time + 1f / cadenciaPrimario;
+        foreach (var cañon in cañones)
+            Disparar(prefabProyectilPrimario, velocidadProyectilPrimario, cañon);
     }
 
     // ==================== DISPARO ====================
 
-    void FirePrimary()
-    {
-        if (primaryProjectilePrefab == null) return;
-
-        switch (fireMode)
-        {
-            case FireMode.Simultaneous:
-                foreach (var b in barrels)
-                    Fire(primaryProjectilePrefab, primaryProjectileSpeed,
-                         primaryInheritVelocity, b);
-                break;
-
-            case FireMode.Sequential:
-                var barrel = barrels[nextBarrelIndex];
-                nextBarrelIndex = (nextBarrelIndex + 1) % barrels.Count;
-                Fire(primaryProjectilePrefab, primaryProjectileSpeed,
-                     primaryInheritVelocity, barrel);
-                break;
-        }
-    }
-
-    void Fire(GameObject prefab, float projectileSpeed, bool inheritVelocity, Transform from)
+    void Disparar(GameObject prefab, float velocidad, Transform origen)
     {
         if (prefab == null) return;
 
-        GameObject go = Instantiate(prefab, from.position, from.rotation);
-
-        Vector2 shotVel = from.up * projectileSpeed;
-        if (inheritVelocity && shipRb != null)
-            shotVel += shipRb.linearVelocity;
-
+        var go = Instantiate(prefab, origen.position, origen.rotation);
         if (go.TryGetComponent<Projectile>(out var p))
-            p.Initialize(shotVel);
-        else if (go.TryGetComponent<HomingMissile>(out var m))
-            m.Initialize(shotVel);
+            p.Initialize(origen.up * velocidad);
     }
 }
