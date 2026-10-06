@@ -137,9 +137,10 @@ GameObject:
   - component: {fileID: 8852882567317553937}
   - component: {fileID: 497548850579521229}
   - component: {fileID: 740686638504912794}
+  - component: {fileID: 1655797828146367397}
   m_Layer: 0
   m_Name: EnemyNv1_Objeto
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,3 +314,19 @@ MonoBehaviour:
   fuerzaSeparacion: 3
   tagEnemigos: Enemy
   intervaloActualizacion: 0.2
+--- !u!114 &1655797828146367397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911172836786130444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb05a7c4eafa6f4f81e700362a34134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
+  vida: 10
+  "tagDa\xF1oDebil": Attack1
+  "tagDa\xF1oFuerte": Attack2
+  destruirAlMorir: 1
