@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 [RequireComponent(typeof(Stats))]
 public class ShipInteractions : MonoBehaviour
 {
@@ -20,10 +21,15 @@ public class ShipInteractions : MonoBehaviour
     public string etiquetaEnergia = "EnergyPickup";
     public int cantidadEnergia = 25;
 
+    ShieldController escudo;
     Stats estadisticas;
     float siguienteDañoContactoPermitido;
 
-    void Awake() => estadisticas = GetComponent<Stats>();
+    void Awake()
+    {
+        estadisticas = GetComponent<Stats>();
+        escudo = GetComponentInChildren<ShieldController>();
+    }
 
     // ==================== TRIGGERS ====================
     // Balas enemigas y objetos recogibles
@@ -31,30 +37,32 @@ public class ShipInteractions : MonoBehaviour
     {
         if (otro.CompareTag(etiquetaBala))
         {
+            if (escudo != null && escudo.EstaActivo) return;
             estadisticas.RecibirDaño(dañoBala);
             Destroy(otro.gameObject);
             return;
         }
+        /*
+                if (otro.CompareTag(etiquetaBotiquin))
+                {
+                    estadisticas.Curar(curacionBotiquin);
+                    Destroy(otro.gameObject);
+                    return;
+                }
 
-        if (otro.CompareTag(etiquetaBotiquin))
-        {
-            estadisticas.Curar(curacionBotiquin);
-            Destroy(otro.gameObject);
-            return;
-        }
+                if (otro.CompareTag(etiquetaMunicion))
+                {
+                    estadisticas.AñadirMunicion(cantidadMunicion);
+                    Destroy(otro.gameObject);
+                    return;
+                }
 
-        if (otro.CompareTag(etiquetaMunicion))
-        {
-            estadisticas.AñadirMunicion(cantidadMunicion);
-            Destroy(otro.gameObject);
-            return;
-        }
-
-        if (otro.CompareTag(etiquetaEnergia))
-        {
-            estadisticas.AñadirEnergia(cantidadEnergia);
-            Destroy(otro.gameObject);
-        }
+                if (otro.CompareTag(etiquetaEnergia))
+                {
+                    estadisticas.AñadirEnergia(cantidadEnergia);
+                    Destroy(otro.gameObject);
+                }
+                */
     }
 
     // ==================== COLISIONES ====================

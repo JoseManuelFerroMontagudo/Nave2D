@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
+[RequireComponent(typeof(Animator))]
 public class Stats : MonoBehaviour
 {
     [Header("Vida")]
@@ -12,17 +13,20 @@ public class Stats : MonoBehaviour
     public int regeneracionEnergia = 10;   // puntos por segundo
 
     [Header("Munición")]
-    public int municionMaxima = 30;
+    public int municionMaxima = 20;
     public int municion;
-
-    // Acumulador interno para no perder los decimales del regen por segundo
+    Animator animador;
     float acumuladorRegeneracion;
+    private PlayerInput playerInput;
 
     void Awake()
     {
         vida = vidaMaxima;
         energia = energiaMaxima;
         municion = municionMaxima;
+        animador = GetComponent<Animator>();
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.enabled = true;
     }
 
     // ---------------- VIDA ----------------
@@ -30,12 +34,19 @@ public class Stats : MonoBehaviour
     {
         if (cantidad <= 0) return;
         vida = Mathf.Max(0, vida - cantidad);
+
+        if (vida <= 0)
+        {
+            playerInput.enabled = false;
+            animador.SetTrigger("Death");
+        }
     }
 
     public void Curar(int cantidad)
     {
         if (cantidad <= 0) return;
         vida = Mathf.Min(vidaMaxima, vida + cantidad);
+
     }
 
     public bool EstaMuerto => vida <= 0;
@@ -87,5 +98,9 @@ public class Stats : MonoBehaviour
     {
         if (cantidad <= 0) return;
         municion = Mathf.Min(municionMaxima, municion + cantidad);
+    }
+    public void Morir()
+    {
+        SceneLoader.Instance.LoadSingle("MainMenu");
     }
 }

@@ -19,6 +19,7 @@ public class ShieldController : MonoBehaviour
 
     enum Fase { Apagado, Activo, Desactivando, Destruyendo }
     Fase fase = Fase.Apagado;
+    public bool EstaActivo => fase == Fase.Activo;
 
     float enfriamientoRestante;
     float acumuladorDrenaje;
