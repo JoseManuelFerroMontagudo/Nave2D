@@ -2078,10 +2078,10 @@ MonoBehaviour:
   zonaMuertaRaton: 0.1
   velocidadRotacionMaxima: 120
   respuestaGiro: 10
-  costoGiro: 20
+  costoGiro: 40
   velocidadImpulso: 40
   duracionImpulso: 0.15
-  costoImpulso: 10
+  costoImpulso: 40
   desaceleracionFreno: 15
   umbralParadaFreno: 0.05
 --- !u!114 &1982281061
