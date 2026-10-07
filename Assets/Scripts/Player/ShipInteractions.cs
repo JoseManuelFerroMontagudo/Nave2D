@@ -33,10 +33,24 @@ public class ShipInteractions : MonoBehaviour
     // Balas enemigas y objetos recogibles
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag(etiquetaBala))
+        if (otro.CompareTag("Bullet"))
         {
             if (escudo != null && escudo.EstaActivo) return;
-            estadisticas.RecibirDaño(dañoBala);
+            estadisticas.RecibirDaño(1);
+            Destroy(otro.gameObject);
+            return;
+        }
+        if (otro.CompareTag("Bullet2"))
+        {
+            if (escudo != null && escudo.EstaActivo) return;
+            estadisticas.RecibirDaño(5);
+            Destroy(otro.gameObject);
+            return;
+        }
+        if (otro.CompareTag("Bullet3"))
+        {
+            if (escudo != null && escudo.EstaActivo) return;
+            estadisticas.RecibirDaño(10);
             Destroy(otro.gameObject);
             return;
         }
