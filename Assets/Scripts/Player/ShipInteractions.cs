@@ -9,8 +9,6 @@ public class ShipInteractions : MonoBehaviour
     public int dañoBala = 5;
 
     [Header("Daño por contacto")]
-    public string etiquetaEnemigo = "Enemy";
-    public int dañoEnemigo = 10;
     public float intervaloDañoContacto = 0.5f;
 
     [Header("Recogidas")]
@@ -68,10 +66,17 @@ public class ShipInteractions : MonoBehaviour
     // ==================== COLISIONES ====================
     void OnCollisionStay2D(Collision2D choque)
     {
-        if (!choque.collider.CompareTag(etiquetaEnemigo)) return;
-        if (Time.time < siguienteDañoContactoPermitido) return;
+        if (choque.collider.CompareTag("Enemy"))
+        {
+            if (Time.time < siguienteDañoContactoPermitido) return;
 
-        siguienteDañoContactoPermitido = Time.time + intervaloDañoContacto;
-        estadisticas.RecibirDaño(dañoEnemigo);
+            siguienteDañoContactoPermitido = Time.time + intervaloDañoContacto;
+            estadisticas.RecibirDaño(20);
+        }
+        if (choque.collider.CompareTag("Asteroide"))
+        {
+            estadisticas.RecibirDaño(10);
+            Destroy(choque.collider.gameObject);
+        }
     }
 }
