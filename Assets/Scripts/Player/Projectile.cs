@@ -40,8 +40,19 @@ public class Projectile : MonoBehaviour
         // Ignora al que disparó: filtra por tag, layer, o componente
         if (other.CompareTag("Player")) return;
         if (other.CompareTag("Shield")) return;
-        // TODO: aplicar daño aquí cuando exista sistema de vida
-        // other.GetComponent<IDamageable>()?.TakeDamage(damage);
+        // Aplicar daño al Boss
+        var jefe = other.GetComponentInParent<ControladorJefe>();
+        if (jefe != null)
+        {
+            jefe.AplicarDaño(damage);
+        }
+
+        // Aplicar daño a Enemigos Normales
+        var enemigo = other.GetComponentInParent<ControladorEnemyNv1>();
+        if (enemigo != null)
+        {
+            enemigo.AplicarDaño(damage);
+        }
 
         if (hitEffectPrefab != null)
             Instantiate(hitEffectPrefab, transform.position, transform.rotation);

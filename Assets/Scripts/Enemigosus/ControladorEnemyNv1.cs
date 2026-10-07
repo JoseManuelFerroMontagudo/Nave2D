@@ -33,6 +33,7 @@ public class ControladorEnemyNv1 : MonoBehaviour
 
     void Awake()
     {
+        if (vida < 30f) vida = 50f;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         simuladorJefe = GetComponent<ControladorJefe>();
 
@@ -47,13 +48,10 @@ public class ControladorEnemyNv1 : MonoBehaviour
             simuladorJefe.prefabProyectil = prefabProyectilCustom;
             simuladorJefe.puntoDisparo = puntoDisparo;
             simuladorJefe.dañoProyectil = dañoProyectilCustom;
-            simuladorJefe.velocidad = 0f;
-            simuladorJefe.rangoAtaque = 0f;
+            simuladorJefe.velocidadMovimiento = 0f;
             simuladorJefe.lluviaActivada = false;
             simuladorJefe.enabled = false;
         }
-
-
     }
 
     void Update()
@@ -118,5 +116,16 @@ public class ControladorEnemyNv1 : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         estaAtacando = false;
+    }
+
+    public void TakeDamage(float daño) => AplicarDaño(daño);
+
+    public void AplicarDaño(float daño)
+    {
+        vida -= Mathf.Abs(daño);
+        if (vida <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -130,7 +130,12 @@ public class HomingMissile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) return;   // red de seguridad
-        // TODO: aplicar daño
+        // Aplicar daño al Boss
+        var jefe = other.GetComponentInParent<ControladorJefe>();
+        if (jefe != null)
+        {
+            jefe.AplicarDaño(15f);
+        }
         if (other.CompareTag("Shield")) return;
         if (other.CompareTag("Muros")) return;
         if (other.CompareTag("Attacks")) return;
