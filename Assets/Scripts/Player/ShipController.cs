@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Stats))]
+[RequireComponent(typeof(Animator))]
 public class ShipController : MonoBehaviour
 {
     [Header("Propulsión")]
@@ -15,7 +16,7 @@ public class ShipController : MonoBehaviour
     const float respuestaRotacion = 18f;
 
     [Header("Giro 180")]
-    public float respuestaGiro = 10f;   // antes "velocidadGiro"; ahora es constante de suavizado
+    public float respuestaGiro = 10f;
     public int costoGiro = 20;
 
     [Header("Impulso lateral")]
@@ -29,6 +30,7 @@ public class ShipController : MonoBehaviour
 
     Rigidbody2D cuerpo;
     Stats estadisticas;
+    Animator animador;
 
     Vector2 entradaMovimiento;
     Vector2? posRatonPantalla;
@@ -42,6 +44,7 @@ public class ShipController : MonoBehaviour
         cuerpo = GetComponent<Rigidbody2D>();
         estadisticas = GetComponent<Stats>();
         rotacionObjetivo = cuerpo.rotation;
+        animador = GetComponent<Animator>();
     }
 
     // ================== INPUT ==================
@@ -76,15 +79,15 @@ public class ShipController : MonoBehaviour
         if (tiempoImpulsoRestante > 0f) tiempoImpulsoRestante -= Time.fixedDeltaTime;
 
         cuerpo.linearVelocity = velocidadBase + (tiempoImpulsoRestante > 0f ? vectorImpulso : Vector2.zero);
+        animador.SetBool("Move", girando || tiempoImpulsoRestante > 0f || (!frenando && entradaMovimiento.sqrMagnitude > 0.001f));
     }
 
     void ActualizarRotacion()
     {
-        // El giro 180 tiene prioridad y corta el control por ratón.
-        // Usa el mismo suavizado exponencial que la rotación normal.
         if (girando)
         {
             float suavizado = 1f - Mathf.Exp(-respuestaGiro * Time.fixedDeltaTime);
+            //suavizado exponencial
             cuerpo.MoveRotation(Mathf.LerpAngle(cuerpo.rotation, objetivoGiro, suavizado));
 
             if (Mathf.Abs(Mathf.DeltaAngle(cuerpo.rotation, objetivoGiro)) < 0.1f)
