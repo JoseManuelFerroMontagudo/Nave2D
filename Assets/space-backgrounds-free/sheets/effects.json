@@ -1,0 +1,889 @@
+{
+ "effects": [
+  {
+   "name": "deep_blue_space",
+   "element": "deep_blue",
+   "shape": "space",
+   "scroll": 0.0,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_space.png"
+  },
+  {
+   "name": "deep_blue_stars_far",
+   "element": "deep_blue",
+   "shape": "stars_far",
+   "scroll": 0.03,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_stars_far.png"
+  },
+  {
+   "name": "deep_blue_nebula",
+   "element": "deep_blue",
+   "shape": "nebula",
+   "scroll": 0.08,
+   "drift": 4,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_nebula.png"
+  },
+  {
+   "name": "deep_blue_stars_near",
+   "element": "deep_blue",
+   "shape": "stars_near",
+   "scroll": 0.18,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_stars_near.png"
+  },
+  {
+   "name": "deep_blue_planet",
+   "element": "deep_blue",
+   "shape": "planet",
+   "scroll": 0.3,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_planet.png"
+  },
+  {
+   "name": "deep_blue_asteroids",
+   "element": "deep_blue",
+   "shape": "asteroids",
+   "scroll": 0.7,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "deep_blue/deep_blue_asteroids.png"
+  },
+  {
+   "name": "frozen_space",
+   "element": "frozen",
+   "shape": "space",
+   "scroll": 0.0,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_space.png"
+  },
+  {
+   "name": "frozen_stars_far",
+   "element": "frozen",
+   "shape": "stars_far",
+   "scroll": 0.03,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_stars_far.png"
+  },
+  {
+   "name": "frozen_nebula",
+   "element": "frozen",
+   "shape": "nebula",
+   "scroll": 0.08,
+   "drift": 4,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_nebula.png"
+  },
+  {
+   "name": "frozen_stars_near",
+   "element": "frozen",
+   "shape": "stars_near",
+   "scroll": 0.18,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_stars_near.png"
+  },
+  {
+   "name": "frozen_planet",
+   "element": "frozen",
+   "shape": "planet",
+   "scroll": 0.3,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_planet.png"
+  },
+  {
+   "name": "frozen_asteroids",
+   "element": "frozen",
+   "shape": "asteroids",
+   "scroll": 0.7,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "frozen/frozen_asteroids.png"
+  },
+  {
+   "name": "void_space",
+   "element": "void",
+   "shape": "space",
+   "scroll": 0.0,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_space.png"
+  },
+  {
+   "name": "void_stars_far",
+   "element": "void",
+   "shape": "stars_far",
+   "scroll": 0.03,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_stars_far.png"
+  },
+  {
+   "name": "void_nebula",
+   "element": "void",
+   "shape": "nebula",
+   "scroll": 0.08,
+   "drift": 4,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_nebula.png"
+  },
+  {
+   "name": "void_stars_near",
+   "element": "void",
+   "shape": "stars_near",
+   "scroll": 0.18,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_stars_near.png"
+  },
+  {
+   "name": "void_planet",
+   "element": "void",
+   "shape": "planet",
+   "scroll": 0.3,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_planet.png"
+  },
+  {
+   "name": "void_asteroids",
+   "element": "void",
+   "shape": "asteroids",
+   "scroll": 0.7,
+   "frames": 1,
+   "fps": 1,
+   "loop": false,
+   "columns": 1,
+   "rows": 1,
+   "cell": {
+    "1080": [
+     1920,
+     1080
+    ],
+    "540": [
+     960,
+     540
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "void/void_asteroids.png"
+  },
+  {
+   "name": "planet_terran",
+   "group": "planets",
+   "planet": {
+    "seed": 7.85,
+    "kind": 0,
+    "scale": 1.6,
+    "sea": 0.52,
+    "c0": [
+     0.03,
+     0.1,
+     0.3,
+     1.0
+    ],
+    "c1": [
+     0.08,
+     0.32,
+     0.6,
+     1.0
+    ],
+    "c2": [
+     0.2,
+     0.45,
+     0.18,
+     1.0
+    ],
+    "c3": [
+     0.45,
+     0.42,
+     0.25,
+     1.0
+    ],
+    "c4": [
+     0.85,
+     0.85,
+     0.82,
+     1.0
+    ],
+    "ice": 0.14,
+    "clouds": 0.75,
+    "cities": 0.6,
+    "glow_color": [
+     1,
+     0.82,
+     0.45,
+     1.0
+    ],
+    "atmosphere": 0.8,
+    "atmosphere_color": [
+     0.45,
+     0.7,
+     1,
+     1.0
+    ]
+   },
+   "frames": 48,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 6,
+   "cell": {
+    "1080": [
+     256,
+     256
+    ],
+    "540": [
+     128,
+     128
+    ],
+    "pixel": [
+     64,
+     64
+    ]
+   },
+   "file": "planet_terran.png"
+  },
+  {
+   "name": "planet_ice",
+   "group": "planets",
+   "planet": {
+    "seed": 6.93,
+    "kind": 0,
+    "scale": 2.0,
+    "sea": 0.35,
+    "c0": [
+     0.25,
+     0.45,
+     0.62,
+     1.0
+    ],
+    "c1": [
+     0.5,
+     0.72,
+     0.85,
+     1.0
+    ],
+    "c2": [
+     0.75,
+     0.86,
+     0.94,
+     1.0
+    ],
+    "c3": [
+     0.86,
+     0.93,
+     0.98,
+     1.0
+    ],
+    "c4": [
+     1,
+     1,
+     1,
+     1.0
+    ],
+    "craters": 0.2,
+    "atmosphere": 0.5,
+    "atmosphere_color": [
+     0.7,
+     0.9,
+     1,
+     1.0
+    ]
+   },
+   "frames": 48,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 6,
+   "cell": {
+    "1080": [
+     256,
+     256
+    ],
+    "540": [
+     128,
+     128
+    ],
+    "pixel": [
+     64,
+     64
+    ]
+   },
+   "file": "planet_ice.png"
+  },
+  {
+   "name": "planet_moon",
+   "group": "planets",
+   "planet": {
+    "seed": 0.92,
+    "kind": 0,
+    "scale": 1.4,
+    "sea": 0.38,
+    "c0": [
+     0.32,
+     0.32,
+     0.34,
+     1.0
+    ],
+    "c1": [
+     0.4,
+     0.4,
+     0.42,
+     1.0
+    ],
+    "c2": [
+     0.55,
+     0.55,
+     0.56,
+     1.0
+    ],
+    "c3": [
+     0.65,
+     0.65,
+     0.66,
+     1.0
+    ],
+    "c4": [
+     0.78,
+     0.78,
+     0.78,
+     1.0
+    ],
+    "craters": 0.6
+   },
+   "frames": 48,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 6,
+   "cell": {
+    "1080": [
+     256,
+     256
+    ],
+    "540": [
+     128,
+     128
+    ],
+    "pixel": [
+     64,
+     64
+    ]
+   },
+   "file": "planet_moon.png"
+  },
+  {
+   "name": "planet_gas_giant",
+   "group": "planets",
+   "planet": {
+    "seed": 7.17,
+    "kind": 1,
+    "scale": 1.2,
+    "bands": 7.0,
+    "turbulence": 0.6,
+    "storm": 1.0,
+    "c0": [
+     0.62,
+     0.45,
+     0.3,
+     1.0
+    ],
+    "c1": [
+     0.85,
+     0.7,
+     0.5,
+     1.0
+    ],
+    "c2": [
+     0.95,
+     0.9,
+     0.8,
+     1.0
+    ],
+    "c3": [
+     0.7,
+     0.5,
+     0.38,
+     1.0
+    ],
+    "c4": [
+     0.75,
+     0.3,
+     0.18,
+     1.0
+    ],
+    "atmosphere": 0.5,
+    "atmosphere_color": [
+     1,
+     0.85,
+     0.65,
+     1.0
+    ]
+   },
+   "frames": 48,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 6,
+   "cell": {
+    "1080": [
+     256,
+     256
+    ],
+    "540": [
+     128,
+     128
+    ],
+    "pixel": [
+     64,
+     64
+    ]
+   },
+   "file": "planet_gas_giant.png"
+  },
+  {
+   "name": "asteroid_rock",
+   "group": "asteroids",
+   "planet": {
+    "seed": 0.34,
+    "kind": 4,
+    "size": 0.95,
+    "scale": 1.0,
+    "ambient": 0.08,
+    "c0": [
+     0.16,
+     0.14,
+     0.13,
+     1.0
+    ],
+    "c1": [
+     0.3,
+     0.27,
+     0.25,
+     1.0
+    ],
+    "c2": [
+     0.45,
+     0.42,
+     0.38,
+     1.0
+    ],
+    "c3": [
+     0.6,
+     0.56,
+     0.5,
+     1.0
+    ],
+    "craters": 0.5,
+    "lumps": 0.35,
+    "tilt": 0.4
+   },
+   "frames": 32,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 4,
+   "cell": {
+    "1080": [
+     128,
+     128
+    ],
+    "540": [
+     64,
+     64
+    ],
+    "pixel": [
+     32,
+     32
+    ]
+   },
+   "file": "asteroid_rock.png"
+  },
+  {
+   "name": "asteroid_ice",
+   "group": "asteroids",
+   "planet": {
+    "seed": 1.09,
+    "kind": 4,
+    "size": 0.95,
+    "scale": 1.0,
+    "ambient": 0.08,
+    "c0": [
+     0.35,
+     0.5,
+     0.62,
+     1.0
+    ],
+    "c1": [
+     0.55,
+     0.72,
+     0.82,
+     1.0
+    ],
+    "c2": [
+     0.75,
+     0.87,
+     0.94,
+     1.0
+    ],
+    "c3": [
+     0.92,
+     0.97,
+     1,
+     1.0
+    ],
+    "craters": 0.3,
+    "lumps": 0.3,
+    "tilt": -0.3
+   },
+   "frames": 32,
+   "fps": 12,
+   "loop": true,
+   "columns": 8,
+   "rows": 4,
+   "cell": {
+    "1080": [
+     128,
+     128
+    ],
+    "540": [
+     64,
+     64
+    ],
+    "pixel": [
+     32,
+     32
+    ]
+   },
+   "file": "asteroid_ice.png"
+  },
+  {
+   "name": "nebula_deep_blue",
+   "group": "nebulae",
+   "frames": 16,
+   "fps": 8,
+   "loop": true,
+   "columns": 8,
+   "rows": 2,
+   "cell": {
+    "1080": [
+     640,
+     360
+    ],
+    "540": [
+     320,
+     180
+    ],
+    "pixel": [
+     320,
+     180
+    ]
+   },
+   "file": "nebula_deep_blue.png"
+  }
+ ]
+}

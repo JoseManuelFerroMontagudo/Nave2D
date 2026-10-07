@@ -1,0 +1,2730 @@
+fileFormatVersion: 2
+guid: ea15c113d4e6bae4e8588faa23a3b071
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7250036123587717319
+    second: deep_blue_stars_near_0
+  - first:
+      213: 8432407970826266497
+    second: deep_blue_stars_near_1
+  - first:
+      213: -6584891355781171878
+    second: deep_blue_stars_near_2
+  - first:
+      213: 6177169316566312670
+    second: deep_blue_stars_near_3
+  - first:
+      213: 4617356987530109356
+    second: deep_blue_stars_near_4
+  - first:
+      213: -9148438681864277340
+    second: deep_blue_stars_near_5
+  - first:
+      213: 5504181834907802816
+    second: deep_blue_stars_near_6
+  - first:
+      213: -330256665999683587
+    second: deep_blue_stars_near_7
+  - first:
+      213: 7278281852380700833
+    second: deep_blue_stars_near_8
+  - first:
+      213: -7206719237870407240
+    second: deep_blue_stars_near_9
+  - first:
+      213: 1368701254629114790
+    second: deep_blue_stars_near_10
+  - first:
+      213: 4157211584927896805
+    second: deep_blue_stars_near_11
+  - first:
+      213: -2896395383930804125
+    second: deep_blue_stars_near_12
+  - first:
+      213: -1503880129461173457
+    second: deep_blue_stars_near_13
+  - first:
+      213: 8092768249030219417
+    second: deep_blue_stars_near_14
+  - first:
+      213: 446388304635350185
+    second: deep_blue_stars_near_15
+  - first:
+      213: -718390833591539369
+    second: deep_blue_stars_near_16
+  - first:
+      213: 1852764672600949398
+    second: deep_blue_stars_near_17
+  - first:
+      213: -4472026217525335723
+    second: deep_blue_stars_near_18
+  - first:
+      213: 3674774878091297646
+    second: deep_blue_stars_near_19
+  - first:
+      213: 7337547369035209376
+    second: deep_blue_stars_near_20
+  - first:
+      213: -3987783014091606053
+    second: deep_blue_stars_near_21
+  - first:
+      213: 7811903971309513521
+    second: deep_blue_stars_near_22
+  - first:
+      213: -6178490123398093748
+    second: deep_blue_stars_near_23
+  - first:
+      213: 3166113379763588114
+    second: deep_blue_stars_near_24
+  - first:
+      213: 5654012758530414482
+    second: deep_blue_stars_near_25
+  - first:
+      213: 8508842778739206091
+    second: deep_blue_stars_near_26
+  - first:
+      213: 7850887116209494831
+    second: deep_blue_stars_near_27
+  - first:
+      213: 7004016206732514167
+    second: deep_blue_stars_near_28
+  - first:
+      213: -2857936062680209711
+    second: deep_blue_stars_near_29
+  - first:
+      213: 9111167543675022545
+    second: deep_blue_stars_near_30
+  - first:
+      213: 4749837892708525517
+    second: deep_blue_stars_near_31
+  - first:
+      213: -2150642780919314092
+    second: deep_blue_stars_near_32
+  - first:
+      213: -6848842645722969800
+    second: deep_blue_stars_near_33
+  - first:
+      213: 4355174867512902619
+    second: deep_blue_stars_near_34
+  - first:
+      213: -3470230904309194059
+    second: deep_blue_stars_near_35
+  - first:
+      213: -5881276422514589741
+    second: deep_blue_stars_near_36
+  - first:
+      213: 7472206049473128157
+    second: deep_blue_stars_near_37
+  - first:
+      213: 1803987966300011412
+    second: deep_blue_stars_near_38
+  - first:
+      213: -3401964115123242004
+    second: deep_blue_stars_near_39
+  - first:
+      213: 2212738811255309134
+    second: deep_blue_stars_near_40
+  - first:
+      213: -2506772528344613662
+    second: deep_blue_stars_near_41
+  - first:
+      213: 1838460690682833790
+    second: deep_blue_stars_near_42
+  - first:
+      213: -628591755136440154
+    second: deep_blue_stars_near_43
+  - first:
+      213: 8154398204171146447
+    second: deep_blue_stars_near_44
+  - first:
+      213: 4282246479589227602
+    second: deep_blue_stars_near_45
+  - first:
+      213: 3192781221555495504
+    second: deep_blue_stars_near_46
+  - first:
+      213: 3952729432000559971
+    second: deep_blue_stars_near_47
+  - first:
+      213: 4527473003613729115
+    second: deep_blue_stars_near_48
+  - first:
+      213: 8640093271330656016
+    second: deep_blue_stars_near_49
+  - first:
+      213: 8735367624799869517
+    second: deep_blue_stars_near_50
+  - first:
+      213: -1591067028310758612
+    second: deep_blue_stars_near_51
+  - first:
+      213: -8747585502757759520
+    second: deep_blue_stars_near_52
+  - first:
+      213: -2627770978890190101
+    second: deep_blue_stars_near_53
+  - first:
+      213: 9148130810517451447
+    second: deep_blue_stars_near_54
+  - first:
+      213: -6542203652748666681
+    second: deep_blue_stars_near_55
+  - first:
+      213: 5246008139130722327
+    second: deep_blue_stars_near_56
+  - first:
+      213: -1237576297415050419
+    second: deep_blue_stars_near_57
+  - first:
+      213: -1632953274657496678
+    second: deep_blue_stars_near_58
+  - first:
+      213: -20932420073970359
+    second: deep_blue_stars_near_59
+  - first:
+      213: -3438040293563634575
+    second: deep_blue_stars_near_60
+  - first:
+      213: 8461155027798199140
+    second: deep_blue_stars_near_61
+  - first:
+      213: -409870985029633992
+    second: deep_blue_stars_near_62
+  - first:
+      213: 5557461006887866573
+    second: deep_blue_stars_near_63
+  - first:
+      213: -8354949003899855308
+    second: deep_blue_stars_near_64
+  - first:
+      213: -134463118888929206
+    second: deep_blue_stars_near_65
+  - first:
+      213: 1872414800391298828
+    second: deep_blue_stars_near_66
+  - first:
+      213: -7116372319134448265
+    second: deep_blue_stars_near_67
+  - first:
+      213: -1688486536449478318
+    second: deep_blue_stars_near_68
+  - first:
+      213: -7955681191855859597
+    second: deep_blue_stars_near_69
+  - first:
+      213: -5353998804201678652
+    second: deep_blue_stars_near_70
+  - first:
+      213: -607219948283323059
+    second: deep_blue_stars_near_71
+  - first:
+      213: 5415333126868673053
+    second: deep_blue_stars_near_72
+  - first:
+      213: 1647098934635448225
+    second: deep_blue_stars_near_73
+  - first:
+      213: 1344352576182122699
+    second: deep_blue_stars_near_74
+  - first:
+      213: 6191710932286405408
+    second: deep_blue_stars_near_75
+  - first:
+      213: -1249918569667962627
+    second: deep_blue_stars_near_76
+  - first:
+      213: -5541630729719163189
+    second: deep_blue_stars_near_77
+  - first:
+      213: -7083701954140806075
+    second: deep_blue_stars_near_78
+  - first:
+      213: -7718556506264872600
+    second: deep_blue_stars_near_79
+  - first:
+      213: -2539846624798753690
+    second: deep_blue_stars_near_80
+  - first:
+      213: -3891000131546526322
+    second: deep_blue_stars_near_81
+  - first:
+      213: 7709881725136785261
+    second: deep_blue_stars_near_82
+  - first:
+      213: -5857663016500490041
+    second: deep_blue_stars_near_83
+  - first:
+      213: -3451390308594959688
+    second: deep_blue_stars_near_84
+  - first:
+      213: 6305691635346174874
+    second: deep_blue_stars_near_85
+  - first:
+      213: -8152653495715649206
+    second: deep_blue_stars_near_86
+  - first:
+      213: 1872954557461899122
+    second: deep_blue_stars_near_87
+  - first:
+      213: 3145985955099722622
+    second: deep_blue_stars_near_88
+  - first:
+      213: 2881007602560905266
+    second: deep_blue_stars_near_89
+  - first:
+      213: 8172500444687941845
+    second: deep_blue_stars_near_90
+  - first:
+      213: -6329548762990557262
+    second: deep_blue_stars_near_91
+  - first:
+      213: -1081897020087011378
+    second: deep_blue_stars_near_92
+  - first:
+      213: 8083389950403340355
+    second: deep_blue_stars_near_93
+  - first:
+      213: -3353483346333985721
+    second: deep_blue_stars_near_94
+  - first:
+      213: 6725046292752055468
+    second: deep_blue_stars_near_95
+  - first:
+      213: 8300225899774869592
+    second: deep_blue_stars_near_96
+  - first:
+      213: -6197642823323483059
+    second: deep_blue_stars_near_97
+  - first:
+      213: 1436851664356433171
+    second: deep_blue_stars_near_98
+  - first:
+      213: 5768456390634789067
+    second: deep_blue_stars_near_99
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: deep_blue_stars_near_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 118
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8223b217d4d9460800000000000000
+      internalID: 7250036123587717319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 504
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187a5466f5ee50570800000000000000
+      internalID: 8432407970826266497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 422
+        width: 110
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a557f1e3334cd94a0800000000000000
+      internalID: -6584891355781171878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 490
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6a06fe3c6b9b550800000000000000
+      internalID: 6177169316566312670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_4
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 531
+        width: 43
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca166e267b5241040800000000000000
+      internalID: 4617356987530109356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_5
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 510
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a279064d773a0180800000000000000
+      internalID: -9148438681864277340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_6
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 508
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc56d86738c26c40800000000000000
+      internalID: 5504181834907802816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_7
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 490
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff4262ef41ba6bf0800000000000000
+      internalID: -330256665999683587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_8
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 515
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0e25268c6a10560800000000000000
+      internalID: 7278281852380700833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 483
+        width: 55
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1b2c639079cfb90800000000000000
+      internalID: -7206719237870407240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_10
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 499
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3ccc51a8a9ef210800000000000000
+      internalID: 1368701254629114790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_11
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 463
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e414cf19e161b930800000000000000
+      internalID: 4157211584927896805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_12
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 483
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36829bb7ebfedc7d0800000000000000
+      internalID: -2896395383930804125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_13
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 470
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23c2ba7df4212be0800000000000000
+      internalID: -1503880129461173457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 465
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996910d58d94f4070800000000000000
+      internalID: 8092768249030219417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_15
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 365
+        width: 87
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9accda94cc3e13600800000000000000
+      internalID: 446388304635350185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_16
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 453
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75921e1d753c706f0800000000000000
+      internalID: -718390833591539369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_17
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 458
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692c5c247a756b910800000000000000
+      internalID: 1852764672600949398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_18
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 430
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5592b2659db20f1c0800000000000000
+      internalID: -4472026217525335723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_19
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 393
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e634926284c6ff230800000000000000
+      internalID: 3674774878091297646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_20
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 435
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa12f5c47434d560800000000000000
+      internalID: 7337547369035209376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_21
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 439
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7bbb31a7c88a8c0800000000000000
+      internalID: -3987783014091606053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_22
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 431
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bed5dc545796c60800000000000000
+      internalID: 7811903971309513521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_23
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 398
+        width: 59
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44e892c7f7914aa0800000000000000
+      internalID: -6178490123398093748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_24
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 425
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c8b67185b40fb20800000000000000
+      internalID: 3166113379763588114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_25
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 392
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2975bbbc5a6177e40800000000000000
+      internalID: 5654012758530414482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_26
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 396
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7e56cec6b751670800000000000000
+      internalID: 8508842778739206091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_27
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 421
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b9b558c34f3fc60800000000000000
+      internalID: 7850887116209494831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 298
+        width: 71
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773de5391a3433160800000000000000
+      internalID: 7004016206732514167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 392
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6ea210b429658d0800000000000000
+      internalID: -2857936062680209711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_30
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 396
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc61d1ab9e517e70800000000000000
+      internalID: 9111167543675022545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_31
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 394
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5e49fc560dae140800000000000000
+      internalID: 4749837892708525517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_32
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 384
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459cb8c09c16722e0800000000000000
+      internalID: -2150642780919314092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_33
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 387
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839c22386e504f0a0800000000000000
+      internalID: -6848842645722969800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_34
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 289
+        width: 67
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3c0d0a770b07c30800000000000000
+      internalID: 4355174867512902619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_35
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 372
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2611ce06347dfc0800000000000000
+      internalID: -3470230904309194059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_36
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 103
+        width: 167
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df332a0142816ea0800000000000000
+      internalID: -5881276422514589741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_37
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 372
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6ee5300db92b760800000000000000
+      internalID: 7472206049473128157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_38
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 335
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b34665f7d090910800000000000000
+      internalID: 1803987966300011412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_39
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 339
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebf37369abc9c0d0800000000000000
+      internalID: -3401964115123242004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_40
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 245
+        width: 133
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43c799a93a35be10800000000000000
+      internalID: 2212738811255309134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_41
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 338
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ecbf4bbaa7263dd0800000000000000
+      internalID: -2506772528344613662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_42
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 335
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b6ba1f146838910800000000000000
+      internalID: 1838460690682833790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_43
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 221
+        width: 95
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a86a5e012bc647f0800000000000000
+      internalID: -628591755136440154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_44
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 305
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc454bc76fd3a2170800000000000000
+      internalID: 8154398204171146447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_45
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 281
+        width: 100
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c35902c789d6b30800000000000000
+      internalID: 4282246479589227602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_46
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0526a5cda990f4c20800000000000000
+      internalID: 3192781221555495504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_47
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 314
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bff97d97aead630800000000000000
+      internalID: 3952729432000559971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_48
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 288
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51319e85b0d4de30800000000000000
+      internalID: 4527473003613729115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_49
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 262
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f08e79d07c7e770800000000000000
+      internalID: 8640093271330656016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_50
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ad4a2a2924a3970800000000000000
+      internalID: 8735367624799869517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_51
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 280
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b63b3b7f46be9e0800000000000000
+      internalID: -1591067028310758612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_52
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 282
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e554c9f4555a9680800000000000000
+      internalID: -8747585502757759520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_53
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 276
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be27b2c9738488bd0800000000000000
+      internalID: -2627770978890190101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_54
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 143
+        width: 104
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2f2b7d080b4fe70800000000000000
+      internalID: 9148130810517451447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_55
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 251
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c817ad907c6535a0800000000000000
+      internalID: -6542203652748666681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_56
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718d1b5ab909dc840800000000000000
+      internalID: 5246008139130722327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_57
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 259
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bf12a1aee33dee0800000000000000
+      internalID: -1237576297415050419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_58
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 230
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91aa3106a59659e0800000000000000
+      internalID: -1632953274657496678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_59
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 223
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945a3392312a5bff0800000000000000
+      internalID: -20932420073970359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_60
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 217
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ce8aa8190a940d0800000000000000
+      internalID: -3438040293563634575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_61
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 129
+        width: 140
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b0c6d2baf0c6570800000000000000
+      internalID: 8461155027798199140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_62
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 116
+        width: 119
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838b19db288df4af0800000000000000
+      internalID: -409870985029633992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0d2a05751102d40800000000000000
+      internalID: 5557461006887866573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_64
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 145
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e9b0ab5224d0c80800000000000000
+      internalID: -8354949003899855308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_65
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 195
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48fb3b718a422ef0800000000000000
+      internalID: -134463118888929206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_66
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 159
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fd18927572cf910800000000000000
+      internalID: 1872414800391298828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 51
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775819474119d3d90800000000000000
+      internalID: -7116372319134448265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_68
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 128
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25136eae07a4198e0800000000000000
+      internalID: -1688486536449478318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_69
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 155
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378dc256b1eb79190800000000000000
+      internalID: -7955681191855859597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_70
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 94
+        width: 82
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c851bb4476c2b5b0800000000000000
+      internalID: -5353998804201678652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_71
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 151
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d9a0a9ca8b297f0800000000000000
+      internalID: -607219948283323059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_72
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 132
+        width: 14
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12a96789c0272b40800000000000000
+      internalID: 5415333126868673053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_73
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 85
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7cedc11cbabd610800000000000000
+      internalID: 1647098934635448225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_74
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 118
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8773c9b8918a210800000000000000
+      internalID: 1344352576182122699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_75
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 86
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b75dea9406de550800000000000000
+      internalID: 6191710932286405408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_76
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 143
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8d6c8eea567aee0800000000000000
+      internalID: -1249918569667962627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_77
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 99
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc653be463c2813b0800000000000000
+      internalID: -5541630729719163189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_78
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54462b09a92a1bd90800000000000000
+      internalID: -7083701954140806075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_79
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 81
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8695d4190cd22e490800000000000000
+      internalID: -7718556506264872600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_80
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 53
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c35e093f6a0ccd0800000000000000
+      internalID: -2539846624798753690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_81
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 88
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8dcb2aeef3600ac0800000000000000
+      internalID: -3891000131546526322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_82
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 101
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fcd0f84900ffa60800000000000000
+      internalID: 7709881725136785261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_83
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 88
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c09b8f858665bea0800000000000000
+      internalID: -5857663016500490041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_84
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 109
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bab8f2fcc23a10d0800000000000000
+      internalID: -3451390308594959688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_85
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 71
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93f5f32221528750800000000000000
+      internalID: 6305691635346174874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_86
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 67
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49a50b17d4fbde80800000000000000
+      internalID: -8152653495715649206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_87
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 47
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27727f52f321ef910800000000000000
+      internalID: 1872954557461899122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_88
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 142
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73461ade89c8ab20800000000000000
+      internalID: 3145985955099722622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_89
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 69
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230b7d976256bf720800000000000000
+      internalID: 2881007602560905266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_90
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 71
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0c85ccadd8a6170800000000000000
+      internalID: 8172500444687941845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_91
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 40
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b74f697fece828a0800000000000000
+      internalID: -6329548762990557262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_92
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 37
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7f82274645cf0f0800000000000000
+      internalID: -1081897020087011378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_93
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 0
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348e0ce0558fd2070800000000000000
+      internalID: 8083389950403340355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744139df9a80671d0800000000000000
+      internalID: -3353483346333985721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_95
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 21
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac3b81f8f9245d50800000000000000
+      internalID: 6725046292752055468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_96
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8500497ba73503370800000000000000
+      internalID: 8300225899774869592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_97
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 12
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d440e0f40bc8df9a0800000000000000
+      internalID: -6197642823323483059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_98
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 13
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31dd4e8d9f8b0f310800000000000000
+      internalID: 1436851664356433171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deep_blue_stars_near_99
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 4
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc85e12568cad0050800000000000000
+      internalID: 5768456390634789067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      deep_blue_stars_near_0: 7250036123587717319
+      deep_blue_stars_near_1: 8432407970826266497
+      deep_blue_stars_near_10: 1368701254629114790
+      deep_blue_stars_near_11: 4157211584927896805
+      deep_blue_stars_near_12: -2896395383930804125
+      deep_blue_stars_near_13: -1503880129461173457
+      deep_blue_stars_near_14: 8092768249030219417
+      deep_blue_stars_near_15: 446388304635350185
+      deep_blue_stars_near_16: -718390833591539369
+      deep_blue_stars_near_17: 1852764672600949398
+      deep_blue_stars_near_18: -4472026217525335723
+      deep_blue_stars_near_19: 3674774878091297646
+      deep_blue_stars_near_2: -6584891355781171878
+      deep_blue_stars_near_20: 7337547369035209376
+      deep_blue_stars_near_21: -3987783014091606053
+      deep_blue_stars_near_22: 7811903971309513521
+      deep_blue_stars_near_23: -6178490123398093748
+      deep_blue_stars_near_24: 3166113379763588114
+      deep_blue_stars_near_25: 5654012758530414482
+      deep_blue_stars_near_26: 8508842778739206091
+      deep_blue_stars_near_27: 7850887116209494831
+      deep_blue_stars_near_28: 7004016206732514167
+      deep_blue_stars_near_29: -2857936062680209711
+      deep_blue_stars_near_3: 6177169316566312670
+      deep_blue_stars_near_30: 9111167543675022545
+      deep_blue_stars_near_31: 4749837892708525517
+      deep_blue_stars_near_32: -2150642780919314092
+      deep_blue_stars_near_33: -6848842645722969800
+      deep_blue_stars_near_34: 4355174867512902619
+      deep_blue_stars_near_35: -3470230904309194059
+      deep_blue_stars_near_36: -5881276422514589741
+      deep_blue_stars_near_37: 7472206049473128157
+      deep_blue_stars_near_38: 1803987966300011412
+      deep_blue_stars_near_39: -3401964115123242004
+      deep_blue_stars_near_4: 4617356987530109356
+      deep_blue_stars_near_40: 2212738811255309134
+      deep_blue_stars_near_41: -2506772528344613662
+      deep_blue_stars_near_42: 1838460690682833790
+      deep_blue_stars_near_43: -628591755136440154
+      deep_blue_stars_near_44: 8154398204171146447
+      deep_blue_stars_near_45: 4282246479589227602
+      deep_blue_stars_near_46: 3192781221555495504
+      deep_blue_stars_near_47: 3952729432000559971
+      deep_blue_stars_near_48: 4527473003613729115
+      deep_blue_stars_near_49: 8640093271330656016
+      deep_blue_stars_near_5: -9148438681864277340
+      deep_blue_stars_near_50: 8735367624799869517
+      deep_blue_stars_near_51: -1591067028310758612
+      deep_blue_stars_near_52: -8747585502757759520
+      deep_blue_stars_near_53: -2627770978890190101
+      deep_blue_stars_near_54: 9148130810517451447
+      deep_blue_stars_near_55: -6542203652748666681
+      deep_blue_stars_near_56: 5246008139130722327
+      deep_blue_stars_near_57: -1237576297415050419
+      deep_blue_stars_near_58: -1632953274657496678
+      deep_blue_stars_near_59: -20932420073970359
+      deep_blue_stars_near_6: 5504181834907802816
+      deep_blue_stars_near_60: -3438040293563634575
+      deep_blue_stars_near_61: 8461155027798199140
+      deep_blue_stars_near_62: -409870985029633992
+      deep_blue_stars_near_63: 5557461006887866573
+      deep_blue_stars_near_64: -8354949003899855308
+      deep_blue_stars_near_65: -134463118888929206
+      deep_blue_stars_near_66: 1872414800391298828
+      deep_blue_stars_near_67: -7116372319134448265
+      deep_blue_stars_near_68: -1688486536449478318
+      deep_blue_stars_near_69: -7955681191855859597
+      deep_blue_stars_near_7: -330256665999683587
+      deep_blue_stars_near_70: -5353998804201678652
+      deep_blue_stars_near_71: -607219948283323059
+      deep_blue_stars_near_72: 5415333126868673053
+      deep_blue_stars_near_73: 1647098934635448225
+      deep_blue_stars_near_74: 1344352576182122699
+      deep_blue_stars_near_75: 6191710932286405408
+      deep_blue_stars_near_76: -1249918569667962627
+      deep_blue_stars_near_77: -5541630729719163189
+      deep_blue_stars_near_78: -7083701954140806075
+      deep_blue_stars_near_79: -7718556506264872600
+      deep_blue_stars_near_8: 7278281852380700833
+      deep_blue_stars_near_80: -2539846624798753690
+      deep_blue_stars_near_81: -3891000131546526322
+      deep_blue_stars_near_82: 7709881725136785261
+      deep_blue_stars_near_83: -5857663016500490041
+      deep_blue_stars_near_84: -3451390308594959688
+      deep_blue_stars_near_85: 6305691635346174874
+      deep_blue_stars_near_86: -8152653495715649206
+      deep_blue_stars_near_87: 1872954557461899122
+      deep_blue_stars_near_88: 3145985955099722622
+      deep_blue_stars_near_89: 2881007602560905266
+      deep_blue_stars_near_9: -7206719237870407240
+      deep_blue_stars_near_90: 8172500444687941845
+      deep_blue_stars_near_91: -6329548762990557262
+      deep_blue_stars_near_92: -1081897020087011378
+      deep_blue_stars_near_93: 8083389950403340355
+      deep_blue_stars_near_94: -3353483346333985721
+      deep_blue_stars_near_95: 6725046292752055468
+      deep_blue_stars_near_96: 8300225899774869592
+      deep_blue_stars_near_97: -6197642823323483059
+      deep_blue_stars_near_98: 1436851664356433171
+      deep_blue_stars_near_99: 5768456390634789067
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
