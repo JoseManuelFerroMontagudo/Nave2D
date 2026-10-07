@@ -19,22 +19,20 @@ public class SpawnerOleadas : MonoBehaviour
     // Estado interno
     private readonly List<GameObject> enemigosVivos = new List<GameObject>();
 
-    void Start()
+    IEnumerator EsperarJugadorYArrancar()
     {
-        if (jugador == null)
+        // Esperar hasta que el Player exista (con tag "Player")
+        while (jugador == null)
         {
             var p = GameObject.FindGameObjectWithTag("Player");
             if (p != null) jugador = p.transform;
+            yield return null;
         }
 
-        if (jugador == null)
-        {
-            Debug.LogError("[SpawnerOleadas] No se encontró al jugador.");
-            enabled = false;
-            return;
-        }
+        if (mostrarLogs)
+            Debug.Log("[SpawnerOleadas] Jugador encontrado. Iniciando bucle de oleadas.");
 
-        StartCoroutine(BucleNivel());
+        yield return StartCoroutine(BucleNivel());
     }
 
     IEnumerator BucleNivel()
