@@ -24,7 +24,7 @@ public class RestringirJugador : MonoBehaviour
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.velocity = Vector2.ClampMagnitude(rb.velocity, 2f);
+                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, 2f);
             }
         }
     }
