@@ -87,14 +87,26 @@ public class SpawnerOleadas : MonoBehaviour
         if (!SpawningPermitido || !enabled) yield break;
 
         if (mostrarLogs)
-            Debug.Log("[SpawnerOleadas] Todas las oleadas completadas.");
+            Debug.Log("[SpawnerOleadas] Todas las oleadas completadas. Buscando BossEncounterManager...");
 
-        // Spawnear jefe si está asignado y el BossEncounterManager no está encargándose
-        if (prefabJefe != null)
+        // Intentar activar el boss a través del BossEncounterManager
+        // (que maneja la barra de vida, limpieza de enemigos y secuencia dramática)
+        var bossManager = Object.FindAnyObjectByType<BossEncounterManager>();
+        if (bossManager != null)
         {
+            if (mostrarLogs) Debug.Log("[SpawnerOleadas] BossEncounterManager encontrado → ForzarAparicionBoss()");
+            bossManager.ForzarAparicionBoss();
+        }
+        else if (prefabJefe != null)
+        {
+            // Fallback: no hay manager, spawnear directamente
             Vector2 pos = CalcularPosicionSpawn(90f, 14f);
             Instantiate(prefabJefe, pos, Quaternion.identity);
-            if (mostrarLogs) Debug.Log("[SpawnerOleadas] Jefe spawneado.");
+            if (mostrarLogs) Debug.Log("[SpawnerOleadas] Jefe spawneado directamente (sin BossEncounterManager).");
+        }
+        else
+        {
+            if (mostrarLogs) Debug.Log("[SpawnerOleadas] No hay BossEncounterManager ni prefabJefe asignado.");
         }
     }
 

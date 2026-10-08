@@ -87,10 +87,15 @@ public class ShipInteractions : MonoBehaviour
             siguienteDañoContactoPermitido = Time.time + intervaloDañoContacto;
             estadisticas.RecibirDaño(20);
         }
-        if (choque.collider.CompareTag("Asteroide"))
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         {
-            estadisticas.RecibirDaño(10);
-            Destroy(choque.collider.gameObject);
+            if (collision.collider.CompareTag("Asteroide"))
+            {
+                estadisticas.RecibirDaño(10);
+                Destroy(collision.collider.gameObject);
+            }
         }
     }
 }
