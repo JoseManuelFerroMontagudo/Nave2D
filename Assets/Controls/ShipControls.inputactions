@@ -48,12 +48,12 @@
                 },
                 {
                     "name": "PrimaryAttack",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e24de742-89ef-4c02-a0f8-bbbc5ddd355d",
-                    "expectedControlType": "",
+                    "expectedControlType": "Digital",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
+                    "initialStateCheck": true,
                     "priority": 0
                 },
                 {
@@ -68,12 +68,22 @@
                 },
                 {
                     "name": "Shield",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "1e101c8a-1657-4242-ad3f-936f29c43b3a",
-                    "expectedControlType": "",
+                    "expectedControlType": "Digital",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Dash",
+                    "type": "Value",
+                    "id": "89d11c31-0c19-412f-8c78-9db3b4e9666f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
                     "priority": 0
                 }
             ],
@@ -180,7 +190,7 @@
                 {
                     "name": "",
                     "id": "77d216de-6c5d-445f-819e-18d3d5fbc6b4",
-                    "path": "<Mouse>/delta",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -224,7 +234,7 @@
                 {
                     "name": "",
                     "id": "07e8ba29-f88a-409a-a219-c800b1d9e55a",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -235,13 +245,46 @@
                 {
                     "name": "",
                     "id": "01376b20-b989-4388-ae1c-a96c21be03ea",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Shield",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "205afbc6-16c0-4cd8-9932-6adada27e4eb",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9fbaae41-67cb-4b83-a146-6c67a68c3738",
+                    "path": "<Keyboard>/#(Q)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "3a3008af-fb83-4fa8-87db-3a5faa860967",
+                    "path": "<Keyboard>/#(E)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

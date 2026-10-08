@@ -1,0 +1,1635 @@
+fileFormatVersion: 2
+guid: 95cae1c20462736498d6e5c1eef91a24
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4853634023893879422
+    second: Menu SciFi_0
+  - first:
+      213: -4993833862040161534
+    second: Menu SciFi_1
+  - first:
+      213: -1862574563765257324
+    second: Menu SciFi_2
+  - first:
+      213: -1040505380225810052
+    second: Menu SciFi_3
+  - first:
+      213: 5889281832723403392
+    second: Menu SciFi_4
+  - first:
+      213: 8832439129433948749
+    second: Menu SciFi_5
+  - first:
+      213: -4522473692351518588
+    second: Menu SciFi_6
+  - first:
+      213: 2173153046653885159
+    second: Menu SciFi_7
+  - first:
+      213: -6629067315523466544
+    second: Menu SciFi_8
+  - first:
+      213: -5487398269765687722
+    second: Menu SciFi_9
+  - first:
+      213: -2828005313112815270
+    second: Menu SciFi_10
+  - first:
+      213: -5003289748770275216
+    second: Menu SciFi_11
+  - first:
+      213: 6509959066209678935
+    second: Menu SciFi_12
+  - first:
+      213: -1755894513801068835
+    second: Menu SciFi_13
+  - first:
+      213: 4556754634417222286
+    second: Menu SciFi_14
+  - first:
+      213: -580594082434212236
+    second: Menu SciFi_15
+  - first:
+      213: -6853275207422973374
+    second: Menu SciFi_16
+  - first:
+      213: -4213373501660181470
+    second: Menu SciFi_17
+  - first:
+      213: -2537669616957285639
+    second: Menu SciFi_18
+  - first:
+      213: 5318648794390457078
+    second: Menu SciFi_19
+  - first:
+      213: 7919190213130795840
+    second: Menu SciFi_20
+  - first:
+      213: 3350086333441313487
+    second: Menu SciFi_21
+  - first:
+      213: -2859373099556328312
+    second: Menu SciFi_22
+  - first:
+      213: 400370538975092393
+    second: Menu SciFi_23
+  - first:
+      213: -4404359772765758668
+    second: Menu SciFi_24
+  - first:
+      213: 8126123133678914998
+    second: Menu SciFi_25
+  - first:
+      213: 8971120863247412314
+    second: Menu SciFi_26
+  - first:
+      213: 9143783192115406248
+    second: Menu SciFi_27
+  - first:
+      213: -4176194951387894364
+    second: Menu SciFi_28
+  - first:
+      213: -8707939030970128484
+    second: Menu SciFi_29
+  - first:
+      213: -6836642412891354341
+    second: Menu SciFi_30
+  - first:
+      213: 1424011187264148081
+    second: Menu SciFi_31
+  - first:
+      213: -6268212135511489848
+    second: Menu SciFi_32
+  - first:
+      213: 8999904431823083274
+    second: Menu SciFi_33
+  - first:
+      213: 2345080518399049490
+    second: Menu SciFi_34
+  - first:
+      213: 5901839305209415393
+    second: Menu SciFi_35
+  - first:
+      213: 778726640183602089
+    second: Menu SciFi_36
+  - first:
+      213: 3462238821104435485
+    second: Menu SciFi_37
+  - first:
+      213: -6664368197690579296
+    second: Menu SciFi_38
+  - first:
+      213: -6205795829065927565
+    second: Menu SciFi_39
+  - first:
+      213: 2958316890609993509
+    second: Menu SciFi_40
+  - first:
+      213: 5300014760039406745
+    second: Menu SciFi_41
+  - first:
+      213: -8741453534477683429
+    second: Menu SciFi_42
+  - first:
+      213: 6600484080285291150
+    second: Menu SciFi_43
+  - first:
+      213: 1505140052728903058
+    second: Menu SciFi_44
+  - first:
+      213: -4054849293976469244
+    second: Menu SciFi_45
+  - first:
+      213: 825070037015320264
+    second: Menu SciFi_46
+  - first:
+      213: -8613250124687371065
+    second: Menu SciFi_47
+  - first:
+      213: -3614493127278773110
+    second: Menu SciFi_48
+  - first:
+      213: -5010656089693040235
+    second: Menu SciFi_49
+  - first:
+      213: -861481853874023259
+    second: Menu SciFi_50
+  - first:
+      213: -5520015109027931781
+    second: Menu SciFi_51
+  - first:
+      213: -4052046921223772460
+    second: Menu SciFi_52
+  - first:
+      213: 1169841965540700921
+    second: Menu SciFi_53
+  - first:
+      213: 2944548985244020324
+    second: Menu SciFi_54
+  - first:
+      213: 8494314316196713011
+    second: Menu SciFi_55
+  - first:
+      213: -8526982073924928675
+    second: Menu SciFi_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu SciFi_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1730
+        width: 730
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ac1f7dd629b5340800000000000000
+      internalID: 4853634023893879422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_1
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1731
+        width: 705
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20377c99f8652bab0800000000000000
+      internalID: -4993833862040161534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_2
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1796
+        width: 186
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bf7177d4ec626e0800000000000000
+      internalID: -1862574563765257324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_3
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1796
+        width: 188
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7102c89ed16f81f0800000000000000
+      internalID: -1040505380225810052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_4
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1795
+        width: 186
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082d3a5cf9eeab150800000000000000
+      internalID: 5889281832723403392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_5
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 1844
+        width: 724
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42cb2a8790239a70800000000000000
+      internalID: 8832439129433948749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_6
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1596
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488a65d4322fc31c0800000000000000
+      internalID: -4522473692351518588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_7
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 1596
+        width: 188
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eadc5c9e27982e10800000000000000
+      internalID: 2173153046653885159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_8
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1596
+        width: 184
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da421a1662d004a0800000000000000
+      internalID: -6629067315523466544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_9
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 1702
+        width: 724
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656e58dd858d8d3b0800000000000000
+      internalID: -5487398269765687722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1164
+        width: 731
+        height: 528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a594ef0b628e0c8d0800000000000000
+      internalID: -2828005313112815270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_11
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1164
+        width: 705
+        height: 529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070c1386b7eb09ab0800000000000000
+      internalID: -5003289748770275216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_12
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 1402
+        width: 184
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756f2cb8745085a50800000000000000
+      internalID: 6509959066209678935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_13
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1402
+        width: 186
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde74d92e3fc1a7e0800000000000000
+      internalID: -1755894513801068835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_14
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1402
+        width: 184
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e82bd018238dc3f30800000000000000
+      internalID: 4556754634417222286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_15
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1559
+        width: 723
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e90d512c051f7f0800000000000000
+      internalID: -580594082434212236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_16
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1415
+        width: 723
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24aef81528644e0a0800000000000000
+      internalID: -6853275207422973374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_17
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1213
+        width: 183
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c4087af171785c0800000000000000
+      internalID: -4213373501660181470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_18
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1213
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa95f3bde268ccd0800000000000000
+      internalID: -2537669616957285639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_19
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1213
+        width: 183
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fae3ba26e2afc940800000000000000
+      internalID: 5318648794390457078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_20
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1274
+        width: 725
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b396a8a8d96ed60800000000000000
+      internalID: 7919190213130795840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_21
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 1024
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca09af45c5ed7e20800000000000000
+      internalID: 3350086333441313487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_22
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 1024
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c23a8c0577158d0800000000000000
+      internalID: -2859373099556328312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_23
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1024
+        width: 183
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae542a42e66e8500800000000000000
+      internalID: 400370538975092393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_24
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 1129
+        width: 724
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bd6493f1290e2c0800000000000000
+      internalID: -4404359772765758668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 941
+        width: 292
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd0400afe9c5c070800000000000000
+      internalID: 8126123133678914998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_26
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 941
+        width: 291
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c25f2e4e2df7c70800000000000000
+      internalID: 8971120863247412314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_27
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 946
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5e93d0e5e35ee70800000000000000
+      internalID: 9143783192115406248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_28
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 945
+        width: 132
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adaeb171dc2b06c0800000000000000
+      internalID: -4176194951387894364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_29
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 914
+        width: 1067
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c972445869f272780800000000000000
+      internalID: -8707939030970128484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_30
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 932
+        width: 731
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1bcd3392fd5f11a0800000000000000
+      internalID: -6836642412891354341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 714
+        width: 188
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172df0d41aa13c310800000000000000
+      internalID: 1424011187264148081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_32
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 714
+        width: 188
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c28b0ee546d209a0800000000000000
+      internalID: -6268212135511489848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_33
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 714
+        width: 189
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07574fa56516ec70800000000000000
+      internalID: 8999904431823083274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_34
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 713
+        width: 190
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f3dd48e466b8020800000000000000
+      internalID: 2345080518399049490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_35
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 753
+        width: 1071
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6027c249b87e150800000000000000
+      internalID: 5901839305209415393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_36
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 779
+        width: 731
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abe64dd0c79eca00800000000000000
+      internalID: 778726640183602089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_37
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 624
+        width: 1071
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d114f733dd75c0030800000000000000
+      internalID: 3462238821104435485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_38
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 628
+        width: 731
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a62e3cfe686383a0800000000000000
+      internalID: -6664368197690579296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_39
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 423
+        width: 184
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374bcebb29590e9a0800000000000000
+      internalID: -6205795829065927565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_40
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 422
+        width: 184
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527c8d5c98d0e0920800000000000000
+      internalID: 2958316890609993509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_41
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 423
+        width: 182
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cd974f75f6d8940800000000000000
+      internalID: 5300014760039406745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_42
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 423
+        width: 179
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15ffd8135e10b680800000000000000
+      internalID: -8741453534477683429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_43
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 422
+        width: 182
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e829607dc41a99b50800000000000000
+      internalID: 6600484080285291150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_44
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 499
+        width: 1070
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2957e1447e453e410800000000000000
+      internalID: 1505140052728903058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_45
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 135
+        width: 363
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4010ac6fc084ab7c0800000000000000
+      internalID: -4054849293976469244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_46
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 143
+        width: 400
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6dd17c3dc337b00800000000000000
+      internalID: 825070037015320264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_47
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 253
+        width: 171
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c49b6485a6977880800000000000000
+      internalID: -8613250124687371065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_48
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 252
+        width: 175
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c3571b6adb6ddc0800000000000000
+      internalID: -3614493127278773110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_49
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 252
+        width: 173
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591d23285d2967ab0800000000000000
+      internalID: -5010656089693040235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_50
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 252
+        width: 174
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4d46771d66b04f0800000000000000
+      internalID: -861481853874023259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_51
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 252
+        width: 172
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79d99f2187f463b0800000000000000
+      internalID: -5520015109027931781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_52
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 383
+        width: 757
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6ed373bcc34c7c0800000000000000
+      internalID: -4052046921223772460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_53
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 57
+        width: 1112
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2f56fc11d1c3010800000000000000
+      internalID: 1169841965540700921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_54
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 140
+        width: 755
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ee43183b32dd820800000000000000
+      internalID: 2944548985244020324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_55
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 40
+        width: 560
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3329b63adddd1e570800000000000000
+      internalID: 8494314316196713011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_56
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 50
+        width: 1154
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bb49d4bf21aa980800000000000000
+      internalID: -8526982073924928675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_57
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 265
+        width: 762
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813208ffdf6dcc24dbc703cf9643db2b
+      internalID: 358351973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 07ab31c573cb86f499251e7dd3aed756
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Menu SciFi_0: 4853634023893879422
+      Menu SciFi_1: -4993833862040161534
+      Menu SciFi_10: -2828005313112815270
+      Menu SciFi_11: -5003289748770275216
+      Menu SciFi_12: 6509959066209678935
+      Menu SciFi_13: -1755894513801068835
+      Menu SciFi_14: 4556754634417222286
+      Menu SciFi_15: -580594082434212236
+      Menu SciFi_16: -6853275207422973374
+      Menu SciFi_17: -4213373501660181470
+      Menu SciFi_18: -2537669616957285639
+      Menu SciFi_19: 5318648794390457078
+      Menu SciFi_2: -1862574563765257324
+      Menu SciFi_20: 7919190213130795840
+      Menu SciFi_21: 3350086333441313487
+      Menu SciFi_22: -2859373099556328312
+      Menu SciFi_23: 400370538975092393
+      Menu SciFi_24: -4404359772765758668
+      Menu SciFi_25: 8126123133678914998
+      Menu SciFi_26: 8971120863247412314
+      Menu SciFi_27: 9143783192115406248
+      Menu SciFi_28: -4176194951387894364
+      Menu SciFi_29: -8707939030970128484
+      Menu SciFi_3: -1040505380225810052
+      Menu SciFi_30: -6836642412891354341
+      Menu SciFi_31: 1424011187264148081
+      Menu SciFi_32: -6268212135511489848
+      Menu SciFi_33: 8999904431823083274
+      Menu SciFi_34: 2345080518399049490
+      Menu SciFi_35: 5901839305209415393
+      Menu SciFi_36: 778726640183602089
+      Menu SciFi_37: 3462238821104435485
+      Menu SciFi_38: -6664368197690579296
+      Menu SciFi_39: -6205795829065927565
+      Menu SciFi_4: 5889281832723403392
+      Menu SciFi_40: 2958316890609993509
+      Menu SciFi_41: 5300014760039406745
+      Menu SciFi_42: -8741453534477683429
+      Menu SciFi_43: 6600484080285291150
+      Menu SciFi_44: 1505140052728903058
+      Menu SciFi_45: -4054849293976469244
+      Menu SciFi_46: 825070037015320264
+      Menu SciFi_47: -8613250124687371065
+      Menu SciFi_48: -3614493127278773110
+      Menu SciFi_49: -5010656089693040235
+      Menu SciFi_5: 8832439129433948749
+      Menu SciFi_50: -861481853874023259
+      Menu SciFi_51: -5520015109027931781
+      Menu SciFi_52: -4052046921223772460
+      Menu SciFi_53: 1169841965540700921
+      Menu SciFi_54: 2944548985244020324
+      Menu SciFi_55: 8494314316196713011
+      Menu SciFi_56: -8526982073924928675
+      Menu SciFi_57: 358351973
+      Menu SciFi_6: -4522473692351518588
+      Menu SciFi_7: 2173153046653885159
+      Menu SciFi_8: -6629067315523466544
+      Menu SciFi_9: -5487398269765687722
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
