@@ -317,8 +317,14 @@ public class ControladorJefe : MonoBehaviour
             var entrada = patrones[idx];
             if (entrada != null && entrada.patron != null)
             {
+                if (entrada.retardoAntes > 0f)
+                    yield return new WaitForSeconds(entrada.retardoAntes);
+
                 var ctx = new ContextoPatron { jefe = this, puntoDisparo = puntoDisparo != null ? puntoDisparo : transform, jugador = jugador };
                 yield return StartCoroutine(entrada.patron.Ejecutar(ctx));
+
+                if (entrada.retardoDespues > 0f)
+                    yield return new WaitForSeconds(entrada.retardoDespues);
             }
             idx++;
             if (idx >= patrones.Count) { if (repetirCiclo) idx = 0; else break; }

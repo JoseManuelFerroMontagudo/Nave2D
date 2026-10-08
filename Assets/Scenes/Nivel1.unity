@@ -677,14 +677,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2613473e6f5b5164fa848dd1c4b8b8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossEncounterManager
-  tiempoParaBoss: 1000
+  tiempoParaBoss: 100000
   spawnerPatrullas: {fileID: 0}
   spawnerOleadas: {fileID: 1062775554}
   jugador: {fileID: 0}
   bossEnEscena: {fileID: 0}
   prefabBoss: {fileID: 4342604781370421429, guid: 2cef60bfc9b67d7319976cdafe0f409c, type: 3}
   distanciaSpawn: 4.5
-  duracionAlerta: 1.5
+  duracionAlerta: 5
   barraVidaBoss: {fileID: 0}
 --- !u!4 &606448812
 Transform:

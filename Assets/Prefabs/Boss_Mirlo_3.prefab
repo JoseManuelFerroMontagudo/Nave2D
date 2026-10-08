@@ -62,7 +62,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
-  vida: 50
-  velocidadMovimiento: 50
+  vida: 1000
+  velocidadMovimiento: 10
   distanciaFrenteJugador: 4
   amplitudOndaHorizontal: 3.2
   frecuenciaOndaHorizontal: 1.6
@@ -193,19 +193,23 @@ MonoBehaviour:
   "da\xF1oPlasma": 1.5
   prefabProyectilPerseguidor: {fileID: 5718189123002576064, guid: 35dc214fcf41907bab950b795718c35e, type: 3}
   "da\xF1oPerseguidor": 3
-  spritesDirecciones: []
+  spritesDirecciones:
+  - {fileID: -1142504072679516239, guid: 35b23f3d287e69d4d9721290bf7b7cc8, type: 3}
   patronesFase1:
   - patron: {fileID: 11400000, guid: a899951a64d0b4644a005533e601bb11, type: 2}
-    retardoAntes: 0
-    retardoDespues: 0
+    retardoAntes: 2
+    retardoDespues: 2
+  - patron: {fileID: 11400000, guid: 0436a784834af84449136190368c1424, type: 2}
+    retardoAntes: 2
+    retardoDespues: 2
   patronesFase2:
   - patron: {fileID: 11400000, guid: 346a639dc4dc985418972f882d7279dc, type: 2}
-    retardoAntes: 0
-    retardoDespues: 0
+    retardoAntes: 2
+    retardoDespues: 2
   patronesFase3:
   - patron: {fileID: 11400000, guid: 6acf173504853204787e40d75e295eea, type: 2}
-    retardoAntes: 0
-    retardoDespues: 0
+    retardoAntes: 2
+    retardoDespues: 2
   repetirCiclo: 1
   esperaInicial: 0.5
   lluviaActivada: 1

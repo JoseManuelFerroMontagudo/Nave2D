@@ -107,7 +107,11 @@ public class BossEncounterManager : MonoBehaviour
         if (bossActivo && jefeConectado != null && runtimeHealthFill != null)
         {
             float pct = Mathf.Clamp01(jefeConectado.vida / jefeConectado.VidaMaxima);
-            runtimeHealthFill.fillAmount = pct;
+            
+            // Usar anchorMax para escalar la barra ya que no tenemos Sprite para usar fillAmount
+            RectTransform rect = runtimeHealthFill.rectTransform;
+            rect.anchorMax = new Vector2(pct, 1f);
+            
             runtimeHealthFill.color = Color.Lerp(Color.red, Color.magenta, pct);
         }
 
@@ -253,8 +257,8 @@ public class BossEncounterManager : MonoBehaviour
         fillRect.offsetMax = new Vector2(-4, -4);
 
         runtimeHealthFill = fillObj.AddComponent<Image>();
-        runtimeHealthFill.type = Image.Type.Filled;
-        runtimeHealthFill.fillMethod = Image.FillMethod.Horizontal;
+        // Ya no usamos Filled porque requiere un Sprite, usamos Simple y controlamos el ancho con anchorMax.x
+        runtimeHealthFill.type = Image.Type.Simple;
         runtimeHealthFill.color = new Color(0.8f, 0.2f, 1f, 1f);
 
         GameObject textObj = new GameObject("BossNameText");
