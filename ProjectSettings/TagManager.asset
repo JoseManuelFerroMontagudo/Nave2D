@@ -9,6 +9,11 @@ TagManager:
   - Muros
   - Bullet
   - Attacks
+  - Attack1
+  - Attack2
+  - Bullet2
+  - Bullet3
+  - Asteroide
   layers:
   - Default
   - TransparentFX
