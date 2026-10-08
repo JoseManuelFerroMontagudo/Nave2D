@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4875738121031515867}
   - component: {fileID: 671364714574287397}
   - component: {fileID: 5731791158189740648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AsterHuge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1882219063
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}

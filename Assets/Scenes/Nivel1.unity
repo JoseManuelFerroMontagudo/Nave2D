@@ -4297,11 +4297,15 @@ MonoBehaviour:
   - {fileID: 8869476336097629157, guid: a928b6b7e9852c6429b1e3022b0ca7ed, type: 3}
   - {fileID: 3525697572991576568, guid: 70c536de7d9d92449ae52a7ff80766e1, type: 3}
   - {fileID: 6192019827025467921, guid: 46fd36c0039a3de4e8a017dd1652a1c9, type: 3}
+  - {fileID: 3955418798240587005, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  - {fileID: 6542101368399430838, guid: 5c3659959ebb30a489d7eef3009f8afc, type: 3}
+  - {fileID: 122214560388886015, guid: 0cc97290e5be8a24a95be78aef2fc1a6, type: 3}
+  - {fileID: 1416072628507055035, guid: 0d18f1a7832f6a44fa77efb30bde703e, type: 3}
   "tama\xF1oPool": 25
   jugador: {fileID: 1982281054}
-  tiempoEntreSpawns: 1
-  radioMinimo: 22
-  radioMaximo: 30
+  tiempoEntreSpawns: 0.5
+  radioMinimo: 28
+  radioMaximo: 31
 --- !u!1 &2039170202
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,8 +4393,8 @@ Transform:
   m_GameObject: {fileID: 2039170202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -606.8666, y: 190, z: 218.27618}
-  m_LocalScale: {x: 27.351751, y: 27.351751, z: 27.351751}
+  m_LocalPosition: {x: -606.8666, y: -123.99999, z: 218.27618}
+  m_LocalScale: {x: 34.121307, y: 34.121307, z: 34.121307}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 152826798}

@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8855618701930753940}
   - component: {fileID: -4286769940301428374}
   - component: {fileID: -2380247596044675739}
-  m_Layer: 0
+  - component: {fileID: 4059898901724157434}
+  - component: {fileID: -6974492705268679483}
+  m_Layer: 6
   m_Name: AsterBig2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1882219063
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300008, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
@@ -157,3 +159,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4059898901724157434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542101368399430838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765cc096ccdf69d4fb8949d815aa4ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Asteroide
+  prefabExplosion: {fileID: 6800364490446549859, guid: 40383fab859addf4499daca584d420a9, type: 3}
+  velocidadMin: 4
+  velocidadMax: 6
+  rotacionMin: -40
+  rotacionMax: 40
+--- !u!114 &-6974492705268679483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542101368399430838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf80091aefb648a48afea6e864ee74dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorLimitesAsteroide
+  distanciaMaximoJugador: 30
