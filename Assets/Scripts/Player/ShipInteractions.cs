@@ -80,7 +80,7 @@ public class ShipInteractions : MonoBehaviour
     // ==================== COLISIONES ====================
     void OnCollisionStay2D(Collision2D choque)
     {
-        if (choque.collider.CompareTag("Enemy"))
+        if (choque.collider.CompareTag("Enemy") || choque.collider.CompareTag("Boss"))
         {
             if (Time.time < siguienteDañoContactoPermitido) return;
 

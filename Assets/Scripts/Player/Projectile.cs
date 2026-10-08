@@ -14,17 +14,21 @@ public class Projectile : MonoBehaviour
     public float giroPorSegundo = 0f;    // grados/segundo
     public float radioDeteccion = 6f;
     public LayerMask capasObjetivo = ~0;
-    public string etiquetaObjetivo = "Enemy";
+
+    [Tooltip("Etiquetas que este proyectil considera como objetivos válidos")]
+    public string[] etiquetasObjetivo = new string[] { "Enemy", "Boss" };
 
     float angulo;         // dirección en grados
     float velocidad;
     float edad;
     Transform objetivo;
     Stats estadisticas;
+
     void Awake()
     {
         estadisticas = FindAnyObjectByType<Stats>();
     }
+
     public void Initialize(Vector2 velocidadInicial, Transform objetivoExplicito = null)
     {
         angulo = velocidadInicial.sqrMagnitude > 0.0001f
@@ -63,6 +67,16 @@ public class Projectile : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, angulo - 90f);
     }
 
+    // Comprueba si una etiqueta está dentro de las etiquetas objetivo
+    bool EsEtiquetaObjetivo(string etiqueta)
+    {
+        for (int i = 0; i < etiquetasObjetivo.Length; i++)
+        {
+            if (etiquetasObjetivo[i] == etiqueta) return true;
+        }
+        return false;
+    }
+
     Transform BuscarObjetivoCercano()
     {
         var impactos = Physics2D.OverlapCircleAll(transform.position, radioDeteccion, capasObjetivo);
@@ -71,7 +85,7 @@ public class Projectile : MonoBehaviour
 
         foreach (var h in impactos)
         {
-            if (!h.CompareTag(etiquetaObjetivo)) continue;
+            if (!EsEtiquetaObjetivo(h.tag)) continue;
             float d = ((Vector2)h.transform.position - (Vector2)transform.position).sqrMagnitude;
             if (d < mejorDist) { mejorDist = d; mejor = h.transform; }
         }
@@ -96,7 +110,7 @@ public class Projectile : MonoBehaviour
         if (jefe != null)
         {
             jefe.AplicarDaño(damage);
-            estadisticas.AñadirPuntos(8);
+            if (estadisticas != null) estadisticas.AñadirPuntos(8);
             impacto = true;
         }
 
@@ -105,7 +119,7 @@ public class Projectile : MonoBehaviour
         if (enemigo != null)
         {
             enemigo.AplicarDaño(damage);
-            estadisticas.AñadirPuntos(3);
+            if (estadisticas != null) estadisticas.AñadirPuntos(3);
             impacto = true;
         }
 
@@ -116,7 +130,7 @@ public class Projectile : MonoBehaviour
             if (vidaEnemigo != null)
             {
                 vidaEnemigo.AplicarDaño(damage);
-                estadisticas.AñadirPuntos(3);
+                if (estadisticas != null) estadisticas.AñadirPuntos(3);
                 impacto = true;
             }
         }
