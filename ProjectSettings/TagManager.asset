@@ -9,6 +9,7 @@ TagManager:
   - Muros
   - Bullet
   - Attacks
+  - Asteroide
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Asteroides_Interactivos
+  - Visual_No_Collision
   - 
   - 
   - 
@@ -49,8 +50,14 @@ TagManager:
   - name: Fondo_Espacial
     uniqueID: 264901167
     locked: 0
+  - name: Fondo_Medio
+    uniqueID: 1156093347
+    locked: 0
   - name: Elementos_Juego
     uniqueID: 1882219063
+    locked: 0
+  - name: Fondo_Cercano
+    uniqueID: 3593668977
     locked: 0
   m_RenderingLayers:
   - Default

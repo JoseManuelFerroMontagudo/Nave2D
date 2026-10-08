@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 0dd87569892081b49bc1a0cda745888a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4815455706304410729
+    second: asteroid_ice_0
+  - first:
+      213: -8439807646787100562
+    second: asteroid_ice_1
+  - first:
+      213: -8564093329083343259
+    second: asteroid_ice_2
+  - first:
+      213: -6365754733786792530
+    second: asteroid_ice_3
+  - first:
+      213: 8467013390625378508
+    second: asteroid_ice_4
+  - first:
+      213: 5937698980726823083
+    second: asteroid_ice_5
+  - first:
+      213: 8202526786272945293
+    second: asteroid_ice_6
+  - first:
+      213: 6666764822501427363
+    second: asteroid_ice_7
+  - first:
+      213: 8178655397066766189
+    second: asteroid_ice_8
+  - first:
+      213: 1730972349119676889
+    second: asteroid_ice_9
+  - first:
+      213: 1619648062454426107
+    second: asteroid_ice_10
+  - first:
+      213: -5696283964682503191
+    second: asteroid_ice_11
+  - first:
+      213: -8764246354420530970
+    second: asteroid_ice_12
+  - first:
+      213: -7592152414329572199
+    second: asteroid_ice_13
+  - first:
+      213: 2372494847617959279
+    second: asteroid_ice_14
+  - first:
+      213: -281641889371544518
+    second: asteroid_ice_15
+  - first:
+      213: 4375205033560607821
+    second: asteroid_ice_16
+  - first:
+      213: 2568688546460752426
+    second: asteroid_ice_17
+  - first:
+      213: -2743601106023445729
+    second: asteroid_ice_18
+  - first:
+      213: -7902014407795163512
+    second: asteroid_ice_19
+  - first:
+      213: 4393863066578424980
+    second: asteroid_ice_20
+  - first:
+      213: 7971039937356320
+    second: asteroid_ice_21
+  - first:
+      213: 4607379857389580038
+    second: asteroid_ice_22
+  - first:
+      213: 2857341710981459034
+    second: asteroid_ice_23
+  - first:
+      213: 1321659068559002229
+    second: asteroid_ice_24
+  - first:
+      213: -4206860676160344234
+    second: asteroid_ice_25
+  - first:
+      213: -8466206827697500948
+    second: asteroid_ice_26
+  - first:
+      213: -1081259411882644935
+    second: asteroid_ice_27
+  - first:
+      213: 7841265499885195902
+    second: asteroid_ice_28
+  - first:
+      213: 4420554683865677785
+    second: asteroid_ice_29
+  - first:
+      213: 1491175750336130359
+    second: asteroid_ice_30
+  - first:
+      213: -5635507938781031272
+    second: asteroid_ice_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: asteroid_ice_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 416
+        width: 78
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964f6e5937fe3d240800000000000000
+      internalID: 4815455706304410729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 416
+        width: 78
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6021a849a7cfda80800000000000000
+      internalID: -8439807646787100562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 416
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ed1b0ed7a362980800000000000000
+      internalID: -8564093329083343259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_3
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 416
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead706dfbcb48a7a0800000000000000
+      internalID: -6365754733786792530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 416
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc093b091dfd08570800000000000000
+      internalID: 8467013390625378508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 416
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8db6183c1f66250800000000000000
+      internalID: 5937698980726823083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_6
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 416
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84ec6c37aa35d170800000000000000
+      internalID: 8202526786272945293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 417
+        width: 73
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a88446b84b158c50800000000000000
+      internalID: 6666764822501427363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 289
+        width: 71
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67fe7250cb608170800000000000000
+      internalID: 8178655397066766189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 289
+        width: 72
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d14d413e26a50810800000000000000
+      internalID: 1730972349119676889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 288
+        width: 74
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf9eebfd4552a7610800000000000000
+      internalID: 1619648062454426107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_11
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 288
+        width: 76
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb78511aebb2f0b0800000000000000
+      internalID: -5696283964682503191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_12
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 288
+        width: 76
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e080c820642f5680800000000000000
+      internalID: -8764246354420530970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_13
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 288
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994f247aa9143a690800000000000000
+      internalID: -7592152414329572199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_14
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 288
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6586bf6e7bcce020800000000000000
+      internalID: 2372494847617959279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_15
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 288
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34a32e9138671cf0800000000000000
+      internalID: -281641889371544518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_16
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 160
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c81e41cc9d7bc30800000000000000
+      internalID: 4375205033560607821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_17
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 160
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a586e9f90d5a320800000000000000
+      internalID: 2568688546460752426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_18
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 160
+        width: 77
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b8a1e8455cce9d0800000000000000
+      internalID: -2743601106023445729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_19
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 161
+        width: 75
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88eb95543c7665290800000000000000
+      internalID: -7902014407795163512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_20
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 161
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4949d1bed232afc30800000000000000
+      internalID: 4393863066578424980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_21
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 161
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022e4fb5e915c1000800000000000000
+      internalID: 7971039937356320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_22
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 161
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60feef0c193b0ff30800000000000000
+      internalID: 4607379857389580038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_23
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 161
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ce4f4b52157a720800000000000000
+      internalID: 2857341710981459034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_24
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 33
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a02af9be9775210800000000000000
+      internalID: 1321659068559002229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_25
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 33
+        width: 73
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f27e1018a3e95c0800000000000000
+      internalID: -4206860676160344234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 33
+        width: 76
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec8a100fbdf18a80800000000000000
+      internalID: -8466206827697500948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_27
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 32
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93aefac2b489ef0f0800000000000000
+      internalID: -1081259411882644935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_28
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 32
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72de266d65c1dc60800000000000000
+      internalID: 7841265499885195902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_29
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 32
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfb00a5017f85d30800000000000000
+      internalID: 4420554683865677785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_30
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 32
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d2670c178b1b410800000000000000
+      internalID: 1491175750336130359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_ice_31
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 32
+        width: 79
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894101c4367aac1b0800000000000000
+      internalID: -5635507938781031272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      asteroid_ice_0: 4815455706304410729
+      asteroid_ice_1: -8439807646787100562
+      asteroid_ice_10: 1619648062454426107
+      asteroid_ice_11: -5696283964682503191
+      asteroid_ice_12: -8764246354420530970
+      asteroid_ice_13: -7592152414329572199
+      asteroid_ice_14: 2372494847617959279
+      asteroid_ice_15: -281641889371544518
+      asteroid_ice_16: 4375205033560607821
+      asteroid_ice_17: 2568688546460752426
+      asteroid_ice_18: -2743601106023445729
+      asteroid_ice_19: -7902014407795163512
+      asteroid_ice_2: -8564093329083343259
+      asteroid_ice_20: 4393863066578424980
+      asteroid_ice_21: 7971039937356320
+      asteroid_ice_22: 4607379857389580038
+      asteroid_ice_23: 2857341710981459034
+      asteroid_ice_24: 1321659068559002229
+      asteroid_ice_25: -4206860676160344234
+      asteroid_ice_26: -8466206827697500948
+      asteroid_ice_27: -1081259411882644935
+      asteroid_ice_28: 7841265499885195902
+      asteroid_ice_29: 4420554683865677785
+      asteroid_ice_3: -6365754733786792530
+      asteroid_ice_30: 1491175750336130359
+      asteroid_ice_31: -5635507938781031272
+      asteroid_ice_4: 8467013390625378508
+      asteroid_ice_5: 5937698980726823083
+      asteroid_ice_6: 8202526786272945293
+      asteroid_ice_7: 6666764822501427363
+      asteroid_ice_8: 8178655397066766189
+      asteroid_ice_9: 1730972349119676889
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
