@@ -231,54 +231,7 @@ public class BossEncounterManager : MonoBehaviour
     void CrearBarraVidaRuntime(ControladorJefe jefe)
     {
         if (runtimeCanvasObj != null) return;
-
-        runtimeCanvasObj = new GameObject("BossUI_RuntimeCanvas");
-        Canvas canvas = runtimeCanvasObj.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvas.sortingOrder = 100;
-        runtimeCanvasObj.AddComponent<CanvasScaler>();
-        runtimeCanvasObj.AddComponent<GraphicRaycaster>();
-
-        GameObject panel = new GameObject("BossHealthPanel");
-        panel.transform.SetParent(runtimeCanvasObj.transform, false);
-        RectTransform panelRect = panel.AddComponent<RectTransform>();
-        panelRect.anchorMin = new Vector2(0.2f, 0.9f);
-        panelRect.anchorMax = new Vector2(0.8f, 0.96f);
-        panelRect.offsetMin = Vector2.zero;
-        panelRect.offsetMax = Vector2.zero;
-
-        Image bg = panel.AddComponent<Image>();
-        bg.color = new Color(0.1f, 0.1f, 0.15f, 0.85f);
-
-        GameObject fillObj = new GameObject("HealthFill");
-        fillObj.transform.SetParent(panel.transform, false);
-        RectTransform fillRect = fillObj.AddComponent<RectTransform>();
-        fillRect.anchorMin = Vector2.zero;
-        fillRect.anchorMax = Vector2.one;
-        fillRect.offsetMin = new Vector2(4, 4);
-        fillRect.offsetMax = new Vector2(-4, -4);
-
-        runtimeHealthFill = fillObj.AddComponent<Image>();
-        // Ya no usamos Filled porque requiere un Sprite, usamos Simple y controlamos el ancho con anchorMax.x
-        runtimeHealthFill.type = Image.Type.Simple;
-        runtimeHealthFill.color = new Color(0.8f, 0.2f, 1f, 1f);
-
-        GameObject textObj = new GameObject("BossNameText");
-        textObj.transform.SetParent(panel.transform, false);
-        RectTransform textRect = textObj.AddComponent<RectTransform>();
-        textRect.anchorMin = new Vector2(0, 1f);
-        textRect.anchorMax = new Vector2(1f, 1.6f);
-        textRect.offsetMin = Vector2.zero;
-        textRect.offsetMax = Vector2.zero;
-
-        runtimeBossNameText = textObj.AddComponent<TextMeshProUGUI>();
-        runtimeBossNameText.text = "JEFE: NAVE NODRIZA";
-        runtimeBossNameText.fontSize = 20;
-        runtimeBossNameText.alignment = TextAlignmentOptions.Center;
-        runtimeBossNameText.color = Color.yellow;
-        runtimeBossNameText.fontStyle = FontStyles.Bold;
-
-        Debug.Log("[BossEncounter] UI de barra de vida creada automáticamente en pantalla.");
+        BossUIHelper.CrearBarraVidaRuntime(jefe, out runtimeCanvasObj, out runtimeHealthFill, out runtimeBossNameText);
     }
 
     void BossDerrotado()

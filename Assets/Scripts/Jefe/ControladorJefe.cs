@@ -225,87 +225,9 @@ public class ControladorJefe : MonoBehaviour
         yield return new WaitForSeconds(esperaInicial);
         var patrones = ObtenerPatronesFaseActual();
 
-        // PATRONES LARGOS Y SOSTENIDOS ESTILO ARCADE BARRAGE (Fallback si no hay ScriptableObjects)
         if (patrones == null || patrones.Count == 0)
         {
-            int patronIndex = 0;
-            while (!estaMuerto)
-            {
-                if (jugador != null)
-                {
-                    Transform origen = puntoDisparo != null ? puntoDisparo : transform;
-                    Vector2 dir = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
-                    var opc = new OpcionesProyectil { velocidad = 8.5f, vidaUtil = 4.5f };
-
-                    int selector = patronIndex % 4;
-
-                    // PATRÓN 1: RÁFAGA CONTINUA DE ESCOPETAS (Sustained Shotgun Waves)
-                    if (selector == 0)
-                    {
-                        for (int wave = 0; wave < 8; wave++)
-                        {
-                            if (estaMuerto || jugador == null) break;
-                            Vector2 dirActual = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
-
-                            // Escopeta masiva de 7 proyectiles en abanico
-                            for (int i = -3; i <= 3; i++)
-                            {
-                                Vector2 dirSub = Quaternion.Euler(0, 0, i * 11f) * dirActual;
-                                InstanciarProyectil(origen, dirSub, opc);
-                            }
-                            yield return new WaitForSeconds(0.14f); // Ráfaga continua de escopetas seguidas
-                        }
-                    }
-                    // PATRÓN 2: ESPIRAL GIRATORIA CONTINUA (360° Rotating Spiral Stream)
-                    else if (selector == 1)
-                    {
-                        float anguloActual = 0f;
-                        for (int i = 0; i < 30; i++)
-                        {
-                            if (estaMuerto) break;
-                            Vector2 dirSpiral = new Vector2(Mathf.Cos(anguloActual * Mathf.Deg2Rad), Mathf.Sin(anguloActual * Mathf.Deg2Rad));
-                            InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirSpiral, opc);
-                            anguloActual += 24f;
-                            yield return new WaitForSeconds(0.08f);
-                        }
-                    }
-                    // PATRÓN 3: LLUVIA DE MISILES PERSEGUIDORES (Homing Salvo)
-                    else if (selector == 2)
-                    {
-                        for (int i = 0; i < 6; i++)
-                        {
-                            if (estaMuerto || jugador == null) break;
-                            Vector2 dirHacia = ((Vector2)jugador.position - (Vector2)origen.position).normalized;
-                            var opcPerseguidor = opc.Clonar();
-                            opcPerseguidor.modo = ModoMovimiento.Perseguidor;
-                            opcPerseguidor.fuerzaPersecucion = 4.5f;
-                            InstanciarProyectilDeTipo(TipoProyectilBoss.Perseguidor, origen, dirHacia, opcPerseguidor);
-                            yield return new WaitForSeconds(0.15f);
-                        }
-                    }
-                    // PATRÓN 4: TRIPLE ANILLO DE PLASMA EXPANSIVO (Ring Waves)
-                    else
-                    {
-                        for (int ring = 0; ring < 3; ring++)
-                        {
-                            if (estaMuerto) break;
-                            float offset = ring * 12f;
-                            for (int i = 0; i < 14; i++)
-                            {
-                                float ang = i * (360f / 14f) + offset;
-                                Vector2 dirRing = new Vector2(Mathf.Cos(ang * Mathf.Deg2Rad), Mathf.Sin(ang * Mathf.Deg2Rad));
-                                InstanciarProyectilDeTipo(TipoProyectilBoss.Plasma, origen, dirRing, opc);
-                            }
-                            yield return new WaitForSeconds(0.28f);
-                        }
-                    }
-
-                    patronIndex++;
-                }
-
-                // Pausa breve entre patrones sostenidos
-                yield return new WaitForSeconds(0.6f);
-            }
+            Debug.LogWarning("[ControladorJefe] No hay patrones configurados. El jefe no atacará.");
             estaAtacando = false;
             yield break;
         }
