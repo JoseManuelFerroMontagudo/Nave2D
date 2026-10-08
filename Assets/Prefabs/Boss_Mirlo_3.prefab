@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
   vida: 1000
-  velocidadMovimiento: 10
+  velocidadMovimiento: 15
   distanciaFrenteJugador: 4
   amplitudOndaHorizontal: 3.2
   frecuenciaOndaHorizontal: 1.6
