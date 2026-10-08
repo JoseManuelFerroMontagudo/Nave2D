@@ -18,8 +18,9 @@ public class BossEncounterManager : MonoBehaviour
 
     [Header("Referencias")]
     [Tooltip("Spawner de patrullas (legacy) — se detiene al llegar el boss")]
-    public SpawnerPatrullas spawnerPatrullas;
-    [Tooltip("Spawner de oleadas — se detiene al llegar el boss (asigna el GameObject aquí)")]
+
+    //public SpawnerPatrullas spawnerPatrullas;
+    //[Tooltip("Spawner de oleadas — se detiene al llegar el boss (asigna el GameObject aquí)")]
     public SpawnerOleadas spawnerOleadas;
 
     [Tooltip("Transform del jugador (se busca automáticamente si es null)")]
@@ -130,11 +131,11 @@ public class BossEncounterManager : MonoBehaviour
     IEnumerator SecuenciaAparicionBoss()
     {
         // 1) Detener TODOS los spawners (patrullas y oleadas)
-        SpawnerPatrullas.SpawningPermitido = false;
+        //SpawnerPatrullas.SpawningPermitido = false;
         SpawnerOleadas.SpawningPermitido = false;
 
-        var spawnersPatr = Object.FindObjectsByType<SpawnerPatrullas>(FindObjectsSortMode.None);
-        foreach (var sp in spawnersPatr) { sp.StopAllCoroutines(); sp.enabled = false; }
+        //var spawnersPatr = Object.FindObjectsByType<SpawnerPatrullas>(FindObjectsSortMode.None);
+        //foreach (var sp in spawnersPatr) { sp.StopAllCoroutines(); sp.enabled = false; }
 
         var spawnersOl = Object.FindObjectsByType<SpawnerOleadas>(FindObjectsSortMode.None);
         foreach (var sp in spawnersOl) { sp.StopAllCoroutines(); sp.enabled = false; }

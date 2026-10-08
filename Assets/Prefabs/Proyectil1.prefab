@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6631900198573476286}
   m_Layer: 0
   m_Name: Proyectil1
-  m_TagString: Bullet
+  m_TagString: Bullet2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4640363980238590205, guid: db228fc59581df84d893570b730f002a, type: 3}
