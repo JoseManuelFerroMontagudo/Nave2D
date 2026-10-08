@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5830694933855508796, guid: 78022ea681041024699bd15d8c090986, type: 3}
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
   vida: 50
   velocidadMovimiento: 6.5
-  distanciaOrbitaIdeal: 3.5
-  distanciaOrbitaMinima: 2
-  velocidadOrbita: 45
+  distanciaFrenteJugador: 4
+  amplitudOndaHorizontal: 3.2
+  frecuenciaOndaHorizontal: 1.6
   prefabProyectil: {fileID: 0}
   puntoDisparo: {fileID: 0}
   "da\xF1oProyectil": 2
@@ -276,10 +276,7 @@ MonoBehaviour:
     rebotesMaximos: 1
   umbralFase2: 0.66
   umbralFase3: 0.33
-  velocidadPersecucion: 8.5
   suavizadoMovimiento: 6
-  amplitudVariacionOrbita: 0.8
-  frecuenciaVariacionOrbita: 0.4
   esInvulnerable: 0
 --- !u!114 &497548850579521229
 MonoBehaviour:
@@ -293,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ef8a824f1b3394e9ce27c9f4ea2e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorEnemyNv1
-  vida: 10
+  vida: 50
   velocidadMovimiento: 10
   rangoAtaque: 15
   spritesDirecciones:
@@ -340,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb05a7c4eafa6f4f81e700362a34134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
-  vida: 10
+  vida: 50
   "tagDa\xF1oDebil": Attack1
   "tagDa\xF1oFuerte": Attack2
   destruirAlMorir: 1
