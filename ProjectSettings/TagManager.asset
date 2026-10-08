@@ -10,6 +10,9 @@ TagManager:
   - Bullet
   - Attacks
   - Asteroide
+  - Bullet1
+  - Bullet2
+  - Bullet3
   layers:
   - Default
   - TransparentFX
