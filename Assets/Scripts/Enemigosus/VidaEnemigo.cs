@@ -3,7 +3,7 @@ using UnityEngine;
 public class VidaEnemigo : MonoBehaviour
 {
     [Header("Vida")]
-    public float vida = 10f;
+    public float vida = 100f;
 
     [Header("Daño por tag")]
     public string tagDañoDebil = "Attack1";   // 1 de daño
@@ -25,7 +25,7 @@ public class VidaEnemigo : MonoBehaviour
 
         float daño = 0f;
         if (tag == tagDañoDebil) daño = 1f;
-        else if (tag == tagDañoFuerte) daño = 5f;
+        else if (tag == tagDañoFuerte) daño = 50f;
 
         if (daño > 0f)
         {

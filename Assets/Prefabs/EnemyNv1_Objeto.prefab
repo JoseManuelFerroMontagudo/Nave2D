@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb05a7c4eafa6f4f81e700362a34134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
-  vida: 50
+  vida: 100
   "tagDa\xF1oDebil": Attack1
   "tagDa\xF1oFuerte": Attack2
   destruirAlMorir: 1
