@@ -682,7 +682,7 @@ MonoBehaviour:
   spawnerOleadas: {fileID: 1062775554}
   jugador: {fileID: 0}
   bossEnEscena: {fileID: 0}
-  prefabBoss: {fileID: 7526886902448440747, guid: 08361d012a3d270229c0e09a8bb48e55, type: 3}
+  prefabBoss: {fileID: 4342604781370421429, guid: 2cef60bfc9b67d7319976cdafe0f409c, type: 3}
   distanciaSpawn: 4.5
   duracionAlerta: 1.5
   barraVidaBoss: {fileID: 0}
@@ -1173,36 +1173,6 @@ MonoBehaviour:
   oleadas:
   - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
     cantidad: 3
-    formacion: 0
-    separacionLateral: 5
-    profundidadV: 1.5
-    distanciaFueraDeCamara: 25
-    dispersionAngular: 20
-    retardoAntes: 1
-    retardoDespues: 1.5
-    delayEntreEnemigos: 0.15
-  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-    cantidad: 4
-    formacion: 2
-    separacionLateral: 5
-    profundidadV: 1.5
-    distanciaFueraDeCamara: 25
-    dispersionAngular: 20
-    retardoAntes: 1
-    retardoDespues: 1.5
-    delayEntreEnemigos: 0.15
-  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-    cantidad: 5
-    formacion: 1
-    separacionLateral: 5
-    profundidadV: 1.5
-    distanciaFueraDeCamara: 25
-    dispersionAngular: 20
-    retardoAntes: 1
-    retardoDespues: 1.5
-    delayEntreEnemigos: 0.15
-  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-    cantidad: 5
     formacion: 0
     separacionLateral: 5
     profundidadV: 1.5

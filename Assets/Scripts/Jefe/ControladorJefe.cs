@@ -82,8 +82,22 @@ public class ControladorJefe : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        // Forzar mínimo 1500 de vida para asegurar una pelea larga y duradera
-        if (vida < 500f) vida = 1500f;
+        // Forzar material unlit para que el sprite sea siempre visible
+        // independientemente de si hay o no luces 2D en la escena
+        if (spriteRenderer != null)
+        {
+            // Busca primero Sprites-Default; si no existe usa Sprite-Unlit-Default
+            var mat = Resources.Load<Material>("Sprites-Default")
+                   ?? new Material(Shader.Find("Sprites/Default"));
+            if (mat != null) spriteRenderer.material = mat;
+
+            // Asegurar que el color no sea transparente
+            Color c = spriteRenderer.color;
+            if (c.a < 0.05f) spriteRenderer.color = new Color(c.r, c.g, c.b, 1f);
+        }
+
+        // Respetar el valor del Inspector (no forzar mínimo)
+        if (vida <= 0f) vida = 1500f;
         vidaMaxima = vida;
 
         if (rb != null)
