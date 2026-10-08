@@ -684,7 +684,7 @@ MonoBehaviour:
   bossEnEscena: {fileID: 0}
   prefabBoss: {fileID: 4342604781370421429, guid: 2cef60bfc9b67d7319976cdafe0f409c, type: 3}
   distanciaSpawn: 4.5
-  duracionAlerta: 5
+  duracionAlerta: 1
   barraVidaBoss: {fileID: 0}
 --- !u!4 &606448812
 Transform:

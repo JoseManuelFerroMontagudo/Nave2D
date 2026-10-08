@@ -193,13 +193,12 @@ MonoBehaviour:
   "da\xF1oPlasma": 1.5
   prefabProyectilPerseguidor: {fileID: 5718189123002576064, guid: 35dc214fcf41907bab950b795718c35e, type: 3}
   "da\xF1oPerseguidor": 3
-  spritesDirecciones:
-  - {fileID: -1142504072679516239, guid: 35b23f3d287e69d4d9721290bf7b7cc8, type: 3}
+  spritesDirecciones: []
   patronesFase1:
   - patron: {fileID: 11400000, guid: a899951a64d0b4644a005533e601bb11, type: 2}
     retardoAntes: 2
     retardoDespues: 2
-  - patron: {fileID: 11400000, guid: 0436a784834af84449136190368c1424, type: 2}
+  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
     retardoAntes: 2
     retardoDespues: 2
   patronesFase2:
