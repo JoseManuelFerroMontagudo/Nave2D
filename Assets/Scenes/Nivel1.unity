@@ -205,7 +205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4815455706304410729, guid: 0dd87569892081b49bc1a0cda745888a, type: 3}
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4815455706304410729, guid: 0dd87569892081b49bc1a0cda745888a, type: 3}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 419989501}
   - component: {fileID: 419989500}
   - component: {fileID: 419989502}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: planeta destruido_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,8 +446,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayerID: -177198091
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7545721878694298718, guid: fe69f2924c0f79b408d8eab9c68ccff8, type: 3}
@@ -519,9 +519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e129154b2ea812749994be0cd2be3830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LimitesMapa
-  radioMapa: 250
+  radioMapa: 240
   centroMapa: {x: 0, y: 0, z: 0}
-  segmentos: 128
+  segmentos: 64
 --- !u!4 &500598494
 Transform:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Positions:
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000002f12ca0f37623070a395e844710933d6
+  m_ApplyToSortingLayers: 000000002f12ca0f37623070a395e844710933d6f52b70f5
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -868,7 +868,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8058188747860682135, guid: 7a9e00d449ff3e44ba80cddba638854e, type: 3}
@@ -1005,7 +1005,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3394037591610339442, guid: 46cdac95348413541b98b4cf7ddf7c87, type: 3}
@@ -1083,7 +1083,7 @@ GameObject:
   - component: {fileID: 963720480}
   - component: {fileID: 963720479}
   - component: {fileID: 963720481}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: planeta anillos_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,8 +1135,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayerID: -177198091
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4731829086917158324, guid: ef2ca6fa8540f414e9d56bd7501f1193, type: 3}
@@ -1351,7 +1351,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5751092464479046657, guid: 7a9e00d449ff3e44ba80cddba638854e, type: 3}
@@ -1452,7 +1452,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5751092464479046657, guid: 7a9e00d449ff3e44ba80cddba638854e, type: 3}
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 1253788203}
   - component: {fileID: 1253788205}
   - component: {fileID: 1253788204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1572,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1882219063
+  m_SortingLayerID: 1156093347
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -4773,7 +4773,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8467013390625378508, guid: 0dd87569892081b49bc1a0cda745888a, type: 3}
@@ -4998,7 +4998,7 @@ GameObject:
   - component: {fileID: 1627858405}
   - component: {fileID: 1627858407}
   - component: {fileID: 1627858406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5065,7 +5065,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1882219063
+  m_SortingLayerID: 1156093347
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
@@ -5816,7 +5816,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156093347
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5751092464479046657, guid: 7a9e00d449ff3e44ba80cddba638854e, type: 3}
@@ -5914,7 +5914,7 @@ GameObject:
   - component: {fileID: 2039170204}
   - component: {fileID: 2039170203}
   - component: {fileID: 2039170205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: estrella roja_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5966,8 +5966,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -177198091
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3221596364584847848, guid: 8d21c904e37bfe648bcd2049dae63984, type: 3}

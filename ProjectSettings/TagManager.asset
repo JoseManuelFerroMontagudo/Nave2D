@@ -13,6 +13,9 @@ TagManager:
   - Bullet1
   - Bullet2
   - Bullet3
+  - Attack1
+  - Attack2
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Fondo_Espacial
     uniqueID: 264901167
+    locked: 0
+  - name: fondo_planetas
+    uniqueID: 4117769205
     locked: 0
   - name: Fondo_Medio
     uniqueID: 1156093347
