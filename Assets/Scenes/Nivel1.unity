@@ -1172,15 +1172,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOleadas
   oleadas:
   - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+    cantidad: 3
+    formacion: 0
+    separacionLateral: 5
+    profundidadV: 1.5
+    distanciaFueraDeCamara: 25
+    dispersionAngular: 20
+    retardoAntes: 1
+    retardoDespues: 1.5
+    delayEntreEnemigos: 0.15
+  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+    cantidad: 4
+    formacion: 2
+    separacionLateral: 5
+    profundidadV: 1.5
+    distanciaFueraDeCamara: 25
+    dispersionAngular: 20
+    retardoAntes: 1
+    retardoDespues: 1.5
+    delayEntreEnemigos: 0.15
+  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+    cantidad: 5
+    formacion: 1
+    separacionLateral: 5
+    profundidadV: 1.5
+    distanciaFueraDeCamara: 25
+    dispersionAngular: 20
+    retardoAntes: 1
+    retardoDespues: 1.5
+    delayEntreEnemigos: 0.15
+  - prefabEnemigo: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
     cantidad: 5
     formacion: 0
-    separacionLateral: 1
-    profundidadV: 5
-    distanciaFueraDeCamara: 0
-    dispersionAngular: 0
-    retardoAntes: 0
-    retardoDespues: 0
-    delayEntreEnemigos: 0
+    separacionLateral: 5
+    profundidadV: 1.5
+    distanciaFueraDeCamara: 25
+    dispersionAngular: 20
+    retardoAntes: 1
+    retardoDespues: 1.5
+    delayEntreEnemigos: 0.15
   prefabJefe: {fileID: 7526886902448440747, guid: 08361d012a3d270229c0e09a8bb48e55, type: 3}
   jugador: {fileID: 0}
   mostrarLogs: 1
