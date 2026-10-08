@@ -14,7 +14,7 @@ public class BossEncounterManager : MonoBehaviour
 {
     [Header("Timer")]
     [Tooltip("Segundos hasta que aparece el boss")]
-    public float tiempoParaBoss = 10f;
+    public float tiempoParaBoss = 1000f;
 
     [Header("Referencias")]
     [Tooltip("Spawner de patrullas (legacy) — se detiene al llegar el boss")]
