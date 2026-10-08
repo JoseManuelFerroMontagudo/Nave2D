@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controla la aparición del boss tras un timer fijo.
@@ -290,7 +291,15 @@ public class BossEncounterManager : MonoBehaviour
         if (runtimeCanvasObj != null)
             Destroy(runtimeCanvasObj, 2f);
 
-        Debug.Log("[BossEncounter] ¡Boss derrotado! 🎉");
+        Debug.Log("[BossEncounter] ¡Boss derrotado! 🎉 Llevando a los créditos...");
+        StartCoroutine(IrACreditos());
+    }
+
+    IEnumerator IrACreditos()
+    {
+        // Esperar unos segundos para que se vea la animación de muerte del Boss y la UI
+        yield return new WaitForSeconds(3.5f);
+        SceneManager.LoadScene("Credits");
     }
 
     public void ForzarAparicionBoss()
