@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8114027824060570230}
   - component: {fileID: -3773800918070009059}
   - component: {fileID: -5334241339851592656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AsterHuge3
   m_TagString: Asteroide
   m_Icon: {fileID: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1882219063
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300004, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroide
   prefabExplosion: {fileID: 6800364490446549859, guid: 40383fab859addf4499daca584d420a9, type: 3}
-  velocidadMin: 5
-  velocidadMax: 7
+  velocidadMin: 8
+  velocidadMax: 9
   rotacionMin: -40
   rotacionMax: 40
 --- !u!114 &-5334241339851592656

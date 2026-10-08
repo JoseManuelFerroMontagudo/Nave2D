@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,11 +20,37 @@ public class AsteroidSpawner : MonoBehaviour
     private void Start()
     {
         InicializarPool();
+
+        // Esperar hasta encontrar al Player
+        StartCoroutine(EsperarJugadorYArrancar());
+    }
+
+    private IEnumerator EsperarJugadorYArrancar()
+    {
+        // Buscar continuamente al objeto con tag "Player"
+        while (jugador == null)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            if (player != null)
+            {
+                jugador = player.transform;
+            }
+
+            yield return null;
+        }
+
+        Debug.Log("[AsteroidSpawner] Player encontrado. Iniciando spawner.");
     }
 
     private void Update()
     {
+        // Si todavía no encontramos al jugador, no hacemos nada
+        if (jugador == null)
+            return;
+
         timer += Time.deltaTime;
+
         if (timer >= tiempoEntreSpawns)
         {
             Spawnear();
@@ -35,8 +62,12 @@ public class AsteroidSpawner : MonoBehaviour
     {
         for (int i = 0; i < tamañoPool; i++)
         {
-            GameObject prefab = prefabsInteractivos[Random.Range(0, prefabsInteractivos.Length)];
+            GameObject prefab = prefabsInteractivos[
+                Random.Range(0, prefabsInteractivos.Length)
+            ];
+
             GameObject obj = Instantiate(prefab, transform);
+
             obj.SetActive(false);
             pool.Add(obj);
         }
@@ -45,12 +76,19 @@ public class AsteroidSpawner : MonoBehaviour
     private void Spawnear()
     {
         GameObject asteroide = ObtenerDelPool();
+
         if (asteroide != null)
         {
-            Vector3 centro = jugador != null ? jugador.position : transform.position;
-            Vector2 puntoRandom = Random.insideUnitCircle.normalized * Random.Range(radioMinimo, radioMaximo);
+            // El centro siempre es la posición ACTUAL del jugador
+            Vector3 centro = jugador.position;
 
-            asteroide.transform.position = centro + new Vector3(puntoRandom.x, puntoRandom.y, 0f);
+            Vector2 puntoRandom =
+                Random.insideUnitCircle.normalized *
+                Random.Range(radioMinimo, radioMaximo);
+
+            asteroide.transform.position =
+                centro + new Vector3(puntoRandom.x, puntoRandom.y, 0f);
+
             asteroide.SetActive(true);
         }
     }
@@ -59,8 +97,10 @@ public class AsteroidSpawner : MonoBehaviour
     {
         foreach (GameObject obj in pool)
         {
-            if (!obj.activeInHierarchy) return obj;
+            if (!obj.activeInHierarchy)
+                return obj;
         }
+
         return null;
     }
 }
