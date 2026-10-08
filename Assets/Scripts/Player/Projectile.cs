@@ -20,7 +20,11 @@ public class Projectile : MonoBehaviour
     float velocidad;
     float edad;
     Transform objetivo;
-
+    Stats estadisticas;
+    void Awake()
+    {
+        estadisticas = FindAnyObjectByType<Stats>();
+    }
     public void Initialize(Vector2 velocidadInicial, Transform objetivoExplicito = null)
     {
         angulo = velocidadInicial.sqrMagnitude > 0.0001f
@@ -92,6 +96,7 @@ public class Projectile : MonoBehaviour
         if (jefe != null)
         {
             jefe.AplicarDaño(damage);
+            estadisticas.AñadirPuntos(8);
             impacto = true;
         }
 
@@ -100,6 +105,7 @@ public class Projectile : MonoBehaviour
         if (enemigo != null)
         {
             enemigo.AplicarDaño(damage);
+            estadisticas.AñadirPuntos(3);
             impacto = true;
         }
 
@@ -110,6 +116,7 @@ public class Projectile : MonoBehaviour
             if (vidaEnemigo != null)
             {
                 vidaEnemigo.AplicarDaño(damage);
+                estadisticas.AñadirPuntos(3);
                 impacto = true;
             }
         }

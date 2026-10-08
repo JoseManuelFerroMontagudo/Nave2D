@@ -15,6 +15,8 @@ public class Stats : MonoBehaviour
     [Header("Munición")]
     public int municionMaxima = 20;
     public int municion;
+    [Header("Puntos")]
+    public int puntos;
     Animator animador;
     float acumuladorRegeneracion;
     private PlayerInput playerInput;
@@ -24,6 +26,7 @@ public class Stats : MonoBehaviour
         vida = vidaMaxima;
         energia = energiaMaxima;
         municion = municionMaxima;
+        puntos = 0;
         animador = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
         playerInput.enabled = true;
@@ -98,6 +101,11 @@ public class Stats : MonoBehaviour
     {
         if (cantidad <= 0) return;
         municion = Mathf.Min(municionMaxima, municion + cantidad);
+    }
+    public void AñadirPuntos(int cantidad)
+    {
+        if (cantidad <= 0) return;
+        puntos += cantidad;
     }
     public void Morir()
     {
