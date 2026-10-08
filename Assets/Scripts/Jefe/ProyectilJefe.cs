@@ -149,7 +149,11 @@ public class ProyectilJefe : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Enemy")) { /* ignorar */ }
+        if (otro.CompareTag("Enemy")) return;
+        if (otro.CompareTag("Shield")) return;
+        if (otro.CompareTag("Player")) return;
+        if (otro.CompareTag("Attack1")) return;
+        if (otro.CompareTag("Attack2")) return;
         else if (puedeGolpearParedes && opciones.rebotaEnParedes && rebotesRestantes > 0)
         {
             rebotesRestantes--;
