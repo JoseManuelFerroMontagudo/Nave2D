@@ -17,8 +17,10 @@ public class BossEncounterManager : MonoBehaviour
     public float tiempoParaBoss = 10f;
 
     [Header("Referencias")]
-    [Tooltip("Spawner de patrullas que se desactivará")]
+    [Tooltip("Spawner de patrullas (legacy) — se detiene al llegar el boss")]
     public SpawnerPatrullas spawnerPatrullas;
+    [Tooltip("Spawner de oleadas — se detiene al llegar el boss (asigna el GameObject aquí)")]
+    public SpawnerOleadas spawnerOleadas;
 
     [Tooltip("Transform del jugador (se busca automáticamente si es null)")]
     public Transform jugador;
@@ -123,15 +125,17 @@ public class BossEncounterManager : MonoBehaviour
 
     IEnumerator SecuenciaAparicionBoss()
     {
-        // 1) Desactivar GLOBALMENTE todos los spawners de patrullas
+        // 1) Detener TODOS los spawners (patrullas y oleadas)
         SpawnerPatrullas.SpawningPermitido = false;
-        var spawners = Object.FindObjectsByType<SpawnerPatrullas>();
-        foreach (var spawner in spawners)
-        {
-            spawner.StopAllCoroutines();
-            spawner.enabled = false;
-        }
-        Debug.Log($"[BossEncounter] Spawners de patrullas desactivados globalmente.");
+        SpawnerOleadas.SpawningPermitido = false;
+
+        var spawnersPatr = Object.FindObjectsByType<SpawnerPatrullas>(FindObjectsSortMode.None);
+        foreach (var sp in spawnersPatr) { sp.StopAllCoroutines(); sp.enabled = false; }
+
+        var spawnersOl = Object.FindObjectsByType<SpawnerOleadas>(FindObjectsSortMode.None);
+        foreach (var sp in spawnersOl) { sp.StopAllCoroutines(); sp.enabled = false; }
+
+        Debug.Log($"[BossEncounter] Todos los spawners detenidos (patrullas + oleadas).");
 
         // 2) Limpiar enemigos normales de la escena
         yield return StartCoroutine(LimpiarEnemigosNormales());

@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Spawner de oleadas de enemigos. Espera a que el jugador exista (por tag "Player"),
+/// luego lanza las oleadas en secuencia. Al terminar todas las oleadas, puede
+/// spawnear un jefe prefab. El BossEncounterManager puede detenerlo llamando
+/// a StopAllCoroutines() y desactivando el componente.
+/// </summary>
 public class SpawnerOleadas : MonoBehaviour
 {
     [Header("Oleadas (configurables en el Inspector)")]
     public List<EntradaOleada> oleadas = new List<EntradaOleada>();
 
-    [Header("Jefe gay")]
+    [Header("Jefe (opcional — spawneado al acabar todas las oleadas)")]
     public GameObject prefabJefe;
 
     [Header("Referencias")]
@@ -19,28 +25,37 @@ public class SpawnerOleadas : MonoBehaviour
     // Estado interno
     private readonly List<GameObject> enemigosVivos = new List<GameObject>();
 
+    // Flag estático para que BossEncounterManager lo detenga limpiamente
+    public static bool SpawningPermitido = true;
+
     void Start()
     {
-        if (jugador == null)
+        SpawningPermitido = true;
+        StartCoroutine(EsperarJugadorYArrancar());
+    }
+
+    IEnumerator EsperarJugadorYArrancar()
+    {
+        // Esperar hasta que el Player exista (con tag "Player")
+        while (jugador == null)
         {
             var p = GameObject.FindGameObjectWithTag("Player");
             if (p != null) jugador = p.transform;
+            yield return null;
         }
 
-        if (jugador == null)
-        {
-            Debug.LogError("[SpawnerOleadas] No se encontró al jugador.");
-            enabled = false;
-            return;
-        }
+        if (mostrarLogs)
+            Debug.Log("[SpawnerOleadas] Jugador encontrado. Iniciando bucle de oleadas.");
 
-        StartCoroutine(BucleNivel());
+        yield return StartCoroutine(BucleNivel());
     }
 
     IEnumerator BucleNivel()
     {
         for (int i = 0; i < oleadas.Count; i++)
         {
+            if (!SpawningPermitido || !enabled) yield break;
+
             EntradaOleada oleada = oleadas[i];
 
             if (oleada == null || oleada.prefabEnemigo == null)
@@ -57,7 +72,10 @@ public class SpawnerOleadas : MonoBehaviour
 
             yield return StartCoroutine(SpawnearOleada(oleada));
 
-            yield return new WaitUntil(() => enemigosVivos.Count == 0);
+            // Esperar a que mueran todos los enemigos de esta oleada
+            yield return new WaitUntil(() => enemigosVivos.Count == 0 || !SpawningPermitido);
+
+            if (!SpawningPermitido || !enabled) yield break;
 
             if (mostrarLogs)
                 Debug.Log($"[SpawnerOleadas] Oleada {i + 1} completada.");
@@ -66,9 +84,12 @@ public class SpawnerOleadas : MonoBehaviour
                 yield return new WaitForSeconds(oleada.retardoDespues);
         }
 
+        if (!SpawningPermitido || !enabled) yield break;
+
         if (mostrarLogs)
             Debug.Log("[SpawnerOleadas] Todas las oleadas completadas.");
 
+        // Spawnear jefe si está asignado y el BossEncounterManager no está encargándose
         if (prefabJefe != null)
         {
             Vector2 pos = CalcularPosicionSpawn(90f, 14f);
@@ -85,12 +106,18 @@ public class SpawnerOleadas : MonoBehaviour
 
         for (int i = 0; i < oleada.cantidad; i++)
         {
+            if (!SpawningPermitido || !enabled) yield break;
+
             Vector2 pos = CalcularPosicionFormacion(i, oleada, origen, dir, perp);
 
             GameObject enemigo = Instantiate(oleada.prefabEnemigo, pos, Quaternion.identity);
             enemigosVivos.Add(enemigo);
 
-            var detector = enemigo.AddComponent<DetectorMuerteEnemigo>();
+            // Detectar muerte sin depender de VidaEnemigo directamente
+            var detector = enemigo.GetComponent<DetectorMuerteEnemigo>();
+            if (detector == null)
+                detector = enemigo.AddComponent<DetectorMuerteEnemigo>();
+
             var capturado = enemigo;
             detector.OnMuerte += () => enemigosVivos.Remove(capturado);
 
@@ -108,6 +135,7 @@ public class SpawnerOleadas : MonoBehaviour
 
     Vector2 CalcularPosicionSpawn(float anguloGrados, float distancia)
     {
+        if (jugador == null) return Vector2.zero;
         Vector2 dir = new Vector2(
             Mathf.Cos(anguloGrados * Mathf.Deg2Rad),
             Mathf.Sin(anguloGrados * Mathf.Deg2Rad)
