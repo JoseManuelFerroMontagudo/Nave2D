@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(VidaEnemigo))]
 public class ControladorEnemyNv1 : MonoBehaviour
 {
     [Header("Estadísticas de la Nave")]
-    public float vida = 10f;
     public float velocidadMovimiento = 3f;
     public float rangoAtaque = 6f;
 
@@ -30,12 +30,13 @@ public class ControladorEnemyNv1 : MonoBehaviour
     private float cronometroAtaque;
     private bool estaAtacando = false;
     private ControladorJefe simuladorJefe;
+    private VidaEnemigo vidaEnemigo;
 
     void Awake()
     {
-        if (vida < 30f) vida = 50f;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         simuladorJefe = GetComponent<ControladorJefe>();
+        vidaEnemigo = GetComponent<VidaEnemigo>();
 
         var jugadorObj = GameObject.FindGameObjectWithTag("Player");
         if (jugadorObj != null) jugador = jugadorObj.transform;
@@ -120,12 +121,5 @@ public class ControladorEnemyNv1 : MonoBehaviour
 
     public void TakeDamage(float daño) => AplicarDaño(daño);
 
-    public void AplicarDaño(float daño)
-    {
-        vida -= Mathf.Abs(daño);
-        if (vida <= 0f)
-        {
-            Destroy(gameObject);
-        }
-    }
+    public void AplicarDaño(float daño) => vidaEnemigo.AplicarDaño(Mathf.Abs(daño));
 }

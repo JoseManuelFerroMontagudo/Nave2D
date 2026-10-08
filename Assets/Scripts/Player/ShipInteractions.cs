@@ -93,6 +93,7 @@ public class ShipInteractions : MonoBehaviour
         {
             if (collision.collider.CompareTag("Asteroide"))
             {
+                if (escudo != null && escudo.EstaActivo) return;
                 estadisticas.RecibirDaño(10);
                 Destroy(collision.collider.gameObject);
             }

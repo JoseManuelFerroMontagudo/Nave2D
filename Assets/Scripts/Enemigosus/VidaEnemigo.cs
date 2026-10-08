@@ -17,6 +17,8 @@ public class VidaEnemigo : MonoBehaviour
     void OnTriggerEnter2D(Collider2D otro)
 
     {
+        if (GetComponent<ControladorEnemyNv1>() != null) return;
+
         Debug.Log($"{name} detectó trigger con {otro.name} (tag: {otro.tag})");
         if (muerto) return;
 
