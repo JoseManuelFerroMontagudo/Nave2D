@@ -79,6 +79,11 @@ public class Projectile : MonoBehaviour
         // Ignorar al jugador y su escudo
         if (otro.CompareTag("Player")) return;
         if (otro.CompareTag("Shield")) return;
+        if (otro.CompareTag("Bullet")) return;
+        if (otro.CompareTag("Bullet1")) return;
+        if (otro.CompareTag("Bullet2")) return;
+        if (otro.CompareTag("Bullet3")) return;
+        if (otro.CompareTag("Asteroide")) return;
 
         bool impacto = false;
 
