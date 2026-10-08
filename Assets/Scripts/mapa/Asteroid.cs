@@ -67,7 +67,7 @@ public class Asteroide : MonoBehaviour
     // Por si usas Triggers en lugar de Colliders normales:
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Asteroide"))
+        if (other.CompareTag("Player") || other.CompareTag("Asteroide") || other.CompareTag("Shield"))
         {
             Explotar();
         }

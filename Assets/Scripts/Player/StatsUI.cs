@@ -7,6 +7,7 @@ public class StatsUI : MonoBehaviour
     [Header("Sliders")]
     public Slider sliderVida;
     public Slider sliderEnergia;
+    public TMP_Text PuntajeText;
 
     [Header("Munición (iconos repetidos)")]
     public RectTransform contenedorIconos;   // PanelMunicion (Horizontal Layout Group)
@@ -32,6 +33,10 @@ public class StatsUI : MonoBehaviour
 
         if (sliderEnergia != null)
             sliderEnergia.value = estadisticas.energia;
+
+        // --- Puntaje ---
+        if (PuntajeText != null)
+            PuntajeText.text = $"Puntaje: {estadisticas.puntos}";
 
         // --- Iconos de munición ---
         ActualizarIconos((int)estadisticas.municion);
