@@ -172,10 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroide
   prefabExplosion: {fileID: 6800364490446549859, guid: 40383fab859addf4499daca584d420a9, type: 3}
-  velocidadMin: 4
-  velocidadMax: 6
-  rotacionMin: -40
-  rotacionMax: 40
+  velocidadMin: 8
+  velocidadMax: 9
 --- !u!114 &-7158430391387711649
 MonoBehaviour:
   m_ObjectHideFlags: 0
