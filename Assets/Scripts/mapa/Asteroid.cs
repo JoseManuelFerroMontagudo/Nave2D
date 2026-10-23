@@ -109,9 +109,14 @@ public class Asteroide : MonoBehaviour
     {
         if (prefabExplosion != null)
         {
-            Instantiate(prefabExplosion, transform.position, Quaternion.identity);
+            // 1. Guardamos la referencia de la explosión recién creada
+            GameObject efecto = Instantiate(prefabExplosion, transform.position, Quaternion.identity);
+
+            // 2. Destruimos ÚNICAMENTE la explosión pasados 1.5 segundos
+            Destroy(efecto, 1.5f);
         }
 
+        // 3. El asteroide solo se desactiva para volver al pool
         gameObject.SetActive(false);
     }
 }
