@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e129154b2ea812749994be0cd2be3830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LimitesMapa
-  radioMapa: 50
+  radioMapa: 60
   centroMapa: {x: 0, y: 0, z: 0}
   segmentos: 64
 --- !u!4 &500598494
@@ -6305,16 +6305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c478835854ad2c438c22e4e6c07cbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidSpawner
-  prefabsInteractivos:
-  - {fileID: 6747026704579016348, guid: ae4d463454dcd3f4f8546cef1366ff03, type: 3}
-  - {fileID: 3592861495988656133, guid: a605a9cb8e6a23444baef3434392fdb5, type: 3}
-  - {fileID: 6554404179560890419, guid: 10eda568a7de7e04693212985f98844e, type: 3}
-  - {fileID: 7979792204202706108, guid: a4f6c7d73f99033429f262bcba1bdeb8, type: 3}
-  - {fileID: 1082700227081861820, guid: 65ee5b4a801d6d44eb112962bd3246e2, type: 3}
-  - {fileID: 8869476336097629157, guid: a928b6b7e9852c6429b1e3022b0ca7ed, type: 3}
-  - {fileID: 3525697572991576568, guid: 70c536de7d9d92449ae52a7ff80766e1, type: 3}
-  - {fileID: 6192019827025467921, guid: 46fd36c0039a3de4e8a017dd1652a1c9, type: 3}
-  "tama\xF1oPool": 25
+  prefabAsteroide: {fileID: 3955418798240587005, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  "tama\xF1oPool": 60
   jugador: {fileID: 0}
   tiempoEntreSpawns: 0.5
   radioMinimo: 28

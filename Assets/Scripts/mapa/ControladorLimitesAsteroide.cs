@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class ControladorLimitesAsteroide : MonoBehaviour
+public class ControladorLimitesAsteroid : MonoBehaviour
 {
-    [SerializeField] private float distanciaMaximoJugador = 30f;
+    [SerializeField] private float distanciaMaximoJugador = 22f;
     private Transform jugadorTransform;
 
-    private void Start()
+    private void OnEnable()
     {
-        GameObject jugador = GameObject.FindWithTag("Player");
-        if (jugador != null)
+        // Buscar al jugador cada vez que el asteroide se activa desde el pool
+        if (jugadorTransform == null)
         {
-            jugadorTransform = jugador.transform;
+            GameObject jugador = GameObject.FindWithTag("Player");
+            if (jugador != null)
+            {
+                jugadorTransform = jugador.transform;
+            }
         }
     }
 
