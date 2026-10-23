@@ -113,14 +113,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   vidaUtil: 6
+  "da\xF1o": 100
   prefabEfectoImpacto: {fileID: 0}
-  damage: 10
   giroPorSegundo: 60
   radioDeteccion: 10
   capasObjetivo:
     serializedVersion: 2
     m_Bits: 4294967295
-  etiquetaObjetivo: Enemy
+  etiquetasObjetivo:
+  - Enemy
+  - Boss
+  etiquetasIgnoradas:
+  - Player
+  - Shield
+  - Bullet
+  - Bullet1
+  - Bullet2
+  - Bullet3
+  - Asteroide
+  - Sierra
 --- !u!96 &5186286795562749960
 TrailRenderer:
   serializedVersion: 4
@@ -309,7 +320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2386687998809430707, guid: db228fc59581df84d893570b730f002a, type: 3}

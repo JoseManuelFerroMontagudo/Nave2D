@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6478126962766407553}
   - component: {fileID: 8627246509481013587}
+  - component: {fileID: 6927643682617733076}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -25,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379286089661860738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6629935545977973502}
+  m_Father: {fileID: 6926904008840996643}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8627246509481013587
 SpriteRenderer:
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1882219063
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5830694933855508796, guid: 78022ea681041024699bd15d8c090986, type: 3}
@@ -92,6 +93,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &6927643682617733076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379286089661860738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508b103a11ce87c499b7f95a416268fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteBillboardAndSelector
+  parentTransform: {fileID: 6926904008840996643}
+  mainCamera: {fileID: 0}
+  sprites:
+  - {fileID: 5830694933855508796, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: 2257999382807605110, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: 8579933983931842467, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: 1723005811108047852, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: -4883992831217675976, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: -8404099027125124158, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: -4972751862925979688, guid: 78022ea681041024699bd15d8c090986, type: 3}
+  - {fileID: 1768755365162362248, guid: 78022ea681041024699bd15d8c090986, type: 3}
 --- !u!1 &3251986787303007370
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,11 +140,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3251986787303007370}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018, y: 0.736, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.018000007, y: 0.73600006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 6926904008840996643}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4970157666035185582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6926904008840996643}
+  m_Layer: 0
+  m_Name: Aim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6926904008840996643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970157666035185582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8214241724955802774}
+  - {fileID: 6478126962766407553}
   m_Father: {fileID: 6629935545977973502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7911172836786130444
@@ -133,11 +190,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6629935545977973502}
   - component: {fileID: 3582726307918407053}
-  - component: {fileID: 52415177582574304}
-  - component: {fileID: 8852882567317553937}
-  - component: {fileID: 497548850579521229}
-  - component: {fileID: 740686638504912794}
-  - component: {fileID: 1655797828146367397}
+  - component: {fileID: 9199374279552569098}
+  - component: {fileID: 8525747350769505959}
+  - component: {fileID: 7325573772557519336}
   m_Layer: 0
   m_Name: EnemyNv1_Objeto
   m_TagString: Enemy
@@ -158,8 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6478126962766407553}
-  - {fileID: 8214241724955802774}
+  - {fileID: 6926904008840996643}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3582726307918407053
@@ -189,8 +243,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &52415177582574304
-CapsuleCollider2D:
+--- !u!58 &9199374279552569098
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,66 +273,13 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.024749517, y: 0.00824964}
-  m_Size: {x: 1.7209654, y: 2.583954}
-  m_Direction: 0
---- !u!114 &8852882567317553937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911172836786130444}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
-  vida: 50
-  velocidadMovimiento: 6.5
-  distanciaFrenteJugador: 4
-  amplitudOndaHorizontal: 3.2
-  frecuenciaOndaHorizontal: 1.6
-  prefabProyectil: {fileID: 0}
-  puntoDisparo: {fileID: 0}
-  "da\xF1oProyectil": 2
-  prefabProyectilPlasma: {fileID: 0}
-  "da\xF1oPlasma": 1.5
-  prefabProyectilPerseguidor: {fileID: 0}
-  "da\xF1oPerseguidor": 3
-  spritesDirecciones: []
-  patronesFase1: []
-  patronesFase2: []
-  patronesFase3: []
-  repetirCiclo: 1
-  esperaInicial: 0.5
-  lluviaActivada: 1
-  lluviaBalasPorAnillo: 10
-  lluviaIntervalo: 0.35
-  lluviaOpciones:
-    modo: 0
-    velocidad: 4.95
-    tiempoVuelo: 3
-    vidaUtil: 14
-    color: {r: 0.7, g: 0.2, b: 1, a: 0.7}
-    amplitudOnda: 2
-    frecuenciaOnda: 8
-    fuerzaPersecucion: 1.5
-    regresaAlOrigen: 1
-    multiplicadorVelocidadRetorno: 0.7
-    tiempoFrenado: 0.4
-    pausaAntesDeRegresar: 0.25
-    rebotaEnParedes: 1
-    rebotesMaximos: 1
-  umbralFase2: 0.66
-  umbralFase3: 0.33
-  suavizadoMovimiento: 6
-  esInvulnerable: 0
---- !u!114 &497548850579521229
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.32
+--- !u!114 &8525747350769505959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,28 +288,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7911172836786130444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7ef8a824f1b3394e9ce27c9f4ea2e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f249a6a2d62ed743a7f07a93ad78a2a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorEnemyNv1
-  velocidadMovimiento: 10
-  rangoAtaque: 15
-  spritesDirecciones:
-  - {fileID: 5830694933855508796, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: 2257999382807605110, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: 8579933983931842467, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: 1723005811108047852, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: -4883992831217675976, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: -8404099027125124158, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: -4972751862925979688, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  - {fileID: 1768755365162362248, guid: 78022ea681041024699bd15d8c090986, type: 3}
-  prefabProyectilCustom: {fileID: 7238110645245677718, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Enemigo
+  hijoAim: {fileID: 6926904008840996643}
   puntoDisparo: {fileID: 8214241724955802774}
-  "da\xF1oProyectilCustom": 1
-  cadenciaAtaque: 1.5
-  patronRafaga: {fileID: 11400000, guid: 80c587402cc13ac498a807288fa12e30, type: 2}
-  patronCono: {fileID: 11400000, guid: a899951a64d0b4644a005533e601bb11, type: 2}
-  ataqueActivo: 0
---- !u!114 &740686638504912794
+  puntoAncla: {x: 0, y: 0, z: 0}
+  enPosicion: 1
+  radioAnclaje: 2
+  patron: {fileID: 11400000, guid: 15f7da26fe6bad04b8d133129d9be724, type: 2}
+  cadencia: 3
+--- !u!114 &7325573772557519336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,26 +307,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7911172836786130444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2711468dc3b297d4ba610599418952c8, type: 3}
+  m_Script: {fileID: 11500000, guid: fc3b0e07cf479c9449cebaf09d5134cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SeparacionEnemigos
-  radioSeparacion: 3
-  fuerzaSeparacion: 3
-  tagEnemigos: Enemy
-  intervaloActualizacion: 0.2
---- !u!114 &1655797828146367397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911172836786130444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb05a7c4eafa6f4f81e700362a34134, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VidaEnemigo
-  vida: 200
-  "tagDa\xF1oDebil": Attack1
-  "tagDa\xF1oFuerte": Attack2
-  destruirAlMorir: 1
+  m_EditorClassIdentifier: Assembly-CSharp::VidaPersonaje
+  vidaMaxima: 100
+  fasesTotales: 1
+  vidaActual: 0
+  faseActual: 1
+  duracionFlash: 0.1
+  cadenciaFlash: 0.15
+  colorFlash: {r: 1, g: 0, b: 0, a: 1}
+  OnVidaCambia:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFaseCambia:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMuere:
+    m_PersistentCalls:
+      m_Calls: []

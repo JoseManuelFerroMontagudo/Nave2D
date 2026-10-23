@@ -1,0 +1,1 @@
+public interface IDamageDealer { float Daño { get; } }

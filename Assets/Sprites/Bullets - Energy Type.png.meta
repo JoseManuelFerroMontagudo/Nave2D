@@ -1,0 +1,1824 @@
+fileFormatVersion: 2
+guid: a67ac2d036c8d4c489c1d3eac6ccbbf2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5850540143278715836
+    second: "Atlas de orbes m\xE1gicos luminosos 1_0"
+  - first:
+      213: 2760912312263270005
+    second: "Atlas de orbes m\xE1gicos luminosos 1_1"
+  - first:
+      213: 8267489573118108657
+    second: "Atlas de orbes m\xE1gicos luminosos 1_2"
+  - first:
+      213: 3350292623327374210
+    second: "Atlas de orbes m\xE1gicos luminosos 1_3"
+  - first:
+      213: 3302260353157038087
+    second: "Atlas de orbes m\xE1gicos luminosos 1_4"
+  - first:
+      213: -5342638829944468071
+    second: "Atlas de orbes m\xE1gicos luminosos 1_5"
+  - first:
+      213: -6844525196895715550
+    second: "Atlas de orbes m\xE1gicos luminosos 1_6"
+  - first:
+      213: -4693450654028975476
+    second: "Atlas de orbes m\xE1gicos luminosos 1_7"
+  - first:
+      213: -3084920080109258617
+    second: "Atlas de orbes m\xE1gicos luminosos 1_8"
+  - first:
+      213: 9077620089604436171
+    second: "Atlas de orbes m\xE1gicos luminosos 1_9"
+  - first:
+      213: -4421035517318394361
+    second: "Atlas de orbes m\xE1gicos luminosos 1_10"
+  - first:
+      213: -2501585889463356331
+    second: "Atlas de orbes m\xE1gicos luminosos 1_11"
+  - first:
+      213: 4615519005386082912
+    second: "Atlas de orbes m\xE1gicos luminosos 1_12"
+  - first:
+      213: 2366580419266428934
+    second: "Atlas de orbes m\xE1gicos luminosos 1_13"
+  - first:
+      213: -4831961898896494197
+    second: "Atlas de orbes m\xE1gicos luminosos 1_14"
+  - first:
+      213: -439093882953326060
+    second: "Atlas de orbes m\xE1gicos luminosos 1_15"
+  - first:
+      213: -503332542503887473
+    second: "Atlas de orbes m\xE1gicos luminosos 1_16"
+  - first:
+      213: 3582436620392105101
+    second: "Atlas de orbes m\xE1gicos luminosos 1_17"
+  - first:
+      213: -1751685140427430685
+    second: "Atlas de orbes m\xE1gicos luminosos 1_18"
+  - first:
+      213: 1475787982637056857
+    second: "Atlas de orbes m\xE1gicos luminosos 1_19"
+  - first:
+      213: -8880560741280867764
+    second: "Atlas de orbes m\xE1gicos luminosos 1_20"
+  - first:
+      213: -4087025968502398317
+    second: "Atlas de orbes m\xE1gicos luminosos 1_21"
+  - first:
+      213: -4993068787114581342
+    second: "Atlas de orbes m\xE1gicos luminosos 1_22"
+  - first:
+      213: -6067679428423358415
+    second: "Atlas de orbes m\xE1gicos luminosos 1_23"
+  - first:
+      213: -5561208948748805756
+    second: "Atlas de orbes m\xE1gicos luminosos 1_24"
+  - first:
+      213: 5675446910998036883
+    second: "Atlas de orbes m\xE1gicos luminosos 1_25"
+  - first:
+      213: 1543702657884853543
+    second: "Atlas de orbes m\xE1gicos luminosos 1_26"
+  - first:
+      213: 5991351087965043318
+    second: "Atlas de orbes m\xE1gicos luminosos 1_27"
+  - first:
+      213: -2501859613373009836
+    second: "Atlas de orbes m\xE1gicos luminosos 1_28"
+  - first:
+      213: 849974096341810075
+    second: "Atlas de orbes m\xE1gicos luminosos 1_29"
+  - first:
+      213: 6896785017517229180
+    second: "Atlas de orbes m\xE1gicos luminosos 1_30"
+  - first:
+      213: 2740195665941180251
+    second: "Atlas de orbes m\xE1gicos luminosos 1_31"
+  - first:
+      213: -7216248409814895277
+    second: "Atlas de orbes m\xE1gicos luminosos 1_32"
+  - first:
+      213: 5405447735589760186
+    second: "Atlas de orbes m\xE1gicos luminosos 1_33"
+  - first:
+      213: 639496095046898799
+    second: "Atlas de orbes m\xE1gicos luminosos 1_34"
+  - first:
+      213: -6404495160455582437
+    second: "Atlas de orbes m\xE1gicos luminosos 1_35"
+  - first:
+      213: 491967510841391844
+    second: "Atlas de orbes m\xE1gicos luminosos 1_36"
+  - first:
+      213: 2520378332117054267
+    second: "Atlas de orbes m\xE1gicos luminosos 1_37"
+  - first:
+      213: 4395877294496936887
+    second: "Atlas de orbes m\xE1gicos luminosos 1_38"
+  - first:
+      213: -6509413042675987162
+    second: "Atlas de orbes m\xE1gicos luminosos 1_39"
+  - first:
+      213: 2765283046009687968
+    second: "Atlas de orbes m\xE1gicos luminosos 1_40"
+  - first:
+      213: 2291207976654157368
+    second: "Atlas de orbes m\xE1gicos luminosos 1_41"
+  - first:
+      213: -3665925976226349368
+    second: "Atlas de orbes m\xE1gicos luminosos 1_42"
+  - first:
+      213: -2211683089504126831
+    second: "Atlas de orbes m\xE1gicos luminosos 1_43"
+  - first:
+      213: 4481816138361900717
+    second: "Atlas de orbes m\xE1gicos luminosos 1_44"
+  - first:
+      213: 781411474976527906
+    second: "Atlas de orbes m\xE1gicos luminosos 1_45"
+  - first:
+      213: -939474820773114988
+    second: "Atlas de orbes m\xE1gicos luminosos 1_46"
+  - first:
+      213: 284193386669608373
+    second: "Atlas de orbes m\xE1gicos luminosos 1_47"
+  - first:
+      213: 8299945671457039872
+    second: "Atlas de orbes m\xE1gicos luminosos 1_48"
+  - first:
+      213: -5232549377422376392
+    second: "Atlas de orbes m\xE1gicos luminosos 1_49"
+  - first:
+      213: 6062233772049042676
+    second: "Atlas de orbes m\xE1gicos luminosos 1_50"
+  - first:
+      213: 6208063935214754159
+    second: "Atlas de orbes m\xE1gicos luminosos 1_51"
+  - first:
+      213: 2079803213252803901
+    second: "Atlas de orbes m\xE1gicos luminosos 1_52"
+  - first:
+      213: -2389838466568591622
+    second: "Atlas de orbes m\xE1gicos luminosos 1_53"
+  - first:
+      213: 7997568060724494691
+    second: "Atlas de orbes m\xE1gicos luminosos 1_54"
+  - first:
+      213: 290782967571446886
+    second: "Atlas de orbes m\xE1gicos luminosos 1_55"
+  - first:
+      213: -8374540035800414859
+    second: "Atlas de orbes m\xE1gicos luminosos 1_56"
+  - first:
+      213: 35390397188418880
+    second: "Atlas de orbes m\xE1gicos luminosos 1_57"
+  - first:
+      213: -4277326838017379119
+    second: "Atlas de orbes m\xE1gicos luminosos 1_58"
+  - first:
+      213: 8879582079482386544
+    second: "Atlas de orbes m\xE1gicos luminosos 1_59"
+  - first:
+      213: -1551238328495167947
+    second: "Atlas de orbes m\xE1gicos luminosos 1_60"
+  - first:
+      213: 4278460284829964966
+    second: "Atlas de orbes m\xE1gicos luminosos 1_61"
+  - first:
+      213: -7487067996471658449
+    second: "Atlas de orbes m\xE1gicos luminosos 1_62"
+  - first:
+      213: 2750441632188157721
+    second: "Atlas de orbes m\xE1gicos luminosos 1_63"
+  - first:
+      213: -7276457005307715680
+    second: "Atlas de orbes m\xE1gicos luminosos 1_64"
+  - first:
+      213: -4001869608280729012
+    second: "Atlas de orbes m\xE1gicos luminosos 1_65"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_0"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 567
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb37a48434b413150800000000000000
+      internalID: 5850540143278715836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_1"
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 567
+        width: 137
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e547cbe1bb05620800000000000000
+      internalID: 2760912312263270005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_2"
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 567
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f363f5b6f50cb270800000000000000
+      internalID: 8267489573118108657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_3"
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 570
+        width: 136
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b2a0be361ae7e20800000000000000
+      internalID: 3350292623327374210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_4"
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 567
+        width: 141
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70008c98b4cf3dd20800000000000000
+      internalID: 3302260353157038087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_5"
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 566
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d83f96a422bd5b0800000000000000
+      internalID: -5342638829944468071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_6"
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 567
+        width: 134
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ff1d6e89c5301a0800000000000000
+      internalID: -6844525196895715550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_7"
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 569
+        width: 136
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8237c34f738ddeb0800000000000000
+      internalID: -4693450654028975476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_8"
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 570
+        width: 134
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7883e9028892035d0800000000000000
+      internalID: -3084920080109258617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_9"
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 564
+        width: 144
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc072de406f2afd70800000000000000
+      internalID: 9077620089604436171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_10"
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 569
+        width: 143
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e0ad2ee9355a2c0800000000000000
+      internalID: -4421035517318394361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_11"
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 567
+        width: 141
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554386333e4984dd0800000000000000
+      internalID: -2501585889463356331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_12"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 566
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a0a12d41e9d0040800000000000000
+      internalID: 4615519005386082912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_13"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 416
+        width: 144
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60045c64a58c7d020800000000000000
+      internalID: 2366580419266428934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_14"
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 424
+        width: 145
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b817d08f04c61fcb0800000000000000
+      internalID: -4831961898896494197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_15"
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 420
+        width: 133
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412258b907608e9f0800000000000000
+      internalID: -439093882953326060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_16"
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 420
+        width: 134
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d592828bdc309f0800000000000000
+      internalID: -503332542503887473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_17"
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 419
+        width: 133
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8482dc202f57b130800000000000000
+      internalID: 3582436620392105101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_18"
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 420
+        width: 136
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e42e7645a3c0b7e0800000000000000
+      internalID: -1751685140427430685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_19"
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 418
+        width: 158
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9534fd4e95d0b7410800000000000000
+      internalID: 1475787982637056857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_20"
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 421
+        width: 138
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a9ca99e09e1c480800000000000000
+      internalID: -8880560741280867764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_21"
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 418
+        width: 136
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3922e9f1987f747c0800000000000000
+      internalID: -4087025968502398317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_22"
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 421
+        width: 150
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2e1fc746e05bab0800000000000000
+      internalID: -4993068787114581342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_23"
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 417
+        width: 140
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13861e135b54bcba0800000000000000
+      internalID: -6067679428423358415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_24"
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 419
+        width: 137
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4899a18fced92d2b0800000000000000
+      internalID: -5561208948748805756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_25"
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 415
+        width: 151
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39140af45ec33ce40800000000000000
+      internalID: 5675446910998036883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_26"
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 272
+        width: 144
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7259d0273655c6510800000000000000
+      internalID: 1543702657884853543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_27"
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 276
+        width: 136
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a7eca221e852350800000000000000
+      internalID: 5991351087965043318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_28"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 276
+        width: 135
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4507103efeb974dd0800000000000000
+      internalID: -2501859613373009836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_29"
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 274
+        width: 138
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9bbcb0ffe6bbcb00800000000000000
+      internalID: 849974096341810075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_30"
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 274
+        width: 139
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74c955ce6d46bf50800000000000000
+      internalID: 6896785017517229180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_31"
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 276
+        width: 144
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f2d73a071270620800000000000000
+      internalID: 2740195665941180251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_32"
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 276
+        width: 148
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355710afd4cbadb90800000000000000
+      internalID: -7216248409814895277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_33"
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 275
+        width: 146
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc64c38312040b40800000000000000
+      internalID: 5405447735589760186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_34"
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 275
+        width: 134
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64158c6f42ffd800800000000000000
+      internalID: 639496095046898799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_35"
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 275
+        width: 139
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d26538599ae17a0800000000000000
+      internalID: -6404495160455582437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_36"
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 274
+        width: 141
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eafbb438d1d3d600800000000000000
+      internalID: 491967510841391844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_37"
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 282
+        width: 134
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33bd615dbe2af220800000000000000
+      internalID: 2520378332117054267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_38"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 277
+        width: 142
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3f1b6eb1b410d30800000000000000
+      internalID: 4395877294496936887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_39"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 141
+        width: 135
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62dc007735be9a5a0800000000000000
+      internalID: -6509413042675987162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_40"
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 144
+        width: 134
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af41dc7742406620800000000000000
+      internalID: 2765283046009687968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_41"
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 143
+        width: 134
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8363303f3810ccf10800000000000000
+      internalID: 2291207976654157368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_42"
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 144
+        width: 133
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceb62e5fb3002dc0800000000000000
+      internalID: -3665925976226349368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_43"
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 142
+        width: 133
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1983e56b2f58e41e0800000000000000
+      internalID: -2211683089504126831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_44"
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 142
+        width: 133
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae8cab380c923e30800000000000000
+      internalID: 4481816138361900717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_45"
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 142
+        width: 136
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226d36da89128da00800000000000000
+      internalID: 781411474976527906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_46"
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 141
+        width: 141
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b0568c0a056f2f0800000000000000
+      internalID: -939474820773114988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_47"
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 144
+        width: 132
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd05f32168a1f300800000000000000
+      internalID: 284193386669608373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_48"
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 141
+        width: 138
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006ec3afc945f2370800000000000000
+      internalID: 8299945671457039872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_49"
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 141
+        width: 139
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8324c0180104267b0800000000000000
+      internalID: -5232549377422376392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_50"
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 134
+        width: 138
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc0c502f71612450800000000000000
+      internalID: 6062233772049042676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_51"
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 142
+        width: 133
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f699361e149772650800000000000000
+      internalID: 6208063935214754159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_52"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 10
+        width: 132
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d36a0d002fcdc10800000000000000
+      internalID: 2079803213252803901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_53"
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 14
+        width: 139
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af66d99939695ded0800000000000000
+      internalID: -2389838466568591622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_54"
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 15
+        width: 143
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3614e7e37c11dfe60800000000000000
+      internalID: 7997568060724494691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_55"
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 15
+        width: 129
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c74d08191190400800000000000000
+      internalID: 290782967571446886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_56"
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 14
+        width: 132
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57544d82538a7cb80800000000000000
+      internalID: -8374540035800414859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_57"
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 14
+        width: 130
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d20e4f06bbd7000800000000000000
+      internalID: 35390397188418880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_58"
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 15
+        width: 134
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4babf27e1e3a4c0800000000000000
+      internalID: -4277326838017379119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_59"
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 14
+        width: 126
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078d871fadc9a3b70800000000000000
+      internalID: 8879582079482386544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_60"
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 15
+        width: 125
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536231485f4e87ae0800000000000000
+      internalID: -1551238328495167947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_61"
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 12
+        width: 141
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa18e6f5f4206b30800000000000000
+      internalID: 4278460284829964966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_62"
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 16
+        width: 139
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f287c1d4357981890800000000000000
+      internalID: -7487067996471658449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_63"
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 15
+        width: 140
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f450e87188b2620800000000000000
+      internalID: 2750441632188157721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Atlas de orbes m\xE1gicos luminosos 1_65"
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 14
+        width: 127
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4adef84bc08678c0800000000000000
+      internalID: -4001869608280729012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7224355cd75f4474fb57c75672c1558e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Atlas de orbes m\xE1gicos luminosos 1_0": 5850540143278715836
+      "Atlas de orbes m\xE1gicos luminosos 1_1": 2760912312263270005
+      "Atlas de orbes m\xE1gicos luminosos 1_10": -4421035517318394361
+      "Atlas de orbes m\xE1gicos luminosos 1_11": -2501585889463356331
+      "Atlas de orbes m\xE1gicos luminosos 1_12": 4615519005386082912
+      "Atlas de orbes m\xE1gicos luminosos 1_13": 2366580419266428934
+      "Atlas de orbes m\xE1gicos luminosos 1_14": -4831961898896494197
+      "Atlas de orbes m\xE1gicos luminosos 1_15": -439093882953326060
+      "Atlas de orbes m\xE1gicos luminosos 1_16": -503332542503887473
+      "Atlas de orbes m\xE1gicos luminosos 1_17": 3582436620392105101
+      "Atlas de orbes m\xE1gicos luminosos 1_18": -1751685140427430685
+      "Atlas de orbes m\xE1gicos luminosos 1_19": 1475787982637056857
+      "Atlas de orbes m\xE1gicos luminosos 1_2": 8267489573118108657
+      "Atlas de orbes m\xE1gicos luminosos 1_20": -8880560741280867764
+      "Atlas de orbes m\xE1gicos luminosos 1_21": -4087025968502398317
+      "Atlas de orbes m\xE1gicos luminosos 1_22": -4993068787114581342
+      "Atlas de orbes m\xE1gicos luminosos 1_23": -6067679428423358415
+      "Atlas de orbes m\xE1gicos luminosos 1_24": -5561208948748805756
+      "Atlas de orbes m\xE1gicos luminosos 1_25": 5675446910998036883
+      "Atlas de orbes m\xE1gicos luminosos 1_26": 1543702657884853543
+      "Atlas de orbes m\xE1gicos luminosos 1_27": 5991351087965043318
+      "Atlas de orbes m\xE1gicos luminosos 1_28": -2501859613373009836
+      "Atlas de orbes m\xE1gicos luminosos 1_29": 849974096341810075
+      "Atlas de orbes m\xE1gicos luminosos 1_3": 3350292623327374210
+      "Atlas de orbes m\xE1gicos luminosos 1_30": 6896785017517229180
+      "Atlas de orbes m\xE1gicos luminosos 1_31": 2740195665941180251
+      "Atlas de orbes m\xE1gicos luminosos 1_32": -7216248409814895277
+      "Atlas de orbes m\xE1gicos luminosos 1_33": 5405447735589760186
+      "Atlas de orbes m\xE1gicos luminosos 1_34": 639496095046898799
+      "Atlas de orbes m\xE1gicos luminosos 1_35": -6404495160455582437
+      "Atlas de orbes m\xE1gicos luminosos 1_36": 491967510841391844
+      "Atlas de orbes m\xE1gicos luminosos 1_37": 2520378332117054267
+      "Atlas de orbes m\xE1gicos luminosos 1_38": 4395877294496936887
+      "Atlas de orbes m\xE1gicos luminosos 1_39": -6509413042675987162
+      "Atlas de orbes m\xE1gicos luminosos 1_4": 3302260353157038087
+      "Atlas de orbes m\xE1gicos luminosos 1_40": 2765283046009687968
+      "Atlas de orbes m\xE1gicos luminosos 1_41": 2291207976654157368
+      "Atlas de orbes m\xE1gicos luminosos 1_42": -3665925976226349368
+      "Atlas de orbes m\xE1gicos luminosos 1_43": -2211683089504126831
+      "Atlas de orbes m\xE1gicos luminosos 1_44": 4481816138361900717
+      "Atlas de orbes m\xE1gicos luminosos 1_45": 781411474976527906
+      "Atlas de orbes m\xE1gicos luminosos 1_46": -939474820773114988
+      "Atlas de orbes m\xE1gicos luminosos 1_47": 284193386669608373
+      "Atlas de orbes m\xE1gicos luminosos 1_48": 8299945671457039872
+      "Atlas de orbes m\xE1gicos luminosos 1_49": -5232549377422376392
+      "Atlas de orbes m\xE1gicos luminosos 1_5": -5342638829944468071
+      "Atlas de orbes m\xE1gicos luminosos 1_50": 6062233772049042676
+      "Atlas de orbes m\xE1gicos luminosos 1_51": 6208063935214754159
+      "Atlas de orbes m\xE1gicos luminosos 1_52": 2079803213252803901
+      "Atlas de orbes m\xE1gicos luminosos 1_53": -2389838466568591622
+      "Atlas de orbes m\xE1gicos luminosos 1_54": 7997568060724494691
+      "Atlas de orbes m\xE1gicos luminosos 1_55": 290782967571446886
+      "Atlas de orbes m\xE1gicos luminosos 1_56": -8374540035800414859
+      "Atlas de orbes m\xE1gicos luminosos 1_57": 35390397188418880
+      "Atlas de orbes m\xE1gicos luminosos 1_58": -4277326838017379119
+      "Atlas de orbes m\xE1gicos luminosos 1_59": 8879582079482386544
+      "Atlas de orbes m\xE1gicos luminosos 1_6": -6844525196895715550
+      "Atlas de orbes m\xE1gicos luminosos 1_60": -1551238328495167947
+      "Atlas de orbes m\xE1gicos luminosos 1_61": 4278460284829964966
+      "Atlas de orbes m\xE1gicos luminosos 1_62": -7487067996471658449
+      "Atlas de orbes m\xE1gicos luminosos 1_63": 2750441632188157721
+      "Atlas de orbes m\xE1gicos luminosos 1_64": -7276457005307715680
+      "Atlas de orbes m\xE1gicos luminosos 1_65": -4001869608280729012
+      "Atlas de orbes m\xE1gicos luminosos 1_7": -4693450654028975476
+      "Atlas de orbes m\xE1gicos luminosos 1_8": -3084920080109258617
+      "Atlas de orbes m\xE1gicos luminosos 1_9": 9077620089604436171
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

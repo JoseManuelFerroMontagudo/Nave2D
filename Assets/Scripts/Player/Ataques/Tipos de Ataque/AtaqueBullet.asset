@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
+  m_Name: AtaqueBullet
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
+  cadencia: 10
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
+  velocidad: 20
+  "desdeCa\xF1ones": 1
