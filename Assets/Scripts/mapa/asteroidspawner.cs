@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
-    [Header("Pool de Asteroides Interactivos")]
-    [SerializeField] private GameObject[] prefabsInteractivos;
+    [Header("Prefab de Asteroide")]
+    [SerializeField] private GameObject prefabAsteroide;
     [SerializeField] private int tamañoPool = 25;
 
     [Header("Referencia y Distancia")]
@@ -20,14 +20,11 @@ public class AsteroidSpawner : MonoBehaviour
     private void Start()
     {
         InicializarPool();
-
-        // Esperar hasta encontrar al Player
         StartCoroutine(EsperarJugadorYArrancar());
     }
 
     private IEnumerator EsperarJugadorYArrancar()
     {
-        // Buscar continuamente al objeto con tag "Player"
         while (jugador == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -45,7 +42,6 @@ public class AsteroidSpawner : MonoBehaviour
 
     private void Update()
     {
-        // Si todavía no encontramos al jugador, no hacemos nada
         if (jugador == null)
             return;
 
@@ -58,16 +54,12 @@ public class AsteroidSpawner : MonoBehaviour
         }
     }
 
+    // MANTENER: Crea la reserva inicial de objetos
     private void InicializarPool()
     {
         for (int i = 0; i < tamañoPool; i++)
         {
-            GameObject prefab = prefabsInteractivos[
-                Random.Range(0, prefabsInteractivos.Length)
-            ];
-
-            GameObject obj = Instantiate(prefab, transform);
-
+            GameObject obj = Instantiate(prefabAsteroide, transform);
             obj.SetActive(false);
             pool.Add(obj);
         }
@@ -79,7 +71,6 @@ public class AsteroidSpawner : MonoBehaviour
 
         if (asteroide != null)
         {
-            // El centro siempre es la posición ACTUAL del jugador
             Vector3 centro = jugador.position;
 
             Vector2 puntoRandom =
@@ -93,14 +84,24 @@ public class AsteroidSpawner : MonoBehaviour
         }
     }
 
+    // REEMPLAZAR: Busca disponibles y, si no hay, expande el pool dinámicamente
     private GameObject ObtenerDelPool()
     {
+        // 1. ELIMINA referencias muertas/destruidas si las hay
+        pool.RemoveAll(obj => obj == null);
+
+        // 2. Busca uno desactivado en el pool
         foreach (GameObject obj in pool)
         {
-            if (!obj.activeInHierarchy)
+            if (obj != null && !obj.activeInHierarchy)
                 return obj;
         }
 
-        return null;
+        // 3. Si se agotaron o no hay disponibles, crea uno nuevo
+        GameObject nuevoObj = Instantiate(prefabAsteroide, transform);
+        nuevoObj.SetActive(false);
+        pool.Add(nuevoObj);
+
+        return nuevoObj;
     }
 }
