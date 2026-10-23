@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
   cadencia: 3
   costoCalor: 0
-  costoEnergia: 0
+  costoEnergia: 10
   costoMunicion: 0
   prefab: {fileID: 4685093840455365156, guid: 006d8a741e2d135498b77dbfdb4b1fd2, type: 3}
   velocidad: 15

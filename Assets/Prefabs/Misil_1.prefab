@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5186286795562749960}
   m_Layer: 0
   m_Name: Misil_1
-  m_TagString: Attack2
+  m_TagString: Attack1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   vidaUtil: 6
   "da\xF1o": 100
   prefabEfectoImpacto: {fileID: 0}
+  destruirAlImpactar: 1
   giroPorSegundo: 60
   radioDeteccion: 10
   capasObjetivo:

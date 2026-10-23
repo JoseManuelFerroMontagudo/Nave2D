@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
   m_Name: AtaqueMisil
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectilUnico
-  cadencia: 10
+  cadencia: 2
   costoCalor: 0
   costoEnergia: 0
-  costoMunicion: 0
+  costoMunicion: 1
   prefab: {fileID: 6997285835846201165, guid: a21fc12ab0b0ed942b4cc8e29043f3b2, type: 3}
   velocidad: 20
   "desdeCa\xF1ones": 0

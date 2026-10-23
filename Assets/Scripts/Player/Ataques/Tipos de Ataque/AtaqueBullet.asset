@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AtaqueBullet
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
   cadencia: 10
-  costoCalor: 0
+  costoCalor: 5
   costoEnergia: 0
   costoMunicion: 0
   prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}

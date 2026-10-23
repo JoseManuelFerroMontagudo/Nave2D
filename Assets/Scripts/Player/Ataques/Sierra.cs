@@ -10,6 +10,9 @@ public class Sierra : MonoBehaviour, IDamageDealer
     public float daño;
     public float Daño => daño;
 
+    // Para que ShipInteractions sepa si bloquea proyectiles
+    public bool IsBoosted => boost;
+
     float dañoBase, escalaBase;
     bool boost;
 
@@ -17,7 +20,7 @@ public class Sierra : MonoBehaviour, IDamageDealer
     {
         dañoBase = d;
         escalaBase = e;
-        daño = d * 0.5f;         // arranca en pasivo
+        daño = d * 0.5f;
         transform.localScale = Vector3.one * e;
     }
 
@@ -38,15 +41,19 @@ public class Sierra : MonoBehaviour, IDamageDealer
         boost = b;
         daño = dañoBase * (b ? 1f : 0.5f);
     }
-    public bool BloqueaProyectiles => boost;
 
+    // === Bloqueo de proyectiles solo en boost ===
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (!boost) return; // solo bloquea en boost
-        if (!otro.CompareTag("Bullet") &&
-            !otro.CompareTag("Bullet2") &&
-            !otro.CompareTag("Bullet3")) return;
+        if (!boost) return;
 
-        Destroy(otro.transform.root.gameObject);
+        if (otro.CompareTag("Bullet") ||
+            otro.CompareTag("Bullet1") ||
+            otro.CompareTag("Bullet2") ||
+            otro.CompareTag("Bullet3"))
+        {
+            Destroy(otro.transform.root.gameObject);
+        }
+        // Los asteroides los sigue gestionando el casco (comportamiento original).
     }
 }

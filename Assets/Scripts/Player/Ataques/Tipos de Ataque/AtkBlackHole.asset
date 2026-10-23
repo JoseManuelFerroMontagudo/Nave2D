@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
   m_Name: AtkBlackHole
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
-  cadencia: 0.5
+  cadencia: 0.1
   costoCalor: 0
-  costoEnergia: 30
-  costoMunicion: 0
+  costoEnergia: 0
+  costoMunicion: 1
   prefab: {fileID: 3155201989743126139, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
   velocidad: 5
   "desdeCa\xF1ones": 0

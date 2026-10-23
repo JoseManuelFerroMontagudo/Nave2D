@@ -6,16 +6,14 @@ TagManager:
   tags:
   - Enemy
   - Shield
-  - Muros
-  - Bullet
-  - Attacks
-  - Asteroide
+  - Boss
+  - Bulllet
   - Bullet1
   - Bullet2
-  - Bullet3
+  - Bulllet3
   - Attack1
   - Attack2
-  - Boss
+  - Asteroid
   layers:
   - Default
   - TransparentFX
