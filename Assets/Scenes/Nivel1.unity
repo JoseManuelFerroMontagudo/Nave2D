@@ -526,9 +526,9 @@ MonoBehaviour:
   - {fileID: -5112844274692613043, guid: ac060a705747fa9b1b0d7dc18a0e01e7, type: 3}
   nombreJefe: Mirlo
   duracionEntrada: 1.2
-  intensidadSacudida: 6
+  intensidadSacudida: 12
   duracionSacudida: 0.15
-  colorGolpe: {r: 0, g: 0, b: 0, a: 1}
+  colorGolpe: {r: 0.6886792, g: 0.5879761, b: 0.5879761, a: 1}
 --- !u!225 &290165986
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1408,7 +1408,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerOleadas
   limiteMapa: {fileID: 500598495}
-  oleadas: []
+  oleadas:
+  - grupos:
+    - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      cantidad: 40
+    retardoAntes: 0
+    retardoDespues: 2
+    delayEntreEnemigos: 2
+  - grupos:
+    - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      cantidad: 20
+    retardoAntes: 10
+    retardoDespues: 10
+    delayEntreEnemigos: 2
   prefabJefe: {fileID: 4342604781370421429, guid: 2cef60bfc9b67d7319976cdafe0f409c, type: 3}
   velocidadEntrada: 10
   radioPosicionamiento: 16
