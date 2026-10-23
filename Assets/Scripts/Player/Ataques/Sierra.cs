@@ -38,4 +38,15 @@ public class Sierra : MonoBehaviour, IDamageDealer
         boost = b;
         daño = dañoBase * (b ? 1f : 0.5f);
     }
+    public bool BloqueaProyectiles => boost;
+
+    void OnTriggerEnter2D(Collider2D otro)
+    {
+        if (!boost) return; // solo bloquea en boost
+        if (!otro.CompareTag("Bullet") &&
+            !otro.CompareTag("Bullet2") &&
+            !otro.CompareTag("Bullet3")) return;
+
+        Destroy(otro.transform.root.gameObject);
+    }
 }
