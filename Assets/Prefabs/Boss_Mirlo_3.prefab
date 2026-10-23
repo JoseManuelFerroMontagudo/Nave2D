@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
-  vida: 1000
-  velocidadMovimiento: 15
-  distanciaFrenteJugador: 4
+  vida: 700
+  velocidadMovimiento: 20
+  distanciaFrenteJugador: 2
   amplitudOndaHorizontal: 3.2
   frecuenciaOndaHorizontal: 1.6
   prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
@@ -195,7 +195,7 @@ MonoBehaviour:
   "da\xF1oPerseguidor": 3
   spritesDirecciones: []
   patronesFase1:
-  - patron: {fileID: 11400000, guid: a899951a64d0b4644a005533e601bb11, type: 2}
+  - patron: {fileID: 0}
     retardoAntes: 2
     retardoDespues: 2
   - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
