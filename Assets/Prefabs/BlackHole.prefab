@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7108314619757294774}
   m_Layer: 0
   m_Name: BlackHole
-  m_TagString: Attack1
+  m_TagString: Attack2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c557f8004122e974eb6330ed121681b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  vidaUtil: 3
+  vidaUtil: 10
   "da\xF1o": 10
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 0
@@ -116,19 +116,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65172ad73128fc945becc614ae187191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProyectilAgujeroNegro
-  multiplicadorRadioAtraccion: 1.5
-  fuerzaAtraccion: 20
+  multiplicadorDiametroColider: 0.6
+  multiplicadorDiametroAtraccion: 3
+  escalaPorAbsorcion: 0.3
+  escalaMaxima: 10
+  escalaMinima: 0.1
+  "da\xF1oPorAbsorcion": 10
   tagsProyectilEnemigo:
   - Bullet
   - Bullet1
   - Bullet2
   - Bullet3
-  multiplicadorColider: 0.3
-  "da\xF1oPorAbsorcion": 10
-  escalaPorAbsorcion: 0.3
-  escalaMaxima: 10
-  efectoAbsorcion: {fileID: 0}
-  sprite: {fileID: 5560433211361650414}
+  fuerzaAtraccion: 20
+  destruirAlMinimo: 1
 --- !u!1 &4603857538238989552
 GameObject:
   m_ObjectHideFlags: 0

@@ -2214,7 +2214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
   arsenal:
   - {fileID: 11400000, guid: a40ac8c792febc8469b33eb50933d579, type: 2}
-  - {fileID: 11400000, guid: e64cbd7a3e4ed614aa7ad92dae69f446, type: 2}
+  - {fileID: 11400000, guid: 1cd2497dc60ad964f87f7755a3ab8146, type: 2}
   indicePrimario: 0
   indiceSecundario: 1
   "ca\xF1onesBase": 2
