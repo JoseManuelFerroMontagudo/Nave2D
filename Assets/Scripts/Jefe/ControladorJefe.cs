@@ -294,6 +294,22 @@ public class ControladorJefe : MonoBehaviour
         }
     }
 
+    // ── Recepción de daño del jugador (mismo sistema que VidaPersonaje) ──
+    // Attack1: golpe único al entrar (proyectiles). Attack2: daño continuo por segundo (sierra).
+    void OnTriggerEnter2D(Collider2D otro)
+    {
+        if (estaMuerto || !otro.CompareTag("Attack1")) return;
+        var d = otro.GetComponentInParent<IDamageDealer>();
+        if (d != null) AplicarDaño(d.Daño);
+    }
+
+    void OnTriggerStay2D(Collider2D otro)
+    {
+        if (estaMuerto || !otro.CompareTag("Attack2")) return;
+        var d = otro.GetComponentInParent<IDamageDealer>();
+        if (d != null) AplicarDaño(d.Daño * Time.deltaTime);
+    }
+
     public void TakeDamage(float damage) => AplicarDaño(damage);
 
     public void AplicarDaño(float daño)
