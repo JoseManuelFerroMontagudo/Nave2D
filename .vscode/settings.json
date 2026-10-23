@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Nave2D.slnx"
+    "dotnet.defaultSolution": "Nave Test 2D.slnx"
 }
