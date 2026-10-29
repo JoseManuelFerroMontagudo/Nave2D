@@ -9,6 +9,8 @@ public class ShipController : MonoBehaviour
     [Header("Propulsión")]
     public float aceleracionEmpuje = 24f;
     public float velocidadMaxima = 20f;
+    [Header("Estabilizador lateral")]
+    public float reduccionDerivaLateral = 12f;
 
     [Header("Rotación")]
     public float zonaMuertaRaton = 0.1f;
@@ -123,6 +125,20 @@ public class ShipController : MonoBehaviour
             frenando = false;
         }
 
+        // Reducir la deriva lateral cuando el jugador está empujando hacia adelante
+        if (!girando && !frenando && entradaMovimiento.y > 0.01f)
+        {
+            Vector2 lateral = cuerpo.transform.right;          // eje X local del barco
+            float deriva = Vector2.Dot(velocidadBase, lateral); // velocidad lateral acumulada
+
+            // Cuanto más "adelante" se pulse, más fuerte se corrige la deriva
+            float factor = Mathf.Clamp01(entradaMovimiento.y);
+            float correccion = Mathf.Min(Mathf.Abs(deriva),
+                                         reduccionDerivaLateral * factor * Time.fixedDeltaTime);
+
+            velocidadBase -= lateral * Mathf.Sign(deriva) * correccion;
+        }
+
         if (frenando)
         {
             float velocidad = velocidadBase.magnitude;
@@ -133,5 +149,19 @@ public class ShipController : MonoBehaviour
 
         if (velocidadBase.magnitude > velocidadMaxima)
             velocidadBase = velocidadBase.normalized * velocidadMaxima;
+    }
+    public void Rebotar(Vector2 normalHaciaFuera)
+    {
+        Vector2 velocidadActual = velocidadBase;
+        if (tiempoImpulsoRestante > 0f) velocidadActual += vectorImpulso;
+
+        if (Vector2.Dot(velocidadActual, normalHaciaFuera) <= 0f) return;
+
+        velocidadActual -= 2f * Vector2.Dot(velocidadActual, normalHaciaFuera) * normalHaciaFuera;
+
+        velocidadBase = velocidadActual;
+        tiempoImpulsoRestante = 0f;
+        vectorImpulso = Vector2.zero;
+        cuerpo.linearVelocity = velocidadBase;
     }
 }

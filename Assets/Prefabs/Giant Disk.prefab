@@ -197,6 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea42f4f0aa16c2c48a692a75e53a304f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sierra
+  spriteNormal: {fileID: 1724171721082974900, guid: 1e788b665c8cf4c4bb7a24335950bdb8, type: 3}
+  spriteBoost: {fileID: -7247872967120680731, guid: 1e788b665c8cf4c4bb7a24335950bdb8, type: 3}
+  "da\xF1oBase": 200
+  escalaBase: 1
   multiplicadorBoost: 3
   velocidadEscala: 10
-  "da\xF1o": 5
+  "da\xF1o": 200

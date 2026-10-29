@@ -1,1 +1,1 @@
-public interface IDamageDealer { float Daño { get; } }
+public interface IDamageDealer { int Daño { get; } }

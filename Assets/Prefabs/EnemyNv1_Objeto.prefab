@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 9199374279552569098}
   - component: {fileID: 8525747350769505959}
   - component: {fileID: 7325573772557519336}
+  - component: {fileID: 592060137772181152}
   m_Layer: 0
   m_Name: EnemyNv1_Objeto
   m_TagString: Enemy
@@ -224,7 +225,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911172836786130444}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -295,7 +296,7 @@ MonoBehaviour:
   puntoDisparo: {fileID: 8214241724955802774}
   puntoAncla: {x: 0, y: 0, z: 0}
   enPosicion: 1
-  radioAnclaje: 2
+  radioAnclaje: 14
   patron: {fileID: 11400000, guid: 15f7da26fe6bad04b8d133129d9be724, type: 2}
   cadencia: 3
 --- !u!114 &7325573772557519336
@@ -326,3 +327,25 @@ MonoBehaviour:
   OnMuere:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &592060137772181152
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911172836786130444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70bb6a5e7807b3741a6e6610146fe75d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 1
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -16,5 +16,5 @@ MonoBehaviour:
   "da\xF1o": 10
   velocidad: 15
   vidaUtil: 4
-  cantidad: 6
-  intervalo: 0.2
+  cantidad: 3
+  intervalo: 0.5

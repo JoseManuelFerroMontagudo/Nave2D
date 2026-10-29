@@ -3,31 +3,47 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Sierra : MonoBehaviour, IDamageDealer
 {
+    [Header("Sprites")]
+    [SerializeField] Sprite spriteNormal;
+    [SerializeField] Sprite spriteBoost;
+
+    [Header("Config")]
+    public int dañoBase = 100;
+    public float escalaBase = 3f;
     public float multiplicadorBoost = 2f;
     public float velocidadEscala = 10f;
 
-    [Tooltip("Lo lee el destino al colisionar, igual que Projectile.daño")]
-    public float daño;
-    public float Daño => daño;
-
-    // Para que ShipInteractions sepa si bloquea proyectiles
+    public int daño;
+    public int Daño => daño;
     public bool IsBoosted => boost;
 
-    float dañoBase, escalaBase;
+    SpriteRenderer sr;
     bool boost;
-
-    public void Initialize(float d, float e)
-    {
-        dañoBase = d;
-        escalaBase = e;
-        daño = d * 0.5f;
-        transform.localScale = Vector3.one * e;
-    }
 
     void Awake()
     {
+        // Busca el SpriteRenderer en hijos (el que rota o cualquiera)
+        sr = GetComponentInChildren<SpriteRenderer>();
         GetComponent<Collider2D>().isTrigger = true;
-        gameObject.tag = "Sierra";
+        AplicarEstado();
+    }
+
+    public void SetBoost(bool b)
+    {
+        if (boost == b) return;
+        boost = b;
+        AplicarEstado();
+    }
+
+    void AplicarEstado()
+    {
+        daño = dañoBase * (boost ? 2 : 1);
+
+        if (sr)
+        {
+            var s = boost ? spriteBoost : spriteNormal;
+            if (s) sr.sprite = s;
+        }
     }
 
     void Update()
@@ -36,24 +52,16 @@ public class Sierra : MonoBehaviour, IDamageDealer
         transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one * obj, velocidadEscala * Time.deltaTime);
     }
 
-    public void SetBoost(bool b)
-    {
-        boost = b;
-        daño = dañoBase * (b ? 1f : 0.5f);
-    }
-
-    // === Bloqueo de proyectiles solo en boost ===
     void OnTriggerEnter2D(Collider2D otro)
     {
         if (!boost) return;
-
-        if (otro.CompareTag("Bullet") ||
-            otro.CompareTag("Bullet1") ||
-            otro.CompareTag("Bullet2") ||
-            otro.CompareTag("Bullet3"))
-        {
+        if (otro.CompareTag("Bullet"))
             Destroy(otro.transform.root.gameObject);
+        if (otro.CompareTag("Asteroid"))
+        {
+            var asteroide = otro.GetComponentInParent<Asteroide>();
+            if (asteroide != null)
+                asteroide.Explotar();
         }
-        // Los asteroides los sigue gestionando el casco (comportamiento original).
     }
 }

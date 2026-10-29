@@ -2,30 +2,35 @@ using UnityEngine;
 
 public class RestringirJugador : MonoBehaviour
 {
-    private void LateUpdate()
+    Rigidbody2D rb;
+    ShipController nave;
+
+    void Awake()
     {
-        // Verifica que la instancia del manager de límites exista
+        rb = GetComponent<Rigidbody2D>();
+        nave = GetComponent<ShipController>();
+    }
+
+    void LateUpdate()
+    {
         if (LimitesMapa.Instancia == null) return;
 
         Vector3 centro = LimitesMapa.Instancia.CentroMapa;
         float radioMaximo = LimitesMapa.Instancia.RadioMapa;
 
-        // Calcula el vector de distancia desde el centro del mapa hasta la nave
         Vector3 desfase = transform.position - centro;
-        float distanciaActual = desfase.magnitude;
+        if (desfase.magnitude <= radioMaximo) return;
 
-        // Si la nave intenta salir del círculo, la reubicamos en el límite exacto
-        if (distanciaActual > radioMaximo)
+        Vector2 normal = desfase.normalized;
+
+        transform.position = centro + (Vector3)(normal * radioMaximo);
+
+        if (nave != null) nave.Rebotar(normal);
+        else if (rb != null)
         {
-            Vector3 posicionLimite = centro + desfase.normalized * radioMaximo;
-            transform.position = posicionLimite;
-
-            // Frenar el empuje físico del Rigidbody2D en dirección hacia afuera
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, 2f);
-            }
+            Vector2 v = rb.linearVelocity;
+            if (Vector2.Dot(v, normal) > 0f)
+                rb.linearVelocity = v - 2f * Vector2.Dot(v, normal) * normal;
         }
     }
 }

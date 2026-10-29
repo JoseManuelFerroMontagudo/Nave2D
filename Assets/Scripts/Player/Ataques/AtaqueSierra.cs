@@ -4,8 +4,6 @@ using UnityEngine;
 public class AtaqueSierra : AtaqueBase
 {
     public GameObject prefabSierra;
-    public float daño = 10f;
-    public float escala = 1f;
 
     public override bool EsPermanente => true;
 
@@ -14,7 +12,6 @@ public class AtaqueSierra : AtaqueBase
         if (!prefabSierra) return null;
         var go = Instantiate(prefabSierra, armas.transform);
         go.transform.localPosition = Vector3.zero;
-        if (go.TryGetComponent<Sierra>(out var s)) s.Initialize(daño, escala);
         return go;
     }
 

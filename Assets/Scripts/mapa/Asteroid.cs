@@ -22,7 +22,6 @@ public class Asteroide : MonoBehaviour
     private Rigidbody2D rb;
     private float velocidadRotacion;
     private float anguloZ;
-    [SerializeField] private float distanciaMaximoJugador = 22f;
 
     private void Awake()
     {
@@ -91,7 +90,7 @@ public class Asteroide : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Asteroide"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Asteroid"))
         {
             Explotar();
         }
@@ -99,13 +98,13 @@ public class Asteroide : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Asteroide") || other.CompareTag("Shield"))
+        if (other.CompareTag("Player") || other.CompareTag("Asteroid") || other.CompareTag("Shield"))
         {
             Explotar();
         }
     }
 
-    private void Explotar()
+    public void Explotar()
     {
         if (prefabExplosion != null)
         {

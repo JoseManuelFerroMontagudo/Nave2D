@@ -126,15 +126,16 @@ public class ShieldController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D otro)
     {
         if (fase != Fase.Activo) return;
-        if (!otro.CompareTag("Bullet") &&
-            !otro.CompareTag("Bullet1") &&
-            !otro.CompareTag("Bullet2") &&
-            !otro.CompareTag("Bullet3") &&
-            !otro.CompareTag("Asteroide")) return;
+        if (!otro.CompareTag("Bullet") && !otro.CompareTag("Asteroid")) return;
         Vector2 dir = ((Vector2)otro.transform.position - (Vector2)transform.position).normalized;
         anguloImpacto = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + desfaseAnguloImpacto;
         tiempoImpacto = duracionImpacto;
         animador.SetTrigger("Impact");
-        if (!otro.CompareTag("Asteroide")) Destroy(otro.gameObject);
+        if (otro.CompareTag("Asteroid"))
+        {
+            var asteroide = otro.GetComponentInParent<Asteroide>();
+            if (asteroide != null)
+                asteroide.Explotar();
+        }
     }
 }

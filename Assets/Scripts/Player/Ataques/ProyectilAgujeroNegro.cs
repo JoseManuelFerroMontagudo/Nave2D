@@ -11,7 +11,7 @@ public class ProyectilAgujeroNegro : MonoBehaviour
     public float escalaPorAbsorcion = 0.08f;
     public float escalaMaxima = 3f;
     public float escalaMinima = 0.1f;
-    public float dañoPorAbsorcion = 3f;
+    public int dañoPorAbsorcion = 3;
     public string[] tagsProyectilEnemigo = { "Bullet", "Bullet1", "Bullet2", "Bullet3" };
     public float fuerzaAtraccion = 20f;
     public bool destruirAlMinimo = true;
@@ -72,7 +72,7 @@ public class ProyectilAgujeroNegro : MonoBehaviour
     {
         if (System.Array.IndexOf(tagsProyectilEnemigo, otro.tag) < 0) return;
 
-        proyectil.daño = Mathf.Max(0f, proyectil.daño + dañoPorAbsorcion);
+        proyectil.daño = Mathf.Max(0, proyectil.daño + dañoPorAbsorcion);
         escala = Mathf.Clamp(escala + escalaPorAbsorcion, escalaMinima, escalaMaxima);
         if (sr) sr.transform.localScale = escalaBase * escala;
         AplicarEscalas();

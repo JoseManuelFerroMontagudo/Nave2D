@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3783980327087375580}
   m_Layer: 6
   m_Name: esteroides
-  m_TagString: Asteroide
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   velocidadMax: 11
   rotacionMin: -40
   rotacionMax: 40
+  desviacionAngulo: 35
 --- !u!114 &-3783980327087375580
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,9 +13,26 @@ public class SpawnerOleadas : MonoBehaviour
     [Header("Jefe (spawnea en el centro al terminar)")]
     public GameObject prefabJefe;
 
-    [Header("Entrada desde el borde")]
-    public float velocidadEntrada = 5f;
-    public float radioPosicionamiento = 3f;   // separación entre enemigos de la misma oleada
+    [Header("Spawn de enemigos")]
+    [Tooltip("Distancia mínima al jugador al aparecer")]
+    public float distanciaMinimaJugador = 14f;
+    [Tooltip("Separación mínima entre enemigos ya presentes")]
+    public float separacionMinimaEnemigos = 10f;
+    [Tooltip("Distancia mínima al borde exterior del mapa")]
+    public float distanciaMinimaBorde = 14f;
+    [Tooltip("Intentos máximos para encontrar un punto válido")]
+    public int intentosMaximos = 40;
+
+    // -------- Estado público para UI (Canvas) --------
+    /// <summary>0 = aún no empieza, 1..N = oleada en curso.</summary>
+    public int NumeroOleadaActual { get; private set; } = 0;
+    public int TotalOleadas => oleadas.Count;
+    public int EnemigosVivos => vivos.Count;
+    /// <summary>Enemigos vivos + los que faltan por spawnear en la oleada actual.</summary>
+    public int EnemigosRestantesOleada => vivos.Count + pendientesSpawn;
+    public bool EnFaseJefe { get; private set; }
+
+    int pendientesSpawn = 0;
 
     readonly List<GameObject> vivos = new List<GameObject>();
     readonly List<Vector3> puntos = new List<Vector3>();
@@ -39,8 +56,11 @@ public class SpawnerOleadas : MonoBehaviour
             yield return null;
         }
 
-        foreach (var oleada in oleadas)
+        for (int idx = 0; idx < oleadas.Count; idx++)
         {
+            NumeroOleadaActual = idx + 1;
+            var oleada = oleadas[idx];
+
             if (oleada.retardoAntes > 0) yield return new WaitForSeconds(oleada.retardoAntes);
 
             yield return StartCoroutine(SpawnearOleada(oleada));
@@ -50,6 +70,7 @@ public class SpawnerOleadas : MonoBehaviour
             if (oleada.retardoDespues > 0) yield return new WaitForSeconds(oleada.retardoDespues);
         }
 
+        EnFaseJefe = true;
         SpawnearJefe();
     }
 
@@ -58,9 +79,13 @@ public class SpawnerOleadas : MonoBehaviour
         if (prefabJefe == null) return;
 
         Vector3 centro = Centro();
-        var j = Instantiate(prefabJefe, centro, Quaternion.identity);
+        var wrapperGO = new GameObject("BossWrapper");
+        wrapperGO.transform.position = centro;
 
-        // El jefe arranca ya "en posición" en el centro
+        var j = Instantiate(prefabJefe, wrapperGO.transform);
+        j.transform.localPosition = Vector3.zero;
+        j.transform.localRotation = Quaternion.identity;
+
         var ej = j.GetComponent<Enemigo>();
         if (ej != null) { ej.puntoAncla = centro; ej.enPosicion = true; }
     }
@@ -69,72 +94,141 @@ public class SpawnerOleadas : MonoBehaviour
     {
         int total = 0;
         foreach (var g in oleada.grupos) total += g.cantidad;
+        pendientesSpawn = total;
 
-        int i = 0;
         foreach (var grupo in oleada.grupos)
         {
             for (int k = 0; k < grupo.cantidad; k++)
             {
-                Vector3 borde = PuntoEnBorde();
-                Vector3 destino = PuntoInterior(i, total);
+                Vector3 destino = PuntoValidoParaSpawn();
 
-                var e = Instantiate(grupo.prefab, borde, Quaternion.identity);
+                // Wrapper en el punto de spawn
+                var wrapperGO = new GameObject($"EnemyWrapper_{grupo.prefab.name}");
+                var wrapper = wrapperGO.transform;
+                wrapper.position = destino;
 
-                // Registro de vida para saber cuándo termina la oleada
+                // Enemigo como HIJO del wrapper
+                var e = Instantiate(grupo.prefab, wrapper);
+                e.transform.localPosition = Vector3.zero;
+                e.transform.localRotation = Quaternion.identity;
+                pendientesSpawn--;
+
+                // Vida: al morir se destruye también el wrapper
                 var vida = e.GetComponent<VidaPersonaje>();
                 if (vida != null)
                 {
-                    var capt = e;
-                    vida.OnMuere.AddListener(() => vivos.Remove(capt));
+                    vida.OnMuere.AddListener(() =>
+                    {
+                        vivos.Remove(wrapperGO);
+                        if (wrapperGO != null) Destroy(wrapperGO);
+                    });
                 }
-                vivos.Add(e);
+                vivos.Add(wrapperGO);
 
-                // El spawner lo lleva a su punto dentro del límite
+                // El enemigo queda "en posición" desde el frame 0
                 var enem = e.GetComponent<Enemigo>();
-                if (enem != null) enem.enPosicion = false;
-                StartCoroutine(LlevarAPosicion(e, destino));
+                if (enem != null)
+                {
+                    enem.puntoAncla = destino;
+                    enem.enPosicion = true;
+                }
 
-                i++;
                 if (oleada.delayEntreEnemigos > 0)
                     yield return new WaitForSeconds(oleada.delayEntreEnemigos);
             }
         }
     }
 
-    // Mueve al enemigo desde el borde hasta su ancla; al llegar lo activa.
-    IEnumerator LlevarAPosicion(GameObject enemigo, Vector3 destino)
-    {
-        while (enemigo != null &&
-               Vector3.Distance(enemigo.transform.position, destino) > 0.05f)
-        {
-            enemigo.transform.position = Vector3.MoveTowards(
-                enemigo.transform.position, destino,
-                velocidadEntrada * Time.deltaTime);
-            yield return null;
-        }
-        if (enemigo == null) yield break;
+    // -------- Geometría / validación --------
 
-        var e = enemigo.GetComponent<Enemigo>();
-        if (e != null)
+    Vector3 PuntoValidoParaSpawn()
+    {
+        Vector3 centro = Centro();
+        if (puntos.Count < 3) return centro;
+
+        // Bounding box del polígono para no generar candidatos a lo loco
+        float minX = float.MaxValue, minY = float.MaxValue;
+        float maxX = float.MinValue, maxY = float.MinValue;
+        foreach (var p in puntos)
         {
-            e.puntoAncla = destino;
-            e.enPosicion = true;   // a partir de aquí manda el Animator (o el timer)
+            if (p.x < minX) minX = p.x;
+            if (p.y < minY) minY = p.y;
+            if (p.x > maxX) maxX = p.x;
+            if (p.y > maxY) maxY = p.y;
         }
+
+        Vector3 jugadorPos = jugador != null ? jugador.position : centro;
+        float minJugSqr = distanciaMinimaJugador * distanciaMinimaJugador;
+        float minEnemSqr = separacionMinimaEnemigos * separacionMinimaEnemigos;
+
+        for (int intento = 0; intento < intentosMaximos; intento++)
+        {
+            float x = Random.Range(minX, maxX);
+            float y = Random.Range(minY, maxY);
+            Vector3 candidato = new Vector3(x, y, centro.z);
+
+            if (!PuntoDentroPoligono(candidato)) continue;
+            if (DistanciaAlBorde(candidato) < distanciaMinimaBorde) continue;
+            if ((candidato - jugadorPos).sqrMagnitude < minJugSqr) continue;
+
+            bool muyCerca = false;
+            foreach (var v in vivos)
+            {
+                if (v == null) continue;
+                if ((v.transform.position - candidato).sqrMagnitude < minEnemSqr)
+                {
+                    muyCerca = true;
+                    break;
+                }
+            }
+            if (muyCerca) continue;
+
+            return candidato;
+        }
+
+        // Fallback: centro (puede no cumplir todos los criterios si el área es pequeña)
+        return centro;
     }
 
-    // -------- Geometría del límite --------
-    Vector3 PuntoEnBorde()
+    float DistanciaAlBorde(Vector3 p)
     {
-        if (puntos.Count < 2) return Vector3.zero;
-        int s = Random.Range(0, puntos.Count);
-        return Vector3.Lerp(puntos[s], puntos[(s + 1) % puntos.Count], Random.value);
+        float min = float.MaxValue;
+        int n = puntos.Count;
+        for (int i = 0; i < n; i++)
+        {
+            Vector3 a = puntos[i];
+            Vector3 b = puntos[(i + 1) % n];
+            float d = DistanciaPuntoSegmento(p, a, b);
+            if (d < min) min = d;
+        }
+        return min;
     }
 
-    Vector3 PuntoInterior(int index, int total)
+    static float DistanciaPuntoSegmento(Vector3 p, Vector3 a, Vector3 b)
     {
-        Vector3 c = Centro();
-        float a = Mathf.PI * 2f * index / Mathf.Max(1, total);
-        return c + new Vector3(Mathf.Cos(a), Mathf.Sin(a), 0f) * radioPosicionamiento;
+        Vector3 ab = b - a;
+        float abSqr = ab.sqrMagnitude;
+        if (abSqr < 0.0001f) return Vector3.Distance(p, a);
+        float t = Mathf.Clamp01(Vector3.Dot(p - a, ab) / abSqr);
+        Vector3 proj = a + ab * t;
+        return Vector3.Distance(p, proj);
+    }
+
+    bool PuntoDentroPoligono(Vector3 p)
+    {
+        bool dentro = false;
+        int n = puntos.Count;
+        for (int i = 0, j = n - 1; i < n; j = i++)
+        {
+            Vector3 vi = puntos[i];
+            Vector3 vj = puntos[j];
+            if (((vi.y > p.y) != (vj.y > p.y)) &&
+                (p.x < (vj.x - vi.x) * (p.y - vi.y) / (vj.y - vi.y) + vi.x))
+            {
+                dentro = !dentro;
+            }
+        }
+        return dentro;
     }
 
     Vector3 Centro()

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3910574110037031343}
   m_Layer: 0
   m_Name: ProyectilEnemyNv1
-  m_TagString: Bullet2
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,5 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   "da\xF1o": 1
-  velocidad: 6
+  velocidad: 4
   vidaUtil: 4

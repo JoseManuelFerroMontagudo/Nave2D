@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: AtaqueSierra
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueSierra
   cadencia: 10
-  costoCalor: 5
+  costoCalor: 2
   costoEnergia: 0
   costoMunicion: 0
   prefabSierra: {fileID: 7172256315224862940, guid: 59df59cb340b9b24a93729b9fdc38dbc, type: 3}
-  "da\xF1o": 100
-  escala: 1

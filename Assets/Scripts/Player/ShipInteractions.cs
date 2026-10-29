@@ -7,70 +7,82 @@ public class ShipInteractions : MonoBehaviour
     public Stats estadisticas;
     public ShieldController escudo;
 
-    [Header("Daño por proyectil")]
-    public int dañoBullet1 = 1;
-    public int dañoBullet2 = 5;
-    public int dañoBullet3 = 10;
-
     [Header("Daño por contacto")]
+    public int DañoContacto = 10;
     public float intervaloDañoContacto = 0.5f;
 
     [Header("Recogidas")]
-    public string etiquetaBotiquin  = "HealthPickup";
-    public int    curacionBotiquin  = 25;
-    public string etiquetaMunicion  = "AmmoPickup";
-    public int    cantidadMunicion  = 10;
-    public string etiquetaEnergia   = "EnergyPickup";
-    public int    cantidadEnergia   = 25;
+    public int curacionBotiquin = 25;
+    public int cantidadMunicion = 2;
+    public int cantidadEnergia = 25;
 
     float siguienteDañoContactoPermitido;
+    Sierra sierra;
+    bool SierraBoosted
+    {
+        get
+        {
+            if (sierra == null)
+            {
+                sierra = GetComponentInParent<Sierra>();
+                if (sierra == null)
+                    sierra = transform.root.GetComponentInChildren<Sierra>();
+                if (sierra == null)
+                    sierra = FindAnyObjectByType<Sierra>();
+            }
+            return sierra != null && sierra.IsBoosted;
+        }
+    }
 
     void Awake()
     {
-        // Stats y escudo viven en el padre (Ship), no en Hull
         if (estadisticas == null) estadisticas = GetComponentInParent<Stats>();
-        if (escudo == null)       escudo       = GetComponentInParent<ShieldController>();
+        if (escudo == null) escudo = GetComponentInParent<ShieldController>();
     }
 
-    // ==================== TRIGGERS (balas y recogidas) ====================
+    // ============ TRIGGERS (ataques y recogidas) ============
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Bullet"))  { ProcesarBala(otro, dañoBullet1); return; }
-        if (otro.CompareTag("Bullet2")) { ProcesarBala(otro, dañoBullet2); return; }
-        if (otro.CompareTag("Bullet3")) { ProcesarBala(otro, dañoBullet3); return; }
+        // --- Ataque con daño definido por IDamageDealer ---
+        if (otro.CompareTag("Attack1"))
+        {
+            if (escudo != null && escudo.EstaActivo) return;
+            if (SierraBoosted) return;
 
-        if (otro.CompareTag(etiquetaBotiquin)) { estadisticas.Curar(curacionBotiquin);          Destruir(otro); return; }
-        if (otro.CompareTag(etiquetaMunicion)) { estadisticas.AñadirMunicion(cantidadMunicion); Destruir(otro); return; }
-        if (otro.CompareTag(etiquetaEnergia))  { estadisticas.AñadirEnergia(cantidadEnergia);   Destruir(otro); return; }
+            var d = otro.GetComponentInParent<IDamageDealer>();
+            if (d != null)
+            {
+                estadisticas.RecibirDaño(d.Daño);
+                Destroy(otro.transform.root.gameObject);
+            }
+            return;
+        }
+
+        // --- Recogidas ---
+        if (otro.CompareTag("HealthPickup")) { estadisticas.Curar(curacionBotiquin); Destruir(otro); return; }
+        if (otro.CompareTag("AmmoPickup")) { estadisticas.AñadirMunicion(cantidadMunicion); Destruir(otro); return; }
+        if (otro.CompareTag("EnergyPickup")) { estadisticas.AñadirEnergia(cantidadEnergia); Destruir(otro); return; }
     }
 
-    void ProcesarBala(Collider2D bala, int daño)
-    {
-        // Edge case: si el escudo está activo y la bala se destruye en el mismo frame,
-        // el evento puede llegar también al hull antes del Destroy diferido.
-        if (escudo != null && escudo.EstaActivo) return;
-
-        estadisticas.RecibirDaño(daño);
-        Destruir(bala);
-    }
-
-    // ==================== COLISIONES (no trigger: enemigos, asteroides) ====================
+    // ============ COLISIONES (no-trigger) ============
     void OnCollisionStay2D(Collision2D choque)
     {
         if (choque.collider.CompareTag("Enemy") || choque.collider.CompareTag("Boss"))
         {
+            if (SierraBoosted) return;
             if (Time.time < siguienteDañoContactoPermitido) return;
             siguienteDañoContactoPermitido = Time.time + intervaloDañoContacto;
-            estadisticas.RecibirDaño(20);
+            estadisticas.RecibirDaño(DañoContacto);
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.CompareTag("Asteroide"))
+        if (col.collider.CompareTag("Asteroid"))
         {
             if (escudo != null && escudo.EstaActivo) return;
-            estadisticas.RecibirDaño(10);
+            if (SierraBoosted) return;
+            estadisticas.RecibirDaño(DañoContacto);
         }
     }
 

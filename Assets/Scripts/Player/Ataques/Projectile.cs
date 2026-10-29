@@ -4,8 +4,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour, IDamageDealer
 {
     public float vidaUtil = 3f;
-    public float daño = 10f;
-    public float Daño => daño;
+    public int daño = 10;
+    public int Daño => daño;
     public GameObject prefabEfectoImpacto;
     [Header("Comportamiento")]
     public bool destruirAlImpactar = true;

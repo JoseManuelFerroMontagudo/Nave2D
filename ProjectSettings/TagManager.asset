@@ -7,13 +7,13 @@ TagManager:
   - Enemy
   - Shield
   - Boss
-  - Bulllet
-  - Bullet1
-  - Bullet2
-  - Bulllet3
   - Attack1
   - Attack2
   - Asteroid
+  - Bullet
+  - HealthPickup
+  - AmmoPickup
+  - EnergyPickup
   layers:
   - Default
   - TransparentFX
