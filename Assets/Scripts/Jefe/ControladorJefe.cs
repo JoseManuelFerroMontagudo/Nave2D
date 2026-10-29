@@ -20,15 +20,15 @@ public class ControladorJefe : MonoBehaviour
     [Header("Disparo — Proyectil Principal (Energía)")]
     public GameObject prefabProyectil;
     public Transform puntoDisparo;
-    public float dañoProyectil = 2f;
+    public int dañoProyectil = 5;
 
     [Header("Disparo — Proyectil Plasma")]
     public GameObject prefabProyectilPlasma;
-    public float dañoPlasma = 1.5f;
+    public int dañoPlasma = 10;
 
     [Header("Disparo — Proyectil Perseguidor")]
     public GameObject prefabProyectilPerseguidor;
-    public float dañoPerseguidor = 3f;
+    public int dañoPerseguidor = 15;
 
     [Header("Sprites Direccionales (8 direcciones)")]
     public Sprite[] spritesDirecciones;
@@ -262,7 +262,7 @@ public class ControladorJefe : MonoBehaviour
     public void InstanciarProyectilDeTipo(TipoProyectilBoss tipo, Transform origen, Vector2 direccion, OpcionesProyectil opciones)
     {
         GameObject prefab = ObtenerPrefabPorTipo(tipo);
-        float daño = ObtenerDañoPorTipo(tipo);
+        int daño = ObtenerDañoPorTipo(tipo);
         if (prefab == null) return;
 
         Vector3 pos = origen != null ? origen.position : transform.position;
@@ -284,7 +284,7 @@ public class ControladorJefe : MonoBehaviour
         }
     }
 
-    float ObtenerDañoPorTipo(TipoProyectilBoss tipo)
+    int ObtenerDañoPorTipo(TipoProyectilBoss tipo)
     {
         switch (tipo)
         {

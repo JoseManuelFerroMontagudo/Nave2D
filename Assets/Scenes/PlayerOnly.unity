@@ -2452,12 +2452,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
   arsenal:
+  - {fileID: 11400000, guid: a40ac8c792febc8469b33eb50933d579, type: 2}
   - {fileID: 11400000, guid: e64cbd7a3e4ed614aa7ad92dae69f446, type: 2}
-  - {fileID: 11400000, guid: 1cd2497dc60ad964f87f7755a3ab8146, type: 2}
   indicePrimario: 0
   indiceSecundario: 1
   "ca\xF1onesBase": 2
-  "anchoCa\xF1ones": 4
+  "anchoCa\xF1ones": 3
   autoDisparoPrimario: 0
 --- !u!114 &1982281060
 MonoBehaviour:
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipController
   aceleracionEmpuje: 24
   velocidadMaxima: 20
-  reduccionDerivaLateral: 12
+  reduccionDerivaLateral: 24
   zonaMuertaRaton: 0.1
   velocidadRotacionMaxima: 180
   respuestaGiro: 10

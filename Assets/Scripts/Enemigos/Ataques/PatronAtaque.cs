@@ -5,7 +5,7 @@ public abstract class PatronAtaque : ScriptableObject
 {
     [Header("Proyectil")]
     public GameObject prefabBullet;
-    public float daño = 1f;
+    public int daño = 5;
     public float velocidad = 6f;
     public float vidaUtil = 4f;
 

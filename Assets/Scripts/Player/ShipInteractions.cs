@@ -44,7 +44,7 @@ public class ShipInteractions : MonoBehaviour
     void OnTriggerEnter2D(Collider2D otro)
     {
         // --- Ataque con daño definido por IDamageDealer ---
-        if (otro.CompareTag("Attack1"))
+        if (otro.CompareTag("Bullet"))
         {
             if (escudo != null && escudo.EstaActivo) return;
             if (SierraBoosted) return;

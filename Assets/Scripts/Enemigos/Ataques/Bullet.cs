@@ -1,9 +1,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, IDamageDealer
 {
-    [HideInInspector] public float daño = 1f;
+    public int daño = 5;
+    public int Daño => daño;
     public float velocidad = 6f;
     public float vidaUtil = 4f;
 

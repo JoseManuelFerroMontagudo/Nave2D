@@ -2,11 +2,12 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class ProyectilJefe : MonoBehaviour
+public class ProyectilJefe : MonoBehaviour, IDamageDealer
 {
     public OpcionesProyectil opciones = new OpcionesProyectil();
     public Vector2 direccion;
-    public float daño = 2f;
+    public int daño = 5;
+    public int Daño => daño;
 
     private Rigidbody2D rb;
     private Transform jugador;
@@ -20,7 +21,7 @@ public class ProyectilJefe : MonoBehaviour
 
     void Awake() { rb = GetComponent<Rigidbody2D>(); }
 
-    public void Configurar(Vector2 dir, OpcionesProyectil opc, float dmg)
+    public void Configurar(Vector2 dir, OpcionesProyectil opc, int dmg)
     {
         direccion = dir.normalized;
         opciones = opc;

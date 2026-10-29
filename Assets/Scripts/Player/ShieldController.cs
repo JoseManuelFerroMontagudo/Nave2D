@@ -137,5 +137,6 @@ public class ShieldController : MonoBehaviour
             if (asteroide != null)
                 asteroide.Explotar();
         }
+        Destroy(otro.transform.root.gameObject);
     }
 }
