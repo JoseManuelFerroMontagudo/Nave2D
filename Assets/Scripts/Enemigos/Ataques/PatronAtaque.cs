@@ -21,6 +21,7 @@ public abstract class PatronAtaque : ScriptableObject
             b.daño = daño;
             b.velocidad = velocidad;
             b.vidaUtil = vidaUtil;
+            b.Configurar(dir);    
         }
     }
 }

@@ -279,6 +279,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "8f81efa2-15e5-4179-aebb-aa5140b8dc0f",
+            "actions": [
+                {
+                    "name": "Minimap",
+                    "type": "Button",
+                    "id": "d0752761-764a-4575-bae6-e53ababe041e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "19b32920-f10c-4d17-80a7-b62ee7ed4b2e",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Minimap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -134,9 +134,9 @@ public class Minimap : MonoBehaviour
 
     Sprite SpriteFor(string tag)
     {
-        if (tag == "Player")   return playerSprite;
-        if (tag == "Boss")     return bossSprite;
-        if (tag == "Enemy")    return enemySprite;
+        if (tag == "Player") return playerSprite;
+        if (tag == "Boss") return bossSprite;
+        if (tag == "Enemy") return enemySprite;
         if (tag == "Asteroid") return asteroidSprite;
         return null;
     }
@@ -152,4 +152,5 @@ public class Minimap : MonoBehaviour
         float r = deg * Mathf.Deg2Rad, c = Mathf.Cos(r), s = Mathf.Sin(r);
         return new Vector2(v.x * c - v.y * s, v.x * s + v.y * c);
     }
+    void OnMinimap() { centerOnPlayer = !centerOnPlayer; }
 }

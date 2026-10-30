@@ -20,12 +20,12 @@ public class Stats : MonoBehaviour
     [Header("Calor (evita fuego continuo)")]
     public float calorMaximo = 100f;
     public float calorActual;
-    public float disipacionPorSegundo = 35f;
+    public float disipacionPorSegundo = 30f;
     [Tooltip("Segundos tras el último disparo antes de empezar a enfriar")]
-    public float retrasoEnfriamiento = 0.4f;
+    public float retrasoEnfriamiento = 1f;
     [Range(0f, 1f)]
     [Tooltip("Baja a este % del máximo para salir del estado recalentado")]
-    public float umbralSalidaRecalentamiento = 0.5f;
+    public float umbralSalidaRecalentamiento = 0f;
 
     [Header("Poder (modifica cadencia y/o nº de cañones)")]
     public int poder = 1;

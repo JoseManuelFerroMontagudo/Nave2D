@@ -23,7 +23,7 @@ MonoBehaviour:
     velocidad: 11.7
     tiempoVuelo: 2.5
     vidaUtil: 14
-    color: {r: 1, g: 0, b: 0, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
     amplitudOnda: 2
     frecuenciaOnda: 8
     fuerzaPersecucion: 1.5

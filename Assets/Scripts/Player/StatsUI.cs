@@ -7,32 +7,57 @@ public class StatsUI : MonoBehaviour
     [Header("Sliders")]
     public Slider sliderVida;
     public Slider sliderEnergia;
+    public Slider sliderCalor;
     public TMP_Text PuntajeText;
 
+    [Header("Color del calor (gradiente frío → caliente)")]
+    public Color colorCalorFrio = Color.green;
+    public Color colorCalorMedio = Color.yellow;   // pico intermedio (se pasa al ~60%)
+    public Color colorCalorCaliente = Color.red;
+
     [Header("Munición (iconos repetidos)")]
-    public RectTransform contenedorIconos;   // PanelMunicion (Horizontal Layout Group)
-    public Image iconoPlantilla;             // IconoMisil (desactivado en la jerarquía)
+    public RectTransform contenedorIconos;
+    public Image iconoPlantilla;
 
     [Header("Referencias")]
     public Stats estadisticas;
 
     private Image[] iconos;
     private int ultimaMunicion = -1;
+    private Image rellenoCalor;
 
     void Start()
     {
         CrearIconos(estadisticas.municionMaxima);
+
+        // Cachear el Image del fill del slider de calor para recolorear sin GetComponent cada frame
+        if (sliderCalor != null && sliderCalor.fillRect != null)
+            rellenoCalor = sliderCalor.fillRect.GetComponent<Image>();
     }
 
     void Update()
     {
         if (estadisticas == null) return;
-        // --- Sliders---
+
+        // --- Sliders ---
         if (sliderVida != null)
             sliderVida.value = estadisticas.vida;
 
         if (sliderEnergia != null)
             sliderEnergia.value = estadisticas.energia;
+
+        if (sliderCalor != null)
+        {
+            sliderCalor.value = estadisticas.calorActual;
+
+            if (rellenoCalor != null)
+            {
+                float t = Mathf.Clamp01(estadisticas.CalorNormalizado);
+                rellenoCalor.color = EvaluarColorCalor(t);
+            }
+        }
+        if (estadisticas.Recalentado) // recalentado
+            rellenoCalor.color = Color.Lerp(Color.red, Color.white, Mathf.PingPong(Time.time * 4f, 1f));
 
         // --- Puntaje ---
         if (PuntajeText != null)
@@ -42,11 +67,21 @@ public class StatsUI : MonoBehaviour
         ActualizarIconos((int)estadisticas.municion);
     }
 
+    /// <summary>
+    /// Gradiente de 3 puntos: frío → medio → caliente.
+    /// </summary>
+    Color EvaluarColorCalor(float t)
+    {
+        if (t < 0.6f)
+            return Color.Lerp(colorCalorFrio, colorCalorMedio, t / 0.6f);
+        else
+            return Color.Lerp(colorCalorMedio, colorCalorCaliente, (t - 0.6f) / 0.4f);
+    }
+
     void CrearIconos(int cantidad)
     {
         if (contenedorIconos == null || iconoPlantilla == null) return;
 
-        // Limpiar hijos previos (excepto la plantilla)
         foreach (Transform hijo in contenedorIconos)
         {
             if (hijo != iconoPlantilla.transform)
@@ -63,7 +98,7 @@ public class StatsUI : MonoBehaviour
         }
 
         iconoPlantilla.gameObject.SetActive(false);
-        ultimaMunicion = -1; // forzar refresco
+        ultimaMunicion = -1;
     }
 
     void ActualizarIconos(int cantidadActual)

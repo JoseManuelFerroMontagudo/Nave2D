@@ -308,95 +308,95 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_0"
+      name: Bullets - Energy Type_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 567
+        x: 23
+        y: 568
         width: 137
-        height: 137
+        height: 136
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cb37a48434b413150800000000000000
-      internalID: 5850540143278715836
+      spriteID: cc94b788966afa340b10d5eca3f6e1dd
+      internalID: 1472478007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_1"
+      name: Bullets - Energy Type_1
       rect:
         serializedVersion: 2
         x: 188
-        y: 567
+        y: 568
         width: 137
-        height: 137
+        height: 135
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57e547cbe1bb05620800000000000000
-      internalID: 2760912312263270005
+      spriteID: b6dfbc781760e0146b3b69dc50b399b4
+      internalID: 648547829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_2"
+      name: Bullets - Energy Type_2
       rect:
         serializedVersion: 2
         x: 350
         y: 567
         width: 140
-        height: 139
+        height: 138
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f363f5b6f50cb270800000000000000
-      internalID: 8267489573118108657
+      spriteID: be0d27d22dc9a164ca766c3d54257161
+      internalID: 1910718708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_3"
+      name: Bullets - Energy Type_3
       rect:
         serializedVersion: 2
         x: 515
         y: 570
         width: 136
-        height: 133
+        height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 28b2a0be361ae7e20800000000000000
-      internalID: 3350292623327374210
+      spriteID: cc229a227f19b844496d20455d909b78
+      internalID: -2038889942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_4"
+      name: Bullets - Energy Type_4
       rect:
         serializedVersion: 2
         x: 677
@@ -409,16 +409,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70008c98b4cf3dd20800000000000000
-      internalID: 3302260353157038087
+      spriteID: 498a89f4a0aa17143be5a69c318105f7
+      internalID: 1747942226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_5"
+      name: Bullets - Energy Type_5
       rect:
         serializedVersion: 2
         x: 845
@@ -431,38 +431,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 99d83f96a422bd5b0800000000000000
-      internalID: -5342638829944468071
+      spriteID: 556e83030384c38459e8d6fafb9d8e70
+      internalID: 28419239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_6"
+      name: Bullets - Energy Type_6
       rect:
         serializedVersion: 2
         x: 1021
-        y: 567
+        y: 568
         width: 134
-        height: 138
+        height: 137
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22ff1d6e89c5301a0800000000000000
-      internalID: -6844525196895715550
+      spriteID: 2b5d6617fc9d7c54da3f34202dadfef3
+      internalID: 1426186478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_7"
+      name: Bullets - Energy Type_7
       rect:
         serializedVersion: 2
         x: 1184
@@ -475,21 +475,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c8237c34f738ddeb0800000000000000
-      internalID: -4693450654028975476
+      spriteID: 4f76679898fea8348b80c8c89d1bbcd7
+      internalID: -1210617564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_8"
+      name: Bullets - Energy Type_8
       rect:
         serializedVersion: 2
-        x: 1347
+        x: 1346
         y: 570
-        width: 134
+        width: 135
         height: 132
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -497,21 +497,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7883e9028892035d0800000000000000
-      internalID: -3084920080109258617
+      spriteID: f5b8db7c000835846bf81aaa87eae5c5
+      internalID: -2021090059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_9"
+      name: Bullets - Energy Type_9
       rect:
         serializedVersion: 2
         x: 1503
         y: 564
-        width: 144
+        width: 145
         height: 141
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -519,21 +519,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc072de406f2afd70800000000000000
-      internalID: 9077620089604436171
+      spriteID: ae427b46692b0c44b909b51af891ced4
+      internalID: -673313156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_10"
+      name: Bullets - Energy Type_10
       rect:
         serializedVersion: 2
         x: 1676
         y: 569
-        width: 143
+        width: 142
         height: 137
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -541,16 +541,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70e0ad2ee9355a2c0800000000000000
-      internalID: -4421035517318394361
+      spriteID: 447887e6cad16d24a8b1d69d3933f380
+      internalID: 540339033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_11"
+      name: Bullets - Energy Type_11
       rect:
         serializedVersion: 2
         x: 1846
@@ -563,21 +563,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 554386333e4984dd0800000000000000
-      internalID: -2501585889463356331
+      spriteID: 5a49d03d998d8804e911cc43a764a376
+      internalID: 1496363444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_12"
+      name: Bullets - Energy Type_12
       rect:
         serializedVersion: 2
-        x: 2013
+        x: 2012
         y: 566
-        width: 144
+        width: 146
         height: 140
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -585,38 +585,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 06a0a12d41e9d0040800000000000000
-      internalID: 4615519005386082912
+      spriteID: 820ea17b7b0eb914e8f3c4fe21ebcc45
+      internalID: 1984240651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_13"
+      name: Bullets - Energy Type_13
       rect:
         serializedVersion: 2
         x: 18
         y: 416
         width: 144
-        height: 139
+        height: 138
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60045c64a58c7d020800000000000000
-      internalID: 2366580419266428934
+      spriteID: 561d99ccc1db39a47b597778f6bbebf0
+      internalID: -1540500807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_14"
+      name: Bullets - Energy Type_14
       rect:
         serializedVersion: 2
         x: 185
@@ -629,16 +629,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b817d08f04c61fcb0800000000000000
-      internalID: -4831961898896494197
+      spriteID: 99afbbb9d24683b42b02dd9b62252f17
+      internalID: -1983770220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_15"
+      name: Bullets - Energy Type_15
       rect:
         serializedVersion: 2
         x: 354
@@ -651,38 +651,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 412258b907608e9f0800000000000000
-      internalID: -439093882953326060
+      spriteID: 567f56d4092ef7f4682eeb98b9a769f5
+      internalID: 1419308580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_16"
+      name: Bullets - Energy Type_16
       rect:
         serializedVersion: 2
         x: 518
         y: 420
         width: 134
-        height: 128
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f8d592828bdc309f0800000000000000
-      internalID: -503332542503887473
+      spriteID: 5a92a3ed71866a44bbfa161b47321451
+      internalID: -114295563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_17"
+      name: Bullets - Energy Type_17
       rect:
         serializedVersion: 2
         x: 681
@@ -695,38 +695,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d8482dc202f57b130800000000000000
-      internalID: 3582436620392105101
+      spriteID: a219e1a99849af1489389b1565a2cd04
+      internalID: 1274358173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_18"
+      name: Bullets - Energy Type_18
       rect:
         serializedVersion: 2
         x: 845
         y: 420
         width: 136
-        height: 128
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3e42e7645a3c0b7e0800000000000000
-      internalID: -1751685140427430685
+      spriteID: c1eb1218d45b94f42bc390c5a18652e9
+      internalID: 1651957129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_19"
+      name: Bullets - Energy Type_19
       rect:
         serializedVersion: 2
         x: 997
@@ -739,38 +739,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9534fd4e95d0b7410800000000000000
-      internalID: 1475787982637056857
+      spriteID: 6cd658e7e93e3fc49841c362b566dc35
+      internalID: 353753310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_20"
+      name: Bullets - Energy Type_20
       rect:
         serializedVersion: 2
-        x: 1180
+        x: 1181
         y: 421
-        width: 138
-        height: 127
+        width: 137
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4a9ca99e09e1c480800000000000000
-      internalID: -8880560741280867764
+      spriteID: 73d637ca85c49924fb842ca16c14459a
+      internalID: 269940974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_21"
+      name: Bullets - Energy Type_21
       rect:
         serializedVersion: 2
         x: 1344
@@ -783,43 +783,43 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3922e9f1987f747c0800000000000000
-      internalID: -4087025968502398317
+      spriteID: c0530b1ace80a224f9741a1ed58b7312
+      internalID: 1798111166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_22"
+      name: Bullets - Energy Type_22
       rect:
         serializedVersion: 2
         x: 1504
-        y: 421
+        y: 420
         width: 150
-        height: 128
+        height: 130
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2a2e1fc746e05bab0800000000000000
-      internalID: -4993068787114581342
+      spriteID: 60316d21114cdae49a09bc06895bdf6d
+      internalID: 258939690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_23"
+      name: Bullets - Energy Type_23
       rect:
         serializedVersion: 2
         x: 1677
         y: 417
-        width: 140
+        width: 139
         height: 135
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -827,16 +827,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 13861e135b54bcba0800000000000000
-      internalID: -6067679428423358415
+      spriteID: 4ea64277b0543cd43b4b7a69d4079666
+      internalID: -693661203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_24"
+      name: Bullets - Energy Type_24
       rect:
         serializedVersion: 2
         x: 1848
@@ -849,16 +849,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4899a18fced92d2b0800000000000000
-      internalID: -5561208948748805756
+      spriteID: 18a75debeeb79734abdd425d6f3f72da
+      internalID: 1642456815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_25"
+      name: Bullets - Energy Type_25
       rect:
         serializedVersion: 2
         x: 2010
@@ -871,16 +871,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 39140af45ec33ce40800000000000000
-      internalID: 5675446910998036883
+      spriteID: 1970ab624fd52374d87b9eaa3536e335
+      internalID: 998233195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_26"
+      name: Bullets - Energy Type_26
       rect:
         serializedVersion: 2
         x: 15
@@ -893,16 +893,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7259d0273655c6510800000000000000
-      internalID: 1543702657884853543
+      spriteID: 0e98c1e594c30d94a815ffe3499420fe
+      internalID: 97180551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_27"
+      name: Bullets - Energy Type_27
       rect:
         serializedVersion: 2
         x: 186
@@ -915,16 +915,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 67a7eca221e852350800000000000000
-      internalID: 5991351087965043318
+      spriteID: 525f8c7cabc06bf44b8281a6c73ced21
+      internalID: -1055402797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_28"
+      name: Bullets - Energy Type_28
       rect:
         serializedVersion: 2
         x: 352
@@ -937,38 +937,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4507103efeb974dd0800000000000000
-      internalID: -2501859613373009836
+      spriteID: b77f60a2d24713e478d697c4924d0d41
+      internalID: -1476208224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_29"
+      name: Bullets - Energy Type_29
       rect:
         serializedVersion: 2
         x: 514
-        y: 274
+        y: 275
         width: 138
-        height: 133
+        height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b9bbcb0ffe6bbcb00800000000000000
-      internalID: 849974096341810075
+      spriteID: bb1bd3f3f252449449444eda5301a8ca
+      internalID: -1782524159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_30"
+      name: Bullets - Energy Type_30
       rect:
         serializedVersion: 2
         x: 678
@@ -981,21 +981,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c74c955ce6d46bf50800000000000000
-      internalID: 6896785017517229180
+      spriteID: 93f57126dc3cc1f4da1e9bf8804e382b
+      internalID: 799958633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_31"
+      name: Bullets - Energy Type_31
       rect:
         serializedVersion: 2
-        x: 842
+        x: 843
         y: 276
-        width: 144
+        width: 143
         height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1003,21 +1003,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5f2d73a071270620800000000000000
-      internalID: 2740195665941180251
+      spriteID: da693cc93452d6b43a801c2e81b5deca
+      internalID: 1794121269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_32"
+      name: Bullets - Energy Type_32
       rect:
         serializedVersion: 2
         x: 1008
         y: 276
-        width: 148
+        width: 147
         height: 131
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1025,38 +1025,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 355710afd4cbadb90800000000000000
-      internalID: -7216248409814895277
+      spriteID: cb72df89e170f9c408471bcb97c2b746
+      internalID: -103346789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_33"
+      name: Bullets - Energy Type_33
       rect:
         serializedVersion: 2
         x: 1180
         y: 275
         width: 146
-        height: 129
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abc64c38312040b40800000000000000
-      internalID: 5405447735589760186
+      spriteID: 048fc1fc4b66d4f4bb101296c56332fb
+      internalID: -505703025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_34"
+      name: Bullets - Energy Type_34
       rect:
         serializedVersion: 2
         x: 1349
@@ -1069,16 +1069,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f64158c6f42ffd800800000000000000
-      internalID: 639496095046898799
+      spriteID: ff4085afccc63864884aa46f62b6ffe8
+      internalID: -1011676199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_35"
+      name: Bullets - Energy Type_35
       rect:
         serializedVersion: 2
         x: 1510
@@ -1091,20 +1091,20 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1d26538599ae17a0800000000000000
-      internalID: -6404495160455582437
+      spriteID: 80fe29a7f8d96f248afc459a31b0e675
+      internalID: 777559524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_36"
+      name: Bullets - Energy Type_36
       rect:
         serializedVersion: 2
         x: 1676
-        y: 274
+        y: 275
         width: 141
         height: 133
       alignment: 0
@@ -1113,43 +1113,43 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4eafbb438d1d3d600800000000000000
-      internalID: 491967510841391844
+      spriteID: 68ce711e989f7624490f12f35d5b9f49
+      internalID: 1250881558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_37"
+      name: Bullets - Energy Type_37
       rect:
         serializedVersion: 2
         x: 1851
         y: 282
         width: 134
-        height: 120
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b33bd615dbe2af220800000000000000
-      internalID: 2520378332117054267
+      spriteID: 4c487d9b3c6afe34e99b1443ad8d57c4
+      internalID: -320129653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_38"
+      name: Bullets - Energy Type_38
       rect:
         serializedVersion: 2
         x: 2013
         y: 277
-        width: 142
+        width: 143
         height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1157,38 +1157,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b3f1b6eb1b410d30800000000000000
-      internalID: 4395877294496936887
+      spriteID: 98d44dc79875cf24c9ed4bf22f83b3f3
+      internalID: -1991638302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_39"
+      name: Bullets - Energy Type_39
       rect:
         serializedVersion: 2
         x: 19
         y: 141
         width: 135
-        height: 125
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62dc007735be9a5a0800000000000000
-      internalID: -6509413042675987162
+      spriteID: 2898f326a9ce1e645a60afa6174c178b
+      internalID: -266698864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_40"
+      name: Bullets - Energy Type_40
       rect:
         serializedVersion: 2
         x: 185
@@ -1201,16 +1201,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0af41dc7742406620800000000000000
-      internalID: 2765283046009687968
+      spriteID: 870462fc07b015849b227c7ddd3c4eae
+      internalID: -237370784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_41"
+      name: Bullets - Energy Type_41
       rect:
         serializedVersion: 2
         x: 353
@@ -1223,38 +1223,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8363303f3810ccf10800000000000000
-      internalID: 2291207976654157368
+      spriteID: 0cda9147080a76b4cad16386c732898a
+      internalID: -2130764160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_42"
+      name: Bullets - Energy Type_42
       rect:
         serializedVersion: 2
         x: 521
-        y: 144
+        y: 145
         width: 133
-        height: 121
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8ceb62e5fb3002dc0800000000000000
-      internalID: -3665925976226349368
+      spriteID: 587639424647fdc42bd9864d8efbda2c
+      internalID: -683854369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_43"
+      name: Bullets - Energy Type_43
       rect:
         serializedVersion: 2
         x: 685
@@ -1267,109 +1267,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1983e56b2f58e41e0800000000000000
-      internalID: -2211683089504126831
+      spriteID: bb86f0eeeb10ab340b1d5592fdf6de7a
+      internalID: 1568863494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_44"
+      name: Bullets - Energy Type_44
       rect:
         serializedVersion: 2
         x: 849
         y: 142
         width: 133
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dae8cab380c923e30800000000000000
-      internalID: 4481816138361900717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_45"
-      rect:
-        serializedVersion: 2
-        x: 1015
-        y: 142
-        width: 136
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 226d36da89128da00800000000000000
-      internalID: 781411474976527906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_46"
-      rect:
-        serializedVersion: 2
-        x: 1180
-        y: 141
-        width: 141
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 49b0568c0a056f2f0800000000000000
-      internalID: -939474820773114988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_47"
-      rect:
-        serializedVersion: 2
-        x: 1349
-        y: 144
-        width: 132
-        height: 120
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bd05f32168a1f300800000000000000
-      internalID: 284193386669608373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_48"
-      rect:
-        serializedVersion: 2
-        x: 1510
-        y: 141
-        width: 138
         height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1377,16 +1289,104 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 006ec3afc945f2370800000000000000
-      internalID: 8299945671457039872
+      spriteID: fc95acb43ffdee249b3a89693a7c3865
+      internalID: -101588522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_49"
+      name: Bullets - Energy Type_45
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 142
+        width: 136
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75e9099ebd4ca949909fee2d9892c86
+      internalID: -343734745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Energy Type_46
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 141
+        width: 140
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c8178faf1ac3949b696ca15d78bbe0
+      internalID: -877759527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Energy Type_47
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 144
+        width: 131
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7251ee6c0d452e04a833eed232bfe2c7
+      internalID: -801102910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Energy Type_48
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 141
+        width: 139
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ec2894a18bd9643a342340aba8e227
+      internalID: 305547761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Energy Type_49
       rect:
         serializedVersion: 2
         x: 1677
@@ -1399,38 +1399,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8324c0180104267b0800000000000000
-      internalID: -5232549377422376392
+      spriteID: fed2b24680daf8340924719561bda5b9
+      internalID: 1777570341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_50"
+      name: Bullets - Energy Type_50
       rect:
         serializedVersion: 2
         x: 1850
-        y: 134
+        y: 135
         width: 138
-        height: 135
+        height: 134
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4fc0c502f71612450800000000000000
-      internalID: 6062233772049042676
+      spriteID: 228abb4094384744389784bd1228fcef
+      internalID: -1692258715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_51"
+      name: Bullets - Energy Type_51
       rect:
         serializedVersion: 2
         x: 2018
@@ -1443,43 +1443,43 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f699361e149772650800000000000000
-      internalID: 6208063935214754159
+      spriteID: 3514de157eca5834aa73b1860902053c
+      internalID: 573425378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_52"
+      name: Bullets - Energy Type_52
       rect:
         serializedVersion: 2
         x: 19
         y: 10
         width: 132
-        height: 124
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3d36a0d002fcdc10800000000000000
-      internalID: 2079803213252803901
+      spriteID: c61c4deaf0618a54fb0705c31e25e7f4
+      internalID: -1781776087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_53"
+      name: Bullets - Energy Type_53
       rect:
         serializedVersion: 2
         x: 178
         y: 14
-        width: 139
+        width: 140
         height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1487,20 +1487,20 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: af66d99939695ded0800000000000000
-      internalID: -2389838466568591622
+      spriteID: 4320892d235ec354b96bd52eeb302b0d
+      internalID: -873266305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_54"
+      name: Bullets - Energy Type_54
       rect:
         serializedVersion: 2
         x: 348
-        y: 15
+        y: 14
         width: 143
         height: 119
       alignment: 0
@@ -1509,38 +1509,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3614e7e37c11dfe60800000000000000
-      internalID: 7997568060724494691
+      spriteID: a26d7dcb5c1153f45a84b0f9bb9c2db9
+      internalID: -1171787587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_55"
+      name: Bullets - Energy Type_55
       rect:
         serializedVersion: 2
         x: 521
         y: 15
         width: 129
-        height: 121
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 66c74d08191190400800000000000000
-      internalID: 290782967571446886
+      spriteID: 8a9360e28e6d61c43a17913aed52fe6e
+      internalID: 1598652473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_56"
+      name: Bullets - Energy Type_56
       rect:
         serializedVersion: 2
         x: 685
@@ -1553,16 +1553,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57544d82538a7cb80800000000000000
-      internalID: -8374540035800414859
+      spriteID: 5920209060871bd438551accba90e66d
+      internalID: -2075607389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_57"
+      name: Bullets - Energy Type_57
       rect:
         serializedVersion: 2
         x: 851
@@ -1575,38 +1575,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04d20e4f06bbd7000800000000000000
-      internalID: 35390397188418880
+      spriteID: 2f17c18c2aa1c5145b7bf096a3671b5c
+      internalID: -1784171037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_58"
+      name: Bullets - Energy Type_58
       rect:
         serializedVersion: 2
         x: 1016
-        y: 15
+        y: 14
         width: 134
-        height: 120
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1d4babf27e1e3a4c0800000000000000
-      internalID: -4277326838017379119
+      spriteID: 376188b6b714e21409a20dc1595fde95
+      internalID: -631313367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_59"
+      name: Bullets - Energy Type_59
       rect:
         serializedVersion: 2
         x: 1188
@@ -1619,38 +1619,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 078d871fadc9a3b70800000000000000
-      internalID: 8879582079482386544
+      spriteID: 1833a58a7457b3c438737a52d3f6c756
+      internalID: 691258608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_60"
+      name: Bullets - Energy Type_60
       rect:
         serializedVersion: 2
         x: 1353
-        y: 15
-        width: 125
-        height: 118
+        y: 14
+        width: 124
+        height: 119
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 536231485f4e87ae0800000000000000
-      internalID: -1551238328495167947
+      spriteID: 74daee2b79a66ee47a1fd16d087a595e
+      internalID: 1802309503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_61"
+      name: Bullets - Energy Type_61
       rect:
         serializedVersion: 2
         x: 1508
@@ -1663,38 +1663,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6aa18e6f5f4206b30800000000000000
-      internalID: 4278460284829964966
+      spriteID: 035fd5ba776030242911254d2f65a5d2
+      internalID: 231747015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_62"
+      name: Bullets - Energy Type_62
       rect:
         serializedVersion: 2
         x: 1680
-        y: 16
+        y: 15
         width: 139
-        height: 117
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f287c1d4357981890800000000000000
-      internalID: -7487067996471658449
+      spriteID: b5e53d9a9d00a704f860ee125d3715a4
+      internalID: 264091608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_63"
+      name: Bullets - Energy Type_63
       rect:
         serializedVersion: 2
         x: 1851
@@ -1707,21 +1707,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91f450e87188b2620800000000000000
-      internalID: 2750441632188157721
+      spriteID: 8f698a7fb35b0fb4d883313d4febc33d
+      internalID: -556509386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Atlas de orbes m\xE1gicos luminosos 1_65"
+      name: Bullets - Energy Type_64
       rect:
         serializedVersion: 2
-        x: 2025
+        x: 2018
         y: 14
-        width: 127
+        width: 134
         height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1729,10 +1729,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c4adef84bc08678c0800000000000000
-      internalID: -4001869608280729012
+      spriteID: 22bc37fc8284d9144912ef3748b43a51
+      internalID: 470487650
       vertices: []
       indices: 
       edges: []
@@ -1749,74 +1749,75 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "Atlas de orbes m\xE1gicos luminosos 1_0": 5850540143278715836
-      "Atlas de orbes m\xE1gicos luminosos 1_1": 2760912312263270005
-      "Atlas de orbes m\xE1gicos luminosos 1_10": -4421035517318394361
-      "Atlas de orbes m\xE1gicos luminosos 1_11": -2501585889463356331
-      "Atlas de orbes m\xE1gicos luminosos 1_12": 4615519005386082912
-      "Atlas de orbes m\xE1gicos luminosos 1_13": 2366580419266428934
-      "Atlas de orbes m\xE1gicos luminosos 1_14": -4831961898896494197
-      "Atlas de orbes m\xE1gicos luminosos 1_15": -439093882953326060
-      "Atlas de orbes m\xE1gicos luminosos 1_16": -503332542503887473
-      "Atlas de orbes m\xE1gicos luminosos 1_17": 3582436620392105101
-      "Atlas de orbes m\xE1gicos luminosos 1_18": -1751685140427430685
-      "Atlas de orbes m\xE1gicos luminosos 1_19": 1475787982637056857
-      "Atlas de orbes m\xE1gicos luminosos 1_2": 8267489573118108657
-      "Atlas de orbes m\xE1gicos luminosos 1_20": -8880560741280867764
-      "Atlas de orbes m\xE1gicos luminosos 1_21": -4087025968502398317
-      "Atlas de orbes m\xE1gicos luminosos 1_22": -4993068787114581342
-      "Atlas de orbes m\xE1gicos luminosos 1_23": -6067679428423358415
-      "Atlas de orbes m\xE1gicos luminosos 1_24": -5561208948748805756
-      "Atlas de orbes m\xE1gicos luminosos 1_25": 5675446910998036883
-      "Atlas de orbes m\xE1gicos luminosos 1_26": 1543702657884853543
-      "Atlas de orbes m\xE1gicos luminosos 1_27": 5991351087965043318
-      "Atlas de orbes m\xE1gicos luminosos 1_28": -2501859613373009836
-      "Atlas de orbes m\xE1gicos luminosos 1_29": 849974096341810075
-      "Atlas de orbes m\xE1gicos luminosos 1_3": 3350292623327374210
-      "Atlas de orbes m\xE1gicos luminosos 1_30": 6896785017517229180
-      "Atlas de orbes m\xE1gicos luminosos 1_31": 2740195665941180251
-      "Atlas de orbes m\xE1gicos luminosos 1_32": -7216248409814895277
-      "Atlas de orbes m\xE1gicos luminosos 1_33": 5405447735589760186
-      "Atlas de orbes m\xE1gicos luminosos 1_34": 639496095046898799
-      "Atlas de orbes m\xE1gicos luminosos 1_35": -6404495160455582437
-      "Atlas de orbes m\xE1gicos luminosos 1_36": 491967510841391844
-      "Atlas de orbes m\xE1gicos luminosos 1_37": 2520378332117054267
-      "Atlas de orbes m\xE1gicos luminosos 1_38": 4395877294496936887
-      "Atlas de orbes m\xE1gicos luminosos 1_39": -6509413042675987162
-      "Atlas de orbes m\xE1gicos luminosos 1_4": 3302260353157038087
-      "Atlas de orbes m\xE1gicos luminosos 1_40": 2765283046009687968
-      "Atlas de orbes m\xE1gicos luminosos 1_41": 2291207976654157368
-      "Atlas de orbes m\xE1gicos luminosos 1_42": -3665925976226349368
-      "Atlas de orbes m\xE1gicos luminosos 1_43": -2211683089504126831
-      "Atlas de orbes m\xE1gicos luminosos 1_44": 4481816138361900717
-      "Atlas de orbes m\xE1gicos luminosos 1_45": 781411474976527906
-      "Atlas de orbes m\xE1gicos luminosos 1_46": -939474820773114988
-      "Atlas de orbes m\xE1gicos luminosos 1_47": 284193386669608373
-      "Atlas de orbes m\xE1gicos luminosos 1_48": 8299945671457039872
-      "Atlas de orbes m\xE1gicos luminosos 1_49": -5232549377422376392
-      "Atlas de orbes m\xE1gicos luminosos 1_5": -5342638829944468071
-      "Atlas de orbes m\xE1gicos luminosos 1_50": 6062233772049042676
-      "Atlas de orbes m\xE1gicos luminosos 1_51": 6208063935214754159
-      "Atlas de orbes m\xE1gicos luminosos 1_52": 2079803213252803901
-      "Atlas de orbes m\xE1gicos luminosos 1_53": -2389838466568591622
-      "Atlas de orbes m\xE1gicos luminosos 1_54": 7997568060724494691
-      "Atlas de orbes m\xE1gicos luminosos 1_55": 290782967571446886
-      "Atlas de orbes m\xE1gicos luminosos 1_56": -8374540035800414859
-      "Atlas de orbes m\xE1gicos luminosos 1_57": 35390397188418880
-      "Atlas de orbes m\xE1gicos luminosos 1_58": -4277326838017379119
-      "Atlas de orbes m\xE1gicos luminosos 1_59": 8879582079482386544
-      "Atlas de orbes m\xE1gicos luminosos 1_6": -6844525196895715550
-      "Atlas de orbes m\xE1gicos luminosos 1_60": -1551238328495167947
-      "Atlas de orbes m\xE1gicos luminosos 1_61": 4278460284829964966
-      "Atlas de orbes m\xE1gicos luminosos 1_62": -7487067996471658449
-      "Atlas de orbes m\xE1gicos luminosos 1_63": 2750441632188157721
-      "Atlas de orbes m\xE1gicos luminosos 1_64": -7276457005307715680
-      "Atlas de orbes m\xE1gicos luminosos 1_65": -4001869608280729012
-      "Atlas de orbes m\xE1gicos luminosos 1_7": -4693450654028975476
-      "Atlas de orbes m\xE1gicos luminosos 1_8": -3084920080109258617
-      "Atlas de orbes m\xE1gicos luminosos 1_9": 9077620089604436171
+      Bullets - Energy Type_0: 1472478007
+      Bullets - Energy Type_1: 648547829
+      Bullets - Energy Type_10: 540339033
+      Bullets - Energy Type_11: 1496363444
+      Bullets - Energy Type_12: 1984240651
+      Bullets - Energy Type_13: -1540500807
+      Bullets - Energy Type_14: -1983770220
+      Bullets - Energy Type_15: 1419308580
+      Bullets - Energy Type_16: -114295563
+      Bullets - Energy Type_17: 1274358173
+      Bullets - Energy Type_18: 1651957129
+      Bullets - Energy Type_19: 353753310
+      Bullets - Energy Type_2: 1910718708
+      Bullets - Energy Type_20: 269940974
+      Bullets - Energy Type_21: 1798111166
+      Bullets - Energy Type_22: 258939690
+      Bullets - Energy Type_23: -693661203
+      Bullets - Energy Type_24: 1642456815
+      Bullets - Energy Type_25: 998233195
+      Bullets - Energy Type_26: 97180551
+      Bullets - Energy Type_27: -1055402797
+      Bullets - Energy Type_28: -1476208224
+      Bullets - Energy Type_29: -1782524159
+      Bullets - Energy Type_3: -2038889942
+      Bullets - Energy Type_30: 799958633
+      Bullets - Energy Type_31: 1794121269
+      Bullets - Energy Type_32: -103346789
+      Bullets - Energy Type_33: -505703025
+      Bullets - Energy Type_34: -1011676199
+      Bullets - Energy Type_35: 777559524
+      Bullets - Energy Type_36: 1250881558
+      Bullets - Energy Type_37: -320129653
+      Bullets - Energy Type_38: -1991638302
+      Bullets - Energy Type_39: -266698864
+      Bullets - Energy Type_4: 1747942226
+      Bullets - Energy Type_40: -237370784
+      Bullets - Energy Type_41: -2130764160
+      Bullets - Energy Type_42: -683854369
+      Bullets - Energy Type_43: 1568863494
+      Bullets - Energy Type_44: -101588522
+      Bullets - Energy Type_45: -343734745
+      Bullets - Energy Type_46: -877759527
+      Bullets - Energy Type_47: -801102910
+      Bullets - Energy Type_48: 305547761
+      Bullets - Energy Type_49: 1777570341
+      Bullets - Energy Type_5: 28419239
+      Bullets - Energy Type_50: -1692258715
+      Bullets - Energy Type_51: 573425378
+      Bullets - Energy Type_52: -1781776087
+      Bullets - Energy Type_53: -873266305
+      Bullets - Energy Type_54: -1171787587
+      Bullets - Energy Type_55: 1598652473
+      Bullets - Energy Type_56: -2075607389
+      Bullets - Energy Type_57: -1784171037
+      Bullets - Energy Type_58: -631313367
+      Bullets - Energy Type_59: 691258608
+      Bullets - Energy Type_6: 1426186478
+      Bullets - Energy Type_60: 1802309503
+      Bullets - Energy Type_61: 231747015
+      Bullets - Energy Type_62: 264091608
+      Bullets - Energy Type_63: -556509386
+      Bullets - Energy Type_64: 470487650
+      Bullets - Energy Type_7: -1210617564
+      Bullets - Energy Type_8: -2021090059
+      Bullets - Energy Type_9: -673313156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

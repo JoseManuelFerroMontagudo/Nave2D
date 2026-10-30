@@ -17,5 +17,5 @@ MonoBehaviour:
   costoEnergia: 0
   costoMunicion: 0
   prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
-  velocidad: 25
+  velocidad: 40
   "desdeCa\xF1ones": 1

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-[CreateAssetMenu(menuName = "Ataques/Ráfaga")]
+[CreateAssetMenu(menuName = "AtaqueJefe/Ráfaga")]
 public class AtaqueRafaga : PatronAtaque
 {
     public int cantidad = 3;

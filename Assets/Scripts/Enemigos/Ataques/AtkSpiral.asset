@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8ae9896ebd80d4ca0d7585ca5eebc7, type: 3}
+  m_Name: AtkSpiral
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueRadial
+  prefabBullet: {fileID: 4532273776012636059, guid: b54be4171f0e0694d8c18e3ac51b97b2, type: 3}
+  "da\xF1o": 10
+  velocidad: 10
+  vidaUtil: 4
+  cantidad: 6
+  oleadas: 10
+  intervaloOleada: 0.2
+  rotacionPorOleada: 18
+  anguloInicial: 0
