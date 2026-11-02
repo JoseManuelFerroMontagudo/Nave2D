@@ -5,36 +5,36 @@ using UnityEngine.UI;
 public class Minimap : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] Image mapImage;
-    [SerializeField] RectTransform dotsContainer;
-    [SerializeField] GameObject dotPrefab;
-    [SerializeField] float dotSize = 10f;
+    public Image mapImage;
+    public RectTransform dotsContainer;
+    public GameObject dotPrefab;
+    public float dotSize = 10f;
 
     [Header("Sprites")]
-    [SerializeField] Sprite playerSprite, enemySprite, bossSprite, asteroidSprite;
-    [SerializeField] bool showAsteroids = true;
+    public Sprite playerSprite, enemySprite, bossSprite, asteroidSprite;
+    public bool showAsteroids = true;
 
     [Header("Modo")]
     [Tooltip("OFF = mapa completo norte-arriba. ON = radar centrado en player, player mira arriba.")]
-    [SerializeField] bool centerOnPlayer = true;
+    public bool centerOnPlayer = true;
     [Tooltip("Solo en modo radar: distancia de mundo que mapea al borde.")]
-    [SerializeField] float radarRange = 10f;
+    public float radarRange = 10f;
 
     [Header("Orientación")]
-    [SerializeField] FacingAxis facingAxis = FacingAxis.Up;
+    public FacingAxis facingAxis = FacingAxis.Up;
 
     [Header("Refresco")]
-    [SerializeField] float refreshInterval = 0.1f;
+    public float refreshInterval = 0.1f;
 
+    public event System.Action<bool> OnModeChanged;
     public enum FacingAxis { Up, Right }
 
-    LineRenderer boundary;
-    Transform player;
-    float nextRefresh;
-    readonly List<Image> pool = new List<Image>();
-    readonly List<string> tags = new List<string>();
-    int used;
-
+    private LineRenderer boundary;
+    private Transform player;
+    private float nextRefresh;
+    private readonly List<Image> pool = new List<Image>();
+    private readonly List<string> tags = new List<string>();
+    private int used;
     void Update()
     {
         if (Time.time < nextRefresh) return;
@@ -69,7 +69,7 @@ public class Minimap : MonoBehaviour
         {
             var rt = GetDot(playerSprite).rectTransform;
             rt.anchoredPosition = centerOnPlayer ? Vector2.zero : (Vector2)(player.position - origin) * scale;
-            rt.localRotation = Quaternion.Euler(0, 0, centerOnPlayer ? 180f : pAngle + 90f);
+            rt.localRotation = Quaternion.Euler(0, 0, centerOnPlayer ? 0f : pAngle - 90f);
         }
 
         // Resto
@@ -84,10 +84,9 @@ public class Minimap : MonoBehaviour
                 Vector2 v = Rotate(go.transform.position - origin, rot) * scale;
                 if (centerOnPlayer && v.sqrMagnitude > uiR * uiR) v = v.normalized * uiR;
 
-                float a = FacingAngle(go.transform);
                 var rt = GetDot(sprite).rectTransform;
                 rt.anchoredPosition = v;
-                rt.localRotation = Quaternion.Euler(0, 0, centerOnPlayer ? a - pAngle + 180f : a + 90f);
+                rt.localRotation = Quaternion.identity;   // ← siempre "arriba"
             }
         }
 
@@ -152,5 +151,12 @@ public class Minimap : MonoBehaviour
         float r = deg * Mathf.Deg2Rad, c = Mathf.Cos(r), s = Mathf.Sin(r);
         return new Vector2(v.x * c - v.y * s, v.x * s + v.y * c);
     }
-    void OnMinimap() { centerOnPlayer = !centerOnPlayer; }
+    public bool CenterOnPlayer => centerOnPlayer;
+    public void SetMode(bool on)
+    {
+        if (centerOnPlayer == on) return;
+        centerOnPlayer = on;
+        nextRefresh = 0f;   // ← fuerza refresco en el próximo Update
+    }
+    public void ToggleMode() => centerOnPlayer = !centerOnPlayer;
 }

@@ -16,6 +16,11 @@ MonoBehaviour:
   costoCalor: 1
   costoEnergia: 0
   costoMunicion: 0
+  nombreVisible: Balas de uranio
+  icono: {fileID: 7329226186007742641, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: 'Alta Cadencia
+
+    Sobrecalentamiento'
   prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
   velocidad: 40
   "desdeCa\xF1ones": 1

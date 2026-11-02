@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
   cadencia: 0.5
   costoCalor: 0
-  costoEnergia: 50
+  costoEnergia: 20
   costoMunicion: 0
+  nombreVisible: Espectro
+  icono: {fileID: 965411896615525002, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: "Invoca una copia\nDa\xF1o basico "
   prefab: {fileID: 4557198877208420223, guid: 4bfdc87b0fd6cb341ac0f9a10ebfcbde, type: 3}
   velocidad: 0
   "desdeCa\xF1ones": 0

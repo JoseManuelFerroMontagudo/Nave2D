@@ -6,6 +6,10 @@ public abstract class AtaqueBase : ScriptableObject
     public float costoCalor = 0f;
     public int costoEnergia = 0;
     public int costoMunicion = 0;
+    [Header("UI")]
+    public string nombreVisible;
+    public Sprite icono;
+    [TextArea] public string descripcion;
 
     public virtual bool EsPermanente => false;
 

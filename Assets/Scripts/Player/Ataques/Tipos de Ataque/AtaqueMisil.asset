@@ -15,7 +15,10 @@ MonoBehaviour:
   cadencia: 2
   costoCalor: 0
   costoEnergia: 0
-  costoMunicion: 1
+  costoMunicion: 0
+  nombreVisible: Misil Perseguidor
+  icono: {fileID: 2107035030923953804, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: "Da\xF1o moderado\nBaja Cadencia"
   prefab: {fileID: 6997285835846201165, guid: a21fc12ab0b0ed942b4cc8e29043f3b2, type: 3}
   velocidad: 20
   "desdeCa\xF1ones": 0
