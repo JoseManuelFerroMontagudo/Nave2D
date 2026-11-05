@@ -12602,6 +12602,10 @@ MonoBehaviour:
   intervaloSpawn: 0.2
   velocidadSuccion: 13
   anguloAbanico: 95
+  intervaloFrenesi: 0.15
+  velocidadSuccionFrenesi: 16
+  escalaAsteroidesFrenesi: {x: 2, y: 2, z: 2}
+  colorFrenesi: {r: 1, g: 0.25, b: 0.25, a: 1}
 --- !u!1 &2039170202
 GameObject:
   m_ObjectHideFlags: 0

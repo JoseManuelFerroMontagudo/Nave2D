@@ -42,6 +42,7 @@ public class ControladorAnomalia : MonoBehaviour
     private bool enFaseAgujeroBlanco = false;
     private bool cambiandoDeFase = false;
     private bool jugadorAbsorbido = false;
+    private bool frenesiActivado = false;
 
     private void Start()
     {
@@ -114,6 +115,17 @@ public class ControladorAnomalia : MonoBehaviour
 
     private void AplicarEfectosInestabilidad()
     {
+        // 1. Activar el Frenesí en el Spawner solo una vez al iniciar la inestabilidad
+        if (!frenesiActivado)
+        {
+            frenesiActivado = true;
+            SpawnerAnomalia spawner = GetComponentInChildren<SpawnerAnomalia>();
+            if (spawner != null)
+            {
+                spawner.ActivarModoFrenesi();
+            }
+        }
+
         // Factor de urgencia de 0 a 1 (conforme se acerca a 0 sube la intensidad)
         float factorUrgencia = 1f - (tiempoRestante / tiempoAlarmaInestable);
 

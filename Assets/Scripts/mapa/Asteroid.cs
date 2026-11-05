@@ -138,4 +138,17 @@ public class Asteroide : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+    // Agrégalo dentro de la clase Asteroide (al final del script)
+    public void EstablecerColorTinte(Color nuevoColor)
+    {
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = nuevoColor;
+        }
+    }
 }

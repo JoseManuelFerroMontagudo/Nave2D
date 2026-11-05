@@ -5,7 +5,7 @@ public class SpawnerAnomalia : MonoBehaviour
     [Header("Prefab del Asteroide")]
     public GameObject prefabAsteroide;
 
-    [Header("Configuración de Distancia y Frecuencia")]
+    [Header("Configuración de Distancia y Frecuencia Base")]
     public float radioSpawn = 18f;        // Distancia desde el agujero donde nacen
     public float intervaloSpawn = 0.5f;   // Tiempo entre cada asteroide
     public float velocidadSuccion = 9f;   // Velocidad hacia el centro
@@ -14,8 +14,15 @@ public class SpawnerAnomalia : MonoBehaviour
     [Tooltip("Ángulo del cono de emisión enfocado hacia la nave (ej. 90° = abanico frontal)")]
     public float anguloAbanico = 90f;
 
+    [Header("Modo Frenesí / Inestabilidad (Clímax de Peligro)")]
+    public float intervaloFrenesi = 0.2f;              // Nacen mucho más seguido
+    public float velocidadSuccionFrenesi = 15f;        // Van súper rápido hacia el centro
+    public Vector3 escalaAsteroidesFrenesi = new Vector3(1.6f, 1.6f, 1.6f); // Más grandes
+    public Color colorFrenesi = new Color(1f, 0.25f, 0.25f, 1f); // Rojo carmesí
+
     private float timer;
     private bool generando = true;
+    private bool enModoFrenesi = false;
     private Transform jugador;
 
     private void Start()
@@ -33,6 +40,16 @@ public class SpawnerAnomalia : MonoBehaviour
         }
     }
 
+    public void ActivarModoFrenesi()
+    {
+        enModoFrenesi = true;
+    }
+
+    public void DetenerGeneracion()
+    {
+        generando = false;
+    }
+
     private void Update()
     {
         if (!generando || prefabAsteroide == null) return;
@@ -45,7 +62,11 @@ public class SpawnerAnomalia : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        if (timer >= intervaloSpawn)
+
+        // Usar el intervalo rápido si está en frenesí, o el normal si no
+        float intervaloActual = enModoFrenesi ? intervaloFrenesi : intervaloSpawn;
+
+        if (timer >= intervaloActual)
         {
             timer = 0f;
             SpawnearAsteroideEnAbanico();
@@ -74,6 +95,22 @@ public class SpawnerAnomalia : MonoBehaviour
         // 6. Instanciar el asteroide en el borde del abanico
         GameObject nuevoAsteroide = Instantiate(prefabAsteroide, puntoSpawn, Quaternion.identity);
 
+        // --- LÓGICA DE FRENESÍ (ESCALA, COLOR Y VELOCIDAD) ---
+        float velocidadFinal = velocidadSuccion;
+
+        if (enModoFrenesi)
+        {
+            nuevoAsteroide.transform.localScale = escalaAsteroidesFrenesi;
+            velocidadFinal = velocidadSuccionFrenesi;
+
+            // Cambiar color a rojo
+            Asteroide scriptAsteroide = nuevoAsteroide.GetComponent<Asteroide>();
+            if (scriptAsteroide != null)
+            {
+                scriptAsteroide.EstablecerColorTinte(colorFrenesi);
+            }
+        }
+
         // 7. Aplicar el script de succión que lo arrastra de vuelta al centro
         AtraccionAnomalia atraccion = nuevoAsteroide.GetComponent<AtraccionAnomalia>();
         if (atraccion == null)
@@ -81,12 +118,7 @@ public class SpawnerAnomalia : MonoBehaviour
             atraccion = nuevoAsteroide.AddComponent<AtraccionAnomalia>();
         }
 
-        atraccion.IniciarSuccion(transform, velocidadSuccion);
-    }
-
-    public void DetenerGeneracion()
-    {
-        generando = false;
+        atraccion.IniciarSuccion(transform, velocidadFinal);
     }
 
     // Dibujar el cono en la ventana Scene para calibrarlo visualmente
@@ -94,7 +126,7 @@ public class SpawnerAnomalia : MonoBehaviour
     {
         if (jugador == null) return;
 
-        Gizmos.color = Color.yellow;
+        Gizmos.color = enModoFrenesi ? Color.red : Color.yellow;
         Vector3 dirJugador = (jugador.position - transform.position).normalized;
 
         Vector3 izquierda = Quaternion.Euler(0, 0, -anguloAbanico / 2f) * dirJugador;
