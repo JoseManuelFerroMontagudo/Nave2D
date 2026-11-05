@@ -19,6 +19,10 @@ public class Asteroide : MonoBehaviour
     [Tooltip("Ángulo de desviación en grados para que no vayan exacto al centro del jugador")]
     [SerializeField] private float desviacionAngulo = 35f;
 
+    [Header("Física de Impacto (Opcional)")]
+    [Tooltip("Pon en 0 para Nivel 1 si no quieres que empuje al jugador")]
+    [SerializeField] private float fuerzaEmpuje = 0f;
+
     private Rigidbody2D rb;
     private float velocidadRotacion;
     private float anguloZ;
@@ -56,16 +60,13 @@ public class Asteroide : MonoBehaviour
 
         if (jugadorObj != null)
         {
-            // Vector desde la posición del asteroide hacia la posición del jugador
             direccionBase = (jugadorObj.transform.position - transform.position).normalized;
         }
         else
         {
-            // Si no encuentra al jugador, cae en una dirección aleatoria por defecto
             direccionBase = Random.insideUnitCircle.normalized;
         }
 
-        // Añadir una pequeña desviación aleatoria (en grados) para que no parezca un misil teledirigido
         float anguloDesviacion = Random.Range(-desviacionAngulo, desviacionAngulo);
         Vector2 direccionFinal = Quaternion.Euler(0, 0, anguloDesviacion) * direccionBase;
 
@@ -90,7 +91,12 @@ public class Asteroide : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Asteroid"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AplicarEmpuje(collision.gameObject);
+            Explotar();
+        }
+        else if (collision.gameObject.CompareTag("Asteroid"))
         {
             Explotar();
         }
@@ -98,9 +104,27 @@ public class Asteroide : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Asteroid") || other.CompareTag("Shield"))
+        if (other.CompareTag("Player"))
+        {
+            AplicarEmpuje(other.gameObject);
+            Explotar();
+        }
+        else if (other.CompareTag("Asteroid") || other.CompareTag("Shield"))
         {
             Explotar();
+        }
+    }
+
+    private void AplicarEmpuje(GameObject objetoJugador)
+    {
+        // Si la fuerza es 0 (como en Nivel 1), no hace nada
+        if (fuerzaEmpuje <= 0f) return;
+
+        Rigidbody2D rbJugador = objetoJugador.GetComponent<Rigidbody2D>();
+        if (rbJugador != null)
+        {
+            Vector2 direccionEmpuje = (objetoJugador.transform.position - transform.position).normalized;
+            rbJugador.AddForce(direccionEmpuje * fuerzaEmpuje, ForceMode2D.Impulse);
         }
     }
 
@@ -108,14 +132,10 @@ public class Asteroide : MonoBehaviour
     {
         if (prefabExplosion != null)
         {
-            // 1. Guardamos la referencia de la explosión recién creada
             GameObject efecto = Instantiate(prefabExplosion, transform.position, Quaternion.identity);
-
-            // 2. Destruimos ÚNICAMENTE la explosión pasados 1.5 segundos
             Destroy(efecto, 1.5f);
         }
 
-        // 3. El asteroide solo se desactiva para volver al pool
         gameObject.SetActive(false);
     }
 }

@@ -339,7 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a50c561c16132408448151d76e7767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorAnomalia
-  vidaMaxima: 100
+  tiempoParaTransicion: 20
+  tiempoAlarmaInestable: 10
+  intensidadTemblor: 0.01
+  velocidadPulsacion: 19
+  escalaPulsacion: 0.2
+  radioMuerte: 2.5
   spriteAgujeroNegro: {fileID: 703334942}
   spriteAgujeroBlanco: {fileID: 699765850}
   imagenFlashUI: {fileID: 759091204}
@@ -347,6 +352,8 @@ MonoBehaviour:
   velocidadImplosion: 4
   duracionCeguera: 0.15
   velocidadDesvanecimientoFlash: 2
+  nombreEscenaGameOver: GameOver
+  retardoGameOver: 1
 --- !u!4 &152265353
 Transform:
   m_ObjectHideFlags: 0
