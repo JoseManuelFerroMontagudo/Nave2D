@@ -624,7 +624,7 @@ MonoBehaviour:
   - {fileID: 3360784876340351922, guid: ac060a705747fa9b1b0d7dc18a0e01e7, type: 3}
   - {fileID: -8694194815552800511, guid: ac060a705747fa9b1b0d7dc18a0e01e7, type: 3}
   - {fileID: -5112844274692613043, guid: ac060a705747fa9b1b0d7dc18a0e01e7, type: 3}
-  nombreJefe: Mirlo
+  nombreJefe: Agujero Blanco
   duracionEntrada: 1.2
   intensidadSacudida: 12
   duracionSacudida: 0.15
@@ -6182,6 +6182,8 @@ GameObject:
   - component: {fileID: 699765852}
   - component: {fileID: 699765851}
   - component: {fileID: 699765853}
+  - component: {fileID: 699765855}
+  - component: {fileID: 699765854}
   m_Layer: 0
   m_Name: Agujero_Blanco
   m_TagString: Untagged
@@ -6277,6 +6279,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetaEspacial
   velocidadRotacion: 20
+--- !u!58 &699765854
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699765850}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6.27
+--- !u!114 &699765855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699765850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
+  vida: 1500
+  velocidadMovimiento: 9
+  distanciaFrenteJugador: 4
+  amplitudOndaHorizontal: 3.2
+  frecuenciaOndaHorizontal: 1.6
+  quieto: 1
+  limitarACono: 1
+  anguloCono: 140
+  "flashAlRecibirDa\xF1o": 1
+  balasHastaElLimite: 1
+  alcanceBalas: 60
+  prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
+  puntoDisparo: {fileID: 0}
+  "da\xF1oProyectil": 5
+  prefabProyectilPlasma: {fileID: 0}
+  "da\xF1oPlasma": 10
+  prefabProyectilPerseguidor: {fileID: 0}
+  "da\xF1oPerseguidor": 15
+  spritesDirecciones: []
+  patronesFase1:
+  - patron: {fileID: 11400000, guid: 10f29fa4f1b14cc4ea1c96450b88c937, type: 2}
+    retardoAntes: 1
+    retardoDespues: 1
+  patronesFase2:
+  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
+    retardoAntes: 1
+    retardoDespues: 1
+  patronesFase3: []
+  repetirCiclo: 1
+  esperaInicial: 0.5
+  lluviaActivada: 1
+  lluviaBalasPorAnillo: 12
+  lluviaIntervalo: 0.28
+  lluviaOpciones:
+    modo: 0
+    velocidad: 6
+    tiempoVuelo: 3
+    vidaUtil: 14
+    color: {r: 0.7, g: 0.2, b: 1, a: 0.7}
+    amplitudOnda: 2
+    frecuenciaOnda: 8
+    fuerzaPersecucion: 1.5
+    regresaAlOrigen: 1
+    multiplicadorVelocidadRetorno: 0.7
+    tiempoFrenado: 0.4
+    pausaAntesDeRegresar: 0.25
+    rebotaEnParedes: 1
+    rebotesMaximos: 1
+  umbralFase2: 0.66
+  umbralFase3: 0.33
+  suavizadoMovimiento: 8
+  esInvulnerable: 0
 --- !u!1 &703334942
 GameObject:
   m_ObjectHideFlags: 0
@@ -11904,7 +12006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boss Mirlo
+  m_text: Agujero Blanco
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -11970,7 +12072,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -57.447105, w: 0}
+  m_margin: {x: 0, y: 0, z: -118.907814, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
