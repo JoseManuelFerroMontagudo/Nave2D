@@ -5811,7 +5811,7 @@ MonoBehaviour:
       cantidad: 1
     retardoAntes: 2
     retardoDespues: 2
-    delayEntreEnemigos: 0
+    delayEntreEnemigos: 1
   - grupos:
     - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       cantidad: 3
@@ -5819,11 +5819,11 @@ MonoBehaviour:
       cantidad: 2
     retardoAntes: 2
     retardoDespues: 2
-    delayEntreEnemigos: 0
+    delayEntreEnemigos: 1
   prefabJefe: {fileID: 3708717635896645897, guid: ac2eb82958b6d2d4f8aa3bdb9226650b, type: 3}
-  escenaAlDerrotarJefe: Credits
+  escenaAlDerrotarJefe: NIvel3
   retardoCambioEscena: 1.5
-  usarLoadSingle: 1
+  usarLoadSingle: 0
   OnJefeDerrotado:
     m_PersistentCalls:
       m_Calls: []
