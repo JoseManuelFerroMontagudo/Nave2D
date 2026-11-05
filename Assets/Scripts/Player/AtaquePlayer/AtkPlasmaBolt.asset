@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
+  m_Name: AtkPlasmaBolt
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
+  cadencia: 1
+  costoCalor: 0
+  costoEnergia: 5
+  costoMunicion: 0
+  nombreVisible: Plasma
+  icono: {fileID: -3911416680466541835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: 'Absorbe balas
+
+    Cadencia Media'
+  "cantidadCa\xF1ones": 2
+  separacion: 2
+  modoSeparacion: 0
+  prefab: {fileID: 4685093840455365156, guid: 006d8a741e2d135498b77dbfdb4b1fd2, type: 3}
+  simultaneo: 0
+  oleadas: 1
+  intervaloOleada: 0
+  intervaloBala: 0.5

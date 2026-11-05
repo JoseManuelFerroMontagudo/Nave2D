@@ -202,6 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1b8d3ee594dd94397132ea9acadc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  "da\xF1o": 1
-  velocidad: 4
+  "da\xF1o": 5
+  velocidad: 15
   vidaUtil: 4
+  volverAlOrigen: 0
+  amplitudOnda: 0
+  frecuenciaOnda: 0

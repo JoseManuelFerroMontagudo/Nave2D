@@ -3,35 +3,30 @@ using UnityEngine;
 public class Jefe : Enemigo
 {
     [Header("Patrones por fase (SO)")]
-    public PatronAtaque[] patronesPorFase;
+    public AtaqueBase[] patronesPorFase;
 
-    VidaPersonaje vida;
+    // ❌ ELIMINAR: VidaPersonaje vida;
 
     protected override void Awake()
     {
-        base.Awake();
-        vida = GetComponent<VidaPersonaje>();
-        if (vida != null)
-            vida.OnFaseCambia.AddListener(AlCambiarFase);
+        base.Awake();                          // aquí ya se asigna 'vida' heredado
+        if (vida != null) vida.OnFaseCambia.AddListener(AlCambiarFase);
+        AplicarFaseActual();
     }
 
-    void AlCambiarFase(int nuevaFase)
-    {
-        cronometro = 0f;                       // reinicia el timer (modo sin Animator)
-        // aquí podrías: anim.SetTrigger("PhaseChange");  etc.
-    }
+    void AlCambiarFase(int nuevaFase) => AplicarFaseActual();
 
-    // Sobrescribe Disparar (no EventoDisparo): así cubre
-    // tanto la ruta Animation Event como la ruta timer.
-    public override void Disparar()
+    void AplicarFaseActual()
     {
-        if (jugador == null || puntoDisparo == null) return;
         if (patronesPorFase == null || patronesPorFase.Length == 0) return;
-
         int idx = Mathf.Clamp((vida != null ? vida.faseActual : 1) - 1, 0, patronesPorFase.Length - 1);
         var p = patronesPorFase[idx];
-        if (p == null) return;
+        if (p != null) ataque = p;
+    }
 
-        StartCoroutine(p.Ejecutar(puntoDisparo, jugador));
+    protected override void OnDestroy()
+    {
+        if (vida != null) vida.OnFaseCambia.RemoveListener(AlCambiarFase);
+        base.OnDestroy();   // ← importante: quita también DesactivarAtaque de Enemigo
     }
 }

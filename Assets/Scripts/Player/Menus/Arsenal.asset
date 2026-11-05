@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df338bc6f743344db1293ea677ea448, type: 3}
+  m_Name: Arsenal
+  m_EditorClassIdentifier: Assembly-CSharp::ArsenalJugador
+  desbloqueados:
+  - {fileID: 11400000, guid: a40ac8c792febc8469b33eb50933d579, type: 2}
+  - {fileID: 11400000, guid: 2001672ad83697f4584a5647b0116362, type: 2}
+  - {fileID: 11400000, guid: 9f7a514c2f2ac8b428fcab991e40ed3b, type: 2}
+  - {fileID: 11400000, guid: 7aab4a09e99151e4081b505addb07907, type: 2}
+  - {fileID: 11400000, guid: f6cd8164d50f9594cb9b65541383064c, type: 2}
+  - {fileID: 11400000, guid: e64cbd7a3e4ed614aa7ad92dae69f446, type: 2}
+  - {fileID: 11400000, guid: 1cd2497dc60ad964f87f7755a3ab8146, type: 2}
+  equipadaPrimaria: {fileID: 11400000, guid: a40ac8c792febc8469b33eb50933d579, type: 2}
+  equipadaSecundaria: {fileID: 11400000, guid: 2001672ad83697f4584a5647b0116362, type: 2}

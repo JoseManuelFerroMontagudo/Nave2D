@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8ae9896ebd80d4ca0d7585ca5eebc7, type: 3}
   m_Name: AtkAnillo
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueRadial
-  prefabBullet: {fileID: 4532273776012636059, guid: b54be4171f0e0694d8c18e3ac51b97b2, type: 3}
-  "da\xF1o": 10
-  velocidad: 10
-  vidaUtil: 4
-  cantidad: 12
-  oleadas: 4
+  cadencia: 10
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  nombreVisible: 
+  icono: {fileID: 0}
+  descripcion: 
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 0
+  prefab: {fileID: 558679377710589676, guid: 6f30f5c4e90a6e34b847cdd1646f1c39, type: 3}
+  cantidad: 3
+  oleadas: 5
   intervaloOleada: 0.5
   rotacionPorOleada: 0
   anguloInicial: 0

@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ContextoDisparoSimple
   vidaUtil: 3
   "da\xF1o": 0
+  velocidad: 0
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 0
   giroPorSegundo: 90
@@ -62,9 +63,6 @@ MonoBehaviour:
   - Player
   - Shield
   - Bullet
-  - Bullet1
-  - Bullet2
-  - Bullet3
   - Asteroide
   - Sierra
 --- !u!114 &6958619292051685322
@@ -79,13 +77,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5836b3b0fb3c6147812b88fd05cca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
-  arsenal:
-  - {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
-  indicePrimario: 0
-  indiceSecundario: 1
-  "ca\xF1onesBase": 4
-  "anchoCa\xF1ones": 3
+  arsenalJugador: {fileID: 0}
+  ataquePrimario: {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
+  ataqueSecundario: {fileID: 0}
   autoDisparoPrimario: 1
+  objetivo: {fileID: 0}
 --- !u!1 &8337668625632692894
 GameObject:
   m_ObjectHideFlags: 0

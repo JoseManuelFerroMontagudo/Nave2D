@@ -621,7 +621,7 @@ AudioSource:
   m_GameObject: {fileID: 1382762263}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2201349110982575728, guid: c09cdeb699d59ad4e912990128c54f9a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a2fb0472d6bd9654f9f8354137db6ef7, type: 3}
   m_PlayOnAwake: 1
@@ -783,8 +783,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Space Contract
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4ff646cb886a2924eb1c6d02c2e66c6d, type: 2}
-  m_sharedMaterial: {fileID: 8376186281228217126, guid: 4ff646cb886a2924eb1c6d02c2e66c6d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

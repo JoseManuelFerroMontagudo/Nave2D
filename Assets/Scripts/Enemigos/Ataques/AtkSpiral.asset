@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8ae9896ebd80d4ca0d7585ca5eebc7, type: 3}
   m_Name: AtkSpiral
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueRadial
-  prefabBullet: {fileID: 4532273776012636059, guid: b54be4171f0e0694d8c18e3ac51b97b2, type: 3}
-  "da\xF1o": 10
-  velocidad: 10
-  vidaUtil: 4
+  cadencia: 10
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  nombreVisible: Espiral
+  icono: {fileID: -3905289499681773541, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: Test
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 0
+  prefab: {fileID: 4532273776012636059, guid: b54be4171f0e0694d8c18e3ac51b97b2, type: 3}
   cantidad: 6
   oleadas: 10
   intervaloOleada: 0.2

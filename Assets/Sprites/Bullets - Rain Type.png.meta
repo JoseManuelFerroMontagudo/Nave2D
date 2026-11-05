@@ -1,0 +1,1742 @@
+fileFormatVersion: 2
+guid: 56b09b3957acc4f4693e8b6089f91cdd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8031259931475145471
+    second: Bullets - Rain Type_0
+  - first:
+      213: 1250235711165125032
+    second: Bullets - Rain Type_1
+  - first:
+      213: 3983366699673308980
+    second: Bullets - Rain Type_2
+  - first:
+      213: 1961053436532147226
+    second: Bullets - Rain Type_3
+  - first:
+      213: 59015974034081731
+    second: Bullets - Rain Type_4
+  - first:
+      213: 76471740112854401
+    second: Bullets - Rain Type_5
+  - first:
+      213: 3356787080425819177
+    second: Bullets - Rain Type_6
+  - first:
+      213: 2575269493842130416
+    second: Bullets - Rain Type_7
+  - first:
+      213: -434649918843383366
+    second: Bullets - Rain Type_8
+  - first:
+      213: 5397043500507027611
+    second: Bullets - Rain Type_9
+  - first:
+      213: 7044077018619356037
+    second: Bullets - Rain Type_10
+  - first:
+      213: -6453266639144720900
+    second: Bullets - Rain Type_11
+  - first:
+      213: 4383286565559578585
+    second: Bullets - Rain Type_12
+  - first:
+      213: -3625016806145491915
+    second: Bullets - Rain Type_13
+  - first:
+      213: 6823581829856158641
+    second: Bullets - Rain Type_14
+  - first:
+      213: 4371402505275057213
+    second: Bullets - Rain Type_15
+  - first:
+      213: 3824159876541716456
+    second: Bullets - Rain Type_16
+  - first:
+      213: -3618743385153022254
+    second: Bullets - Rain Type_17
+  - first:
+      213: -1263478536935862015
+    second: Bullets - Rain Type_18
+  - first:
+      213: 5750779527005231683
+    second: Bullets - Rain Type_19
+  - first:
+      213: 3371276903459439784
+    second: Bullets - Rain Type_20
+  - first:
+      213: 2236437822085002762
+    second: Bullets - Rain Type_21
+  - first:
+      213: -7808932628156456806
+    second: Bullets - Rain Type_22
+  - first:
+      213: -7375468658493893274
+    second: Bullets - Rain Type_23
+  - first:
+      213: 7848327530182346370
+    second: Bullets - Rain Type_24
+  - first:
+      213: -4818009891959448362
+    second: Bullets - Rain Type_25
+  - first:
+      213: 5825472375439025867
+    second: Bullets - Rain Type_26
+  - first:
+      213: -1737342771067669866
+    second: Bullets - Rain Type_27
+  - first:
+      213: 8680460356006317753
+    second: Bullets - Rain Type_28
+  - first:
+      213: 4317953992072442900
+    second: Bullets - Rain Type_29
+  - first:
+      213: -4845855153640931139
+    second: Bullets - Rain Type_30
+  - first:
+      213: 3183932958708006203
+    second: Bullets - Rain Type_31
+  - first:
+      213: 1404354098049364255
+    second: Bullets - Rain Type_32
+  - first:
+      213: -5514695916959968700
+    second: Bullets - Rain Type_33
+  - first:
+      213: 6353717112540267205
+    second: Bullets - Rain Type_34
+  - first:
+      213: 2867997059707269011
+    second: Bullets - Rain Type_35
+  - first:
+      213: -7292034057171949876
+    second: Bullets - Rain Type_36
+  - first:
+      213: 249014441822379322
+    second: Bullets - Rain Type_37
+  - first:
+      213: 6522854373868640475
+    second: Bullets - Rain Type_38
+  - first:
+      213: 5593185930641807120
+    second: Bullets - Rain Type_39
+  - first:
+      213: 3560153392527613796
+    second: Bullets - Rain Type_40
+  - first:
+      213: -3280522133232214417
+    second: Bullets - Rain Type_41
+  - first:
+      213: 9161657121490833262
+    second: Bullets - Rain Type_42
+  - first:
+      213: -8669594567526315404
+    second: Bullets - Rain Type_43
+  - first:
+      213: 4336989822449304224
+    second: Bullets - Rain Type_44
+  - first:
+      213: -4215576152969255883
+    second: Bullets - Rain Type_45
+  - first:
+      213: 4844188466998865379
+    second: Bullets - Rain Type_46
+  - first:
+      213: -7559301187399243846
+    second: Bullets - Rain Type_47
+  - first:
+      213: -5719096368778546525
+    second: Bullets - Rain Type_48
+  - first:
+      213: -3020428260359810112
+    second: Bullets - Rain Type_49
+  - first:
+      213: 8471481878166149188
+    second: Bullets - Rain Type_50
+  - first:
+      213: -2115426847781193929
+    second: Bullets - Rain Type_51
+  - first:
+      213: -5072239714592604664
+    second: Bullets - Rain Type_52
+  - first:
+      213: 4012479718741772623
+    second: Bullets - Rain Type_53
+  - first:
+      213: -9201582861208835790
+    second: Bullets - Rain Type_54
+  - first:
+      213: -2070851325541867242
+    second: Bullets - Rain Type_55
+  - first:
+      213: -5730972859436714048
+    second: Bullets - Rain Type_56
+  - first:
+      213: 2990859928521826180
+    second: Bullets - Rain Type_57
+  - first:
+      213: 3205750695091827027
+    second: Bullets - Rain Type_58
+  - first:
+      213: -2689914187709923240
+    second: Bullets - Rain Type_59
+  - first:
+      213: 1988810094061107234
+    second: Bullets - Rain Type_60
+  - first:
+      213: -7566361093079930890
+    second: Bullets - Rain Type_61
+  - first:
+      213: -5199996133892042297
+    second: Bullets - Rain Type_62
+  - first:
+      213: 1602103860808857860
+    second: Bullets - Rain Type_63
+  - first:
+      213: 7068010167284906202
+    second: Bullets - Rain Type_64
+  - first:
+      213: 3222622741548141871
+    second: Bullets - Rain Type_65
+  - first:
+      213: 4056664620995233618
+    second: Bullets - Rain Type_66
+  - first:
+      213: -2003978673263936144
+    second: Bullets - Rain Type_67
+  - first:
+      213: -4600984495264325972
+    second: Bullets - Rain Type_68
+  - first:
+      213: 56061859137839187
+    second: Bullets - Rain Type_69
+  - first:
+      213: -8001674443743998072
+    second: Bullets - Rain Type_70
+  - first:
+      213: 8746176190690690524
+    second: Bullets - Rain Type_71
+  - first:
+      213: -3004326105835267533
+    second: Bullets - Rain Type_72
+  - first:
+      213: -3875542810053856244
+    second: Bullets - Rain Type_73
+  - first:
+      213: 6529402028632378296
+    second: Bullets - Rain Type_74
+  - first:
+      213: -598044635613820549
+    second: Bullets - Rain Type_75
+  - first:
+      213: -4575207016431901097
+    second: Bullets - Rain Type_76
+  - first:
+      213: -7846736417266925402
+    second: Bullets - Rain Type_77
+  - first:
+      213: -5857667347368092928
+    second: Bullets - Rain Type_78
+  - first:
+      213: -3623341652860459943
+    second: Bullets - Rain Type_79
+  - first:
+      213: -4099516192881124649
+    second: Bullets - Rain Type_80
+  - first:
+      213: 6353848632675063115
+    second: Bullets - Rain Type_81
+  - first:
+      213: 3638597670878771212
+    second: Bullets - Rain Type_82
+  - first:
+      213: -6627685491348538869
+    second: Bullets - Rain Type_83
+  - first:
+      213: 2624596832961047848
+    second: Bullets - Rain Type_84
+  - first:
+      213: 3466092788151605372
+    second: Bullets - Rain Type_85
+  - first:
+      213: -1980555296437910378
+    second: Bullets - Rain Type_86
+  - first:
+      213: -7274823484025217551
+    second: Bullets - Rain Type_87
+  - first:
+      213: 6727546256511815719
+    second: Bullets - Rain Type_88
+  - first:
+      213: -962334898022113221
+    second: Bullets - Rain Type_89
+  - first:
+      213: -6570158215813491305
+    second: Bullets - Rain Type_90
+  - first:
+      213: -1641933495596056029
+    second: Bullets - Rain Type_91
+  - first:
+      213: 3601692364401051723
+    second: Bullets - Rain Type_92
+  - first:
+      213: -6890435983579519528
+    second: Bullets - Rain Type_93
+  - first:
+      213: -1792974878453019729
+    second: Bullets - Rain Type_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bullets - Rain Type_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1301
+        width: 540
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d889dc4ab3b8090800000000000000
+      internalID: -8031259931475145471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1287
+        width: 518
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1518951cab95110800000000000000
+      internalID: 1250235711165125032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_3
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1289
+        width: 504
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14ce0ed5bf073b10800000000000000
+      internalID: 1961053436532147226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_4
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1283
+        width: 508
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7006837baa1d000800000000000000
+      internalID: 59015974034081731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_5
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1292
+        width: 506
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d58c874aeaf0100800000000000000
+      internalID: 76471740112854401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_7
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 1285
+        width: 521
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f53c55d5f13db320800000000000000
+      internalID: 2575269493842130416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_9
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 1283
+        width: 608
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b985d0d087626ea40800000000000000
+      internalID: 5397043500507027611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1144
+        width: 542
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf566ecbe246176a0800000000000000
+      internalID: -6453266639144720900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_12
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1131
+        width: 493
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfabe068ef84dc30800000000000000
+      internalID: 4383286565559578585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_13
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 1126
+        width: 511
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c70e4cb6a51bdc0800000000000000
+      internalID: -3625016806145491915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_14
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 1126
+        width: 507
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3e268758b32be50800000000000000
+      internalID: 6823581829856158641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_15
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 1123
+        width: 503
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d342c29fa675aac30800000000000000
+      internalID: 4371402505275057213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_16
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1118
+        width: 524
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7129d7525221530800000000000000
+      internalID: 3824159876541716456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_18
+      rect:
+        serializedVersion: 2
+        x: 3646
+        y: 1126
+        width: 609
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1019b9007f8377ee0800000000000000
+      internalID: -1263478536935862015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_23
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 949
+        width: 531
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665d17ef45215a990800000000000000
+      internalID: -7375468658493893274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_26
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 946
+        width: 509
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6e4e2c24c38d050800000000000000
+      internalID: 5825472375439025867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_27
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 955
+        width: 499
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6923b6d54f7b3e7e0800000000000000
+      internalID: -1737342771067669866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_29
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 958
+        width: 515
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41435fd37447ceb30800000000000000
+      internalID: 4317953992072442900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_32
+      rect:
+        serializedVersion: 2
+        x: 2419
+        y: 958
+        width: 509
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11b8119c944d7310800000000000000
+      internalID: 1404354098049364255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_33
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 956
+        width: 519
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442dd49184dd773b0800000000000000
+      internalID: -5514695916959968700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_34
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 946
+        width: 585
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c28848ec00fc2850800000000000000
+      internalID: 6353717112540267205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_39
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 760
+        width: 548
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0171e9e48fcfe9d40800000000000000
+      internalID: 5593185930641807120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_41
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 765
+        width: 513
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e13e2308e3972d0800000000000000
+      internalID: -3280522133232214417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_43
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 767
+        width: 509
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a00ff9ca96fa780800000000000000
+      internalID: -8669594567526315404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_45
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 767
+        width: 513
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534e8aee2d34f75c0800000000000000
+      internalID: -4215576152969255883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_46
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 765
+        width: 494
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ede280ceb30a3340800000000000000
+      internalID: 4844188466998865379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_47
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 767
+        width: 526
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab721e6fe97f71790800000000000000
+      internalID: -7559301187399243846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_49
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 767
+        width: 605
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3d3b700884516d0800000000000000
+      internalID: -3020428260359810112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_52
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 580
+        width: 547
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e341c7ad8cb99b0800000000000000
+      internalID: -5072239714592604664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_55
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 580
+        width: 511
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6112e66f0bbd243e0800000000000000
+      internalID: -2070851325541867242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_56
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 576
+        width: 493
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7bedf5c8e7770b0800000000000000
+      internalID: -5730972859436714048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_57
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 584
+        width: 501
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f5e7c324ba18920800000000000000
+      internalID: 2990859928521826180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_58
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 579
+        width: 515
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351f86bb54d1d7c20800000000000000
+      internalID: 3205750695091827027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_59
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 578
+        width: 545
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850444d4c418baad0800000000000000
+      internalID: -2689914187709923240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_61
+      rect:
+        serializedVersion: 2
+        x: 3657
+        y: 586
+        width: 602
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f762a49ca2eef690800000000000000
+      internalID: -7566361093079930890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_65
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 411
+        width: 542
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d821b2f4e09bc20800000000000000
+      internalID: 3222622741548141871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_66
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 402
+        width: 490
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257c05bcafa2c4830800000000000000
+      internalID: 4056664620995233618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_68
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 393
+        width: 512
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae90b68af40620c0800000000000000
+      internalID: -4600984495264325972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_70
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 399
+        width: 498
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f4154fc7754f090800000000000000
+      internalID: -8001674443743998072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_71
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 397
+        width: 509
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5091df7e8a06970800000000000000
+      internalID: 8746176190690690524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_72
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 406
+        width: 540
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a9148035d7e46d0800000000000000
+      internalID: -3004326105835267533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_73
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 407
+        width: 560
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04bbe6095e473ac0800000000000000
+      internalID: -3875542810053856244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_76
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 238
+        width: 530
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756a3b385799180c0800000000000000
+      internalID: -4575207016431901097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_78
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 229
+        width: 497
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b58b3359265bea0800000000000000
+      internalID: -5857667347368092928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_79
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 225
+        width: 513
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9542069c6fd47bdc0800000000000000
+      internalID: -3623341652860459943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_80
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 232
+        width: 516
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dadb542eb79b17c0800000000000000
+      internalID: -4099516192881124649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_81
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 227
+        width: 509
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45d233daa76d2850800000000000000
+      internalID: 6353848632675063115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_82
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 230
+        width: 530
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08fa45bd45ee7230800000000000000
+      internalID: 3638597670878771212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_83
+      rect:
+        serializedVersion: 2
+        x: 3702
+        y: 231
+        width: 552
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0af82d192bb504a0800000000000000
+      internalID: -6627685491348538869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_86
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 48
+        width: 527
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694ccc98377a384e0800000000000000
+      internalID: -1980555296437910378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_87
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 43
+        width: 490
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fdd10fb592aa0b90800000000000000
+      internalID: -7274823484025217551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_89
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 47
+        width: 512
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b302e68428915a2f0800000000000000
+      internalID: -962334898022113221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_90
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 55
+        width: 514
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7959254b9eb12d4a0800000000000000
+      internalID: -6570158215813491305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_91
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 44
+        width: 505
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3228e226f2ea639e0800000000000000
+      internalID: -1641933495596056029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_93
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 37
+        width: 530
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d56c23eaf04060a0800000000000000
+      internalID: -6890435983579519528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Rain Type_94
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 37
+        width: 576
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabcb9ef8d21e17e0800000000000000
+      internalID: -1792974878453019729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: debdf815cf63fba48b8cecff788c0f00
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bullets - Rain Type_0: -8031259931475145471
+      Bullets - Rain Type_1: 1250235711165125032
+      Bullets - Rain Type_10: 7044077018619356037
+      Bullets - Rain Type_11: -6453266639144720900
+      Bullets - Rain Type_12: 4383286565559578585
+      Bullets - Rain Type_13: -3625016806145491915
+      Bullets - Rain Type_14: 6823581829856158641
+      Bullets - Rain Type_15: 4371402505275057213
+      Bullets - Rain Type_16: 3824159876541716456
+      Bullets - Rain Type_17: -3618743385153022254
+      Bullets - Rain Type_18: -1263478536935862015
+      Bullets - Rain Type_19: 5750779527005231683
+      Bullets - Rain Type_2: 3983366699673308980
+      Bullets - Rain Type_20: 3371276903459439784
+      Bullets - Rain Type_21: 2236437822085002762
+      Bullets - Rain Type_22: -7808932628156456806
+      Bullets - Rain Type_23: -7375468658493893274
+      Bullets - Rain Type_24: 7848327530182346370
+      Bullets - Rain Type_25: -4818009891959448362
+      Bullets - Rain Type_26: 5825472375439025867
+      Bullets - Rain Type_27: -1737342771067669866
+      Bullets - Rain Type_28: 8680460356006317753
+      Bullets - Rain Type_29: 4317953992072442900
+      Bullets - Rain Type_3: 1961053436532147226
+      Bullets - Rain Type_30: -4845855153640931139
+      Bullets - Rain Type_31: 3183932958708006203
+      Bullets - Rain Type_32: 1404354098049364255
+      Bullets - Rain Type_33: -5514695916959968700
+      Bullets - Rain Type_34: 6353717112540267205
+      Bullets - Rain Type_35: 2867997059707269011
+      Bullets - Rain Type_36: -7292034057171949876
+      Bullets - Rain Type_37: 249014441822379322
+      Bullets - Rain Type_38: 6522854373868640475
+      Bullets - Rain Type_39: 5593185930641807120
+      Bullets - Rain Type_4: 59015974034081731
+      Bullets - Rain Type_40: 3560153392527613796
+      Bullets - Rain Type_41: -3280522133232214417
+      Bullets - Rain Type_42: 9161657121490833262
+      Bullets - Rain Type_43: -8669594567526315404
+      Bullets - Rain Type_44: 4336989822449304224
+      Bullets - Rain Type_45: -4215576152969255883
+      Bullets - Rain Type_46: 4844188466998865379
+      Bullets - Rain Type_47: -7559301187399243846
+      Bullets - Rain Type_48: -5719096368778546525
+      Bullets - Rain Type_49: -3020428260359810112
+      Bullets - Rain Type_5: 76471740112854401
+      Bullets - Rain Type_50: 8471481878166149188
+      Bullets - Rain Type_51: -2115426847781193929
+      Bullets - Rain Type_52: -5072239714592604664
+      Bullets - Rain Type_53: 4012479718741772623
+      Bullets - Rain Type_54: -9201582861208835790
+      Bullets - Rain Type_55: -2070851325541867242
+      Bullets - Rain Type_56: -5730972859436714048
+      Bullets - Rain Type_57: 2990859928521826180
+      Bullets - Rain Type_58: 3205750695091827027
+      Bullets - Rain Type_59: -2689914187709923240
+      Bullets - Rain Type_6: 3356787080425819177
+      Bullets - Rain Type_60: 1988810094061107234
+      Bullets - Rain Type_61: -7566361093079930890
+      Bullets - Rain Type_62: -5199996133892042297
+      Bullets - Rain Type_63: 1602103860808857860
+      Bullets - Rain Type_64: 7068010167284906202
+      Bullets - Rain Type_65: 3222622741548141871
+      Bullets - Rain Type_66: 4056664620995233618
+      Bullets - Rain Type_67: -2003978673263936144
+      Bullets - Rain Type_68: -4600984495264325972
+      Bullets - Rain Type_69: 56061859137839187
+      Bullets - Rain Type_7: 2575269493842130416
+      Bullets - Rain Type_70: -8001674443743998072
+      Bullets - Rain Type_71: 8746176190690690524
+      Bullets - Rain Type_72: -3004326105835267533
+      Bullets - Rain Type_73: -3875542810053856244
+      Bullets - Rain Type_74: 6529402028632378296
+      Bullets - Rain Type_75: -598044635613820549
+      Bullets - Rain Type_76: -4575207016431901097
+      Bullets - Rain Type_77: -7846736417266925402
+      Bullets - Rain Type_78: -5857667347368092928
+      Bullets - Rain Type_79: -3623341652860459943
+      Bullets - Rain Type_8: -434649918843383366
+      Bullets - Rain Type_80: -4099516192881124649
+      Bullets - Rain Type_81: 6353848632675063115
+      Bullets - Rain Type_82: 3638597670878771212
+      Bullets - Rain Type_83: -6627685491348538869
+      Bullets - Rain Type_84: 2624596832961047848
+      Bullets - Rain Type_85: 3466092788151605372
+      Bullets - Rain Type_86: -1980555296437910378
+      Bullets - Rain Type_87: -7274823484025217551
+      Bullets - Rain Type_88: 6727546256511815719
+      Bullets - Rain Type_89: -962334898022113221
+      Bullets - Rain Type_9: 5397043500507027611
+      Bullets - Rain Type_90: -6570158215813491305
+      Bullets - Rain Type_91: -1641933495596056029
+      Bullets - Rain Type_92: 3601692364401051723
+      Bullets - Rain Type_93: -6890435983579519528
+      Bullets - Rain Type_94: -1792974878453019729
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
