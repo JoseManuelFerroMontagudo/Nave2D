@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8ae9896ebd80d4ca0d7585ca5eebc7, type: 3}
+  m_Name: Dragon Spikes
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueRadial
+  cadencia: 10
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  nombreVisible: 
+  icono: {fileID: 0}
+  descripcion: 
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 0
+  prefab: {fileID: 558679377710589676, guid: 6f30f5c4e90a6e34b847cdd1646f1c39, type: 3}
+  cantidad: 5
+  oleadas: 3
+  intervaloOleada: 0.4
+  rotacionPorOleada: 18
+  anguloInicial: 36

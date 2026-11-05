@@ -9,13 +9,19 @@ public class VidaPersonaje : MonoBehaviour
     [HideInInspector] public float vidaActual;
     [HideInInspector] public int faseActual = 1;
 
+    [Header("Comportamiento al llegar a 0")]
+    [Tooltip("true = destruye el GameObject (enemigo normal). " +
+             "false = solo dispara OnMuere; el GO queda vivo (hardpoint, cañón, etc.).")]
+    public bool destruyeAlMorir = true;
+
     [Header("Feedback de daño")]
-    public float duracionFlash = 0.1f;   // cuánto tarda en volver a color normal
-    public float cadenciaFlash = 0.15f;  // separación mínima entre flashes
+    public float duracionFlash = 0.1f;
+    public float cadenciaFlash = 0.15f;
     public Color colorFlash = Color.red;
 
     public UnityEvent<float> OnVidaCambia;
     public UnityEvent<int> OnFaseCambia;
+    [Tooltip("Se dispara al llegar a 0 (con o sin destrucción)")]
     public UnityEvent OnMuere;
 
     SpriteRenderer sprite;
@@ -24,12 +30,12 @@ public class VidaPersonaje : MonoBehaviour
     float ultimoFlash = -999f;
 
     bool muerto;
+    public bool Muerto => muerto;
 
     void Awake()
     {
         vidaActual = vidaMaxima;
         faseActual = 1;
-
         sprite = GetComponentInChildren<SpriteRenderer>();
         if (sprite != null) colorOriginal = sprite.color;
     }
@@ -37,7 +43,6 @@ public class VidaPersonaje : MonoBehaviour
     void Update()
     {
         if (sprite == null || flashTimer <= 0f) return;
-
         flashTimer -= Time.deltaTime;
         float t = Mathf.Clamp01(flashTimer / duracionFlash);
         sprite.color = Color.Lerp(colorOriginal, colorFlash, t);
@@ -67,22 +72,27 @@ public class VidaPersonaje : MonoBehaviour
     public void RecibirDaño(float daño)
     {
         if (muerto) return;
+
         vidaActual -= daño;
         OnVidaCambia?.Invoke(vidaActual);
         if (vidaActual > 0f) return;
 
+        // Se agotó la vida de la fase actual
         if (faseActual < fasesTotales)
         {
             faseActual++;
             vidaActual = vidaMaxima;
             OnFaseCambia?.Invoke(faseActual);
+            return;
         }
-        else
-        {
-            muerto = true;
-            OnMuere?.Invoke();
+
+        // Última fase agotada
+        muerto = true;
+        OnMuere?.Invoke();
+
+        if (destruyeAlMorir)
             Destroy(gameObject);
-        }
+        // Si no destruye, el GO queda vivo pero "muerto" (ignora más daño)
     }
 
     void OnDestroy()

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 592060137772181152, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6629935545977973502, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -60,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyNv1_Objeto Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: ataque
+      value: 
+      objectReference: {fileID: 11400000, guid: 15f7da26fe6bad04b8d133129d9be724, type: 2}
     - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: patron
       value: 

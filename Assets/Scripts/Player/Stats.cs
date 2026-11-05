@@ -52,9 +52,14 @@ public class Stats : MonoBehaviour
         playerInput.enabled = true;
     }
 
+    public bool RegeneracionPausada { get; private set; }
+    public void SetRegeneracionPausada(bool pausa) => RegeneracionPausada = pausa;
+
     void Update()
     {
         ActualizarCalor(Time.deltaTime);
+        if (!RegeneracionPausada)
+            RegenerarEnergia(Time.deltaTime);
     }
 
     // ---------------- VIDA ----------------

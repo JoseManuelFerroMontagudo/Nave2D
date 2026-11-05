@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ContextoDisparoSimple
   vidaUtil: 3
   "da\xF1o": 0
+  velocidad: 0
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 0
   giroPorSegundo: 90
@@ -77,13 +78,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
   arsenalJugador: {fileID: 0}
-  arsenal:
-  - {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
-  indicePrimario: 0
-  indiceSecundario: 1
-  "ca\xF1onesBase": 4
-  "anchoCa\xF1ones": 3
+  ataquePrimario: {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
+  ataqueSecundario: {fileID: 0}
   autoDisparoPrimario: 1
+  objetivo: {fileID: 0}
 --- !u!1 &8337668625632692894
 GameObject:
   m_ObjectHideFlags: 0

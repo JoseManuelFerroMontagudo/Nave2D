@@ -29,6 +29,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
+      propertyPath: velocidad
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: destruirAlImpactar
       value: 1
       objectReference: {fileID: 0}
