@@ -23,7 +23,7 @@ MonoBehaviour:
   separacion: 0
   modoSeparacion: 0
   prefab: {fileID: 4532273776012636059, guid: b54be4171f0e0694d8c18e3ac51b97b2, type: 3}
-  cantidad: 6
+  cantidad: 3
   oleadas: 10
   intervaloOleada: 0.2
   rotacionPorOleada: 18
