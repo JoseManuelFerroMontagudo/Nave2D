@@ -40,7 +40,7 @@ public class ShipController : MonoBehaviour
     float rotacionObjetivo, objetivoGiro, tiempoImpulsoRestante;
     bool frenando, girando;
 
-    void Start() => SceneLoader.Instance.LoadLevel("Nivel3");
+    void Start() => SceneLoader.Instance.LoadLevel("Nivel1");
     void Awake()
     {
         cuerpo = GetComponent<Rigidbody2D>();

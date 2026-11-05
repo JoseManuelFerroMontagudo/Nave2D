@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
   m_Name: AtkPlasmaBolt
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
-  cadencia: 1
+  cadencia: 2
   costoCalor: 0
   costoEnergia: 5
   costoMunicion: 0
@@ -28,4 +28,4 @@ MonoBehaviour:
   simultaneo: 0
   oleadas: 1
   intervaloOleada: 0
-  intervaloBala: 0.5
+  intervaloBala: 0.25

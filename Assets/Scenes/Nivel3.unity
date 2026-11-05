@@ -5967,7 +5967,7 @@ AudioSource:
   m_GameObject: {fileID: 551835754}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2201349110982575728, guid: c09cdeb699d59ad4e912990128c54f9a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 74e4d0e9b0b2c1746928d4a86a5672ea, type: 3}
   m_PlayOnAwake: 1
@@ -6244,12 +6244,12 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5982534379709430168, guid: b445073d4c0b36d43909af08dd4b0037, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b445073d4c0b36d43909af08dd4b0037, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.54, y: 12.54}
+  m_Size: {x: 20, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6342,26 +6342,26 @@ MonoBehaviour:
   "flashAlRecibirDa\xF1o": 1
   balasHastaElLimite: 1
   alcanceBalas: 60
-  prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
+  prefabProyectil: {fileID: 5924167065734960460, guid: 9e4c4c20200ccefdfa3f054a0c48705d, type: 3}
   puntoDisparo: {fileID: 0}
   "da\xF1oProyectil": 5
-  prefabProyectilPlasma: {fileID: 0}
+  prefabProyectilPlasma: {fileID: 558679377710589676, guid: 6f30f5c4e90a6e34b847cdd1646f1c39, type: 3}
   "da\xF1oPlasma": 10
   prefabProyectilPerseguidor: {fileID: 0}
   "da\xF1oPerseguidor": 15
   spritesDirecciones: []
   patronesFase1:
-  - patron: {fileID: 11400000, guid: 10f29fa4f1b14cc4ea1c96450b88c937, type: 2}
+  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
     retardoAntes: 1
     retardoDespues: 1
   patronesFase2:
-  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
+  - patron: {fileID: 11400000, guid: b15f5558f89dfef4cbca40113ce2ca93, type: 2}
     retardoAntes: 1
     retardoDespues: 1
   patronesFase3: []
   repetirCiclo: 1
   esperaInicial: 0.5
-  lluviaActivada: 1
+  lluviaActivada: 0
   lluviaBalasPorAnillo: 12
   lluviaIntervalo: 0.28
   lluviaOpciones:
@@ -6450,12 +6450,12 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8632128761605285248, guid: 46bfc18e3c40dd147b92584556972e63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f02e4ccf04565340b05799b7b33e522, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.41, y: 18.29}
+  m_Size: {x: 12.54, y: 12.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
