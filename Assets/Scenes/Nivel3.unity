@@ -342,8 +342,8 @@ MonoBehaviour:
   tiempoParaTransicion: 20
   tiempoAlarmaInestable: 10
   intensidadTemblor: 0.01
-  velocidadPulsacion: 19
-  escalaPulsacion: 0.2
+  velocidadPulsacion: 5
+  escalaPulsacion: 0.1
   radioMuerte: 13.5
   velocidadSuccionMuerte: 1.5
   spriteAgujeroNegro: {fileID: 703334942}
