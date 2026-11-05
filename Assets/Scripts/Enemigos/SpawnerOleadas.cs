@@ -40,11 +40,16 @@ public class SpawnerOleadas : MonoBehaviour
     public UnityEvent OnJefeDerrotado;
 
     [Header("Spawn de enemigos")]
+    [Tooltip("Distancia mínima al jugador al aparecer")]
     public float distanciaMinimaJugador = 14f;
+    [Tooltip("Separación mínima entre enemigos ya presentes")]
     public float separacionMinimaEnemigos = 10f;
+    [Tooltip("Distancia mínima al borde exterior del mapa")]
     public float distanciaMinimaBorde = 14f;
+    [Tooltip("Intentos máximos para encontrar un punto válido")]
     public int intentosMaximos = 40;
 
+    // -------- Estado público para UI (Canvas) --------
     public int NumeroOleadaActual { get; private set; }
     public int TotalOleadas => oleadas.Count;
     public int EnemigosVivos => vivos.Count;
@@ -53,7 +58,7 @@ public class SpawnerOleadas : MonoBehaviour
     public bool JefeVivo => jefeActual != null;
 
     int pendientesSpawn;
-    readonly List<GameObject> vivos = new List<GameObject>();
+    readonly List<GameObject> vivos = new List<GameObject>();  // wrappers, no enemigos
     readonly List<Vector3> puntos = new List<Vector3>();
     Transform jugador;
     GameObject jefeActual;
@@ -63,7 +68,8 @@ public class SpawnerOleadas : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return null; // Espera a que otros scripts rellenen el LineRenderer
+        // Espera a que otros scripts rellenen el LineRenderer
+        yield return null;
 
         if (limiteMapa != null)
             for (int i = 0; i < limiteMapa.positionCount; i++)
@@ -76,7 +82,6 @@ public class SpawnerOleadas : MonoBehaviour
         bounds = BoundsDePuntos();
         minJugSqr = distanciaMinimaJugador * distanciaMinimaJugador;
         minEnemSqr = separacionMinimaEnemigos * separacionMinimaEnemigos;
-
         StartCoroutine(BucleNivel());
     }
 
@@ -119,19 +124,34 @@ public class SpawnerOleadas : MonoBehaviour
         }
     }
 
+    // Wrapper a destino + enemigo hijo con localPos = 0:
+    // así el Animator (con curvas de posición) solo mueve la localPosition
+    // del hijo, y el wrapper conserva la posición de spawn.
     void SpawnUno(GameObject prefab)
     {
-        var e = Instantiate(prefab, PuntoValidoParaSpawn(), Quaternion.identity);
-        vivos.Add(e);
-        e.AddComponent<EnemyTracker>().Init(this);
+        Vector3 destino = PuntoValidoParaSpawn();
+
+        var wrapper = new GameObject($"EnemyWrapper_{prefab.name}").transform;
+        wrapper.position = destino;
+        wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
+        vivos.Add(wrapper.gameObject);
         pendientesSpawn--;
 
+        var e = Instantiate(prefab, wrapper);
+        e.transform.localPosition = Vector3.zero;
+        e.transform.localRotation = Quaternion.identity;
+
         var vida = e.GetComponent<VidaPersonaje>();
-        if (vida != null) vida.OnMuere.AddListener(() => { if (e != null) Destroy(e); });
-        else Destroy(e);
+        if (vida != null)
+            vida.OnMuere.AddListener(() => { if (wrapper != null) Destroy(wrapper.gameObject); });
+        else
+        {
+            Destroy(wrapper.gameObject);
+            return;
+        }
 
         var enem = e.GetComponent<Enemigo>();
-        if (enem != null) { enem.puntoAncla = e.transform.position; enem.enPosicion = true; }
+        if (enem != null) { enem.puntoAncla = destino; enem.enPosicion = true; }
     }
 
     void SpawnearJefe()
@@ -139,9 +159,14 @@ public class SpawnerOleadas : MonoBehaviour
         if (prefabJefe == null) { Debug.LogError("[SpawnerOleadas] Sin prefabJefe."); return; }
         EnFaseJefe = true;
 
-        jefeActual = Instantiate(prefabJefe, centro, Quaternion.identity);
-        vivos.Add(jefeActual);
-        jefeActual.AddComponent<EnemyTracker>().Init(this);
+        var wrapper = new GameObject("BossWrapper").transform;
+        wrapper.position = centro;
+        wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
+        vivos.Add(wrapper.gameObject);
+
+        jefeActual = Instantiate(prefabJefe, wrapper);
+        jefeActual.transform.localPosition = Vector3.zero;
+        jefeActual.transform.localRotation = Quaternion.identity;
 
         var vida = FindBossVida(jefeActual);
         if (vida != null) vida.OnMuere.AddListener(AlMorirJefe);
@@ -153,7 +178,14 @@ public class SpawnerOleadas : MonoBehaviour
     void AlMorirJefe()
     {
         OnJefeDerrotado?.Invoke();
-        if (jefeActual != null) Destroy(jefeActual);
+
+        if (jefeActual != null)
+        {
+            var wrapper = jefeActual.transform.parent;
+            Destroy(wrapper != null ? wrapper.gameObject : jefeActual);
+        }
+        jefeActual = null;
+
         if (!string.IsNullOrEmpty(escenaAlDerrotarJefe)) StartCoroutine(CambiarEscena());
     }
 
@@ -178,8 +210,7 @@ public class SpawnerOleadas : MonoBehaviour
 
     public void RemoveEnemy(GameObject go)
     {
-        if (ReferenceEquals(go, jefeActual)) jefeActual = null;
-        vivos.RemoveAll(v => v == null || ReferenceEquals(v, go));
+        vivos.RemoveAll(v => v == null || v == go);
     }
 
     // -------- Geometría / validación --------
@@ -299,7 +330,7 @@ public class SpawnerOleadas : MonoBehaviour
     }
 }
 
-/// <summary>Se autodestruye al morir y se saca de 'vivos'.</summary>
+/// <summary>Vive en el wrapper. Se limpia de 'vivos' al destruirse.</summary>
 public class EnemyTracker : MonoBehaviour
 {
     SpawnerOleadas spawner;
