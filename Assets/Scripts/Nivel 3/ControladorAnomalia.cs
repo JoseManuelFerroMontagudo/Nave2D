@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 public class ControladorAnomalia : MonoBehaviour
 {
     [Header("Supervivencia por Tiempo")]
-    public float tiempoParaTransicion = 40f;   // Tiempo total antes del colapso
-    public float tiempoAlarmaInestable = 10f; // Últimos X segundos donde empieza a temblar y pulsar
+    public float tiempoParaTransicion = 30f;
+    public float tiempoAlarmaInestable = 10f;
 
     [Header("Efectos de Inestabilidad (Shake & Pulse)")]
-    public float intensidadTemblor = 0.15f;  // Qué tanto se sacude
-    public float velocidadPulsacion = 12f;   // Rápidez del latido
-    public float escalaPulsacion = 0.2f;      // Cuánto crece/decrece en cada latido
+    public float intensidadTemblor = 0.15f;
+    public float velocidadPulsacion = 12f;
+    public float escalaPulsacion = 0.2f;
 
-    [Header("Radio de Muerte Absoluta")]
-    public float radioMuerte = 2.5f;
+    [Header("Radio de Absorción y Muerte")]
+    [Tooltip("Ajusta este radio en el Editor (circulo rojo) para que coincida con el borde del anillo de fuego")]
+    public float radioMuerte = 7.5f; // Ampliado para cubrir el anillo rojo
+    public float velocidadSuccionMuerte = 15f; // Qué tan rápido traga a la nave al entrar
 
-    [Header("Referencias de Sprites y Renderers")]
+    [Header("Referencias de Sprites")]
     public GameObject spriteAgujeroNegro;
     public GameObject spriteAgujeroBlanco;
     private SpriteRenderer rendererAgujeroNegro;
@@ -33,7 +35,6 @@ public class ControladorAnomalia : MonoBehaviour
 
     [Header("Escena de Derrota")]
     public string nombreEscenaGameOver = "GameOver";
-    public float retardoGameOver = 1f;
 
     private Transform jugador;
     private float tiempoRestante;
@@ -87,22 +88,19 @@ public class ControladorAnomalia : MonoBehaviour
     {
         if (enFaseAgujeroBlanco || cambiandoDeFase) return;
 
-        // 1. Conteo de tiempo global
         tiempoRestante -= Time.deltaTime;
 
-        // 2. Efecto de Inestabilidad (Últimos segundos)
         if (tiempoRestante <= tiempoAlarmaInestable && tiempoRestante > 0f)
         {
             AplicarEfectosInestabilidad();
         }
 
-        // 3. Detonación automática al agotarse el tiempo
         if (tiempoRestante <= 0f)
         {
             IniciarCambioAAgujeroBlanco();
         }
 
-        // 4. Detección de absorción del jugador
+        // Detección de entrada al Anillo de Fuego / Radio de Muerte
         if (jugador != null && !jugadorAbsorbido)
         {
             float distancia = Vector2.Distance(transform.position, jugador.position);
@@ -115,7 +113,6 @@ public class ControladorAnomalia : MonoBehaviour
 
     private void AplicarEfectosInestabilidad()
     {
-        // 1. Activar el Frenesí en el Spawner solo una vez al iniciar la inestabilidad
         if (!frenesiActivado)
         {
             frenesiActivado = true;
@@ -126,19 +123,15 @@ public class ControladorAnomalia : MonoBehaviour
             }
         }
 
-        // Factor de urgencia de 0 a 1 (conforme se acerca a 0 sube la intensidad)
         float factorUrgencia = 1f - (tiempoRestante / tiempoAlarmaInestable);
 
-        // A. TEMBLOR (SHAKE)
         float offsetX = (Mathf.PerlinNoise(Time.time * 25f, 0f) - 0.5f) * 2f * intensidadTemblor * factorUrgencia;
         float offsetY = (Mathf.PerlinNoise(0f, Time.time * 25f) - 0.5f) * 2f * intensidadTemblor * factorUrgencia;
         transform.position = posicionOriginal + new Vector3(offsetX, offsetY, 0f);
 
-        // B. PULSACIÓN DE ESCALA (LATIDO)
         float pulso = Mathf.Sin(Time.time * velocidadPulsacion * (1f + factorUrgencia)) * escalaPulsacion * factorUrgencia;
         transform.localScale = escalaOriginal + (Vector3.one * pulso);
 
-        // C. FLASH ROJO EN EL SPRITE (Opcional: destello suave de advertencia)
         if (rendererAgujeroNegro != null)
         {
             float alphaColor = (Mathf.Sin(Time.time * velocidadPulsacion) + 1f) / 2f;
@@ -151,17 +144,34 @@ public class ControladorAnomalia : MonoBehaviour
         if (jugadorAbsorbido) return;
         jugadorAbsorbido = true;
 
-        if (jugador != null)
-        {
-            jugador.gameObject.SetActive(false);
-        }
+        // Desactivar controles físicos de la nave si los tiene para que no pueda escapar
+        MonoBehaviour controlNave = jugador.GetComponent<MonoBehaviour>();
+        if (controlNave != null) controlNave.enabled = false;
 
-        StartCoroutine(RutinaCargarGameOver());
+        Rigidbody2D rbJugador = jugador.GetComponent<Rigidbody2D>();
+        if (rbJugador != null) rbJugador.linearVelocity = Vector2.zero;
+
+        StartCoroutine(RutinaAnimacionAbsorcion());
     }
 
-    private IEnumerator RutinaCargarGameOver()
+    private IEnumerator RutinaAnimacionAbsorcion()
     {
-        yield return new WaitForSeconds(retardoGameOver);
+        float t = 0f;
+        Vector3 escalaInicialJugador = jugador.localScale;
+        Vector3 posInicialJugador = jugador.position;
+
+        // Anima a la nave encologiéndola y llevándola violentamente al centro
+        while (t < 1f)
+        {
+            t += Time.deltaTime * 2.5f; // Dura menos de medio segundo el arrastre
+            jugador.position = Vector3.Lerp(posInicialJugador, transform.position, t);
+            jugador.localScale = Vector3.Lerp(escalaInicialJugador, Vector3.zero, t);
+            yield return null;
+        }
+
+        jugador.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
+
         SceneManager.LoadScene(nombreEscenaGameOver);
     }
 
@@ -169,7 +179,6 @@ public class ControladorAnomalia : MonoBehaviour
     {
         if (!cambiandoDeFase)
         {
-            // Restaurar posición base antes de implosionar
             transform.position = posicionOriginal;
             StartCoroutine(RutinaTransicionCegadora());
         }
@@ -180,7 +189,6 @@ public class ControladorAnomalia : MonoBehaviour
         cambiandoDeFase = true;
         float t = 0f;
 
-        // 1. IMPLOSIÓN
         while (t < 1f)
         {
             t += Time.deltaTime * velocidadImplosion;
@@ -195,7 +203,6 @@ public class ControladorAnomalia : MonoBehaviour
             yield return null;
         }
 
-        // 2. DETONACIÓN LUMINOSA
         if (imagenFlashUI != null)
         {
             Color c = imagenFlashUI.color;
@@ -218,7 +225,6 @@ public class ControladorAnomalia : MonoBehaviour
 
         yield return new WaitForSeconds(duracionCeguera);
 
-        // 3. DESVANECIMIENTO DE LUZ
         float tiempoFlash = 0f;
         while (tiempoFlash < 1f)
         {

@@ -344,7 +344,8 @@ MonoBehaviour:
   intensidadTemblor: 0.01
   velocidadPulsacion: 19
   escalaPulsacion: 0.2
-  radioMuerte: 2.5
+  radioMuerte: 13.5
+  velocidadSuccionMuerte: 1.5
   spriteAgujeroNegro: {fileID: 703334942}
   spriteAgujeroBlanco: {fileID: 699765850}
   imagenFlashUI: {fileID: 759091204}
@@ -353,7 +354,6 @@ MonoBehaviour:
   duracionCeguera: 0.15
   velocidadDesvanecimientoFlash: 2
   nombreEscenaGameOver: GameOver
-  retardoGameOver: 1
 --- !u!4 &152265353
 Transform:
   m_ObjectHideFlags: 0
@@ -6467,7 +6467,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5032023, y: 1.5032023, z: 1.5032023}
+  m_LocalScale: {x: 1.7901636, y: 1.7901636, z: 1.7901636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 152265353}
