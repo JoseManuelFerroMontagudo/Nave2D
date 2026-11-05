@@ -6338,26 +6338,26 @@ MonoBehaviour:
   "flashAlRecibirDa\xF1o": 1
   balasHastaElLimite: 1
   alcanceBalas: 60
-  prefabProyectil: {fileID: 1869851582582421668, guid: 95982d33ccc7a3fc491904c4593da1af, type: 3}
+  prefabProyectil: {fileID: 5924167065734960460, guid: 9e4c4c20200ccefdfa3f054a0c48705d, type: 3}
   puntoDisparo: {fileID: 0}
   "da\xF1oProyectil": 5
-  prefabProyectilPlasma: {fileID: 0}
+  prefabProyectilPlasma: {fileID: 558679377710589676, guid: 6f30f5c4e90a6e34b847cdd1646f1c39, type: 3}
   "da\xF1oPlasma": 10
   prefabProyectilPerseguidor: {fileID: 0}
   "da\xF1oPerseguidor": 15
   spritesDirecciones: []
   patronesFase1:
-  - patron: {fileID: 11400000, guid: 10f29fa4f1b14cc4ea1c96450b88c937, type: 2}
+  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
     retardoAntes: 1
     retardoDespues: 1
   patronesFase2:
-  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
+  - patron: {fileID: 11400000, guid: b15f5558f89dfef4cbca40113ce2ca93, type: 2}
     retardoAntes: 1
     retardoDespues: 1
   patronesFase3: []
   repetirCiclo: 1
   esperaInicial: 0.5
-  lluviaActivada: 1
+  lluviaActivada: 0
   lluviaBalasPorAnillo: 12
   lluviaIntervalo: 0.28
   lluviaOpciones:
