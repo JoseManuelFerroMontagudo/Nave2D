@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
   cadencia: 3
   costoCalor: 0
-  costoEnergia: 10
+  costoEnergia: 5
   costoMunicion: 0
+  nombreVisible: Plasma
+  icono: {fileID: -3911416680466541835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: 'Absorbe balas
+
+    Cadencia Media'
   prefab: {fileID: 4685093840455365156, guid: 006d8a741e2d135498b77dbfdb4b1fd2, type: 3}
   velocidad: 15
-  "desdeCa\xF1ones": 0
+  "desdeCa\xF1ones": 1

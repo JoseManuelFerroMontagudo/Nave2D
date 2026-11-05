@@ -62,9 +62,6 @@ MonoBehaviour:
   - Player
   - Shield
   - Bullet
-  - Bullet1
-  - Bullet2
-  - Bullet3
   - Asteroide
   - Sierra
 --- !u!114 &6958619292051685322
@@ -79,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5836b3b0fb3c6147812b88fd05cca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
+  arsenalJugador: {fileID: 0}
   arsenal:
   - {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
   indicePrimario: 0

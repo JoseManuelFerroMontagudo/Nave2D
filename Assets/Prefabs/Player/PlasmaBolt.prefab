@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: "da\xF1o"
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: destruirAlImpactar
@@ -34,19 +34,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: etiquetasIgnoradas.Array.size
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: 'etiquetasIgnoradas.Array.data[3]'
-      value: Bullet1
+      value: Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: 'etiquetasIgnoradas.Array.data[4]'
-      value: Bullet2
+      value: Sierra
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
+      propertyPath: 'etiquetasIgnoradas.Array.data[5]'
+      value: Attack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
+      propertyPath: 'etiquetasIgnoradas.Array.data[6]'
+      value: Attack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
+      propertyPath: 'etiquetasIgnoradas.Array.data[7]'
+      value: Attack2
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: 'etiquetasIgnoradas.Array.data[8]'
-      value: Attack1
+      value: Attack2
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: 'etiquetasIgnoradas.Array.data[9]'

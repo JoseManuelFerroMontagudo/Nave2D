@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 // ① Ya NO es [RequireComponent(typeof(Stats))]
 public class ShipWeapons : MonoBehaviour
 {
+    public ArsenalJugador arsenalJugador;
     public AtaqueBase[] arsenal;
     public int indicePrimario = 0;
     public int indiceSecundario = 1;
@@ -19,12 +20,15 @@ public class ShipWeapons : MonoBehaviour
     bool primMantenido, secMantenido, secPresion;
     GameObject instPrim, instSec;
     AtaqueBase atkPrimCache, atkSecCache;
+    AtaqueBase ultimoPrim, ultimoSec;
     Stats stats;
 
     public IReadOnlyList<Transform> Cañones => cañones;
 
     AtaqueBase Atk(int i) =>
-        (arsenal == null || arsenal.Length == 0) ? null : arsenal[Mathf.Clamp(i, 0, arsenal.Length - 1)];
+        (i < 0 || arsenal == null || arsenal.Length == 0)
+            ? null
+            : arsenal[Mathf.Clamp(i, 0, arsenal.Length - 1)];
 
     void Awake()
     {
@@ -38,21 +42,26 @@ public class ShipWeapons : MonoBehaviour
             c.localPosition = Vector3.right * (i - centro) * sep;
             cañones.Add(c);
         }
+        SincronizarDesdeArsenal();
     }
 
     public void OnPrimaryAttack(InputValue v) => primMantenido = v.isPressed;
-    public void OnSecondaryAttack(InputValue v)
-    {
-        if (v.isPressed) { secMantenido = true; secPresion = true; } else secMantenido = false;
-    }
-    public void OnSwap() => (indicePrimario, indiceSecundario) = (indiceSecundario, indicePrimario);
-
+    public void OnSecondaryAttack(InputValue v) => secMantenido = v.isPressed;
     void Update()
     {
-        bool prim = primMantenido || autoDisparoPrimario;   // ③
+        // ⭐ Detectar cambios externos (menú, OnSwap, scripts)
+        if (arsenalJugador != null &&
+            (ultimoPrim != arsenalJugador.equipadaPrimaria ||
+             ultimoSec != arsenalJugador.equipadaSecundaria))
+        {
+            ultimoPrim = arsenalJugador.equipadaPrimaria;
+            ultimoSec = arsenalJugador.equipadaSecundaria;
+            SincronizarDesdeArsenal();
+        }
+
+        bool prim = primMantenido || autoDisparoPrimario;
         Procesar(Atk(indicePrimario), prim, false, true, ref cdPrim, ref instPrim, ref atkPrimCache);
-        bool pres = secPresion; secPresion = false;
-        Procesar(Atk(indiceSecundario), secMantenido, pres, false, ref cdSec, ref instSec, ref atkSecCache);
+        Procesar(Atk(indiceSecundario), secMantenido, false, true, ref cdSec, ref instSec, ref atkSecCache);
     }
 
     void Procesar(AtaqueBase atk, bool mantenido, bool presion, bool auto,
@@ -107,5 +116,43 @@ public class ShipWeapons : MonoBehaviour
         if (!prefab) return;
         var go = Instantiate(prefab, origen.position, origen.rotation);
         if (go.TryGetComponent<Projectile>(out var p)) p.Initialize(origen.up * velocidad);
+    }
+    public void SincronizarDesdeArsenal()
+    {
+        if (arsenalJugador == null)
+        {
+            Debug.LogWarning("[ShipWeapons] arsenalJugador NO asignado.", this);
+            return;
+        }
+
+        arsenalJugador.ReconciliarEquipados();
+
+        var lista = arsenalJugador.Desbloqueados;
+        arsenal = new AtaqueBase[lista.Count];
+        for (int i = 0; i < lista.Count; i++) arsenal[i] = lista[i];
+
+        indicePrimario = System.Array.IndexOf(arsenal, arsenalJugador.equipadaPrimaria);
+        indiceSecundario = System.Array.IndexOf(arsenal, arsenalJugador.equipadaSecundaria);
+
+        // ⭐ Destruir las instancias permanentes existentes antes de invalidar caches
+        if (instPrim) { Destroy(instPrim); instPrim = null; }
+        if (instSec) { Destroy(instSec); instSec = null; }
+
+        atkPrimCache = null;
+        atkSecCache = null;
+
+        ultimoPrim = arsenalJugador.equipadaPrimaria;
+        ultimoSec = arsenalJugador.equipadaSecundaria;
+
+        Debug.Log($"[ShipWeapons] arsenal={arsenal.Length} " +
+                  $"primIdx={indicePrimario} secIdx={indiceSecundario}");
+    }
+
+    public void OnSwap()
+    {
+        if (arsenalJugador == null) return;
+        (arsenalJugador.equipadaPrimaria, arsenalJugador.equipadaSecundaria) =
+        (arsenalJugador.equipadaSecundaria, arsenalJugador.equipadaPrimaria);
+        // El Update detecta el cambio y llama a SincronizarDesdeArsenal solo.
     }
 }

@@ -277,6 +277,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1318,10 +1331,10 @@ TextureImporter:
       name: Menu SciFi_47
       rect:
         serializedVersion: 2
-        x: 88
-        y: 253
-        width: 171
-        height: 113
+        x: 89
+        y: 223
+        width: 170
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1340,10 +1353,10 @@ TextureImporter:
       name: Menu SciFi_48
       rect:
         serializedVersion: 2
-        x: 294
-        y: 252
-        width: 175
-        height: 115
+        x: 297
+        y: 223
+        width: 170
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1362,10 +1375,10 @@ TextureImporter:
       name: Menu SciFi_49
       rect:
         serializedVersion: 2
-        x: 509
-        y: 252
-        width: 173
-        height: 115
+        x: 510
+        y: 230
+        width: 170
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1385,9 +1398,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 719
-        y: 252
-        width: 174
-        height: 115
+        y: 228
+        width: 170
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1407,9 +1420,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 925
-        y: 252
-        width: 172
-        height: 116
+        y: 228
+        width: 170
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1543,7 +1556,7 @@ TextureImporter:
         width: 762
         height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1552,6 +1565,50 @@ TextureImporter:
       bones: []
       spriteID: 813208ffdf6dcc24dbc703cf9643db2b
       internalID: 358351973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_58
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 265
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947b12a7ed68b644eb2da98db2d4a5c7
+      internalID: -742740682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu SciFi_59
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 340
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aee64d31a8236f4facd10d6951f5006
+      internalID: -137145004
       vertices: []
       indices: 
       edges: []
@@ -1624,6 +1681,8 @@ TextureImporter:
       Menu SciFi_55: 8494314316196713011
       Menu SciFi_56: -8526982073924928675
       Menu SciFi_57: 358351973
+      Menu SciFi_58: -742740682
+      Menu SciFi_59: -137145004
       Menu SciFi_6: -4522473692351518588
       Menu SciFi_7: 2173153046653885159
       Menu SciFi_8: -6629067315523466544

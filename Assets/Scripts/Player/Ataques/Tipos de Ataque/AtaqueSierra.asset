@@ -16,4 +16,7 @@ MonoBehaviour:
   costoCalor: 2
   costoEnergia: 0
   costoMunicion: 0
+  nombreVisible: Sierra
+  icono: {fileID: -137709017222326040, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: "Da\xF1o Pasivo\nSobrecalentamiento"
   prefabSierra: {fileID: 7172256315224862940, guid: 59df59cb340b9b24a93729b9fdc38dbc, type: 3}

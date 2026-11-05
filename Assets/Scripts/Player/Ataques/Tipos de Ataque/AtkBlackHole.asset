@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
   m_Name: AtkBlackHole
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueProyectil
-  cadencia: 0.1
+  cadencia: 0.2
   costoCalor: 0
-  costoEnergia: 0
+  costoEnergia: 20
   costoMunicion: 1
+  nombreVisible: Agujero Negro
+  icono: {fileID: 1659190920764550260, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: 'Absorbe Proyectiles
+
+    Coste de Energia Alto'
   prefab: {fileID: 3155201989743126139, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
   velocidad: 5
   "desdeCa\xF1ones": 0

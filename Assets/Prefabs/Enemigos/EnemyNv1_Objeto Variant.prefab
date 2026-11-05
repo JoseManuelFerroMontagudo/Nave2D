@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: vidaMaxima
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7836993850328541027, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5901839305209415393, guid: 95cae1c20462736498d6e5c1eef91a24, type: 3}
     - target: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: m_Name
       value: EnemyNv1_Objeto Variant
