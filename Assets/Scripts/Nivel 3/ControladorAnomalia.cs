@@ -9,6 +9,12 @@ public class ControladorAnomalia : MonoBehaviour
     public float tiempoParaTransicion = 30f;
     public float tiempoAlarmaInestable = 10f;
 
+    [Header("Sistema de Láseres / Ráfagas")]
+    public LaserAnomalia scriptLaser;
+    public float cooldownLaserBase = 5f;    // Cada cuántos segundos spawnea un láser
+    public float cooldownLaserFrenesi = 2.5f; // Más ráfagas en los últimos 10 segundos
+    private float timerLaser;
+
     [Header("Efectos de Inestabilidad (Shake & Pulse)")]
     public float intensidadTemblor = 0.15f;
     public float velocidadPulsacion = 12f;
@@ -107,6 +113,18 @@ public class ControladorAnomalia : MonoBehaviour
             if (distancia <= radioMuerte)
             {
                 AbsorberYMatarJugador();
+            }
+        }
+        // Añadir dentro de Update():
+        if (jugador != null && scriptLaser != null && !scriptLaser.EstaDisparando())
+        {
+            timerLaser += Time.deltaTime;
+            float cooldownActual = frenesiActivado ? cooldownLaserFrenesi : cooldownLaserBase;
+
+            if (timerLaser >= cooldownActual)
+            {
+                timerLaser = 0f;
+                scriptLaser.DispararAlJugador(jugador);
             }
         }
     }
