@@ -989,7 +989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &936344657
 Grid:
   m_ObjectHideFlags: 0
@@ -4590,7 +4590,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 53eea7840f280f24dbcbae9fb8d6ef92, type: 2}
+  - {fileID: 2100000, guid: 95ebf50189f880e4aa17c4fdba9007aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5790,7 +5790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OleadaUI
   spawner: {fileID: 2019116194}
   texto: {fileID: 1515614644}
-  NivelActual: 2
 --- !u!114 &2019116194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5809,21 +5808,22 @@ MonoBehaviour:
     - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
       cantidad: 3
     - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-      cantidad: 2
+      cantidad: 1
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 0
   - grupos:
     - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       cantidad: 3
-    - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-      cantidad: 1
+    - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
+      cantidad: 2
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 0
   prefabJefe: {fileID: 3708717635896645897, guid: ac2eb82958b6d2d4f8aa3bdb9226650b, type: 3}
-  escenaAlDerrotarJefe: Nivel2
+  escenaAlDerrotarJefe: Credits
   retardoCambioEscena: 1.5
+  usarLoadSingle: 1
   OnJefeDerrotado:
     m_PersistentCalls:
       m_Calls: []

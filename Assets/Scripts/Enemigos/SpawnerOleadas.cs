@@ -36,6 +36,11 @@ public class SpawnerOleadas : MonoBehaviour
     public string escenaAlDerrotarJefe;
     [Tooltip("Segundos antes del cambio (para la animación de muerte).")]
     public float retardoCambioEscena = 1.5f;
+
+    [Tooltip("TRUE = LoadSingle (reemplaza la escena actual, ideal para pantalla de victoria).\n" +
+             "FALSE = LoadLevel (carga aditiva, descarga el nivel actual).")]
+    public bool usarLoadSingle = true;
+
     [Tooltip("Se dispara al morir el jefe, antes del cambio de escena.")]
     public UnityEvent OnJefeDerrotado;
 
@@ -192,8 +197,21 @@ public class SpawnerOleadas : MonoBehaviour
     IEnumerator CambiarEscena()
     {
         if (retardoCambioEscena > 0f) yield return new WaitForSeconds(retardoCambioEscena);
-        if (SceneLoader.Instance != null) SceneLoader.Instance.LoadLevel(escenaAlDerrotarJefe);
-        else SceneManager.LoadScene(escenaAlDerrotarJefe);
+
+        if (SceneLoader.Instance != null)
+        {
+            if (usarLoadSingle)
+                SceneLoader.Instance.LoadSingle(escenaAlDerrotarJefe);
+            else
+                SceneLoader.Instance.LoadLevel(escenaAlDerrotarJefe);
+        }
+        else
+        {
+            // Sin SceneLoader en escena: fallback directo
+            SceneManager.LoadScene(
+                escenaAlDerrotarJefe,
+                usarLoadSingle ? LoadSceneMode.Single : LoadSceneMode.Additive);
+        }
     }
 
     static VidaPersonaje FindBossVida(GameObject root)

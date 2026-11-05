@@ -5765,7 +5765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019116190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c478835854ad2c438c22e4e6c07cbf5, type: 3}
   m_Name: 
@@ -5790,7 +5790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OleadaUI
   spawner: {fileID: 2019116194}
   texto: {fileID: 1515614644}
-  NivelActual: 1
 --- !u!114 &2019116194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5807,13 +5806,17 @@ MonoBehaviour:
   oleadas:
   - grupos:
     - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
-      cantidad: 5
+      cantidad: 2
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 2
   - grupos:
-    - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-      cantidad: 2
+    - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
+      cantidad: 3
+    retardoAntes: 2
+    retardoDespues: 2
+    delayEntreEnemigos: 2
+  - grupos:
     - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       cantidad: 1
     retardoAntes: 2
@@ -5822,6 +5825,7 @@ MonoBehaviour:
   prefabJefe: {fileID: 4342604781370421429, guid: 2cef60bfc9b67d7319976cdafe0f409c, type: 3}
   escenaAlDerrotarJefe: Nivel2
   retardoCambioEscena: 1.5
+  usarLoadSingle: 0
   OnJefeDerrotado:
     m_PersistentCalls:
       m_Calls: []

@@ -5963,7 +5963,7 @@ AudioSource:
   m_GameObject: {fileID: 551835754}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2201349110982575728, guid: c09cdeb699d59ad4e912990128c54f9a, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 74e4d0e9b0b2c1746928d4a86a5672ea, type: 3}
   m_PlayOnAwake: 1
@@ -6240,15 +6240,15 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5982534379709430168, guid: b445073d4c0b36d43909af08dd4b0037, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b445073d4c0b36d43909af08dd4b0037, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.54, y: 12.54}
+  m_Size: {x: 20, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &699765852
@@ -6446,15 +6446,15 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8632128761605285248, guid: 46bfc18e3c40dd147b92584556972e63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f02e4ccf04565340b05799b7b33e522, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.41, y: 18.29}
+  m_Size: {x: 12.54, y: 12.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!4 &703334944
