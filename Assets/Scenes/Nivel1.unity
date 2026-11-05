@@ -6482,9 +6482,13 @@ MonoBehaviour:
   oleadas:
   - grupos:
     - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
-      cantidad: 5
-    - prefab: {fileID: 7911172836786130444, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
-      cantidad: 1
+      cantidad: 4
+    - prefab: {fileID: 940544504779508610, guid: cc67409468a8afa479549fa994909b61, type: 3}
+      cantidad: 3
+    - prefab: {fileID: 5732278228093751113, guid: b90e1ec47b0609946bf1ff3888738a38, type: 3}
+      cantidad: 4
+    - prefab: {fileID: 5732278228093751113, guid: b90e1ec47b0609946bf1ff3888738a38, type: 3}
+      cantidad: 7
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 2
