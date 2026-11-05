@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   vidaUtil: 10
   "da\xF1o": 10
+  velocidad: 5
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 0
   giroPorSegundo: 0
@@ -116,11 +117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65172ad73128fc945becc614ae187191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProyectilAgujeroNegro
+  modoEscalado: 0
   multiplicadorDiametroColider: 0.6
   multiplicadorDiametroAtraccion: 3
-  escalaPorAbsorcion: 0.3
-  escalaMaxima: 10
   escalaMinima: 0.1
+  escalaMaxima: 10
+  escalaPorSegundo: 0
+  escalaPorAbsorcion: 0.3
   "da\xF1oPorAbsorcion": 10
   tagsProyectilEnemigo:
   - Bullet
@@ -129,6 +132,7 @@ MonoBehaviour:
   - Bullet3
   fuerzaAtraccion: 20
   destruirAlMinimo: 1
+  destruirAlMaximo: 0
 --- !u!1 &4603857538238989552
 GameObject:
   m_ObjectHideFlags: 0

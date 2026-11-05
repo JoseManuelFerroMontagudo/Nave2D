@@ -9,14 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba4e885576bdda47b9eaec5ff52737b, type: 3}
+  m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
   m_Name: AtkCono
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueCono
-  prefabBullet: {fileID: 7238110645245677718, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
-  "da\xF1o": 10
-  velocidad: 10
-  vidaUtil: 4
-  cantidad: 3
-  anguloApertura: 15
+  cadencia: 0.5
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  nombreVisible: Ataque Cono
+  icono: {fileID: 1109653005361908914, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: Test
+  "cantidadCa\xF1ones": 3
+  separacion: 15
+  modoSeparacion: 1
+  prefab: {fileID: 1487628197808377308, guid: 38be789b143dc1e4abfd58db7b1f5dfd, type: 3}
+  simultaneo: 0
   oleadas: 3
   intervaloOleada: 0.3
+  intervaloBala: 0

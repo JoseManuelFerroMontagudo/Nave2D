@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3910574110037031343, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+      propertyPath: velocidad
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910574110037031343, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
       propertyPath: amplitudOnda
       value: 0
       objectReference: {fileID: 0}

@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 3c3ca1928ec1de5409ebe7c01eb1bc97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5312996251278257748
+    second: Dragon Boss_0
+  - first:
+      213: 4898735252917277545
+    second: Dragon Boss_1
+  - first:
+      213: 7370485818055997901
+    second: Dragon Boss_2
+  - first:
+      213: 1498794495154124427
+    second: Dragon Boss_3
+  - first:
+      213: 6289207809004764815
+    second: Dragon Boss_4
+  - first:
+      213: 6851107904805436774
+    second: Dragon Boss_5
+  - first:
+      213: -6476173514390184719
+    second: Dragon Boss_6
+  - first:
+      213: 6359800325745735600
+    second: Dragon Boss_7
+  - first:
+      213: -7447474255949708411
+    second: Dragon Boss_8
+  - first:
+      213: 3409748781877893045
+    second: Dragon Boss_9
+  - first:
+      213: -2758813728239837063
+    second: Dragon Boss_10
+  - first:
+      213: 5889992244462872654
+    second: Dragon Boss_11
+  - first:
+      213: -9025752938229643285
+    second: Dragon Boss_12
+  - first:
+      213: -5266939820591484659
+    second: Dragon Boss_13
+  - first:
+      213: -3689890154635029661
+    second: Dragon Boss_14
+  - first:
+      213: 7306192724722307522
+    second: Dragon Boss_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon Boss_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1170
+        width: 232
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e2c6ae0fd8bb940800000000000000
+      internalID: 5312996251278257748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1170
+        width: 284
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96351d602cdcbf340800000000000000
+      internalID: 4898735252917277545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_2
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1195
+        width: 301
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9384f0dc9394660800000000000000
+      internalID: 7370485818055997901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_3
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1212
+        width: 291
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86f8f207a9ccc410800000000000000
+      internalID: 1498794495154124427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 818
+        width: 243
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e775e3e21c74750800000000000000
+      internalID: 6289207809004764815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_5
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 845
+        width: 291
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d7cc73756041f50800000000000000
+      internalID: 6851107904805436774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_6
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 840
+        width: 301
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcdafa30820026a0800000000000000
+      internalID: -6476173514390184719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_7
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 816
+        width: 284
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7fc7a53bc824850800000000000000
+      internalID: 6359800325745735600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 495
+        width: 213
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58340446f9145a890800000000000000
+      internalID: -7447474255949708411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 501
+        width: 280
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b71725937cd15f20800000000000000
+      internalID: 3409748781877893045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_10
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 499
+        width: 289
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9702bcee789b6b9d0800000000000000
+      internalID: -2758813728239837063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_11
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 501
+        width: 283
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48e3056db47db150800000000000000
+      internalID: 5889992244462872654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 130
+        width: 213
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7426ee5851eb280800000000000000
+      internalID: -9025752938229643285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_13
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 144
+        width: 283
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01f84c732218e6b0800000000000000
+      internalID: -5266939820591484659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_14
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 144
+        width: 289
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36394c84470eaccc0800000000000000
+      internalID: -3689890154635029661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon Boss_15
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 164
+        width: 280
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1dd91c29fc46560800000000000000
+      internalID: 7306192724722307522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dragon Boss_0: 5312996251278257748
+      Dragon Boss_1: 4898735252917277545
+      Dragon Boss_10: -2758813728239837063
+      Dragon Boss_11: 5889992244462872654
+      Dragon Boss_12: -9025752938229643285
+      Dragon Boss_13: -5266939820591484659
+      Dragon Boss_14: -3689890154635029661
+      Dragon Boss_15: 7306192724722307522
+      Dragon Boss_2: 7370485818055997901
+      Dragon Boss_3: 1498794495154124427
+      Dragon Boss_4: 6289207809004764815
+      Dragon Boss_5: 6851107904805436774
+      Dragon Boss_6: -6476173514390184719
+      Dragon Boss_7: 6359800325745735600
+      Dragon Boss_8: -7447474255949708411
+      Dragon Boss_9: 3409748781877893045
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

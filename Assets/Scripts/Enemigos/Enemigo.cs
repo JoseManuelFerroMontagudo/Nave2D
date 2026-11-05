@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
@@ -12,50 +11,90 @@ public class Enemigo : MonoBehaviour
     [HideInInspector] public bool enPosicion = true;
 
     [Header("Ataque (SO compartido)")]
-    public PatronAtaque patron;
-    [Tooltip("Solo se usa si NO hay Animator en el padre")]
-    public float cadencia = 3f;
+    public AtaqueBase ataque;
+    [Tooltip("Si NO hay Animator en el padre, dispara con la cadencia propia del ataque.")]
+    public bool dispararSinAnimator = true;
 
-    // protected: accesibles desde subclases (Jefe)
+    [Header("Estado")]
+    [Tooltip("Si es false, no apunta, no dispara y no procesa el ataque.")]
+    public bool puedeAtacar = true;
+
     protected Animator anim;
     protected Transform jugador;
-    protected float cronometro;
+
+    AtaqueRunner runner;
+    AtaqueBase ataqueAnterior;
+    protected VidaPersonaje vida;
 
     protected virtual void Awake()
     {
         anim = GetComponent<Animator>();
         var p = GameObject.FindGameObjectWithTag("Player");
         if (p) jugador = p.transform;
+
+        runner = new AtaqueRunner(this)
+        {
+            owner = transform,
+            origen = puntoDisparo,
+            objetivo = jugador,
+            stats = null
+        };
+        runner.SetAtaque(ataque);
+        ataqueAnterior = ataque;
+
+        // Hardpoint: si esta GO tiene VidaPersonaje, al morir se desactiva el ataque
+        vida = GetComponent<VidaPersonaje>();
+        if (vida != null) vida.OnMuere.AddListener(DesactivarAtaque);
     }
 
     protected virtual void Update()
     {
+        if (!puedeAtacar) return;
+
         if (jugador != null && hijoAim != null)
         {
             Vector2 d = (jugador.position - hijoAim.position).normalized;
             hijoAim.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(d.y, d.x) * Mathf.Rad2Deg - 90f);
         }
 
-        if (!enPosicion) return;
-
-        if (anim == null && patron != null)
+        if (ataque != ataqueAnterior)
         {
-            cronometro += Time.deltaTime;
-            if (cronometro >= cadencia)
-            {
-                cronometro = 0f;
-                Disparar();
-            }
+            runner.SetAtaque(ataque);
+            ataqueAnterior = ataque;
         }
+
+        if (!enPosicion) { runner.Tick(Time.deltaTime); return; }
+
+        if (anim == null && ataque != null && dispararSinAnimator)
+            runner.TryFire();
+
+        runner.Tick(Time.deltaTime);
     }
 
-    // Animation Events: deben ser public (o al menos no-private) para que Unity los encuentre
-    public void EventoDisparo() => Disparar();
-    public void EventoFinAtaque() { }
+    // ───── API de activación ─────
 
-    public virtual void Disparar()
+    public virtual void DesactivarAtaque()
     {
-        if (patron == null || puntoDisparo == null || jugador == null) return;
-        StartCoroutine(patron.Ejecutar(puntoDisparo, jugador));
+        if (!puedeAtacar) return;
+        puedeAtacar = false;
+        runner.SetAtaque(null); // cancela ráfaga + destruye permanente en curso
+    }
+
+    public virtual void ReactivarAtaque()
+    {
+        if (puedeAtacar) return;
+        puedeAtacar = true;
+        if (ataque != null) runner.SetAtaque(ataque);
+    }
+
+    // ───── Disparos externos (respetan puedeAtacar) ─────
+
+    public void EventoDisparo() { if (puedeAtacar) runner.TryFire(true); }
+    public void EventoFinAtaque() { }
+    public virtual void Disparar() { if (puedeAtacar) runner.TryFire(); }
+
+    protected virtual void OnDestroy()
+    {
+        if (vida != null) vida.OnMuere.RemoveListener(DesactivarAtaque);
     }
 }

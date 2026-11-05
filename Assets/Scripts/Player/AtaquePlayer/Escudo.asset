@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cfe03b1fb1f454ebc67240d0c1e0c1, type: 3}
+  m_Name: Escudo
+  m_EditorClassIdentifier: Assembly-CSharp::AtaquePermanente
+  cadencia: 25
+  costoCalor: 0
+  costoEnergia: 1
+  costoMunicion: 0
+  nombreVisible: Escudo
+  icono: {fileID: 3191601095360900734, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: "Escudo Basico\nNo causa da\xF1o alguno"
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 0
+  prefab: {fileID: 3594308605153596223, guid: c688fa585eda1f640941933e302e4986, type: 3}

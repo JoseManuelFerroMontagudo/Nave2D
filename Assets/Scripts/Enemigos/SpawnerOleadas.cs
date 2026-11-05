@@ -1,9 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class SpawnerOleadas : MonoBehaviour
 {
+    [System.Serializable]
+    public class GrupoEnemigos
+    {
+        public GameObject prefab;
+        public int cantidad = 1;
+    }
+
+    [System.Serializable]
+    public class EntradaOleada
+    {
+        public List<GrupoEnemigos> grupos = new List<GrupoEnemigos>();
+        public float retardoAntes = 1f;
+        public float retardoDespues = 1.5f;
+        public float delayEntreEnemigos = 0.15f;
+    }
+
     [Header("Límite del mapa (LineRenderer)")]
     public LineRenderer limiteMapa;
 
@@ -12,6 +30,19 @@ public class SpawnerOleadas : MonoBehaviour
 
     [Header("Jefe (spawnea en el centro al terminar)")]
     public GameObject prefabJefe;
+
+    [Header("Al derrotar al jefe")]
+    [Tooltip("Escena a cargar. Vacío = no cambia de escena, solo dispara el evento.")]
+    public string escenaAlDerrotarJefe;
+    [Tooltip("Segundos antes del cambio (para la animación de muerte).")]
+    public float retardoCambioEscena = 1.5f;
+
+    [Tooltip("TRUE = LoadSingle (reemplaza la escena actual, ideal para pantalla de victoria).\n" +
+             "FALSE = LoadLevel (carga aditiva, descarga el nivel actual).")]
+    public bool usarLoadSingle = true;
+
+    [Tooltip("Se dispara al morir el jefe, antes del cambio de escena.")]
+    public UnityEvent OnJefeDerrotado;
 
     [Header("Spawn de enemigos")]
     [Tooltip("Distancia mínima al jugador al aparecer")]
@@ -24,26 +55,38 @@ public class SpawnerOleadas : MonoBehaviour
     public int intentosMaximos = 40;
 
     // -------- Estado público para UI (Canvas) --------
-    /// <summary>0 = aún no empieza, 1..N = oleada en curso.</summary>
-    public int NumeroOleadaActual { get; private set; } = 0;
+    public int NumeroOleadaActual { get; private set; }
     public int TotalOleadas => oleadas.Count;
     public int EnemigosVivos => vivos.Count;
-    /// <summary>Enemigos vivos + los que faltan por spawnear en la oleada actual.</summary>
     public int EnemigosRestantesOleada => vivos.Count + pendientesSpawn;
     public bool EnFaseJefe { get; private set; }
+    public bool JefeVivo => jefeActual != null;
 
-    int pendientesSpawn = 0;
-
-    readonly List<GameObject> vivos = new List<GameObject>();
+    int pendientesSpawn;
+    readonly List<GameObject> vivos = new List<GameObject>();  // wrappers, no enemigos
     readonly List<Vector3> puntos = new List<Vector3>();
     Transform jugador;
+    GameObject jefeActual;
+    Vector3 centro;
+    Rect bounds;
+    float minJugSqr, minEnemSqr;
 
-    void Start()
+    IEnumerator Start()
     {
+        // Espera a que otros scripts rellenen el LineRenderer
+        yield return null;
+
         if (limiteMapa != null)
             for (int i = 0; i < limiteMapa.positionCount; i++)
-                puntos.Add(limiteMapa.GetPosition(i));
+            {
+                var p = limiteMapa.GetPosition(i);
+                puntos.Add(limiteMapa.useWorldSpace ? p : limiteMapa.transform.TransformPoint(p));
+            }
 
+        centro = Centro();
+        bounds = BoundsDePuntos();
+        minJugSqr = distanciaMinimaJugador * distanciaMinimaJugador;
+        minEnemSqr = separacionMinimaEnemigos * separacionMinimaEnemigos;
         StartCoroutine(BucleNivel());
     }
 
@@ -56,138 +99,209 @@ public class SpawnerOleadas : MonoBehaviour
             yield return null;
         }
 
-        for (int idx = 0; idx < oleadas.Count; idx++)
+        for (int i = 0; i < oleadas.Count; i++)
         {
-            NumeroOleadaActual = idx + 1;
-            var oleada = oleadas[idx];
-
-            if (oleada.retardoAntes > 0) yield return new WaitForSeconds(oleada.retardoAntes);
-
-            yield return StartCoroutine(SpawnearOleada(oleada));
-
+            NumeroOleadaActual = i + 1;
+            var o = oleadas[i];
+            if (o.retardoAntes > 0) yield return new WaitForSeconds(o.retardoAntes);
+            yield return SpawnearOleada(o);
             yield return new WaitUntil(() => vivos.Count == 0);
-
-            if (oleada.retardoDespues > 0) yield return new WaitForSeconds(oleada.retardoDespues);
+            if (o.retardoDespues > 0) yield return new WaitForSeconds(o.retardoDespues);
         }
 
-        EnFaseJefe = true;
         SpawnearJefe();
+    }
+
+    IEnumerator SpawnearOleada(EntradaOleada o)
+    {
+        pendientesSpawn = 0;
+        foreach (var g in o.grupos) if (g.prefab != null) pendientesSpawn += g.cantidad;
+
+        var espera = o.delayEntreEnemigos > 0 ? new WaitForSeconds(o.delayEntreEnemigos) : null;
+        foreach (var g in o.grupos)
+        {
+            if (g.prefab == null) continue;
+            for (int k = 0; k < g.cantidad; k++)
+            {
+                SpawnUno(g.prefab);
+                if (espera != null) yield return espera;
+            }
+        }
+    }
+
+    // Wrapper a destino + enemigo hijo con localPos = 0:
+    // así el Animator (con curvas de posición) solo mueve la localPosition
+    // del hijo, y el wrapper conserva la posición de spawn.
+    void SpawnUno(GameObject prefab)
+    {
+        Vector3 destino = PuntoValidoParaSpawn();
+
+        var wrapper = new GameObject($"EnemyWrapper_{prefab.name}").transform;
+        wrapper.position = destino;
+        wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
+        vivos.Add(wrapper.gameObject);
+        pendientesSpawn--;
+
+        var e = Instantiate(prefab, wrapper);
+        e.transform.localPosition = Vector3.zero;
+        e.transform.localRotation = Quaternion.identity;
+
+        var vida = e.GetComponent<VidaPersonaje>();
+        if (vida != null)
+            vida.OnMuere.AddListener(() => { if (wrapper != null) Destroy(wrapper.gameObject); });
+        else
+        {
+            Destroy(wrapper.gameObject);
+            return;
+        }
+
+        var enem = e.GetComponent<Enemigo>();
+        if (enem != null) { enem.puntoAncla = destino; enem.enPosicion = true; }
     }
 
     void SpawnearJefe()
     {
-        if (prefabJefe == null) return;
+        if (prefabJefe == null) { Debug.LogError("[SpawnerOleadas] Sin prefabJefe."); return; }
+        EnFaseJefe = true;
 
-        Vector3 centro = Centro();
-        var wrapperGO = new GameObject("BossWrapper");
-        wrapperGO.transform.position = centro;
+        var wrapper = new GameObject("BossWrapper").transform;
+        wrapper.position = centro;
+        wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
+        vivos.Add(wrapper.gameObject);
 
-        var j = Instantiate(prefabJefe, wrapperGO.transform);
-        j.transform.localPosition = Vector3.zero;
-        j.transform.localRotation = Quaternion.identity;
+        jefeActual = Instantiate(prefabJefe, wrapper);
+        jefeActual.transform.localPosition = Vector3.zero;
+        jefeActual.transform.localRotation = Quaternion.identity;
 
-        var ej = j.GetComponent<Enemigo>();
-        if (ej != null) { ej.puntoAncla = centro; ej.enPosicion = true; }
+        var vida = FindBossVida(jefeActual);
+        if (vida != null) vida.OnMuere.AddListener(AlMorirJefe);
+
+        var enem = jefeActual.GetComponent<Enemigo>();
+        if (enem != null) { enem.puntoAncla = centro; enem.enPosicion = true; }
     }
 
-    IEnumerator SpawnearOleada(EntradaOleada oleada)
+    void AlMorirJefe()
     {
-        int total = 0;
-        foreach (var g in oleada.grupos) total += g.cantidad;
-        pendientesSpawn = total;
+        OnJefeDerrotado?.Invoke();
 
-        foreach (var grupo in oleada.grupos)
+        if (jefeActual != null)
         {
-            for (int k = 0; k < grupo.cantidad; k++)
-            {
-                Vector3 destino = PuntoValidoParaSpawn();
-
-                // Wrapper en el punto de spawn
-                var wrapperGO = new GameObject($"EnemyWrapper_{grupo.prefab.name}");
-                var wrapper = wrapperGO.transform;
-                wrapper.position = destino;
-
-                // Enemigo como HIJO del wrapper
-                var e = Instantiate(grupo.prefab, wrapper);
-                e.transform.localPosition = Vector3.zero;
-                e.transform.localRotation = Quaternion.identity;
-                pendientesSpawn--;
-
-                // Vida: al morir se destruye también el wrapper
-                var vida = e.GetComponent<VidaPersonaje>();
-                if (vida != null)
-                {
-                    vida.OnMuere.AddListener(() =>
-                    {
-                        vivos.Remove(wrapperGO);
-                        if (wrapperGO != null) Destroy(wrapperGO);
-                    });
-                }
-                vivos.Add(wrapperGO);
-
-                // El enemigo queda "en posición" desde el frame 0
-                var enem = e.GetComponent<Enemigo>();
-                if (enem != null)
-                {
-                    enem.puntoAncla = destino;
-                    enem.enPosicion = true;
-                }
-
-                if (oleada.delayEntreEnemigos > 0)
-                    yield return new WaitForSeconds(oleada.delayEntreEnemigos);
-            }
+            var wrapper = jefeActual.transform.parent;
+            Destroy(wrapper != null ? wrapper.gameObject : jefeActual);
         }
+        jefeActual = null;
+
+        if (!string.IsNullOrEmpty(escenaAlDerrotarJefe)) StartCoroutine(CambiarEscena());
+    }
+
+    IEnumerator CambiarEscena()
+    {
+        if (retardoCambioEscena > 0f) yield return new WaitForSeconds(retardoCambioEscena);
+
+        if (SceneLoader.Instance != null)
+        {
+            if (usarLoadSingle)
+                SceneLoader.Instance.LoadSingle(escenaAlDerrotarJefe);
+            else
+                SceneLoader.Instance.LoadLevel(escenaAlDerrotarJefe);
+        }
+        else
+        {
+            // Sin SceneLoader en escena: fallback directo
+            SceneManager.LoadScene(
+                escenaAlDerrotarJefe,
+                usarLoadSingle ? LoadSceneMode.Single : LoadSceneMode.Additive);
+        }
+    }
+
+    static VidaPersonaje FindBossVida(GameObject root)
+    {
+        var jefe = root.GetComponentInChildren<Jefe>(true);
+        if (jefe != null) return jefe.GetComponent<VidaPersonaje>();
+
+        var vidas = root.GetComponentsInChildren<VidaPersonaje>(true);
+        if (vidas.Length == 0) return null;
+        VidaPersonaje mejor = vidas[0];
+        foreach (var v in vidas) if (v.vidaMaxima > mejor.vidaMaxima) mejor = v;
+        return mejor;
+    }
+
+    public void RemoveEnemy(GameObject go)
+    {
+        vivos.RemoveAll(v => v == null || v == go);
     }
 
     // -------- Geometría / validación --------
 
     Vector3 PuntoValidoParaSpawn()
     {
-        Vector3 centro = Centro();
-        if (puntos.Count < 3) return centro;
-
-        // Bounding box del polígono para no generar candidatos a lo loco
-        float minX = float.MaxValue, minY = float.MaxValue;
-        float maxX = float.MinValue, maxY = float.MinValue;
-        foreach (var p in puntos)
+        if (puntos.Count < 3)
         {
-            if (p.x < minX) minX = p.x;
-            if (p.y < minY) minY = p.y;
-            if (p.x > maxX) maxX = p.x;
-            if (p.y > maxY) maxY = p.y;
+            Debug.LogError("[SpawnerOleadas] Sin polígono. Spawneando en centro.");
+            return centro;
         }
 
-        Vector3 jugadorPos = jugador != null ? jugador.position : centro;
-        float minJugSqr = distanciaMinimaJugador * distanciaMinimaJugador;
-        float minEnemSqr = separacionMinimaEnemigos * separacionMinimaEnemigos;
+        if (TryPunto(out var p, true)) return p;
+        if (TryPunto(out p, false)) { Debug.LogWarning($"[SpawnerOleadas] Fallback 'sin borde' → {p}"); return p; }
 
-        for (int intento = 0; intento < intentosMaximos; intento++)
+        Vector3 mejor = centro;
+        float mejorDist = -1f;
+        for (int i = 0; i < intentosMaximos * 10; i++)
         {
-            float x = Random.Range(minX, maxX);
-            float y = Random.Range(minY, maxY);
-            Vector3 candidato = new Vector3(x, y, centro.z);
-
-            if (!PuntoDentroPoligono(candidato)) continue;
-            if (DistanciaAlBorde(candidato) < distanciaMinimaBorde) continue;
-            if ((candidato - jugadorPos).sqrMagnitude < minJugSqr) continue;
-
-            bool muyCerca = false;
-            foreach (var v in vivos)
-            {
-                if (v == null) continue;
-                if ((v.transform.position - candidato).sqrMagnitude < minEnemSqr)
-                {
-                    muyCerca = true;
-                    break;
-                }
-            }
-            if (muyCerca) continue;
-
-            return candidato;
+            var c = RandomEnBounds();
+            if (!PuntoDentroPoligono(c)) continue;
+            float d = DistanciaMinimaAOtros(c);
+            if (d > mejorDist) { mejorDist = d; mejor = c; }
         }
+        return mejorDist >= 0f ? mejor : centro;
+    }
 
-        // Fallback: centro (puede no cumplir todos los criterios si el área es pequeña)
-        return centro;
+    bool TryPunto(out Vector3 result, bool checkBorde)
+    {
+        var j2d = jugador != null ? (Vector2)jugador.position : (Vector2)centro;
+        for (int i = 0; i < intentosMaximos * 2; i++)
+        {
+            var c = RandomEnBounds();
+            if (!PuntoDentroPoligono(c)) continue;
+            if (checkBorde && DistanciaAlBorde(c) < distanciaMinimaBorde) continue;
+            if (((Vector2)c - j2d).sqrMagnitude < minJugSqr) continue;
+            if (MuyCercaDeOtro(c)) continue;
+            result = c;
+            return true;
+        }
+        result = default;
+        return false;
+    }
+
+    float DistanciaMinimaAOtros(Vector3 c)
+    {
+        if (vivos.Count == 0) return float.MaxValue;
+        float min = float.MaxValue;
+        foreach (var v in vivos)
+        {
+            if (v == null) continue;
+            float d = (v.transform.position - c).sqrMagnitude;
+            if (d < min) min = d;
+        }
+        return min;
+    }
+
+    Vector3 RandomEnBounds() =>
+        new Vector3(Random.Range(bounds.xMin, bounds.xMax), Random.Range(bounds.yMin, bounds.yMax), centro.z);
+
+    bool MuyCercaDeOtro(Vector3 c)
+    {
+        foreach (var v in vivos)
+            if (v != null && (v.transform.position - c).sqrMagnitude < minEnemSqr) return true;
+        return false;
+    }
+
+    Rect BoundsDePuntos()
+    {
+        if (puntos.Count == 0) return new Rect();
+        Vector3 min = puntos[0], max = puntos[0];
+        foreach (var p in puntos) { min = Vector3.Min(min, p); max = Vector3.Max(max, p); }
+        return Rect.MinMaxRect(min.x, min.y, max.x, max.y);
     }
 
     float DistanciaAlBorde(Vector3 p)
@@ -196,9 +310,7 @@ public class SpawnerOleadas : MonoBehaviour
         int n = puntos.Count;
         for (int i = 0; i < n; i++)
         {
-            Vector3 a = puntos[i];
-            Vector3 b = puntos[(i + 1) % n];
-            float d = DistanciaPuntoSegmento(p, a, b);
+            float d = DistanciaPuntoSegmento(p, puntos[i], puntos[(i + 1) % n]);
             if (d < min) min = d;
         }
         return min;
@@ -210,8 +322,7 @@ public class SpawnerOleadas : MonoBehaviour
         float abSqr = ab.sqrMagnitude;
         if (abSqr < 0.0001f) return Vector3.Distance(p, a);
         float t = Mathf.Clamp01(Vector3.Dot(p - a, ab) / abSqr);
-        Vector3 proj = a + ab * t;
-        return Vector3.Distance(p, proj);
+        return Vector3.Distance(p, a + ab * t);
     }
 
     bool PuntoDentroPoligono(Vector3 p)
@@ -220,13 +331,10 @@ public class SpawnerOleadas : MonoBehaviour
         int n = puntos.Count;
         for (int i = 0, j = n - 1; i < n; j = i++)
         {
-            Vector3 vi = puntos[i];
-            Vector3 vj = puntos[j];
+            Vector3 vi = puntos[i], vj = puntos[j];
             if (((vi.y > p.y) != (vj.y > p.y)) &&
                 (p.x < (vj.x - vi.x) * (p.y - vi.y) / (vj.y - vi.y) + vi.x))
-            {
                 dentro = !dentro;
-            }
         }
         return dentro;
     }
@@ -238,4 +346,12 @@ public class SpawnerOleadas : MonoBehaviour
         foreach (var p in puntos) s += p;
         return s / puntos.Count;
     }
+}
+
+/// <summary>Vive en el wrapper. Se limpia de 'vivos' al destruirse.</summary>
+public class EnemyTracker : MonoBehaviour
+{
+    SpawnerOleadas spawner;
+    public void Init(SpawnerOleadas s) => spawner = s;
+    void OnDestroy() { if (spawner != null) spawner.RemoveEnemy(gameObject); }
 }

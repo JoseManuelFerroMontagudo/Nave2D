@@ -17,6 +17,15 @@ public class ControladorJefe : MonoBehaviour
     public float amplitudOndaHorizontal = 3.2f; // Ancho del vaivén izquierda-derecha
     public float frecuenciaOndaHorizontal = 1.6f; // Velocidad de la onda
 
+    [Header("Modo Estático (ej. Agujero Blanco)")]
+    public bool quieto = false;             // No se mueve ni rota el sprite
+    public bool limitarACono = false;       // Solo dispara hacia el jugador (optimiza balas)
+    public float anguloCono = 140f;         // Apertura total del cono en grados
+    public bool flashAlRecibirDaño = true;  // Desmárcalo para que el sprite nunca se tiña de rojo
+    private float proximoFlash = 0f;
+    public bool balasHastaElLimite = false; // Las balas no regresan ni frenan: viajan hasta el alcance
+    public float alcanceBalas = 40f;        // Distancia máxima que recorren (unidades)
+
     [Header("Disparo — Proyectil Principal (Energía)")]
     public GameObject prefabProyectil;
     public Transform puntoDisparo;
@@ -73,6 +82,7 @@ public class ControladorJefe : MonoBehaviour
     private Transform jugador;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Color colorOriginal = Color.white;
 
     public event System.Action OnMuerte;
     public event System.Action<int> OnCambioFase;
@@ -95,6 +105,8 @@ public class ControladorJefe : MonoBehaviour
             Color c = spriteRenderer.color;
             if (c.a < 0.05f) spriteRenderer.color = new Color(c.r, c.g, c.b, 1f);
         }
+
+        if (spriteRenderer != null) colorOriginal = spriteRenderer.color;
 
         // Respetar el valor del Inspector (no forzar mínimo)
         if (vida <= 0f) vida = 1500f;
@@ -131,10 +143,12 @@ public class ControladorJefe : MonoBehaviour
         tiempoVivo += Time.fixedDeltaTime;
 
         // Movimiento estilizado (vaivén sinusoidal en frente del jugador)
-        MoverHaciaObjetivo();
-
-        // Orientación del sprite hacia abajo / jugador
-        ActualizarSpriteDir();
+        if (!quieto)
+        {
+            MoverHaciaObjetivo();
+            // Orientación del sprite hacia abajo / jugador
+            ActualizarSpriteDir();
+        }
 
         // Fases
         VerificarFaseCombate();
@@ -191,6 +205,9 @@ public class ControladorJefe : MonoBehaviour
             if (estaAtacando)
             {
                 StopAllCoroutines();
+                // StopAllCoroutines corta el parpadeo a medias: restaurar color y estado
+                estaGolpeado = false;
+                if (spriteRenderer != null) spriteRenderer.color = colorOriginal;
                 estaAtacando = false;
                 lluviaActiva = false;
             }
@@ -265,10 +282,41 @@ public class ControladorJefe : MonoBehaviour
         int daño = ObtenerDañoPorTipo(tipo);
         if (prefab == null) return;
 
+        // Solo instanciar balas dentro del cono que mira al jugador
+        if (limitarACono && jugador != null)
+        {
+            Vector2 haciaJugador = (jugador.position - transform.position).normalized;
+            if (Vector2.Angle(haciaJugador, direccion) > anguloCono * 0.5f) return;
+        }
+
+        // Balas que llegan hasta el límite: sin frenar, sin regresar y con vida suficiente
+        if (balasHastaElLimite && opciones != null)
+        {
+            opciones = opciones.Clonar();
+            opciones.regresaAlOrigen = false;
+            opciones.rebotaEnParedes = false;
+            opciones.vidaUtil = alcanceBalas / Mathf.Max(0.1f, opciones.velocidad);
+        }
+
         Vector3 pos = origen != null ? origen.position : transform.position;
         GameObject go = Instantiate(prefab, pos, Quaternion.identity);
         var p = go.GetComponent<ProyectilJefe>();
         if (p != null) p.Configurar(direccion.normalized, opciones, daño);
+        else
+        {
+            // Prefab de enemigo normal (script Bullet): darle dirección para que se mueva y se destruya
+            var b = go.GetComponent<Bullet>();
+            if (b != null)
+            {
+                b.Configurar(direccion);
+                b.daño = daño;
+                if (opciones != null)
+                {
+                    if (opciones.velocidad > 0f) b.velocidad = opciones.velocidad;
+                    if (opciones.vidaUtil > 0f) b.vidaUtil = opciones.vidaUtil;
+                }
+            }
+        }
 
         float rot = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
         go.transform.rotation = Quaternion.Euler(0, 0, rot);
@@ -318,7 +366,7 @@ public class ControladorJefe : MonoBehaviour
         vida -= Mathf.Abs(daño);
 
         if (vida <= 0f) { vida = 0f; Morir(); }
-        else StartCoroutine(ParpadeoDaño());
+        else if (flashAlRecibirDaño && Time.time >= proximoFlash) { proximoFlash = Time.time + 0.2f; StartCoroutine(ParpadeoDaño()); }
     }
 
     IEnumerator ParpadeoDaño()
@@ -326,10 +374,11 @@ public class ControladorJefe : MonoBehaviour
         estaGolpeado = true;
         if (spriteRenderer != null)
         {
-            Color original = spriteRenderer.color;
+            // Usa el color guardado en Awake: si varias corrutinas se solapan
+            // (daño continuo) ya no se queda pegado en rojo.
             spriteRenderer.color = Color.red;
             yield return new WaitForSeconds(0.04f);
-            spriteRenderer.color = original;
+            spriteRenderer.color = colorOriginal;
         }
         estaGolpeado = false;
     }

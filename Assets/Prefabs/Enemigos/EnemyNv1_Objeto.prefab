@@ -496,8 +496,9 @@ MonoBehaviour:
   puntoDisparo: {fileID: 8214241724955802774}
   puntoAncla: {x: 0, y: 0, z: 0}
   enPosicion: 1
-  patron: {fileID: 11400000, guid: d39a6a4f4498b144eb99b4d633fca21b, type: 2}
-  cadencia: 3
+  ataque: {fileID: 11400000, guid: d39a6a4f4498b144eb99b4d633fca21b, type: 2}
+  dispararSinAnimator: 0
+  puedeAtacar: 1
 --- !u!114 &7325573772557519336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +515,7 @@ MonoBehaviour:
   fasesTotales: 1
   vidaActual: 0
   faseActual: 1
+  destruyeAlMorir: 1
   duracionFlash: 0.1
   cadenciaFlash: 0.15
   colorFlash: {r: 1, g: 0, b: 0, a: 1}
