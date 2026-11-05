@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: b445073d4c0b36d43909af08dd4b0037
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5982534379709430168
+    second: "V\xF3rtice c\xF3smico luminoso_0"
+  - first:
+      213: -5098066528844411438
+    second: "V\xF3rtice c\xF3smico luminoso_1"
+  - first:
+      213: -6045742456647927517
+    second: "V\xF3rtice c\xF3smico luminoso_2"
+  - first:
+      213: -2969373864134224966
+    second: "V\xF3rtice c\xF3smico luminoso_3"
+  - first:
+      213: -5762169549464918285
+    second: "V\xF3rtice c\xF3smico luminoso_4"
+  - first:
+      213: 6559919814631370022
+    second: "V\xF3rtice c\xF3smico luminoso_5"
+  - first:
+      213: -7843115949585007433
+    second: "V\xF3rtice c\xF3smico luminoso_6"
+  - first:
+      213: 4798874452488607960
+    second: "V\xF3rtice c\xF3smico luminoso_7"
+  - first:
+      213: 5668656924111624096
+    second: "V\xF3rtice c\xF3smico luminoso_8"
+  - first:
+      213: 8310384730070665417
+    second: "V\xF3rtice c\xF3smico luminoso_9"
+  - first:
+      213: -7845852257552691552
+    second: "V\xF3rtice c\xF3smico luminoso_10"
+  - first:
+      213: 6301583293451558687
+    second: "V\xF3rtice c\xF3smico luminoso_11"
+  - first:
+      213: 5904104751420837557
+    second: "V\xF3rtice c\xF3smico luminoso_12"
+  - first:
+      213: 3394424342532635285
+    second: "V\xF3rtice c\xF3smico luminoso_13"
+  - first:
+      213: -2696502277239368932
+    second: "V\xF3rtice c\xF3smico luminoso_14"
+  - first:
+      213: 5132292627324805875
+    second: "V\xF3rtice c\xF3smico luminoso_15"
+  - first:
+      213: 1578189145472099818
+    second: "V\xF3rtice c\xF3smico luminoso_16"
+  - first:
+      213: -251772550986947698
+    second: "V\xF3rtice c\xF3smico luminoso_17"
+  - first:
+      213: -1844956422668945237
+    second: "V\xF3rtice c\xF3smico luminoso_18"
+  - first:
+      213: -61979958881653839
+    second: "V\xF3rtice c\xF3smico luminoso_19"
+  - first:
+      213: -2255413585648905810
+    second: "V\xF3rtice c\xF3smico luminoso_20"
+  - first:
+      213: -3001292504751417105
+    second: "V\xF3rtice c\xF3smico luminoso_21"
+  - first:
+      213: -8443117708175398388
+    second: "V\xF3rtice c\xF3smico luminoso_22"
+  - first:
+      213: 6714091039046487591
+    second: "V\xF3rtice c\xF3smico luminoso_23"
+  - first:
+      213: -2950804571802811046
+    second: "V\xF3rtice c\xF3smico luminoso_24"
+  - first:
+      213: 2096618381622698177
+    second: "V\xF3rtice c\xF3smico luminoso_25"
+  - first:
+      213: -5864317237145324237
+    second: "V\xF3rtice c\xF3smico luminoso_26"
+  - first:
+      213: -5165954845196814100
+    second: "V\xF3rtice c\xF3smico luminoso_27"
+  - first:
+      213: 3066203423857741868
+    second: "V\xF3rtice c\xF3smico luminoso_28"
+  - first:
+      213: -3980881132498736997
+    second: "V\xF3rtice c\xF3smico luminoso_29"
+  - first:
+      213: 253464646871030447
+    second: "V\xF3rtice c\xF3smico luminoso_30"
+  - first:
+      213: -5204684889607475586
+    second: "V\xF3rtice c\xF3smico luminoso_31"
+  - first:
+      213: -721589558519639394
+    second: "V\xF3rtice c\xF3smico luminoso_32"
+  - first:
+      213: 875173581003020982
+    second: "V\xF3rtice c\xF3smico luminoso_33"
+  - first:
+      213: -7245729859362524419
+    second: "V\xF3rtice c\xF3smico luminoso_34"
+  - first:
+      213: -4268993096195378080
+    second: "V\xF3rtice c\xF3smico luminoso_35"
+  - first:
+      213: 8993178613018400063
+    second: "V\xF3rtice c\xF3smico luminoso_36"
+  - first:
+      213: -1582117225937537002
+    second: "V\xF3rtice c\xF3smico luminoso_37"
+  - first:
+      213: -2117110729556444939
+    second: "V\xF3rtice c\xF3smico luminoso_38"
+  - first:
+      213: 418072933622544210
+    second: "V\xF3rtice c\xF3smico luminoso_39"
+  - first:
+      213: -5001584146080822082
+    second: "V\xF3rtice c\xF3smico luminoso_40"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1254
+        height: 1254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8668bd0bda4c9fca0800000000000000
+      internalID: -5982534379709430168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 982
+        width: 248
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd8be2b0870049b0800000000000000
+      internalID: -5098066528844411438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_2"
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1069
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329b0047445391ca0800000000000000
+      internalID: -6045742456647927517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 5
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab353f6f33aaac6d0800000000000000
+      internalID: -2969373864134224966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 917
+        width: 52
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f62294f259a800b0800000000000000
+      internalID: -5762169549464918285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_5"
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 925
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d2622c054890b50800000000000000
+      internalID: 6559919814631370022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_6"
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 932
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcf8c43997a72390800000000000000
+      internalID: -7843115949585007433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_7"
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 964
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8d74693e6099240800000000000000
+      internalID: 4798874452488607960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_8"
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 966
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a75b3b407d1bae40800000000000000
+      internalID: 5668656924111624096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_9"
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 921
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c841b6b1ea645370800000000000000
+      internalID: 8310384730070665417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_10"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 867
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae006cd0feed1390800000000000000
+      internalID: -7845852257552691552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_11"
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 269
+        width: 126
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f57b04e98b37750800000000000000
+      internalID: 6301583293451558687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_12"
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 367
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be82297df79fe150800000000000000
+      internalID: 5904104751420837557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_13"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 254
+        width: 7
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ab89184fa6b1f20800000000000000
+      internalID: 3394424342532635285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_14"
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 286
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c139d1d2779149ad0800000000000000
+      internalID: -2696502277239368932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_15"
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 264
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f22d07d3f0993740800000000000000
+      internalID: 5132292627324805875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_16"
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 242
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae5ed3c8aaad6e510800000000000000
+      internalID: 1578189145472099818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_17"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 6
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83aa36e236818cf0800000000000000
+      internalID: -251772550986947698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_18"
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8fdb898e56566e0800000000000000
+      internalID: -1844956422668945237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_19"
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 45
+        width: 260
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb6aa74e8dc32ff0800000000000000
+      internalID: -61979958881653839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_20"
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 204
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea19ec52b4923b0e0800000000000000
+      internalID: -2255413585648905810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_21"
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 174
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8df335e544956d0800000000000000
+      internalID: -3001292504751417105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_22"
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 41
+        width: 120
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a256f8d2504da80800000000000000
+      internalID: -8443117708175398388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_23"
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 0
+        width: 216
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ecffb2a3e3d2d50800000000000000
+      internalID: 6714091039046487591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_24"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 136
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55481040e2ac07d0800000000000000
+      internalID: -2950804571802811046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_25"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 119
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0ec2a4f4fa81d10800000000000000
+      internalID: 2096618381622698177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_26"
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 23
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335b0c51b82cd9ea0800000000000000
+      internalID: -5864317237145324237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_27"
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 194
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8f55e4077de48b0800000000000000
+      internalID: -5165954845196814100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_28"
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 15
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c209020c4c75d8a20800000000000000
+      internalID: 3066203423857741868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_29"
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 34
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98ab5c93b111c8c0800000000000000
+      internalID: -3980881132498736997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_30"
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 45
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa1edfd0cc748300800000000000000
+      internalID: 253464646871030447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_31"
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 59
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e6a132bae35c7b0800000000000000
+      internalID: -5204684889607475586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_32"
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 21
+        width: 106
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e925ec2ae166cf5f0800000000000000
+      internalID: -721589558519639394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_33"
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 41
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6badd7c2cbd352c00800000000000000
+      internalID: 875173581003020982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_34"
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 47
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2714a151ff17b90800000000000000
+      internalID: -7245729859362524419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_35"
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 39
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064fda8a56d71c4c0800000000000000
+      internalID: -4268993096195378080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_36"
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 27
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f351a96fc403ecc70800000000000000
+      internalID: 8993178613018400063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_37"
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 33
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61877f2f3c03b0ae0800000000000000
+      internalID: -1582117225937537002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_38"
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 20
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8be9622038e92e0800000000000000
+      internalID: -2117110729556444939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_39"
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 19
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257f6ca3e1b4dc500800000000000000
+      internalID: 418072933622544210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "V\xF3rtice c\xF3smico luminoso_40"
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 9
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc80aaf7bdc69ab0800000000000000
+      internalID: -5001584146080822082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "V\xF3rtice c\xF3smico luminoso_0": -5982534379709430168
+      "V\xF3rtice c\xF3smico luminoso_1": -5098066528844411438
+      "V\xF3rtice c\xF3smico luminoso_10": -7845852257552691552
+      "V\xF3rtice c\xF3smico luminoso_11": 6301583293451558687
+      "V\xF3rtice c\xF3smico luminoso_12": 5904104751420837557
+      "V\xF3rtice c\xF3smico luminoso_13": 3394424342532635285
+      "V\xF3rtice c\xF3smico luminoso_14": -2696502277239368932
+      "V\xF3rtice c\xF3smico luminoso_15": 5132292627324805875
+      "V\xF3rtice c\xF3smico luminoso_16": 1578189145472099818
+      "V\xF3rtice c\xF3smico luminoso_17": -251772550986947698
+      "V\xF3rtice c\xF3smico luminoso_18": -1844956422668945237
+      "V\xF3rtice c\xF3smico luminoso_19": -61979958881653839
+      "V\xF3rtice c\xF3smico luminoso_2": -6045742456647927517
+      "V\xF3rtice c\xF3smico luminoso_20": -2255413585648905810
+      "V\xF3rtice c\xF3smico luminoso_21": -3001292504751417105
+      "V\xF3rtice c\xF3smico luminoso_22": -8443117708175398388
+      "V\xF3rtice c\xF3smico luminoso_23": 6714091039046487591
+      "V\xF3rtice c\xF3smico luminoso_24": -2950804571802811046
+      "V\xF3rtice c\xF3smico luminoso_25": 2096618381622698177
+      "V\xF3rtice c\xF3smico luminoso_26": -5864317237145324237
+      "V\xF3rtice c\xF3smico luminoso_27": -5165954845196814100
+      "V\xF3rtice c\xF3smico luminoso_28": 3066203423857741868
+      "V\xF3rtice c\xF3smico luminoso_29": -3980881132498736997
+      "V\xF3rtice c\xF3smico luminoso_3": -2969373864134224966
+      "V\xF3rtice c\xF3smico luminoso_30": 253464646871030447
+      "V\xF3rtice c\xF3smico luminoso_31": -5204684889607475586
+      "V\xF3rtice c\xF3smico luminoso_32": -721589558519639394
+      "V\xF3rtice c\xF3smico luminoso_33": 875173581003020982
+      "V\xF3rtice c\xF3smico luminoso_34": -7245729859362524419
+      "V\xF3rtice c\xF3smico luminoso_35": -4268993096195378080
+      "V\xF3rtice c\xF3smico luminoso_36": 8993178613018400063
+      "V\xF3rtice c\xF3smico luminoso_37": -1582117225937537002
+      "V\xF3rtice c\xF3smico luminoso_38": -2117110729556444939
+      "V\xF3rtice c\xF3smico luminoso_39": 418072933622544210
+      "V\xF3rtice c\xF3smico luminoso_4": -5762169549464918285
+      "V\xF3rtice c\xF3smico luminoso_40": -5001584146080822082
+      "V\xF3rtice c\xF3smico luminoso_5": 6559919814631370022
+      "V\xF3rtice c\xF3smico luminoso_6": -7843115949585007433
+      "V\xF3rtice c\xF3smico luminoso_7": 4798874452488607960
+      "V\xF3rtice c\xF3smico luminoso_8": 5668656924111624096
+      "V\xF3rtice c\xF3smico luminoso_9": 8310384730070665417
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
