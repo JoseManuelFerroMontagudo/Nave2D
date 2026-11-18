@@ -5,7 +5,6 @@ public class Jefe : Enemigo
     [Header("Patrones por fase (SO)")]
     public AtaqueBase[] patronesPorFase;
 
-    // ❌ ELIMINAR: VidaPersonaje vida;
 
     protected override void Awake()
     {

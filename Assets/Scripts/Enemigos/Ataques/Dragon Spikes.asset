@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8ae9896ebd80d4ca0d7585ca5eebc7, type: 3}
   m_Name: Dragon Spikes
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueRadial
-  cadencia: 10
+  cadencia: 1
   costoCalor: 0
   costoEnergia: 0
   costoMunicion: 0
