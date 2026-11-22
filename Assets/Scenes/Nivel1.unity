@@ -5829,6 +5829,7 @@ MonoBehaviour:
   OnJefeDerrotado:
     m_PersistentCalls:
       m_Calls: []
+  numeroNivel: 1
   distanciaMinimaJugador: 14
   separacionMinimaEnemigos: 10
   distanciaMinimaBorde: 14

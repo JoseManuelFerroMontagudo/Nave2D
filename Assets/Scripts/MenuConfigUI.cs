@@ -89,7 +89,7 @@ public class MenuConfigUI : MonoBehaviour
     public void SalirAlMenuPrincipal()
     {
         if (ui) ui.OnMenu();
-        SceneLoader.Instance?.LoadSingle(mainMenuScene);
+        SceneLoader.Instance?.LoadSingleQuick(mainMenuScene);
     }
 
     public void Volver()

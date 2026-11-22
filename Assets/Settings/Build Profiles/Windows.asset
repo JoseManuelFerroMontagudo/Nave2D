@@ -721,6 +721,7 @@ MonoBehaviour:
     - line: '|   webWasm2023: 0'
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols:'
+    - line: '|     Android: APP_UI_EDITOR_ONLY;SENTIS_ANALYTICS_ENABLED'
     - line: '|     Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'

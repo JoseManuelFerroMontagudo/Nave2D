@@ -218,7 +218,7 @@ public class SpawnerOleadas : MonoBehaviour
         if (SceneLoader.Instance != null)
         {
             if (usarLoadSingle)
-                SceneLoader.Instance.LoadSingle(escenaAlDerrotarJefe);
+                SceneLoader.Instance.LoadSingleQuick(escenaAlDerrotarJefe);
             else
                 SceneLoader.Instance.LoadLevel(escenaAlDerrotarJefe);
         }

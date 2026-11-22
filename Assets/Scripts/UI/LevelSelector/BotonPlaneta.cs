@@ -6,6 +6,7 @@ public class BotonPlaneta : MonoBehaviour
 {
     [Header("Datos")]
     public string nombreMostrado = "Planeta";
+    public string descripcion = "Un lugar inhóspito...";
     public string escenaDestino = "Nivel_1";
     public int numeroNivel = 1;
 

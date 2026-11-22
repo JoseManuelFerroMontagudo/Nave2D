@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 520978145}
   - component: {fileID: 520978144}
   m_Layer: 5
-  m_Name: BtnContinuar
+  m_Name: BtnNiveles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,14 +616,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 520978145}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2102565178}
         m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
-        m_MethodName: Continuar
+        m_MethodName: AbrirNiveles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -754,10 +754,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadSingle
-        m_Mode: 5
+      - m_Target: {fileID: 2102565178}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: AbrirCreditos
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2365,10 +2365,94 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUI
   EscenaPersistente: PlayerOnly
-  EscenaCreditos: Creditos
-  botonContinuar: {fileID: 520978144}
+  EscenaCreditos: Credits
+  botonNuevaPartida: {fileID: 272138472}
+  textoBotonNuevaPartida: {fileID: 2043291101}
+  botonNiveles: {fileID: 520978144}
+  escenasNivel:
+  - Nivel1
+  - Nivel2
+  - Nivel3
+  - Nivel4
   toggleDebugUnlock: {fileID: 1575806440}
   debugNivelMaximo: 3
+--- !u!1001 &4964477248484040680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4931355800466240674, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_Name
+      value: TransitionOverlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 4931355800466240674, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303448094404854201, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: fadeInTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303448094404854201, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: fadeOutTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303448094404854201, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: minDisplayTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725792875360261687, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.92193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.67694
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448587209375740189, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d01f801b12b5a804b9ce1813e57bb1db, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2377,3 +2461,4 @@ SceneRoots:
   - {fileID: 2102565177}
   - {fileID: 1856013121}
   - {fileID: 1382762265}
+  - {fileID: 4964477248484040680}

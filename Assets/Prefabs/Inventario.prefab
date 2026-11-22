@@ -301,7 +301,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1248265519899222580}
         m_TargetAssemblyTypeName: MenuInventarioUI, Assembly-CSharp
-        m_MethodName: Cerrar
+        m_MethodName: Volver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,71 +1,98 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuUI : MonoBehaviour
 {
-    [Tooltip("Escena persistente (jugador + HUD + managers).")]
-    public string EscenaPersistente = "EscenaJugador";
-
-    [Tooltip("Escena de créditos.")]
-    public string EscenaCreditos = "Creditos";
+    public string EscenaPersistente = "PlayerOnly";
+    public string EscenaCreditos = "Credits";
 
     [Header("Botones")]
-    public Button botonContinuar; // se deshabilita si no hay progreso ni debug
+    public Button botonNuevaPartida;
+    public TMP_Text textoBotonNuevaPartida;
+    public Button botonNiveles;
+
+    [Header("Niveles (índice 0 = nivel 1)")]
+    public string[] escenasNivel = { "Nivel1", "Nivel2", "Nivel3", "Nivel4" };
 
     [Header("Debug")]
-    [Tooltip("Activa un unlock temporal hasta debugNivelMaximo, " +
-             "sin tocar el progreso real. Útil para testear el selector.")]
     public Toggle toggleDebugUnlock;
-    public int debugNivelMaximo = 3; // de 4 niveles → desbloquea 1, 2 y 3; el 4 sigue bloqueado
+    public int debugNivelMaximo = 3;
 
     void Start()
     {
-        ActualizarBotonContinuar();
+        ActualizarBotones();
 
         if (toggleDebugUnlock != null)
         {
-            // Estado inicial leyendo PlayerPrefs; SetIsOnWithoutNotify evita disparar
-            // el listener mientras inicializamos.
             toggleDebugUnlock.SetIsOnWithoutNotify(
                 PlayerPrefs.GetInt(ProgressManager.KEY_DEBUG_UNLOCK, 0) > 0);
-
             toggleDebugUnlock.onValueChanged.AddListener(OnDebugToggleChanged);
         }
     }
 
-    void ActualizarBotonContinuar()
+    int MaxEfectivo()
     {
-        if (botonContinuar == null) return;
-
         int maxReal = PlayerPrefs.GetInt(ProgressManager.KEY_NIVEL_MAX, 0);
         int maxDebug = PlayerPrefs.GetInt(ProgressManager.KEY_DEBUG_UNLOCK, 0);
-        botonContinuar.interactable = Mathf.Max(maxReal, maxDebug) > 0;
+        return Mathf.Max(maxReal, maxDebug);
     }
 
-    // ---- Botones ----
+    void ActualizarBotones()
+    {
+        int max = MaxEfectivo();
+
+        // "Nueva Partida" vs "Continuar"
+        bool continuar = max > 1;
+        if (textoBotonNuevaPartida != null)
+            textoBotonNuevaPartida.text = continuar ? "Continuar" : "Nueva Partida";
+
+        // "Niveles": solo si hay algo más que el nivel 1
+        if (botonNiveles != null)
+            botonNiveles.interactable = max > 1;
+    }
+
+    // ---------- Botones ----------
 
     public void NuevaPartida()
     {
-        PlayerPrefs.SetInt(ProgressManager.KEY_NIVEL_MAX, 1); // Nivel 1 desbloqueado
-        PlayerPrefs.Save();
+        int maxReal = PlayerPrefs.GetInt(ProgressManager.KEY_NIVEL_MAX, 0);
+        int max = MaxEfectivo();
 
-        ProgressManager.SetEscenaPendiente("Nivel_1");
-        SceneManager.LoadScene(EscenaPersistente); // Single directo (sin SceneLoader)
+        string escena;
+        if (maxReal <= 1 && max <= 1)
+        {
+            PlayerPrefs.SetInt(ProgressManager.KEY_NIVEL_MAX, 1);
+            PlayerPrefs.Save();
+            escena = escenasNivel.Length > 0 ? escenasNivel[0] : "Nivel1";
+        }
+        else
+        {
+            int idx = Mathf.Clamp(max - 1, 0, escenasNivel.Length - 1);
+            escena = escenasNivel[idx];
+        }
+
+        CargarJuegoConNivel(escena);
     }
 
-    public void Continuar()
+    public void AbrirNiveles()
     {
-        if (!botonContinuar.interactable) return;
-
-        ProgressManager.SetEscenaPendiente("SelectorNiveles");
-        SceneManager.LoadScene(EscenaPersistente);
+        if (botonNiveles != null && !botonNiveles.interactable) return;
+        CargarJuegoConNivel("SelectorNiveles");
     }
 
-    public void AbrirCreditos()
+    void CargarJuegoConNivel(string nivel)
     {
-        SceneManager.LoadScene(EscenaCreditos); // Single, reemplaza el menú
+        if (TransitionManager.Instance == null)
+        {
+            Debug.LogError("[MenuUI] Falta el prefab TransitionOverlay en MenuPrincipal.");
+            return;
+        }
+        TransitionManager.Instance.LoadSingleWithFollowUp(EscenaPersistente, nivel);
     }
+
+    public void AbrirCreditos() => SceneManager.LoadScene(EscenaCreditos);
 
     public void Salir()
     {
@@ -75,14 +102,10 @@ public class MenuUI : MonoBehaviour
 #endif
     }
 
-    // ---- Debug ----
-
     void OnDebugToggleChanged(bool activo)
     {
-        PlayerPrefs.SetInt(ProgressManager.KEY_DEBUG_UNLOCK,
-                           activo ? debugNivelMaximo : 0);
+        PlayerPrefs.SetInt(ProgressManager.KEY_DEBUG_UNLOCK, activo ? debugNivelMaximo : 0);
         PlayerPrefs.Save();
-
-        ActualizarBotonContinuar();
+        ActualizarBotones();
     }
 }

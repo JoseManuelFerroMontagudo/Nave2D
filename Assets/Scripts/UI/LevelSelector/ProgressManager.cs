@@ -5,7 +5,6 @@ public class ProgressManager : MonoBehaviour
     public static ProgressManager Instance { get; private set; }
 
     public const string KEY_NIVEL_MAX = "NivelMaxDesbloqueado";
-    public const string KEY_ESCENA_PENDIENTE = "EscenaPendiente";
     public const string KEY_DEBUG_UNLOCK = "DebugUnlockNivelMax"; // 0=off, N=desbloquea hasta N
 
     public int NivelMaxDesbloqueado { get; private set; }
@@ -42,24 +41,5 @@ public class ProgressManager : MonoBehaviour
         NivelMaxDesbloqueado = 0;
         PlayerPrefs.SetInt(KEY_NIVEL_MAX, 0);
         PlayerPrefs.Save();
-    }
-
-    // ---- Escena pendiente (estático, usable desde el menú) ----
-
-    public static void SetEscenaPendiente(string escena)
-    {
-        PlayerPrefs.SetString(KEY_ESCENA_PENDIENTE, escena);
-        PlayerPrefs.Save();
-    }
-
-    public static string ConsumirEscenaPendiente(string fallback = null)
-    {
-        string e = PlayerPrefs.GetString(KEY_ESCENA_PENDIENTE, fallback);
-        if (!string.IsNullOrEmpty(e))
-        {
-            PlayerPrefs.DeleteKey(KEY_ESCENA_PENDIENTE);
-            PlayerPrefs.Save();
-        }
-        return string.IsNullOrEmpty(e) ? fallback : e;
     }
 }

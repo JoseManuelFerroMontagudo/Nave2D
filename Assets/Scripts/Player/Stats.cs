@@ -172,6 +172,6 @@ public class Stats : MonoBehaviour
 
     public void Morir()
     {
-        SceneLoader.Instance.LoadSingle("GameOver");
+        SceneLoader.Instance.LoadSingleQuick("GameOver");
     }
 }
