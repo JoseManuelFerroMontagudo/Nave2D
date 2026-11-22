@@ -499,6 +499,7 @@ MonoBehaviour:
   ataque: {fileID: 11400000, guid: d39a6a4f4498b144eb99b4d633fca21b, type: 2}
   dispararSinAnimator: 0
   puedeAtacar: 1
+  prefabVida: {fileID: 1758116811068251401, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
 --- !u!114 &7325573772557519336
 MonoBehaviour:
   m_ObjectHideFlags: 0

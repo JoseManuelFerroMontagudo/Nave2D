@@ -5807,11 +5807,15 @@ MonoBehaviour:
   - grupos:
     - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
       cantidad: 2
+    - prefab: {fileID: 2709350137340775055, guid: fb0923063980c634f96a3189d2b8bb66, type: 3}
+      cantidad: 2
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 2
   - grupos:
-    - prefab: {fileID: 9201073477314361554, guid: 891b67a377513e44fa7be47e9d406954, type: 3}
+    - prefab: {fileID: 890866767614060903, guid: f527956789a2a5546840596e90461394, type: 3}
+      cantidad: 3
+    - prefab: {fileID: 8445268703831702054, guid: 17efb2d6ca002b144ab329955352290c, type: 3}
       cantidad: 3
     retardoAntes: 2
     retardoDespues: 2
@@ -5829,6 +5833,7 @@ MonoBehaviour:
   OnJefeDerrotado:
     m_PersistentCalls:
       m_Calls: []
+  numeroNivel: 0
   distanciaMinimaJugador: 14
   separacionMinimaEnemigos: 10
   distanciaMinimaBorde: 14
