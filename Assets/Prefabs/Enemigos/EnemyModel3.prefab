@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyModel3
       objectReference: {fileID: 0}
+    - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: prefabVida
+      value: 
+      objectReference: {fileID: 4751473575324678115, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
