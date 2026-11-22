@@ -19,6 +19,12 @@ public class Enemigo : MonoBehaviour
     [Tooltip("Si es false, no apunta, no dispara y no procesa el ataque.")]
     public bool puedeAtacar = true;
 
+
+    [Header("Drop al morir")]
+    public GameObject prefabVida;
+
+    bool dropRealizado = false;
+
     protected Animator anim;
     protected Transform jugador;
 
@@ -78,6 +84,7 @@ public class Enemigo : MonoBehaviour
         if (!puedeAtacar) return;
         puedeAtacar = false;
         runner.SetAtaque(null); // cancela ráfaga + destruye permanente en curso
+        SoltarVida();
     }
 
     public virtual void ReactivarAtaque()
@@ -87,8 +94,17 @@ public class Enemigo : MonoBehaviour
         if (ataque != null) runner.SetAtaque(ataque);
     }
 
-    // ───── Disparos externos (respetan puedeAtacar) ─────
 
+
+    // ───── Disparos externos (respetan puedeAtacar) ─────
+    protected virtual void SoltarVida()
+    {
+        if (dropRealizado) return;
+        dropRealizado = true;
+
+        if (prefabVida == null) return;
+        Instantiate(prefabVida, transform.position, Quaternion.identity);
+    }
     public void EventoDisparo() { if (puedeAtacar) runner.TryFire(true); }
     public void EventoFinAtaque() { }
     public virtual void Disparar() { if (puedeAtacar) runner.TryFire(); }
