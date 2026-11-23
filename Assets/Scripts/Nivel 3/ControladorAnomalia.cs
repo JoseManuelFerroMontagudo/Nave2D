@@ -9,11 +9,13 @@ public class ControladorAnomalia : MonoBehaviour
     public float tiempoParaTransicion = 30f;
     public float tiempoAlarmaInestable = 10f;
 
-    [Header("Sistema de Láseres / Ráfagas")]
-    public LaserAnomalia scriptLaser;
-    public float cooldownLaserBase = 5f;    // Cada cuántos segundos spawnea un láser
-    public float cooldownLaserFrenesi = 2.5f; // Más ráfagas en los últimos 10 segundos
-    private float timerLaser;
+    [Header("Sistemas de Láser Coordinados")]
+    public LaserAnomalia laserAnomalia;
+    public MaquinaLasers maquinaLasers;
+    public float pausaEntreAtaquesLaser = 2.0f; // Tiempo de respiro entre cada ataque (en frenesí baja a la mitad)
+
+    private float timerTurnoLaser = 0f;
+    private bool turnoMaquinaLasers = false;
 
     [Header("Efectos de Inestabilidad (Shake & Pulse)")]
     public float intensidadTemblor = 0.15f;
@@ -21,9 +23,9 @@ public class ControladorAnomalia : MonoBehaviour
     public float escalaPulsacion = 0.2f;
 
     [Header("Radio de Absorción y Muerte")]
-    [Tooltip("Ajusta este radio en el Editor (circulo rojo) para que coincida con el borde del anillo de fuego")]
-    public float radioMuerte = 7.5f; // Ampliado para cubrir el anillo rojo
-    public float velocidadSuccionMuerte = 15f; // Qué tan rápido traga a la nave al entrar
+    [Tooltip("Ajusta este radio en el Editor (círculo rojo) para que coincida con el borde del anillo de fuego")]
+    public float radioMuerte = 7.5f;
+    public float velocidadSuccionMuerte = 15f;
 
     [Header("Referencias de Sprites")]
     public GameObject spriteAgujeroNegro;
@@ -50,6 +52,7 @@ public class ControladorAnomalia : MonoBehaviour
     private bool cambiandoDeFase = false;
     private bool jugadorAbsorbido = false;
     private bool frenesiActivado = false;
+    private int cicloDeCombate = 1;
 
     private void Start()
     {
@@ -104,6 +107,7 @@ public class ControladorAnomalia : MonoBehaviour
         if (tiempoRestante <= 0f)
         {
             IniciarCambioAAgujeroBlanco();
+            return;
         }
 
         // Detección de entrada al Anillo de Fuego / Radio de Muerte
@@ -115,16 +119,51 @@ public class ControladorAnomalia : MonoBehaviour
                 AbsorberYMatarJugador();
             }
         }
-        // Añadir dentro de Update():
-        if (jugador != null && scriptLaser != null && !scriptLaser.EstaDisparando())
-        {
-            timerLaser += Time.deltaTime;
-            float cooldownActual = frenesiActivado ? cooldownLaserFrenesi : cooldownLaserBase;
 
-            if (timerLaser >= cooldownActual)
+        // Ejecutar la secuencia coordinada entre LaserAnomalia (escalado) y MaquinaLasers
+        GestionarAtaquesLaserCoordinados();
+    }
+
+    private void GestionarAtaquesLaserCoordinados()
+    {
+        if (jugador == null || laserAnomalia == null || maquinaLasers == null) return;
+
+        if (laserAnomalia.EstaDisparando() || maquinaLasers.EstaActiva())
+        {
+            return;
+        }
+
+        float pausaActual = frenesiActivado ? pausaEntreAtaquesLaser * 0.55f : pausaEntreAtaquesLaser;
+        timerTurnoLaser += Time.deltaTime;
+
+        if (timerTurnoLaser >= pausaActual)
+        {
+            timerTurnoLaser = 0f;
+
+            if (!turnoMaquinaLasers)
             {
-                timerLaser = 0f;
-                scriptLaser.DispararAlJugador(jugador);
+                laserAnomalia.DispararAlJugador(jugador);
+
+                // Cada ciclo tiene 4 niveles de escalado antes de ceder el turno a la Máquina Giratoria
+                if (laserAnomalia.nivelAtaqueActual >= 4)
+                {
+                    turnoMaquinaLasers = true;
+                }
+            }
+            else
+            {
+                // Si estamos terminando el Ciclo 2, potenciamos la Máquina de Láseres (6 rayos más rápidos)
+                if (cicloDeCombate == 2)
+                {
+                    maquinaLasers.ConfigurarDificultad(20, 22f);
+                }
+
+                maquinaLasers.ActivarMaquina();
+
+                // Avanzamos al siguiente ciclo (1 -> 2 Zig-Zag -> 3 Triangulación con Mini-Agujeros)
+                cicloDeCombate++;
+                laserAnomalia.AvanzarDeCiclo(cicloDeCombate, jugador);
+                turnoMaquinaLasers = false;
             }
         }
     }
@@ -162,7 +201,6 @@ public class ControladorAnomalia : MonoBehaviour
         if (jugadorAbsorbido) return;
         jugadorAbsorbido = true;
 
-        // Desactivar controles físicos de la nave si los tiene para que no pueda escapar
         MonoBehaviour controlNave = jugador.GetComponent<MonoBehaviour>();
         if (controlNave != null) controlNave.enabled = false;
 
@@ -178,10 +216,9 @@ public class ControladorAnomalia : MonoBehaviour
         Vector3 escalaInicialJugador = jugador.localScale;
         Vector3 posInicialJugador = jugador.position;
 
-        // Anima a la nave encologiéndola y llevándola violentamente al centro
         while (t < 1f)
         {
-            t += Time.deltaTime * 2.5f; // Dura menos de medio segundo el arrastre
+            t += Time.deltaTime * 2.5f;
             jugador.position = Vector3.Lerp(posInicialJugador, transform.position, t);
             jugador.localScale = Vector3.Lerp(escalaInicialJugador, Vector3.zero, t);
             yield return null;
@@ -205,8 +242,13 @@ public class ControladorAnomalia : MonoBehaviour
     private IEnumerator RutinaTransicionCegadora()
     {
         cambiandoDeFase = true;
-        float t = 0f;
 
+        // Detener cualquier láser activo durante la transición al Agujero Blanco
+        if (maquinaLasers != null) maquinaLasers.DetenerMaquina();
+
+        if (laserAnomalia != null) laserAnomalia.LimpiarMiniAgujeros();
+
+        float t = 0f;
         while (t < 1f)
         {
             t += Time.deltaTime * velocidadImplosion;

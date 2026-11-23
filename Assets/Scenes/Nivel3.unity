@@ -264,16 +264,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a50c561c16132408448151d76e7767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorAnomalia
-  tiempoParaTransicion: 20
+  tiempoParaTransicion: 52
   tiempoAlarmaInestable: 10
-  scriptLaser: {fileID: 726250899}
-  cooldownLaserBase: 4
-  cooldownLaserFrenesi: 2
+  laserAnomalia: {fileID: 726250899}
+  maquinaLasers: {fileID: 409678349}
+  pausaEntreAtaquesLaser: 2
   intensidadTemblor: 0.1
   velocidadPulsacion: 19
   escalaPulsacion: 0.1
-  radioMuerte: 13.5
-  velocidadSuccionMuerte: 1.5
+  radioMuerte: 14
+  velocidadSuccionMuerte: 1.8
   spriteAgujeroNegro: {fileID: 703334942}
   spriteAgujeroBlanco: {fileID: 699765850}
   imagenFlashUI: {fileID: 759091204}
@@ -300,6 +300,7 @@ Transform:
   - {fileID: 1178978994}
   - {fileID: 1917948374}
   - {fileID: 726250897}
+  - {fileID: 409678350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &152265354
@@ -5518,6 +5519,63 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &409678348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409678350}
+  - component: {fileID: 409678349}
+  m_Layer: 0
+  m_Name: MaquinaLasers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &409678349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409678348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52982b52ef57fa4d983ad8121ebef96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaquinaLasers
+  cantidadRayos: 12
+  longitudRayos: 60
+  velocidadRotacion: 22
+  tiempoAdvertencia: 1
+  duracionDisparo: 5
+  materialLaser: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
+  sortingLayerName: Elementos_Juego
+  grosorAdvertencia: 3
+  grosorDisparo: 4
+  colorAdvertencia: {r: 1, g: 0.9, b: 0.2, a: 0.45}
+  colorDisparo: {r: 0.2, g: 0.9, b: 1, a: 1}
+  danoPorImpacto: 10
+  intervaloEntreGolpes: 0.4
+--- !u!4 &409678350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409678348}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 152265353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419989499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6486,14 +6544,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026220b4fb11d204b9091aaa98262b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserAnomalia
-  distanciaMax: 58
-  tiempoAdvertencia: 1
+  distanciaMax: 60
+  tiempoAdvertencia: 0.8
   duracionDisparo: 0.4
-  danoPorSegundo: 25
-  grosorAdvertencia: 0.15
-  grosorDisparo: 1.2
-  colorAdvertencia: {r: 1, g: 0.9, b: 0.1, a: 0.4}
-  colorDisparo: {r: 1, g: 0.1, b: 0.1, a: 1}
+  danoPorImpacto: 25
+  materialAdvertencia: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
+  materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
+  grosorAdvertencia: 2
+  grosorDisparo: 3
+  colorAdvertencia: {r: 1, g: 0.017119544, b: 0, a: 0.4}
+  colorDisparo: {r: 0, g: 0.056978226, b: 1, a: 1}
+  nivelAtaqueActual: 1
+  cicloActual: 1
+  anguloAbanico: 18
+  segmentosZigZag: 10
+  amplitudZigZag: 1.5
+  prefabMiniAgujero: {fileID: 7698369970264882517, guid: b4665665a1ffba5438adb458da397b8d, type: 3}
+  distanciaOrbitaHijos: 18
+  anguloFlancosHijos: 48
 --- !u!1 &759091202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12014,7 +12082,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95ebf50189f880e4aa17c4fdba9007aa, type: 2}
+  - {fileID: 2100000, guid: 9803600998c48b140b2f7038d0fc2eb1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12056,7 +12124,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.000002, y: 0, z: 52.85146}
-  m_LocalScale: {x: 213.43413, y: 213.43413, z: 213.43413}
+  m_LocalScale: {x: 193.81526, y: 193.81526, z: 193.81526}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -12572,7 +12640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerAnomalia
   prefabAsteroide: {fileID: 3955418798240587005, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
   radioSpawn: 58
-  intervaloSpawn: 0.2
+  intervaloSpawn: 0.5
   velocidadSuccion: 13
   anguloAbanico: 95
   intervaloFrenesi: 0.15

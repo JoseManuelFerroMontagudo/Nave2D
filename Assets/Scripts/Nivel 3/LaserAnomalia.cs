@@ -1,30 +1,59 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserAnomalia : MonoBehaviour
 {
-    [Header("Configuración del Láser")]
+    [Header("Configuración General")]
     public float distanciaMax = 30f;
-    public float tiempoAdvertencia = 1.5f; // Tiempo que tarda en avisar
-    public float duracionDisparo = 0.5f;     // Tiempo que dura el rayo cargado
-    public float danoPorSegundo = 25f;
+    public float tiempoAdvertencia = 1.25f;
+    public float duracionDisparo = 0.5f;
+    public int danoPorImpacto = 25;
 
-    [Header("Grosor del Rayo")]
-    public float grosorAdvertencia = 0.15f;
-    public float grosorDisparo = 1.2f;
+    [Header("Materiales / Diseño")]
+    public Material materialAdvertencia;
+    public Material materialDisparo;
+    public float grosorAdvertencia = 0.14f;
+    public float grosorDisparo = 1.0f;
+    public Color colorAdvertencia = new Color(1f, 0.9f, 0.1f, 0.45f);
+    public Color colorDisparo = new Color(1f, 0.1f, 0.1f, 1f);
+    public string sortingLayerName = "Elementos_Juego";
 
-    [Header("Colores")]
-    public Color colorAdvertencia = new Color(1f, 0.9f, 0.1f, 0.4f); // Amarillo translúcido
-    public Color colorDisparo = new Color(1f, 0.1f, 0.1f, 1f);      // Rojo intenso sólido
+    [Header("Progresión y Ciclos")]
+    public int nivelAtaqueActual = 1;
+    public int cicloActual = 1; // 1 = Recto, 2 = Zig-Zag, 3 = Triangulación con 2 Mini-Agujeros
+    public float anguloAbanico = 18f;
 
-    private LineRenderer lineRenderer;
+    [Header("Configuración Zig-Zag (Ciclo 2)")]
+    public int segmentosZigZag = 10;
+    public float amplitudZigZag = 1.1f;
+
+    [Header("Configuración Mini-Agujeros (Ciclo 3)")]
+    public GameObject prefabMiniAgujero;
+    public float distanciaOrbitaHijos = 5.5f;
+    public float anguloFlancosHijos = 48f; // Posición a los costados del jefe
+
+    private List<LineRenderer> poolRayos = new List<LineRenderer>();
+    private List<GameObject> hijosActivos = new List<GameObject>();
     private Transform jugador;
     private bool disparando = false;
 
-    private void Awake()
+    private LineRenderer ObtenerOcrearRayo(int indice)
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.enabled = false;
+        while (poolRayos.Count <= indice)
+        {
+            GameObject obj = new GameObject("RayoAnomalia_" + poolRayos.Count);
+            obj.transform.SetParent(transform);
+            obj.transform.localPosition = Vector3.zero;
+
+            LineRenderer lr = obj.AddComponent<LineRenderer>();
+            lr.useWorldSpace = true;
+            lr.sortingLayerName = sortingLayerName;
+            lr.textureMode = LineTextureMode.Tile;
+            lr.enabled = false;
+            poolRayos.Add(lr);
+        }
+        return poolRayos[indice];
     }
 
     public void DispararAlJugador(Transform objetivo)
@@ -32,84 +61,262 @@ public class LaserAnomalia : MonoBehaviour
         if (!disparando && objetivo != null)
         {
             jugador = objetivo;
-            StartCoroutine(RutinaDisparoLaser());
+            StartCoroutine(RutinaDisparoEscalado());
         }
     }
 
-    private IEnumerator RutinaDisparoLaser()
+    public void AvanzarDeCiclo(int nuevoCiclo, Transform objetivo)
+    {
+        nivelAtaqueActual = 1;
+        cicloActual = nuevoCiclo;
+
+        // Si entramos al Ciclo 3, invocamos los 2 Mini-Agujeros Negros a los costados
+        if (cicloActual >= 3 && hijosActivos.Count == 0 && prefabMiniAgujero != null && objetivo != null)
+        {
+            InvocarMiniAgujeros(objetivo);
+        }
+    }
+
+    private void InvocarMiniAgujeros(Transform objetivo)
+    {
+        float[] angulos = { -anguloFlancosHijos, anguloFlancosHijos };
+        foreach (float ang in angulos)
+        {
+            GameObject hijo = Instantiate(prefabMiniAgujero, transform.position, Quaternion.identity);
+            MiniAgujeroSatelite sat = hijo.AddComponent<MiniAgujeroSatelite>();
+            sat.Inicializar(transform, objetivo, ang, distanciaOrbitaHijos);
+            hijosActivos.Add(hijo);
+        }
+    }
+
+    public void LimpiarMiniAgujeros()
+    {
+        foreach (var hijo in hijosActivos)
+        {
+            if (hijo != null) Destroy(hijo);
+        }
+        hijosActivos.Clear();
+    }
+
+    private IEnumerator RutinaDisparoEscalado()
     {
         disparando = true;
-        lineRenderer.enabled = true;
+        Vector3 origenCentro = transform.position;
+        Vector3 posJugador = (jugador != null) ? jugador.position : (origenCentro + Vector3.up * 8f);
+        Vector3 dirBase = (posJugador - origenCentro).normalized;
+        if (dirBase == Vector3.zero) dirBase = Vector3.up;
 
-        // 1. FASE DE ADVERTENCIA (Sigue al jugador)
-        float t = 0f;
-        lineRenderer.startWidth = grosorAdvertencia;
-        lineRenderer.endWidth = grosorAdvertencia;
-        lineRenderer.startColor = colorAdvertencia;
-        lineRenderer.endColor = colorAdvertencia;
+        List<List<Vector3>> trayectoriasPuntos = new List<List<Vector3>>();
 
-        Vector3 direccionFija = Vector3.up;
-
-        while (t < tiempoAdvertencia)
+        if (cicloActual < 3)
         {
-            t += Time.deltaTime;
-
-            if (jugador != null)
+            // CICLO 1 (Recto) y CICLO 2 (Zig-Zag): Disparan desde el Agujero Negro central
+            bool usarZigZag = (cicloActual == 2);
+            List<Vector3> direcciones = CalcularDireccionesPorNivel(dirBase, nivelAtaqueActual);
+            foreach (Vector3 dir in direcciones)
             {
-                // Guarda la dirección hacia donde estaba el jugador
-                direccionFija = (jugador.position - transform.position).normalized;
+                trayectoriasPuntos.Add(GenerarPuntosRayo(origenCentro, dir, usarZigZag));
             }
-
-            Vector3 origen = transform.position;
-            Vector3 destino = origen + (direccionFija * distanciaMax);
-
-            lineRenderer.SetPosition(0, origen);
-            lineRenderer.SetPosition(1, destino);
-
-            yield return null;
+        }
+        else
+        {
+            // CICLO 3: Triangulación real desde el Jefe + los 2 Mini-Agujeros Negros
+            trayectoriasPuntos = GenerarPatronesTriangulados(origenCentro, posJugador, dirBase, nivelAtaqueActual);
         }
 
-        // 2. FASE DE DISPARO REAL (Rayos fijos en esa dirección)
-        // 2. FASE DE DISPARO REAL (Rayo cargado)
-        lineRenderer.startWidth = grosorDisparo;
-        lineRenderer.endWidth = grosorDisparo;
-        lineRenderer.startColor = colorDisparo;
-        lineRenderer.endColor = colorDisparo;
+        // FASE 1: ADVERTENCIA
+        for (int i = 0; i < trayectoriasPuntos.Count; i++)
+        {
+            LineRenderer lr = ObtenerOcrearRayo(i);
+            lr.enabled = true;
+            if (materialAdvertencia != null) lr.material = materialAdvertencia;
+            lr.startWidth = grosorAdvertencia;
+            lr.endWidth = grosorAdvertencia;
+            lr.startColor = colorAdvertencia;
+            lr.endColor = colorAdvertencia;
+
+            lr.positionCount = trayectoriasPuntos[i].Count;
+            lr.SetPositions(trayectoriasPuntos[i].ToArray());
+        }
+
+        yield return new WaitForSeconds(tiempoAdvertencia);
+
+        // FASE 2: DISPARO REAL
+        for (int i = 0; i < trayectoriasPuntos.Count; i++)
+        {
+            LineRenderer lr = poolRayos[i];
+            if (materialDisparo != null) lr.material = materialDisparo;
+            lr.startWidth = grosorDisparo;
+            lr.endWidth = grosorDisparo;
+            lr.startColor = colorDisparo;
+            lr.endColor = colorDisparo;
+        }
 
         float tiempoDisparo = 0f;
-        Vector3 puntoOrigen = transform.position;
-        Vector3 puntoDestino = puntoOrigen + (direccionFija * distanciaMax);
-
-        // Controlamos para que el daño no se aplique a cada frame flotante, sino en enteros
-        float danoAcumulado = 0f;
+        bool yaHizoDano = false;
 
         while (tiempoDisparo < duracionDisparo)
         {
             tiempoDisparo += Time.deltaTime;
 
-            // Detección de colisión usando Raycast2D
-            RaycastHit2D hit = Physics2D.Raycast(puntoOrigen, direccionFija, distanciaMax);
-            if (hit.collider != null && hit.collider.CompareTag("Player"))
+            if (!yaHizoDano)
             {
-                danoAcumulado += danoPorSegundo * Time.deltaTime;
-
-                // Convertimos el daño flotante acumulado a un entero válido
-                int danoEntero = Mathf.FloorToInt(danoAcumulado);
-
-                if (danoEntero >= 1)
+                foreach (List<Vector3> puntos in trayectoriasPuntos)
                 {
-                    // Llama exactamente a tu método RecibirDaño(int cantidad)
-                    hit.collider.SendMessage("RecibirDaño", danoEntero, SendMessageOptions.DontRequireReceiver);
-                    danoAcumulado -= danoEntero; // Resta la parte entera ya enviada
+                    for (int p = 0; p < puntos.Count - 1; p++)
+                    {
+                        Vector3 inicioSeg = puntos[p];
+                        Vector3 finSeg = puntos[p + 1];
+                        Vector3 dirSeg = (finSeg - inicioSeg).normalized;
+                        float distSeg = Vector3.Distance(inicioSeg, finSeg);
+
+                        RaycastHit2D[] impactos = Physics2D.CircleCastAll(inicioSeg, grosorDisparo * 0.36f, dirSeg, distSeg);
+                        foreach (RaycastHit2D hit in impactos)
+                        {
+                            if (hit.collider != null && (hit.collider.CompareTag("Player") || hit.transform.root.CompareTag("Player")))
+                            {
+                                hit.transform.root.BroadcastMessage("RecibirDaño", danoPorImpacto, SendMessageOptions.DontRequireReceiver);
+                                yaHizoDano = true;
+                                break;
+                            }
+                        }
+                        if (yaHizoDano) break;
+                    }
+                    if (yaHizoDano) break;
                 }
             }
 
             yield return null;
         }
 
-        // 3. APAGADO
-        lineRenderer.enabled = false;
+        foreach (var lr in poolRayos)
+        {
+            lr.enabled = false;
+        }
+
+        nivelAtaqueActual++;
         disparando = false;
+    }
+
+    private List<List<Vector3>> GenerarPatronesTriangulados(Vector3 origenCentro, Vector3 posJugador, Vector3 dirBase, int nivel)
+    {
+        List<List<Vector3>> rayos = new List<List<Vector3>>();
+
+        // Obtener referencias seguras a los 2 mini-agujeros
+        Vector3 origenIzq = (hijosActivos.Count > 0 && hijosActivos[0] != null) ? hijosActivos[0].transform.position : origenCentro;
+        Vector3 origenDer = (hijosActivos.Count > 1 && hijosActivos[1] != null) ? hijosActivos[1].transform.position : origenCentro;
+
+        Vector3 dirIzqAlJugador = (posJugador - origenIzq).normalized;
+        Vector3 dirDerAlJugador = (posJugador - origenDer).normalized;
+
+        if (nivel == 1)
+        {
+            // NIVEL 1: "Tridente Convergente" (Los 3 agujeros cruzan sus rayos justo en la posición del jugador)
+            rayos.Add(GenerarPuntosRayo(origenCentro, dirBase, false));
+            rayos.Add(GenerarPuntosRayo(origenIzq, dirIzqAlJugador, false));
+            rayos.Add(GenerarPuntosRayo(origenDer, dirDerAlJugador, false));
+        }
+        else if (nivel == 2)
+        {
+            // NIVEL 2: "Tenaza Lateral" (El centro cierra los flancos en V amplia, los hijos disparan paralelos al centro)
+            rayos.Add(GenerarPuntosRayo(origenCentro, Quaternion.Euler(0, 0, -22f) * dirBase, false));
+            rayos.Add(GenerarPuntosRayo(origenCentro, Quaternion.Euler(0, 0, 22f) * dirBase, false));
+
+            // Los satélites disparan ligeramente desplazados hacia el interior para formar un pasillo estrecho
+            rayos.Add(GenerarPuntosRayo(origenIzq, Quaternion.Euler(0, 0, 6f) * dirIzqAlJugador, false));
+            rayos.Add(GenerarPuntosRayo(origenDer, Quaternion.Euler(0, 0, -6f) * dirDerAlJugador, false));
+        }
+        else if (nivel == 3)
+        {
+            // NIVEL 3: "Telaraña de Rombos" (3 rayos centrales + tijeras cruzadas desde los satélites)
+            rayos.Add(GenerarPuntosRayo(origenCentro, Quaternion.Euler(0, 0, -18f) * dirBase, false));
+            rayos.Add(GenerarPuntosRayo(origenCentro, dirBase, false));
+            rayos.Add(GenerarPuntosRayo(origenCentro, Quaternion.Euler(0, 0, 18f) * dirBase, false));
+
+            // Tijera desde el satélite izquierdo
+            rayos.Add(GenerarPuntosRayo(origenIzq, Quaternion.Euler(0, 0, -14f) * dirIzqAlJugador, false));
+            rayos.Add(GenerarPuntosRayo(origenIzq, Quaternion.Euler(0, 0, 14f) * dirIzqAlJugador, false));
+
+            // Tijera desde el satélite derecho
+            rayos.Add(GenerarPuntosRayo(origenDer, Quaternion.Euler(0, 0, -14f) * dirDerAlJugador, false));
+            rayos.Add(GenerarPuntosRayo(origenDer, Quaternion.Euler(0, 0, 14f) * dirDerAlJugador, false));
+        }
+        else
+        {
+            // NIVEL 4: "Juicio Triangular" (3 rayos por cada uno de los 3 agujeros = 9 rayos en malla total)
+            float[] abanicoTriple = { -16f, 0f, 16f };
+            foreach (float ang in abanicoTriple)
+            {
+                rayos.Add(GenerarPuntosRayo(origenCentro, Quaternion.Euler(0, 0, ang) * dirBase, false));
+                rayos.Add(GenerarPuntosRayo(origenIzq, Quaternion.Euler(0, 0, ang) * dirIzqAlJugador, false));
+                rayos.Add(GenerarPuntosRayo(origenDer, Quaternion.Euler(0, 0, ang) * dirDerAlJugador, false));
+            }
+        }
+
+        return rayos;
+    }
+
+    private List<Vector3> GenerarPuntosRayo(Vector3 origen, Vector3 direccion, bool usarZigZag)
+    {
+        List<Vector3> puntos = new List<Vector3> { origen };
+
+        if (!usarZigZag)
+        {
+            puntos.Add(origen + direccion * distanciaMax);
+        }
+        else
+        {
+            Vector3 perpendicular = new Vector3(-direccion.y, direccion.x, 0f);
+            float pasoDistancia = distanciaMax / segmentosZigZag;
+
+            for (int i = 1; i < segmentosZigZag; i++)
+            {
+                float signo = (i % 2 == 0) ? 1f : -1f;
+                Vector3 puntoBase = origen + (direccion * (pasoDistancia * i));
+                puntos.Add(puntoBase + (perpendicular * (amplitudZigZag * signo)));
+            }
+            puntos.Add(origen + direccion * distanciaMax);
+        }
+
+        return puntos;
+    }
+
+    private List<Vector3> CalcularDireccionesPorNivel(Vector3 dirBase, int nivel)
+    {
+        List<Vector3> dirs = new List<Vector3>();
+
+        if (nivel == 1)
+        {
+            // Nivel 1: 2 láseres en V estrecha
+            dirs.Add(Quaternion.Euler(0, 0, -anguloAbanico * 0.5f) * dirBase);
+            dirs.Add(Quaternion.Euler(0, 0, anguloAbanico * 0.5f) * dirBase);
+        }
+        else if (nivel == 2)
+        {
+            // Nivel 2: 3 láseres (uno central directo al jugador + dos flancos)
+            dirs.Add(Quaternion.Euler(0, 0, -anguloAbanico) * dirBase);
+            dirs.Add(dirBase);
+            dirs.Add(Quaternion.Euler(0, 0, anguloAbanico) * dirBase);
+        }
+        else if (nivel == 3)
+        {
+            // Nivel 3: 4 láseres en abanico abierto
+            dirs.Add(Quaternion.Euler(0, 0, -anguloAbanico * 1.5f) * dirBase);
+            dirs.Add(Quaternion.Euler(0, 0, -anguloAbanico * 0.5f) * dirBase);
+            dirs.Add(Quaternion.Euler(0, 0, anguloAbanico * 0.5f) * dirBase);
+            dirs.Add(Quaternion.Euler(0, 0, anguloAbanico * 1.5f) * dirBase);
+        }
+        else
+        {
+            // Nivel 4: Jaula Frontal de 5 láseres
+            float separacionJaula = 16f;
+            for (int i = -2; i <= 2; i++)
+            {
+                dirs.Add(Quaternion.Euler(0, 0, i * separacionJaula) * dirBase);
+            }
+        }
+
+        return dirs;
     }
 
     public bool EstaDisparando()

@@ -65,6 +65,7 @@ public class Stats : MonoBehaviour
     // ---------------- VIDA ----------------
     public void RecibirDaño(int cantidad)
     {
+        Debug.Log("¡Me pegaron! Daño recibido: " + cantidad + " | Vida restante: " + (vida - cantidad));
         if (cantidad <= 0) return;
         vida = Mathf.Max(0, vida - cantidad);
 
