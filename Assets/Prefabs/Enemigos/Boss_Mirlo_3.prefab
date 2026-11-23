@@ -58,6 +58,7 @@ MonoBehaviour:
   ataque: {fileID: 0}
   dispararSinAnimator: 0
   puedeAtacar: 1
+  tablaDrops: {fileID: 0}
   patronesPorFase:
   - {fileID: 11400000, guid: fbdeb4b5037f8294db7771d82cc8a8ec, type: 2}
 --- !u!114 &1052827122830440255

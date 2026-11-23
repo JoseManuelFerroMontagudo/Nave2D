@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a439db572af1f4cac72900da5da549, type: 3}
+  m_Name: New Ataque Laser
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueLaser
+  cadencia: 0.2
+  costoCalor: 0
+  costoEnergia: 0
+  costoMunicion: 0
+  nombreVisible: Laser
+  icono: {fileID: -2967136927400764835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: TEST
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 1
+  modo: 1
+  tagRayo: Attack2
+  cantidadRayos: 1
+  anguloAbanico: 18
+  longitud: 30
+  sortingLayerName: Elementos_Juego
+  pausaIdle: 2
+  tiempoAdvertencia: 5
+  duracionDisparo: 0.5
+  rotacionAdvertencia: 0
+  rotacionDisparo: 0
+  colorAdvertencia: {r: 0.33784264, g: 0.92280334, b: 0.9811321, a: 0.6117647}
+  grosorAdvertencia: 2
+  colorDisparo: {r: 1, g: 0.1, b: 0.1, a: 1}
+  grosorDisparo: 6
+  materialAdvertencia: {fileID: 2100000, guid: 9288b39eaed46cb48831c323a5fe4b49, type: 2}
+  materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
+  zigzag: 0
+  segmentosZigZag: 10
+  amplitudZigZag: 1.1
+  danoMinimo: 0
+  danoMaximo: 200
+  danoEnAdvertencia: 0
