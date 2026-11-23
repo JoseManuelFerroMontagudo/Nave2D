@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Enemigo : MonoBehaviour
 {
@@ -12,16 +13,13 @@ public class Enemigo : MonoBehaviour
 
     [Header("Ataque (SO compartido)")]
     public AtaqueBase ataque;
-    [Tooltip("Si NO hay Animator en el padre, dispara con la cadencia propia del ataque.")]
     public bool dispararSinAnimator = true;
 
     [Header("Estado")]
-    [Tooltip("Si es false, no apunta, no dispara y no procesa el ataque.")]
     public bool puedeAtacar = true;
 
-
     [Header("Drop al morir")]
-    public GameObject prefabVida;
+    public TablaDrops tablaDrops;
 
     bool dropRealizado = false;
 
@@ -48,7 +46,6 @@ public class Enemigo : MonoBehaviour
         runner.SetAtaque(ataque);
         ataqueAnterior = ataque;
 
-        // Hardpoint: si esta GO tiene VidaPersonaje, al morir se desactiva el ataque
         vida = GetComponent<VidaPersonaje>();
         if (vida != null) vida.OnMuere.AddListener(DesactivarAtaque);
     }
@@ -83,8 +80,8 @@ public class Enemigo : MonoBehaviour
     {
         if (!puedeAtacar) return;
         puedeAtacar = false;
-        runner.SetAtaque(null); // cancela ráfaga + destruye permanente en curso
-        SoltarVida();
+        runner.SetAtaque(null);
+        SoltarDrops();
     }
 
     public virtual void ReactivarAtaque()
@@ -94,17 +91,65 @@ public class Enemigo : MonoBehaviour
         if (ataque != null) runner.SetAtaque(ataque);
     }
 
+    // ───── Drop ─────
 
-
-    // ───── Disparos externos (respetan puedeAtacar) ─────
-    protected virtual void SoltarVida()
+    protected virtual void SoltarDrops()
     {
         if (dropRealizado) return;
         dropRealizado = true;
 
-        if (prefabVida == null) return;
-        Instantiate(prefabVida, transform.position, Quaternion.identity);
+        if (tablaDrops == null || tablaDrops.entradas == null) return;
+
+        // 1) Armar lista: min garantizado (100%) + resto al 50%
+        var lista = new List<GameObject>();
+        foreach (var e in tablaDrops.entradas)
+        {
+            if (e == null || e.prefab == null) continue;
+
+            int min = Mathf.Max(0, e.cantidadMin);
+            int max = Mathf.Max(min, e.cantidadMax);
+
+            for (int i = 0; i < min; i++) lista.Add(e.prefab);
+            for (int i = min; i < max; i++)
+                if (Random.value < 0.5f) lista.Add(e.prefab);
+        }
+
+        int n = lista.Count;
+        if (n == 0) return;
+
+        // 2) Ángulos equiespaciados barajados => direcciones únicas y aleatorias
+        float[] angulos = new float[n];
+        float paso = 360f / n;
+        float offset = Random.Range(0f, 360f);
+
+        for (int i = 0; i < n; i++) angulos[i] = offset + paso * i;
+
+        // Fisher-Yates
+        for (int i = n - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (angulos[i], angulos[j]) = (angulos[j], angulos[i]);
+        }
+
+        // 3) Instanciar en la posición exacta del enemigo y lanzar
+        Vector3 origen = transform.position;
+
+        for (int i = 0; i < n; i++)
+        {
+            float rad = angulos[i] * Mathf.Deg2Rad;
+            Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+
+            GameObject go = Instantiate(lista[i], origen, Quaternion.identity);
+
+            if (go.TryGetComponent(out Rigidbody2D rbItem))
+            {
+                float fuerza = Random.Range(tablaDrops.fuerzaMin, tablaDrops.fuerzaMax);
+                rbItem.linearVelocity = dir * fuerza; // Unity 2022-: rbItem.velocity
+            }
+        }
     }
+
+    // ───── Disparos externos ─────
     public void EventoDisparo() { if (puedeAtacar) runner.TryFire(true); }
     public void EventoFinAtaque() { }
     public virtual void Disparar() { if (puedeAtacar) runner.TryFire(); }
