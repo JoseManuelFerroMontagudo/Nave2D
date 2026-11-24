@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a439db572af1f4cac72900da5da549, type: 3}
-  m_Name: New Ataque Laser
+  m_Name: AtaqueLaser
   m_EditorClassIdentifier: Assembly-CSharp::AtaqueLaser
-  cadencia: 0.2
+  cadencia: 25
   costoCalor: 0
-  costoEnergia: 0
+  costoEnergia: 1
   costoMunicion: 0
   nombreVisible: Laser
   icono: {fileID: -2967136927400764835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
@@ -22,26 +22,28 @@ MonoBehaviour:
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 1
-  modo: 1
   tagRayo: Attack2
-  cantidadRayos: 1
-  anguloAbanico: 18
-  longitud: 30
+  longitud: 25
   sortingLayerName: Elementos_Juego
+  textureMode: 0
+  invertirDireccionMaterial: 1
+  autoCiclico: 1
   pausaIdle: 2
-  tiempoAdvertencia: 5
+  tiempoAdvertencia: 2
   duracionDisparo: 0.5
+  anguloInicial: 0
+  barridoTotal: 0
   rotacionAdvertencia: 0
   rotacionDisparo: 0
-  colorAdvertencia: {r: 0.33784264, g: 0.92280334, b: 0.9811321, a: 0.6117647}
-  grosorAdvertencia: 2
-  colorDisparo: {r: 1, g: 0.1, b: 0.1, a: 1}
-  grosorDisparo: 6
-  materialAdvertencia: {fileID: 2100000, guid: 9288b39eaed46cb48831c323a5fe4b49, type: 2}
+  colorAdvertencia: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+  grosorAdvertencia: 0
+  colorDisparo: {r: 0, g: 0.3862859, b: 1, a: 1}
+  grosorDisparo: 5
+  materialAdvertencia: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   zigzag: 0
   segmentosZigZag: 10
   amplitudZigZag: 1.1
   danoMinimo: 0
-  danoMaximo: 200
+  danoMaximo: 300
   danoEnAdvertencia: 0

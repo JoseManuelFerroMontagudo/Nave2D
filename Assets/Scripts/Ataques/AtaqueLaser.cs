@@ -3,28 +3,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ataques/Laser Configurable")]
 public class AtaqueLaser : AtaqueBase
 {
-    public enum ModoLaser { AutoCiclico, CargaSoltar, Instantaneo }
-
-    [Header("Modo")]
-    public ModoLaser modo = ModoLaser.AutoCiclico;
-
     [Header("Tag de impacto")]
-    [Tooltip("Debe ser un tag que el receptor procese con OnTriggerStay2D (típicamente 'Attack2'). " +
-             "NO usar 'Bullet' si el receptor destruye el source al OnTriggerEnter.")]
     public string tagRayo = "Attack2";
 
     [Header("Geometría")]
-    public int cantidadRayos = 2;
-    public float anguloAbanico = 18f;
     public float longitud = 30f;
     public string sortingLayerName = "Elementos_Juego";
 
+    [Header("Apariencia")]
+    [Tooltip("Stretch = la textura se estira a lo largo del rayo. Tile = se repite.")]
+    public LineTextureMode textureMode = LineTextureMode.Tile;
+    [Tooltip("Invierte el orden de los puntos del LineRenderer para que el patrón del material " +
+             "avance en sentido contrario (del destino hacia el origen).")]
+    public bool invertirDireccionMaterial = false;
+
     [Header("Ciclo")]
-    public float pausaIdle = 2f;
+    public bool autoCiclico = true;
+    public float pausaIdle = 0.5f;
     public float tiempoAdvertencia = 1.25f;
     public float duracionDisparo = 0.5f;
 
-    [Header("Rotación (grados/seg)")]
+    [Header("Rotación / Barrido (grados)")]
+    public float anguloInicial = 0f;
+    public float barridoTotal = 0f;
     public float rotacionAdvertencia = 0f;
     public float rotacionDisparo = 0f;
 
@@ -42,17 +43,12 @@ public class AtaqueLaser : AtaqueBase
     public float amplitudZigZag = 1.1f;
 
     [Header("Daño (por segundo)")]
-    [Tooltip("Daño al inicio de la advertencia. Rampa hasta danoMaximo al terminar la advertencia.")]
-    public int danoMinimo = 10;
-    [Tooltip("Daño máximo. Es el que se usa durante el disparo.")]
+    public int danoMinimo = 0;
     public int danoMaximo = 50;
-    [Tooltip("Si está activo, la advertencia ya aplica el daño rampante. " +
-             "Desactívalo si quieres que la advertencia sea solo telegráfica.")]
-    public bool danoEnAdvertencia = true;
+    public bool danoEnAdvertencia = false;
 
     public override bool EsPermanente => true;
 
-    /// <summary>t01 = progreso normalizado [0..1] de la fase de advertencia.</summary>
     public int DanioEnAdvertencia(float t01)
         => Mathf.RoundToInt(Mathf.Lerp(danoMinimo, danoMaximo, Mathf.Clamp01(t01)));
 
