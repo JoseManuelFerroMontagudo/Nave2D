@@ -5,17 +5,18 @@ public class Projectile : MonoBehaviour, IDamageDealer
 {
     public float vidaUtil = 3f;
     public int daño = 10;
-    public float velocidad = 20f;              // ← ahora vive en el proyectil
+    public float velocidad = 20f;
     public int Daño => daño;
     public GameObject prefabEfectoImpacto;
+
     [Header("Comportamiento")]
     public bool destruirAlImpactar = true;
+
     [Header("Persecución (0 = recto)")]
     public float giroPorSegundo = 0f;
     public float radioDeteccion = 6f;
     public LayerMask capasObjetivo = ~0;
     public string[] etiquetasObjetivo = { "Enemy", "Boss" };
-    public string[] etiquetasIgnoradas = { "Player", "Shield", "Bullet", "Bullet1", "Bullet2", "Bullet3", "Asteroide", "Sierra" };
 
     float angulo, edad;
     Transform objetivo;
@@ -74,7 +75,9 @@ public class Projectile : MonoBehaviour, IDamageDealer
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (Contiene(etiquetasIgnoradas, otro.tag)) return;
+        // Solo impacta contra tags objetivo; todo lo demás se ignora
+        if (!Contiene(etiquetasObjetivo, otro.tag)) return;
+
         if (prefabEfectoImpacto) Instantiate(prefabEfectoImpacto, transform.position, transform.rotation);
         if (destruirAlImpactar) Destroy(gameObject);
     }

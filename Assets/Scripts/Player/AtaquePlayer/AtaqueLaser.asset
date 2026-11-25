@@ -35,9 +35,9 @@ MonoBehaviour:
   barridoTotal: 0
   rotacionAdvertencia: 0
   rotacionDisparo: 0
-  colorAdvertencia: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+  colorAdvertencia: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 0.4745098}
   grosorAdvertencia: 0
-  colorDisparo: {r: 0, g: 0.3862859, b: 1, a: 1}
+  colorDisparo: {r: 0, g: 0.44655728, b: 1, a: 1}
   grosorDisparo: 5
   materialAdvertencia: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}

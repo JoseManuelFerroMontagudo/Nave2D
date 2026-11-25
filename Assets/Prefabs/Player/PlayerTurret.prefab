@@ -59,12 +59,6 @@ MonoBehaviour:
   etiquetasObjetivo:
   - Enemy
   - Boss
-  etiquetasIgnoradas:
-  - Player
-  - Shield
-  - Bullet
-  - Asteroide
-  - Sierra
 --- !u!114 &6958619292051685322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5836b3b0fb3c6147812b88fd05cca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipWeapons
-  arsenalJugador: {fileID: 11400000, guid: 130e0fb587332bc49a0a2a75fade3baf, type: 2}
+  arsenalJugador: {fileID: 0}
   ataquePrimario: {fileID: 11400000, guid: 5f25a0230bddd924b9accc1873dcd45b, type: 2}
   ataqueSecundario: {fileID: 0}
   autoDisparoPrimario: 1

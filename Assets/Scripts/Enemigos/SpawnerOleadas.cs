@@ -53,6 +53,18 @@ public class SpawnerOleadas : MonoBehaviour
     public float separacionMinimaEnemigos = 10f;
     public float distanciaMinimaBorde = 14f;
     public int intentosMaximos = 40;
+    [Header("Anuncios (TMP hijo del spawner)")]
+    [Tooltip("TextMeshProUGUI que mostrará 'Nivel #', 'Oleada #' y 'Jefe Detectado!'.")]
+    public TMPro.TextMeshProUGUI textoAnuncio;
+
+    [Tooltip("Duración total del anuncio en segundos.")]
+    public float duracionAnuncio = 2f;
+
+    [Tooltip("Tiempo de fade in/out.")]
+    public float fadeAnuncio = 0.35f;
+
+    [Tooltip("Escala máxima del 'pop'.")]
+    public float escalaMaxAnuncio = 1.15f;
 
     // -------- Estado público para UI --------
     public int NumeroOleadaActual { get; private set; }
@@ -100,11 +112,22 @@ public class SpawnerOleadas : MonoBehaviour
             yield return null;
         }
 
+        // 👇 Anuncio de nivel
+        if (numeroNivel > 0)
+        {
+            MostrarAnuncio($"Nivel {numeroNivel}");
+            yield return new WaitForSeconds(duracionAnuncio * 0.8f);
+        }
+
         for (int i = 0; i < oleadas.Count; i++)
         {
             NumeroOleadaActual = i + 1;
             var o = oleadas[i];
+
+            // 👇 Anuncio de oleada
+            MostrarAnuncio($"Oleada {NumeroOleadaActual}");
             if (o.retardoAntes > 0) yield return new WaitForSeconds(o.retardoAntes);
+
             yield return SpawnearOleada(o);
             yield return new WaitUntil(() => vivos.Count == 0);
             if (o.retardoDespues > 0) yield return new WaitForSeconds(o.retardoDespues);
@@ -170,7 +193,7 @@ public class SpawnerOleadas : MonoBehaviour
     {
         if (prefabJefe == null) { Debug.LogError("[SpawnerOleadas] Sin prefabJefe."); return; }
         EnFaseJefe = true;
-
+        MostrarAnuncio("¡Jefe Detectado!");
         var wrapper = new GameObject("BossWrapper").transform;
         wrapper.position = centro;
 
@@ -369,6 +392,65 @@ public class SpawnerOleadas : MonoBehaviour
         Vector3 s = Vector3.zero;
         foreach (var p in puntos) s += p;
         return s / puntos.Count;
+    }
+    Coroutine anuncioActual;
+
+    public void MostrarAnuncio(string mensaje)
+    {
+        if (textoAnuncio == null) return;
+        if (anuncioActual != null) StopCoroutine(anuncioActual);
+        anuncioActual = StartCoroutine(AnunciarRutina(mensaje));
+    }
+
+    IEnumerator AnunciarRutina(string mensaje)
+    {
+        textoAnuncio.text = mensaje;
+        textoAnuncio.gameObject.SetActive(true);
+
+        var rt = textoAnuncio.rectTransform;
+        Color c = textoAnuncio.color;
+
+        // Fade in + pop
+        float t = 0f;
+        while (t < fadeAnuncio)
+        {
+            t += Time.deltaTime;
+            float k = Mathf.Clamp01(t / fadeAnuncio);
+            c.a = k;
+            textoAnuncio.color = c;
+            float s = Mathf.Lerp(0.7f, escalaMaxAnuncio, k);
+            rt.localScale = Vector3.one * s;
+            yield return null;
+        }
+
+        // Volver a escala 1
+        t = 0f;
+        float popDur = 0.15f;
+        while (t < popDur)
+        {
+            t += Time.deltaTime;
+            float k = Mathf.Clamp01(t / popDur);
+            rt.localScale = Vector3.one * Mathf.Lerp(escalaMaxAnuncio, 1f, k);
+            yield return null;
+        }
+
+        // Mantener visible
+        float hold = Mathf.Max(0.1f, duracionAnuncio - fadeAnuncio * 2f);
+        yield return new WaitForSeconds(hold);
+
+        // Fade out
+        t = 0f;
+        while (t < fadeAnuncio)
+        {
+            t += Time.deltaTime;
+            float k = Mathf.Clamp01(t / fadeAnuncio);
+            c.a = 1f - k;
+            textoAnuncio.color = c;
+            yield return null;
+        }
+
+        textoAnuncio.gameObject.SetActive(false);
+        anuncioActual = null;
     }
 }
 

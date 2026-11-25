@@ -10,14 +10,18 @@ public class BarraVidaEnemigo : MonoBehaviour
     [Tooltip("La Image con Image Type = Filled")]
     public Image relleno;
 
-    [Header("Seguimiento")]
+    [Header("Seguimiento (mundo)")]
     [Tooltip("Offset respecto al enemigo (ej: 0, 1.2, 0)")]
     public Vector3 offset = new Vector3(0f, 1.2f, 0f);
     [Tooltip("Si está activo, la barra siempre mira a la cámara")]
     public bool mirarCamara = true;
 
+    [Header("Fijar a pantalla")]
+    [Tooltip("Si está activo, la barra no sigue al enemigo y queda fija en la pantalla (posición definida en el prefab)")]
+    public bool fijarAPantalla = false;
+
     [Header("Visibilidad")]
-    [Tooltip("Si está activo, la barra solo aparece al recibir daño")]
+    [Tooltip("Si está activo, la barra solo aparece al recibir daño; si no, siempre visible")]
     public bool soloVisibleAlDañar = true;
     [Tooltip("Segundos que permanece visible tras el último daño")]
     public float duracionVisible = 2f;
@@ -34,12 +38,20 @@ public class BarraVidaEnemigo : MonoBehaviour
         grupo = GetComponent<CanvasGroup>();
         if (grupo == null) grupo = gameObject.AddComponent<CanvasGroup>();
 
-        // El Canvas debe ser World Space
+        // Solo forzar modo si este Canvas es raíz (no tiene padre Canvas)
         var canvas = GetComponent<Canvas>();
-        if (canvas != null) canvas.renderMode = RenderMode.WorldSpace;
+        if (canvas != null && canvas.isRootCanvas)
+        {
+            canvas.renderMode = fijarAPantalla
+                ? RenderMode.ScreenSpaceOverlay
+                : RenderMode.WorldSpace;
+        }
 
         // Objetivo a seguir: el transform del enemigo (padre)
         objetivo = transform.parent != null ? transform.parent : transform;
+
+        // Si se fija a pantalla, no tiene sentido mirar a la cámara
+        if (fijarAPantalla) mirarCamara = false;
     }
 
     void Start()
@@ -69,17 +81,21 @@ public class BarraVidaEnemigo : MonoBehaviour
 
     void LateUpdate()
     {
-        // 1) Seguir al enemigo
-        if (objetivo != null)
-            transform.position = objetivo.position + offset;
+        // 1) Seguimiento en mundo (solo si no está fija a pantalla)
+        if (!fijarAPantalla)
+        {
+            if (objetivo != null)
+                transform.position = objetivo.position + offset;
 
-        // 2) Mirar a la cámara
-        if (mirarCamara && Camera.main != null)
-            transform.rotation = Camera.main.transform.rotation;
+            if (mirarCamara && Camera.main != null)
+                transform.rotation = Camera.main.transform.rotation;
+        }
 
-        // 3) Control de visibilidad
+        // 2) Control de visibilidad
         if (soloVisibleAlDañar)
             alphaObjetivo = (Time.time - tiempoUltimoDaño <= duracionVisible) ? 1f : 0f;
+        else
+            alphaObjetivo = 1f;
 
         grupo.alpha = Mathf.Lerp(grupo.alpha, alphaObjetivo, velocidadFade * Time.deltaTime);
     }
@@ -98,8 +114,8 @@ public class BarraVidaEnemigo : MonoBehaviour
 
     void AlMorir()
     {
-        // Opcional: ocultar al morir antes de destruirse
-        alphaObjetivo = 0f;
+        // Ocultar al morir (respetando el modo de visibilidad)
+        if (soloVisibleAlDañar) alphaObjetivo = 0f;
     }
 
     void ActualizarRelleno()
