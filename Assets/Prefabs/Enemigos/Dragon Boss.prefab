@@ -872,7 +872,7 @@ MonoBehaviour:
   ataque: {fileID: 0}
   dispararSinAnimator: 1
   puedeAtacar: 1
-  tablaDrops: {fileID: 0}
+  tablaDrops: {fileID: 11400000, guid: 037b8e38b4a20fe4792ae0dcc955044c, type: 2}
   patronesPorFase:
   - {fileID: 11400000, guid: 2ce5eeb9a683d944ea7aad626749f714, type: 2}
 --- !u!114 &5094722236467147014

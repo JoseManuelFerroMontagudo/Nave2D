@@ -6703,24 +6703,32 @@ MonoBehaviour:
   limiteMapa: {fileID: 500598495}
   oleadas:
   - grupos:
-    - prefab: {fileID: 4944144142031632098, guid: 50f3ae02cbc5148468c117a64b77c40e, type: 3}
+    - prefab: {fileID: 4481591756253347311, guid: fad50987d1a3c4d49bc21fb7e232dd9d, type: 3}
       cantidad: 3
-    - prefab: {fileID: 8445268703831702054, guid: 17efb2d6ca002b144ab329955352290c, type: 3}
+    - prefab: {fileID: 4944144142031632098, guid: 50f3ae02cbc5148468c117a64b77c40e, type: 3}
       cantidad: 1
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 1
   - grupos:
     - prefab: {fileID: 4481591756253347311, guid: fad50987d1a3c4d49bc21fb7e232dd9d, type: 3}
+      cantidad: 6
+    - prefab: {fileID: 4944144142031632098, guid: 50f3ae02cbc5148468c117a64b77c40e, type: 3}
       cantidad: 3
-    - prefab: {fileID: 890866767614060903, guid: f527956789a2a5546840596e90461394, type: 3}
-      cantidad: 2
+    retardoAntes: 2
+    retardoDespues: 2
+    delayEntreEnemigos: 1
+  - grupos:
+    - prefab: {fileID: 4481591756253347311, guid: fad50987d1a3c4d49bc21fb7e232dd9d, type: 3}
+      cantidad: 6
+    - prefab: {fileID: 4944144142031632098, guid: 50f3ae02cbc5148468c117a64b77c40e, type: 3}
+      cantidad: 5
     retardoAntes: 2
     retardoDespues: 2
     delayEntreEnemigos: 1
   prefabJefe: {fileID: 3708717635896645897, guid: ac2eb82958b6d2d4f8aa3bdb9226650b, type: 3}
   escenaAlDerrotarJefe: NIvel3
-  retardoCambioEscena: 1.5
+  retardoCambioEscena: 0.1
   usarLoadSingle: 0
   OnJefeDerrotado:
     m_PersistentCalls:
