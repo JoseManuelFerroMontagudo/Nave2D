@@ -22,5 +22,5 @@ MonoBehaviour:
   - prefab: {fileID: 8594354345092268609, guid: 321c641c59b746c4f93660cf88b2dc70, type: 3}
     cantidadMin: 6
     cantidadMax: 8
-  fuerzaMin: 1
+  fuerzaMin: 0.1
   fuerzaMax: 2

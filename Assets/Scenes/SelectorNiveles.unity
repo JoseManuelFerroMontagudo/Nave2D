@@ -856,8 +856,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Nivel 2
-  descripcion: "Un lugar inh\xF3spito..."
+  nombreMostrado: Vorthax Prime
+  descripcion: "Lo ronda un drag\xF3n rob\xF3tico de escamas de aleaci\xF3n que escupe
+    plasma."
   escenaDestino: Nivel2
   numeroNivel: 2
   alphaBloqueado: 0.3
@@ -1302,8 +1303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Nivel 1
-  descripcion: "Un lugar inh\xF3spito..."
+  nombreMostrado: Kaelith-9
+  descripcion: En su orbita aguarda Myrlo, un orbe robot que flota y dispara descargas
+    gravitatorias.
   escenaDestino: Nivel1
   numeroNivel: 1
   alphaBloqueado: 0.3
@@ -1666,8 +1668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Nivel 3
-  descripcion: "Un lugar inh\xF3spito..."
+  nombreMostrado: Velo de Nihilus
+  descripcion: "Anomal\xEDa de agujero negro y blanco colisionando"
   escenaDestino: Nivel3
   numeroNivel: 3
   alphaBloqueado: 0.3
