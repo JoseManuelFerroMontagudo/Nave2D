@@ -19,7 +19,7 @@ MonoBehaviour:
   icono: {fileID: 0}
   descripcion: 
   "cantidadCa\xF1ones": 11
-  separacion: 1
+  separacion: 9
   modoSeparacion: 1
   sonidoDisparo: {fileID: 0}
   volumenDisparo: 1
