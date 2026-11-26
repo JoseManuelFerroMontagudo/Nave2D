@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorAgujeroBlanco : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class ControladorAgujeroBlanco : MonoBehaviour
 
     [Header("Efectos de Victoria")]
     public GameObject prefabExplosionFinal;
+    public string escenaVictoria = "Credits";
+    public float retrasoCambioEscena = 2.0f;
 
     private bool faseActiva = false;
     private Transform jugador;
@@ -410,6 +413,18 @@ public class ControladorAgujeroBlanco : MonoBehaviour
         ProyectilAgujeroBlanco[] balasRestantes = FindObjectsByType<ProyectilAgujeroBlanco>(FindObjectsSortMode.None);
         foreach (var b in balasRestantes) Destroy(b.gameObject);
 
-        gameObject.SetActive(false);
+        // Oculta el sprite y desactiva la hitbox sin apagar el objeto todavía para que la espera funcione
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null) sr.enabled = false;
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
+        StartCoroutine(CargarEscenaVictoria());
+    }
+
+    private IEnumerator CargarEscenaVictoria()
+    {
+        yield return new WaitForSeconds(retrasoCambioEscena);
+        SceneManager.LoadScene(escenaVictoria);
     }
 }
