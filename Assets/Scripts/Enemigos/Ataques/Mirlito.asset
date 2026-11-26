@@ -20,7 +20,7 @@ MonoBehaviour:
   descripcion: 
   "cantidadCa\xF1ones": 11
   separacion: 1
-  modoSeparacion: 0
+  modoSeparacion: 1
   sonidoDisparo: {fileID: 0}
   volumenDisparo: 1
   sonidoHold: {fileID: 0}
