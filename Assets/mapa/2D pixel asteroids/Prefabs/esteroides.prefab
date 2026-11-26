@@ -184,12 +184,13 @@ MonoBehaviour:
   - {fileID: 21300018, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   - {fileID: 21300020, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   - {fileID: 21300022, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
-  prefabExplosion: {fileID: 6800364490446549859, guid: 40383fab859addf4499daca584d420a9, type: 3}
+  prefabExplosion: {fileID: 5162910912013668194, guid: cf82839c411151342a7b2337bda9fb34, type: 3}
   velocidadMin: 8
   velocidadMax: 11
   rotacionMin: -40
   rotacionMax: 40
   desviacionAngulo: 35
+  fuerzaEmpuje: 0
 --- !u!114 &-3783980327087375580
 MonoBehaviour:
   m_ObjectHideFlags: 0

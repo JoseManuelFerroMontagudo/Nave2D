@@ -10,6 +10,16 @@ public class LaserAnomalia : MonoBehaviour
     public float duracionDisparo = 0.5f;
     public int danoPorImpacto = 25;
 
+    [Header("Configuración Mini-Agujeros (Ciclo 3)")]
+    public GameObject prefabMiniAgujero;
+    public GameObject prefabPortalHijos;      // Arrastra aquí el efecto de portal de tu pack
+    public float retrasoAparicionHijos = 0.4f; // Tiempo que tarda en abrirse el portal antes de salir el satélite
+    public float distanciaOrbitaHijos = 5.5f;
+    public float anguloFlancosHijos = 48f;
+
+    [Header("Efectos Visuales (VFX)")]
+    public GameObject prefabImpactoLaser; // Arrastra aquí un prefab de chispa, rayo o mini-explosión
+
     [Header("Materiales / Diseño")]
     public Material materialAdvertencia;
     public Material materialDisparo;
@@ -27,11 +37,6 @@ public class LaserAnomalia : MonoBehaviour
     [Header("Configuración Zig-Zag (Ciclo 2)")]
     public int segmentosZigZag = 10;
     public float amplitudZigZag = 1.1f;
-
-    [Header("Configuración Mini-Agujeros (Ciclo 3)")]
-    public GameObject prefabMiniAgujero;
-    public float distanciaOrbitaHijos = 5.5f;
-    public float anguloFlancosHijos = 48f; // Posición a los costados del jefe
 
     private List<LineRenderer> poolRayos = new List<LineRenderer>();
     private List<GameObject> hijosActivos = new List<GameObject>();
@@ -79,13 +84,65 @@ public class LaserAnomalia : MonoBehaviour
 
     private void InvocarMiniAgujeros(Transform objetivo)
     {
+        StartCoroutine(RutinaInvocarMiniAgujerosConPortal(objetivo));
+    }
+
+    private IEnumerator RutinaInvocarMiniAgujerosConPortal(Transform objetivo)
+    {
+        // Calcular el ángulo actual desde el Agujero Negro hacia el jugador para saber dónde abrir los portales
+        Vector2 dirAlJugador = (objetivo.position - transform.position).normalized;
+        if (dirAlJugador == Vector2.zero) dirAlJugador = Vector2.up;
+        float anguloBase = Mathf.Atan2(dirAlJugador.y, dirAlJugador.x) * Mathf.Rad2Deg;
+
         float[] angulos = { -anguloFlancosHijos, anguloFlancosHijos };
+
+        // 1. Abrir los 2 Portales en los flancos del jefe
+        if (prefabPortalHijos != null)
+        {
+            foreach (float ang in angulos)
+            {
+                float anguloRad = (anguloBase + ang) * Mathf.Deg2Rad;
+                Vector3 posPortal = transform.position + new Vector3(Mathf.Cos(anguloRad), Mathf.Sin(anguloRad), 0f) * distanciaOrbitaHijos;
+
+                GameObject portal = Instantiate(prefabPortalHijos, posPortal, Quaternion.identity);
+                Destroy(portal, 1.8f); // Se limpia automáticamente tras cerrarse
+            }
+        }
+
+        // Esperar un instante a que se abran los portales
+        yield return new WaitForSeconds(retrasoAparicionHijos);
+
+        // Si mientras tanto el jefe ya detonó al Agujero Blanco, cancelamos la invocación
+        if (cicloActual < 3 || objetivo == null) yield break;
+
+        // 2. Hacer emerger los 2 Mini-Agujeros desde los portales
         foreach (float ang in angulos)
         {
-            GameObject hijo = Instantiate(prefabMiniAgujero, transform.position, Quaternion.identity);
+            float anguloRad = (anguloBase + ang) * Mathf.Deg2Rad;
+            Vector3 posSpawn = transform.position + new Vector3(Mathf.Cos(anguloRad), Mathf.Sin(anguloRad), 0f) * distanciaOrbitaHijos;
+
+            GameObject hijo = Instantiate(prefabMiniAgujero, posSpawn, Quaternion.identity);
             MiniAgujeroSatelite sat = hijo.AddComponent<MiniAgujeroSatelite>();
             sat.Inicializar(transform, objetivo, ang, distanciaOrbitaHijos);
             hijosActivos.Add(hijo);
+
+            // Animación rápida de aparición creciendo desde 0 hasta su escala del prefab
+            StartCoroutine(AnimarEscalaAparicion(hijo.transform));
+        }
+    }
+
+    private IEnumerator AnimarEscalaAparicion(Transform objetivoEscala)
+    {
+        if (objetivoEscala == null) yield break;
+        Vector3 escalaFinal = objetivoEscala.localScale;
+        objetivoEscala.localScale = Vector3.zero;
+
+        float t = 0f;
+        while (t < 1f && objetivoEscala != null)
+        {
+            t += Time.deltaTime * 4f; // Aparece en 0.25 segundos
+            objetivoEscala.localScale = Vector3.Lerp(Vector3.zero, escalaFinal, t);
+            yield return null;
         }
     }
 
@@ -176,6 +233,13 @@ public class LaserAnomalia : MonoBehaviour
                             if (hit.collider != null && (hit.collider.CompareTag("Player") || hit.transform.root.CompareTag("Player")))
                             {
                                 hit.transform.root.BroadcastMessage("RecibirDaño", danoPorImpacto, SendMessageOptions.DontRequireReceiver);
+                                // Instanciar efecto de impacto en el punto exacto donde tocó la nave
+                                if (prefabImpactoLaser != null)
+                                {
+                                    GameObject fx = Instantiate(prefabImpactoLaser, hit.point, Quaternion.identity);
+                                    Destroy(fx, 1.5f); // Lo destruye automáticamente tras 1.5 segundos para no llenar la escena
+                                }
+
                                 yaHizoDano = true;
                                 break;
                             }
