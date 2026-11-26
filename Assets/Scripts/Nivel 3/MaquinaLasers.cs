@@ -17,6 +17,9 @@ public class MaquinaLasers : MonoBehaviour
     public float tiempoAdvertencia = 1.5f;    // Tiempo de aviso antes de hacer daño
     public float duracionDisparo = 5f;        // Cuánto tiempo dura girando el láser activo
 
+    [Header("Efectos Visuales (VFX)")]
+    public GameObject prefabImpactoLaser;
+
     [Header("Apariencia y Materiales")]
     public Material materialLaser;            // Usa aquí un material del pack LineRendererShader
     public string sortingLayerName = "Elementos_Juego";
@@ -194,6 +197,12 @@ public class MaquinaLasers : MonoBehaviour
                 {
                     hit.transform.root.BroadcastMessage("RecibirDaño", danoPorImpacto, SendMessageOptions.DontRequireReceiver);
                     timerInmunidadJugador = intervaloEntreGolpes;
+                    // Instanciar efecto de impacto en el punto exacto donde tocó la nave
+                    if (prefabImpactoLaser != null)
+                    {
+                        GameObject fx = Instantiate(prefabImpactoLaser, hit.point, Quaternion.identity);
+                        Destroy(fx, 1.5f); // Lo destruye automáticamente tras 1.5 segundos para no llenar la escena
+                    }
                     return; // Sale tras aplicar el golpe para respetar el tiempo de inmunidad
                 }
             }

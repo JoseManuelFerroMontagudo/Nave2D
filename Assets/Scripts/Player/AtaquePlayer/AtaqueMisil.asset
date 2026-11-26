@@ -15,9 +15,10 @@ MonoBehaviour:
   cadencia: 2
   costoCalor: 0
   costoEnergia: 0
-  nombreVisible: Misil Perseguidor
+  nombreVisible: "Sabueso T\xE9rmico"
   icono: {fileID: 2107035030923953804, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: "Da\xF1o moderado\nBaja Cadencia"
+  descripcion: "Misil de rastreo por firma cal\xF3rica. Cada lanzamiento sobrecalienta
+    el tubo de lanzamiento; limita las salvas consecutivas"
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 0

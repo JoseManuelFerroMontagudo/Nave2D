@@ -71,6 +71,7 @@ public class VidaPersonaje : MonoBehaviour
 
     public void RecibirDaño(float daño)
     {
+        Debug.Log($"[VidaPersonaje] Golpe recibido: {daño} | Vida: {vidaActual}");
         if (muerto) return;
 
         vidaActual -= daño;

@@ -15,11 +15,10 @@ MonoBehaviour:
   cadencia: 2
   costoCalor: 0
   costoEnergia: 5
-  nombreVisible: Plasma
+  nombreVisible: Lanza Solar
   icono: {fileID: -3911416680466541835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: 'Absorbe balas
-
-    Cadencia Media'
+  descripcion: "Proyectil de plasma fundido que perfora blindajes. Cada disparo eleva
+    dr\xE1sticamente la temperatura del arma; riesgo de sobrecalentamiento."
   "cantidadCa\xF1ones": 2
   separacion: 2
   modoSeparacion: 0

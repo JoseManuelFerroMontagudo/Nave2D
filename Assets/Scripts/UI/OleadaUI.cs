@@ -10,20 +10,25 @@ public class OleadaUI : MonoBehaviour
     {
         if (spawner == null || texto == null) return;
 
+        int puntos = spawner.EstadisticasJugador != null
+            ? spawner.EstadisticasJugador.puntos
+            : 0;
+
         if (spawner.EnFaseJefe)
         {
-            texto.text = "¡JEFE!";
+            texto.text = $"¡JEFE!\nPuntos: {puntos}";
             return;
         }
 
         if (spawner.NumeroOleadaActual == 0)
         {
-            texto.text = "Preparando…";
+            texto.text = $"Preparando…\nPuntos: {puntos}";
             return;
         }
 
         texto.text =
             $"Oleada {spawner.NumeroOleadaActual}/{spawner.TotalOleadas}\n" +
-            $"Enemigos: {spawner.EnemigosRestantesOleada}";
+            $"Enemigos: {spawner.EnemigosRestantesOleada}\n" +
+            $"Puntos: {puntos}";
     }
 }

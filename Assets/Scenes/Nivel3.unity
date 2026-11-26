@@ -244,7 +244,6 @@ GameObject:
   m_Component:
   - component: {fileID: 152265353}
   - component: {fileID: 152265352}
-  - component: {fileID: 152265354}
   m_Layer: 0
   m_Name: AnomaliaCentral
   m_TagString: Untagged
@@ -265,6 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorAnomalia
   tiempoParaTransicion: 52
+  segundoInicioFrenesiAsteroides: 5
+  segundoInicioSecuenciaLasers: 15
   tiempoAlarmaInestable: 10
   laserAnomalia: {fileID: 726250899}
   maquinaLasers: {fileID: 409678349}
@@ -303,42 +304,6 @@ Transform:
   - {fileID: 409678350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &152265354
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152265351}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!1 &152826797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,6 +5520,7 @@ MonoBehaviour:
   velocidadRotacion: 22
   tiempoAdvertencia: 1
   duracionDisparo: 5
+  prefabImpactoLaser: {fileID: 0}
   materialLaser: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   sortingLayerName: Elementos_Juego
   grosorAdvertencia: 3
@@ -6088,15 +6054,16 @@ GameObject:
   - component: {fileID: 699765852}
   - component: {fileID: 699765851}
   - component: {fileID: 699765853}
-  - component: {fileID: 699765855}
   - component: {fileID: 699765854}
+  - component: {fileID: 699765856}
+  - component: {fileID: 699765855}
   m_Layer: 0
   m_Name: Agujero_Blanco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &699765851
 SpriteRenderer:
   serializedVersion: 3
@@ -6169,7 +6136,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.9984353, y: 1.9984353, z: 1.9984353}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1113569027}
   m_Father: {fileID: 152265353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &699765853
@@ -6230,61 +6198,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 699765850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2ae75952f029e4c95b3f4c335ae6c7, type: 3}
+  m_Script: {fileID: 11500000, guid: fc3b0e07cf479c9449cebaf09d5134cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorJefe
-  vida: 1500
-  velocidadMovimiento: 9
-  distanciaFrenteJugador: 4
-  amplitudOndaHorizontal: 3.2
-  frecuenciaOndaHorizontal: 1.6
-  quieto: 1
-  limitarACono: 1
-  anguloCono: 140
-  "flashAlRecibirDa\xF1o": 1
-  balasHastaElLimite: 1
-  alcanceBalas: 60
-  prefabProyectil: {fileID: 5924167065734960460, guid: 9e4c4c20200ccefdfa3f054a0c48705d, type: 3}
-  puntoDisparo: {fileID: 0}
-  "da\xF1oProyectil": 5
-  prefabProyectilPlasma: {fileID: 558679377710589676, guid: 6f30f5c4e90a6e34b847cdd1646f1c39, type: 3}
-  "da\xF1oPlasma": 10
-  prefabProyectilPerseguidor: {fileID: 0}
-  "da\xF1oPerseguidor": 15
-  spritesDirecciones: []
-  patronesFase1:
-  - patron: {fileID: 11400000, guid: 6c0f6106eb29df74ca4dfa0ff6f0e6fd, type: 2}
-    retardoAntes: 1
-    retardoDespues: 1
-  patronesFase2:
-  - patron: {fileID: 11400000, guid: b15f5558f89dfef4cbca40113ce2ca93, type: 2}
-    retardoAntes: 1
-    retardoDespues: 1
-  patronesFase3: []
-  repetirCiclo: 1
-  esperaInicial: 0.5
-  lluviaActivada: 0
-  lluviaBalasPorAnillo: 12
-  lluviaIntervalo: 0.28
-  lluviaOpciones:
-    modo: 0
-    velocidad: 6
-    tiempoVuelo: 3
-    vidaUtil: 14
-    color: {r: 0.7, g: 0.2, b: 1, a: 0.7}
-    amplitudOnda: 2
-    frecuenciaOnda: 8
-    fuerzaPersecucion: 1.5
-    regresaAlOrigen: 1
-    multiplicadorVelocidadRetorno: 0.7
-    tiempoFrenado: 0.4
-    pausaAntesDeRegresar: 0.25
-    rebotaEnParedes: 1
-    rebotesMaximos: 1
-  umbralFase2: 0.66
-  umbralFase3: 0.33
-  suavizadoMovimiento: 8
-  esInvulnerable: 0
+  m_EditorClassIdentifier: Assembly-CSharp::VidaPersonaje
+  vidaMaxima: 2000
+  fasesTotales: 1
+  vidaActual: 0
+  faseActual: 1
+  destruyeAlMorir: 1
+  duracionFlash: 0.1
+  cadenciaFlash: 0.15
+  colorFlash: {r: 1, g: 0, b: 0, a: 1}
+  OnVidaCambia:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFaseCambia:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMuere:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &699765856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699765850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c9b3fdb9532394d82e440a787fe829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorAgujeroBlanco
+  radioAlcanceMapa: 60
+  vidaPersonaje: {fileID: 699765855}
+  fuerzaRepulsion: 4.5
+  prefabBalaNormal: {fileID: 4282305057102428602, guid: 17ec6180e2fd06c448ecd75d6ebef9c9, type: 3}
+  prefabOrbeGigante: {fileID: 5488512800074345544, guid: 9b5717009b11ee94aa6720fd2f3565c4, type: 3}
+  materialLaserEstrella: {fileID: 2100000, guid: 9288b39eaed46cb48831c323a5fe4b49, type: 2}
+  sortingLayerLasers: Default
+  orderInLayerLasers: 10
+  amplitudConoAtaque: 160
+  duracionCadaPatron: 8
+  pausaEntrePatrones: 2
+  prefabExplosionFinal: {fileID: 3123075737211501182, guid: a3f72d5f213bb7d458dfc2c4369e7acf, type: 3}
 --- !u!1 &703334942
 GameObject:
   m_ObjectHideFlags: 0
@@ -6552,6 +6509,12 @@ MonoBehaviour:
   tiempoAdvertencia: 0.8
   duracionDisparo: 0.4
   danoPorImpacto: 25
+  prefabMiniAgujero: {fileID: 7698369970264882517, guid: b4665665a1ffba5438adb458da397b8d, type: 3}
+  prefabPortalHijos: {fileID: 0}
+  retrasoAparicionHijos: 0.4
+  distanciaOrbitaHijos: 18
+  anguloFlancosHijos: 48
+  prefabImpactoLaser: {fileID: 0}
   materialAdvertencia: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   grosorAdvertencia: 2
@@ -6564,9 +6527,6 @@ MonoBehaviour:
   anguloAbanico: 18
   segmentosZigZag: 10
   amplitudZigZag: 1.5
-  prefabMiniAgujero: {fileID: 7698369970264882517, guid: b4665665a1ffba5438adb458da397b8d, type: 3}
-  distanciaOrbitaHijos: 18
-  anguloFlancosHijos: 48
 --- !u!1 &759091202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,6 +6838,124 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetaEspacial
   velocidadRotacion: 5
+--- !u!1001 &1113569026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 699765852}
+    m_Modifications:
+    - target: {fileID: 5281808661300904247, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637078921838589170, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 699765855}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.03433186
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.629892
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+--- !u!224 &1113569027 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
+  m_PrefabInstance: {fileID: 1113569026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1178978991
 GameObject:
   m_ObjectHideFlags: 0
@@ -12087,7 +12165,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9803600998c48b140b2f7038d0fc2eb1, type: 2}
+  - {fileID: 2100000, guid: 4778856aab888f640b0ae081d3c3ca47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12644,6 +12722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerAnomalia
   prefabAsteroide: {fileID: 3955418798240587005, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  prefabPortalSpawn: {fileID: 0}
+  retrasoSalidaAsteroide: 0.35
   radioSpawn: 58
   intervaloSpawn: 0.5
   velocidadSuccion: 13

@@ -15,9 +15,10 @@ MonoBehaviour:
   cadencia: 10
   costoCalor: 2
   costoEnergia: 0
-  nombreVisible: Sierra
+  nombreVisible: Diente de Plasma
   icono: {fileID: -137709017222326040, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: "Da\xF1o Pasivo\nSobrecalentamiento"
+  descripcion: "Disco giratorio de aleaci\xF3n afilada que corta cascos y drones.
+    La fricci\xF3n sobrecalienta el motor; necesita pausas entre cortes."
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 0

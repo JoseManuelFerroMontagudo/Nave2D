@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4258858789339902648, guid: 32b54a16b0b382e45936242235789e60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32b54a16b0b382e45936242235789e60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CREDITOS: \n\r\nJos\xE9 Manuel Ferro \nMonteagudo (100%)\n\r\nDanny Kevin
-    \nPonce Sullca (100%)\n\r\nAngel Gabriel \nGordillo Sosa (100%)\n\r\nFrank Smith
-    \nHuarancca Camala (100%)\n\r\n"
+  m_text: "UNIVERSIDAD CONTINENTAL\nCurso: Desarrollo de Videojuegos\n\r\nJos\xE9
+    Manuel Ferro \nMonteagudo (100%)\n\r\nDanny Kevin \nPonce Sullca (100%)\n\r\nAngel
+    Gabriel \nGordillo Sosa (100%)\n\r\nFrank Smith \nHuarancca Camala (100%)\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ff646cb886a2924eb1c6d02c2e66c6d, type: 2}
   m_sharedMaterial: {fileID: 8376186281228217126, guid: 4ff646cb886a2924eb1c6d02c2e66c6d, type: 2}
@@ -654,7 +654,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 46, y: -50}
-  m_SizeDelta: {x: 450, y: 500}
+  m_SizeDelta: {x: 492, y: 543}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1629965364
 MonoBehaviour:

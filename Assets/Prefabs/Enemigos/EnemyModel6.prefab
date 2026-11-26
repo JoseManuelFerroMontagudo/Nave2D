@@ -85,9 +85,13 @@ PrefabInstance:
       value: EnemyModel6
       objectReference: {fileID: 0}
     - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: ataque
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ce5eeb9a683d944ea7aad626749f714, type: 2}
+    - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: tablaDrops
       value: 
-      objectReference: {fileID: 11400000, guid: 8d6925395e8924f4ea17954662b48c2c, type: 2}
+      objectReference: {fileID: 11400000, guid: 2c11348d0bec73b4f93a449a49ff0091, type: 2}
     - target: {fileID: 8627246509481013587, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: m_Sprite
       value: 

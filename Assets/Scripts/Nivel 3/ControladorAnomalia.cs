@@ -5,17 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ControladorAnomalia : MonoBehaviour
 {
-    [Header("Supervivencia por Tiempo")]
-    public float tiempoParaTransicion = 30f;
-    public float tiempoAlarmaInestable = 10f;
+    [Header("Línea de Tiempo de la Fase Agujero Negro")]
+    [Tooltip("Duración total del Agujero Negro antes de explotar al Agujero Blanco (ej. 55s o 60s)")]
+    public float tiempoParaTransicion = 55f;
+    public float segundoInicioFrenesiAsteroides = 5f;
+    public float segundoInicioSecuenciaLasers = 15f;
+    public float tiempoAlarmaInestable = 10f; // Últimos 10s de temblor antes de explotar
 
     [Header("Sistemas de Láser Coordinados")]
     public LaserAnomalia laserAnomalia;
     public MaquinaLasers maquinaLasers;
-    public float pausaEntreAtaquesLaser = 2.0f; // Tiempo de respiro entre cada ataque (en frenesí baja a la mitad)
+    public float pausaEntreAtaquesLaser = 2.0f;
 
     private float timerTurnoLaser = 0f;
     private bool turnoMaquinaLasers = false;
+    private int cicloDeCombate = 1;
 
     [Header("Efectos de Inestabilidad (Shake & Pulse)")]
     public float intensidadTemblor = 0.15f;
@@ -45,20 +49,25 @@ public class ControladorAnomalia : MonoBehaviour
     public string nombreEscenaGameOver = "GameOver";
 
     private Transform jugador;
+    private SpawnerAnomalia spawnerAsteroides;
     private float tiempoRestante;
+    private float tiempoTranscurrido = 0f;
+
     private Vector3 posicionOriginal;
     private Vector3 escalaOriginal;
     private bool enFaseAgujeroBlanco = false;
     private bool cambiandoDeFase = false;
     private bool jugadorAbsorbido = false;
-    private bool frenesiActivado = false;
-    private int cicloDeCombate = 1;
+
+    private bool frenesiAsteroidesActivado = false;
+    private bool secuenciaLasersIniciada = false;
 
     private void Start()
     {
         tiempoRestante = tiempoParaTransicion;
         posicionOriginal = transform.position;
         escalaOriginal = transform.localScale;
+        spawnerAsteroides = GetComponentInChildren<SpawnerAnomalia>();
 
         if (spriteAgujeroNegro != null)
         {
@@ -97,8 +106,30 @@ public class ControladorAnomalia : MonoBehaviour
     {
         if (enFaseAgujeroBlanco || cambiandoDeFase) return;
 
+        tiempoTranscurrido += Time.deltaTime;
         tiempoRestante -= Time.deltaTime;
 
+        // 1. SEGUNDO 5: Activa el frenesí de absorción de asteroides
+        if (tiempoTranscurrido >= segundoInicioFrenesiAsteroides && !frenesiAsteroidesActivado)
+        {
+            frenesiAsteroidesActivado = true;
+            if (spawnerAsteroides != null) spawnerAsteroides.ActivarModoFrenesi();
+        }
+
+        // 2. SEGUNDO 15: Detiene los asteroides e inicia la secuencia de láseres
+        if (tiempoTranscurrido >= segundoInicioSecuenciaLasers && !secuenciaLasersIniciada)
+        {
+            secuenciaLasersIniciada = true;
+            if (spawnerAsteroides != null) spawnerAsteroides.DetenerGeneracion();
+        }
+
+        // 3. Ejecutar láseres únicamente a partir del segundo 15
+        if (secuenciaLasersIniciada)
+        {
+            GestionarAtaquesLaserCoordinados();
+        }
+
+        // 4. Efectos visuales de inestabilidad en los últimos 10 segundos antes del Agujero Blanco
         if (tiempoRestante <= tiempoAlarmaInestable && tiempoRestante > 0f)
         {
             AplicarEfectosInestabilidad();
@@ -110,7 +141,7 @@ public class ControladorAnomalia : MonoBehaviour
             return;
         }
 
-        // Detección de entrada al Anillo de Fuego / Radio de Muerte
+        // 5. Detección de entrada al Anillo de Fuego / Radio de Muerte
         if (jugador != null && !jugadorAbsorbido)
         {
             float distancia = Vector2.Distance(transform.position, jugador.position);
@@ -119,9 +150,6 @@ public class ControladorAnomalia : MonoBehaviour
                 AbsorberYMatarJugador();
             }
         }
-
-        // Ejecutar la secuencia coordinada entre LaserAnomalia (escalado) y MaquinaLasers
-        GestionarAtaquesLaserCoordinados();
     }
 
     private void GestionarAtaquesLaserCoordinados()
@@ -133,7 +161,8 @@ public class ControladorAnomalia : MonoBehaviour
             return;
         }
 
-        float pausaActual = frenesiActivado ? pausaEntreAtaquesLaser * 0.55f : pausaEntreAtaquesLaser;
+        bool enInestabilidadFinal = (tiempoRestante <= tiempoAlarmaInestable);
+        float pausaActual = enInestabilidadFinal ? pausaEntreAtaquesLaser * 0.65f : pausaEntreAtaquesLaser;
         timerTurnoLaser += Time.deltaTime;
 
         if (timerTurnoLaser >= pausaActual)
@@ -152,7 +181,7 @@ public class ControladorAnomalia : MonoBehaviour
             }
             else
             {
-                // Si estamos terminando el Ciclo 2, potenciamos la Máquina de Láseres (6 rayos más rápidos)
+                // Mantiene tu configuración personalizada de 20 rayos al terminar el Ciclo 2
                 if (cicloDeCombate == 2)
                 {
                     maquinaLasers.ConfigurarDificultad(20, 22f);
@@ -170,16 +199,6 @@ public class ControladorAnomalia : MonoBehaviour
 
     private void AplicarEfectosInestabilidad()
     {
-        if (!frenesiActivado)
-        {
-            frenesiActivado = true;
-            SpawnerAnomalia spawner = GetComponentInChildren<SpawnerAnomalia>();
-            if (spawner != null)
-            {
-                spawner.ActivarModoFrenesi();
-            }
-        }
-
         float factorUrgencia = 1f - (tiempoRestante / tiempoAlarmaInestable);
 
         float offsetX = (Mathf.PerlinNoise(Time.time * 25f, 0f) - 0.5f) * 2f * intensidadTemblor * factorUrgencia;
@@ -243,9 +262,7 @@ public class ControladorAnomalia : MonoBehaviour
     {
         cambiandoDeFase = true;
 
-        // Detener cualquier láser activo durante la transición al Agujero Blanco
         if (maquinaLasers != null) maquinaLasers.DetenerMaquina();
-
         if (laserAnomalia != null) laserAnomalia.LimpiarMiniAgujeros();
 
         float t = 0f;
@@ -270,10 +287,9 @@ public class ControladorAnomalia : MonoBehaviour
             imagenFlashUI.color = c;
         }
 
-        SpawnerAnomalia spawner = GetComponentInChildren<SpawnerAnomalia>();
-        if (spawner != null)
+        if (spawnerAsteroides != null)
         {
-            spawner.DetenerGeneracion();
+            spawnerAsteroides.DetenerGeneracion();
         }
 
         if (spriteAgujeroNegro != null) spriteAgujeroNegro.SetActive(false);
@@ -282,6 +298,8 @@ public class ControladorAnomalia : MonoBehaviour
 
         enFaseAgujeroBlanco = true;
         transform.localScale = escalaOriginal * 1.3f;
+        ControladorAgujeroBlanco faseBlanca = GetComponent<ControladorAgujeroBlanco>();
+        if (faseBlanca != null) faseBlanca.ActivarFaseAgujeroBlanco();
 
         yield return new WaitForSeconds(duracionCeguera);
 

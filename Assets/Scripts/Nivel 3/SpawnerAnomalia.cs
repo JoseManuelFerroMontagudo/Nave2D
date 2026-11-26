@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnerAnomalia : MonoBehaviour
 {
-    [Header("Prefab del Asteroide")]
+    [Header("Prefab del Asteroide y Portal")]
     public GameObject prefabAsteroide;
+    public GameObject prefabPortalSpawn; // Arrastra aquí tu efecto de portal del pack
+    public float retrasoSalidaAsteroide = 0.35f; // Tiempo que tarda en salir tras abrirse el portal
 
     [Header("Configuración de Distancia y Frecuencia Base")]
     public float radioSpawn = 18f;        // Distancia desde el agujero donde nacen
@@ -69,11 +72,11 @@ public class SpawnerAnomalia : MonoBehaviour
         if (timer >= intervaloActual)
         {
             timer = 0f;
-            SpawnearAsteroideEnAbanico();
+            StartCoroutine(SpawnearAsteroideConPortal());
         }
     }
 
-    private void SpawnearAsteroideEnAbanico()
+    private IEnumerator SpawnearAsteroideConPortal()
     {
         // 1. Obtener la dirección desde la Anomalía hacia el Jugador
         Vector2 direccionHaciaJugador = (jugador.position - transform.position).normalized;
@@ -91,6 +94,21 @@ public class SpawnerAnomalia : MonoBehaviour
         // 5. Convertir el ángulo final en una posición Vector3
         Vector3 direccionSpawn = Quaternion.Euler(0, 0, anguloFinal) * Vector3.right;
         Vector3 puntoSpawn = transform.position + (direccionSpawn * radioSpawn);
+
+        // 5.5 Abrir el Portal en puntoSpawn antes de que salga el asteroide
+        if (prefabPortalSpawn != null)
+        {
+            GameObject portal = Instantiate(prefabPortalSpawn, puntoSpawn, Quaternion.identity);
+            // Si estamos en frenesí, también hacemos el portal un poco más grande para que acompañe al asteroide gigante
+            if (enModoFrenesi) portal.transform.localScale *= 1.3f;
+            Destroy(portal, 1.5f);
+        }
+
+        // Esperar un instante para que se vea el portal abriéndose
+        yield return new WaitForSeconds(retrasoSalidaAsteroide);
+
+        // Si mientras se abría el portal ya llegamos al segundo 15 y se detuvo la generación, cancelamos
+        if (!generando || prefabAsteroide == null) yield break;
 
         // 6. Instanciar el asteroide en el borde del abanico
         GameObject nuevoAsteroide = Instantiate(prefabAsteroide, puntoSpawn, Quaternion.identity);

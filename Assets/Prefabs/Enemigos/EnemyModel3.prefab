@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: ataque
       value: 
-      objectReference: {fileID: 11400000, guid: 2f728c169154624439a1d96909fb6e8e, type: 2}
+      objectReference: {fileID: 11400000, guid: 15f7da26fe6bad04b8d133129d9be724, type: 2}
     - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: tablaDrops
       value: 
