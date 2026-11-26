@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6010742523275562492, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
       propertyPath: "da\xF1o"
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
       propertyPath: m_Name

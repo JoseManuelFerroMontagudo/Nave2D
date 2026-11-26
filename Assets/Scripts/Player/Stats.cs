@@ -140,6 +140,10 @@ public class Stats : MonoBehaviour
         if (cantidad <= 0) return;
         puntos += cantidad;
     }
+    public void ReiniciarPuntos()
+    {
+        puntos = 0;
+    }
 
     public void Morir()
     {

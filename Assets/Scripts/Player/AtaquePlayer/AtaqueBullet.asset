@@ -23,8 +23,8 @@ MonoBehaviour:
   "cantidadCa\xF1ones": 2
   separacion: 1
   modoSeparacion: 0
-  sonidoDisparo: {fileID: 8300000, guid: 4f16bae99c66ce8449732bc0ff08186f, type: 3}
-  volumenDisparo: 1
+  sonidoDisparo: {fileID: 8300000, guid: 3bc11f77b7b2dde488613bc1d83b8882, type: 3}
+  volumenDisparo: 0.256
   sonidoHold: {fileID: 0}
   volumenHold: 1
   prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}

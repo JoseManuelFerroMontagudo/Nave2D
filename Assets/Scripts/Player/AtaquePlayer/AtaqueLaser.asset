@@ -30,7 +30,7 @@ MonoBehaviour:
   sortingLayerName: Elementos_Juego
   textureMode: 0
   invertirDireccionMaterial: 1
-  autoCiclico: 1
+  autoCiclico: 0
   pausaIdle: 2
   tiempoAdvertencia: 2
   duracionDisparo: 0.5

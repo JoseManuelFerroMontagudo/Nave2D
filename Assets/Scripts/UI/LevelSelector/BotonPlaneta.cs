@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Button))]
 public class BotonPlaneta : MonoBehaviour
@@ -15,8 +16,14 @@ public class BotonPlaneta : MonoBehaviour
     [Tooltip("Alpha del botón cuando está bloqueado. 0.3 ≈ oscurecido sobre fondo espacial.")]
     public float alphaBloqueado = 0.3f;
 
+    [Header("Récord (opcional)")]
+    [Tooltip("TMP hijo del botón donde mostrar 'Récord: #'. Si null no se muestra.")]
+    public TMP_Text textoRecord;
+
     Button boton;
     CanvasGroup canvasGroup;
+
+    public int Record => PlayerPrefs.GetInt("PuntosNivel_" + numeroNivel, 0);
 
     void Awake()
     {
@@ -27,6 +34,8 @@ public class BotonPlaneta : MonoBehaviour
 
     void Start()
     {
+        RefrescarRecord();
+
         if (ProgressManager.Instance == null)
         {
             Debug.LogWarning("[BotonPlaneta] ProgressManager.Instance no disponible. " +
@@ -43,14 +52,18 @@ public class BotonPlaneta : MonoBehaviour
                 FindObjectOfType<SelectorNiveles>()?.SeleccionarPlaneta(this));
     }
 
+    /// Actualiza el TMP de récord (si está asignado).
+    public void RefrescarRecord()
+    {
+        if (textoRecord == null) return;
+        int r = Record;
+        textoRecord.text = r > 0 ? $"Récord: {r}" : "Récord: —";
+    }
+
     void AplicarEstado(bool desbloqueado)
     {
         boton.interactable = desbloqueado;
         canvasGroup.alpha = desbloqueado ? 1f : alphaBloqueado;
-
-        // Redundancia útil: aunque boton.interactable ya bloquea el clic,
-        // esto asegura que NINGÚN hijo sea clicable (ej. si un día añades
-        // un botón de "candado" o tooltip dentro del planeta).
         canvasGroup.interactable = desbloqueado;
         canvasGroup.blocksRaycasts = desbloqueado;
     }
