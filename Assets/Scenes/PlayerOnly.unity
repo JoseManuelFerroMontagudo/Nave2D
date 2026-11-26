@@ -299,8 +299,6 @@ MonoBehaviour:
   colorCalorFrio: {r: 1, g: 0.9215687, b: 0.015686275, a: 1}
   colorCalorMedio: {r: 1, g: 0.5948128, b: 0.015686274, a: 1}
   colorCalorCaliente: {r: 1, g: 0, b: 0, a: 1}
-  contenedorIconos: {fileID: 58844281}
-  iconoPlantilla: {fileID: 1319382193}
   estadisticas: {fileID: 1982281061}
 --- !u!114 &206993658
 MonoBehaviour:
@@ -2997,14 +2995,11 @@ MonoBehaviour:
   energiaMaxima: 100
   energia: 0
   regeneracionEnergia: 10
-  municionMaxima: 20
-  municion: 20
   calorMaximo: 100
   calorActual: 0
   disipacionPorSegundo: 30
   retrasoEnfriamiento: 1
   umbralSalidaRecalentamiento: 0
-  poder: 1
   puntos: 0
 --- !u!96 &1982281062
 TrailRenderer:
@@ -3494,6 +3489,7 @@ MonoBehaviour:
   curacionBotiquin: 25
   cantidadMunicion: 10
   cantidadEnergia: 25
+  shipWeapons: {fileID: 1982281059}
 --- !u!58 &2071368331
 CircleCollider2D:
   m_ObjectHideFlags: 0

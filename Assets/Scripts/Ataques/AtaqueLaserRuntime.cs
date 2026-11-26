@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class LaserHitbox : MonoBehaviour, IDamageDealer
 {
@@ -9,6 +10,9 @@ public class LaserHitbox : MonoBehaviour, IDamageDealer
 public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
 {
     public AtaqueLaser Config;
+
+    [Tooltip("Nombre del grupo del mixer para el audio del láser.")]
+    public string mixerGroupSFX = "SFX";
 
     enum Estado { Idle, Advertencia, Disparo }
     Estado estado = Estado.Idle;
@@ -23,6 +27,9 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
     int danioAcumulado;
     float grosorAcumulado;
 
+    AudioSource audioDisparo;
+    AudioSource audioCarga;
+
     class Rayo
     {
         public LineRenderer lr;
@@ -34,7 +41,30 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
     public int DanioActual { get; private set; }
     public float GrosorActual { get; private set; }
 
-    public void SetBoost(bool boost) { /* boost llega por Procesar */ }
+    public void SetBoost(bool boost) { }
+
+    void Awake()
+    {
+        var grupo = ResolverGrupo(mixerGroupSFX);
+
+        audioDisparo = gameObject.AddComponent<AudioSource>();
+        audioDisparo.loop = true;
+        audioDisparo.playOnAwake = false;
+        audioDisparo.spatialBlend = 0f;
+        audioDisparo.outputAudioMixerGroup = grupo;
+
+        audioCarga = gameObject.AddComponent<AudioSource>();
+        audioCarga.loop = true;
+        audioCarga.playOnAwake = false;
+        audioCarga.spatialBlend = 0f;
+        audioCarga.outputAudioMixerGroup = grupo;
+    }
+
+    void OnDestroy()
+    {
+        if (audioDisparo != null && audioDisparo.isPlaying) audioDisparo.Stop();
+        if (audioCarga != null && audioCarga.isPlaying) audioCarga.Stop();
+    }
 
     public void Procesar(AtaqueContext ctx, bool boost)
     {
@@ -44,11 +74,10 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
         if (enfriamiento > 0f) enfriamiento -= dt;
 
         ProcesarTransicion(boost, dt);
-        ProcesarEstado(ctx, dt, boost);   // ← pasamos boost para auto-disparo
+        ProcesarEstado(ctx, dt, boost);
         boostAnterior = boost;
     }
 
-    // ------------------ TRANSICIONES ------------------
     void ProcesarTransicion(bool boost, float dt)
     {
         bool flancoSubida = boost && !boostAnterior;
@@ -57,33 +86,26 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
         switch (estado)
         {
             case Estado.Idle:
-                // Entrada por flanco (manual) o por nivel si es cíclico y ya pasó el enfriamiento.
                 bool puedeEntrar = enfriamiento <= 0f && CadenciaLista();
                 if (puedeEntrar && (flancoSubida || (Config.autoCiclico && boost)))
                     Entrar(Estado.Advertencia);
                 break;
 
             case Estado.Advertencia:
-                // Pérdida de boost (soltar o quedarse sin recursos) → disparar con lo acumulado.
                 if (flancoBajada)
                 {
-                    if (DanioActual > 0 || GrosorActual > 0.0001f)
-                        CongelarYDisparar();
-                    else
-                        Entrar(Estado.Idle);   // no había carga aún: cancelar sin gastar
+                    if (DanioActual > 0 || GrosorActual > 0.0001f) CongelarYDisparar();
+                    else Entrar(Estado.Idle);
                 }
                 break;
 
             case Estado.Disparo:
-                // En cíclico, si sigue pulsado y ya pasó el enfriamiento, re-carga.
-                // (El enfriamiento se aplica al volver a Idle, no aquí.)
                 break;
         }
     }
 
     void CongelarYDisparar()
     {
-        // Usa lo acumulado; si es 0 (corte instantáneo), usa el mínimo, no el máximo.
         danioAcumulado = DanioActual;
         grosorAcumulado = GrosorActual;
         Entrar(Estado.Disparo);
@@ -92,7 +114,6 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
     bool CadenciaLista()
         => Time.time >= ultimoInicioCarga + (Config.cadencia > 0.0001f ? 1f / Config.cadencia : 0f);
 
-    // ------------------ ESTADOS ------------------
     void ProcesarEstado(AtaqueContext ctx, float dt, bool boost)
     {
         switch (estado)
@@ -101,6 +122,7 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 DanioActual = 0;
                 GrosorActual = 0f;
                 OcultarRayos();
+                ActualizarAudio(cargando: false, disparando: false);
                 break;
 
             case Estado.Advertencia:
@@ -111,11 +133,10 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                          + Config.barridoTotal * t01
                          + Config.rotacionAdvertencia * timer;
 
-                DanioActual = Config.danoEnAdvertencia
-                    ? Config.DanioEnAdvertencia(t01)
-                    : 0;
+                DanioActual = Config.danoEnAdvertencia ? Config.DanioEnAdvertencia(t01) : 0;
                 GrosorActual = Mathf.Lerp(0f, Config.grosorDisparo, t01);
                 DibujarRayos(ctx, advertencia: true);
+                ActualizarAudio(cargando: Config.sonidoCarga != null, disparando: false);
 
                 if (timer >= Config.tiempoAdvertencia)
                 {
@@ -126,10 +147,7 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                              + Config.barridoTotal
                              + Config.rotacionAdvertencia * Config.tiempoAdvertencia;
 
-                    // ⭐ Auto-disparo en cíclico: al alcanzar el máximo, dispara solo
-                    if (Config.autoCiclico)
-                        CongelarYDisparar();
-                    // En manual, se queda cargado hasta que el jugador suelte.
+                    if (Config.autoCiclico) CongelarYDisparar();
                 }
                 break;
 
@@ -139,9 +157,31 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 DanioActual = danioAcumulado;
                 GrosorActual = grosorAcumulado;
                 DibujarRayos(ctx, advertencia: false);
+                ActualizarAudio(cargando: false, disparando: Config.sonidoDisparo != null);
                 if (timer >= Config.duracionDisparo) Entrar(Estado.Idle);
                 break;
         }
+    }
+
+    void ActualizarAudio(bool cargando, bool disparando)
+    {
+        if (Config == null) return;
+
+        if (cargando)
+        {
+            if (audioCarga.clip != Config.sonidoCarga) audioCarga.clip = Config.sonidoCarga;
+            audioCarga.volume = Config.volumenCarga;
+            if (!audioCarga.isPlaying) audioCarga.Play();
+        }
+        else if (audioCarga.isPlaying) audioCarga.Stop();
+
+        if (disparando)
+        {
+            if (audioDisparo.clip != Config.sonidoDisparo) audioDisparo.clip = Config.sonidoDisparo;
+            audioDisparo.volume = Config.volumenDisparo;
+            if (!audioDisparo.isPlaying) audioDisparo.Play();
+        }
+        else if (audioDisparo.isPlaying) audioDisparo.Stop();
     }
 
     void Entrar(Estado nuevo)
@@ -165,6 +205,7 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 if (grosorAcumulado <= 0f) grosorAcumulado = Config != null ? Config.grosorDisparo : 0f;
                 DanioActual = danioAcumulado;
                 GrosorActual = grosorAcumulado;
+                if (audioCarga != null && audioCarga.isPlaying) audioCarga.Stop();
                 break;
 
             case Estado.Idle:
@@ -173,6 +214,8 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 GrosorActual = 0f;
                 if (Config != null) enfriamiento = Mathf.Max(enfriamiento, Config.pausaIdle);
                 OcultarRayos();
+                if (audioDisparo != null && audioDisparo.isPlaying) audioDisparo.Stop();
+                if (audioCarga != null && audioCarga.isPlaying) audioCarga.Stop();
                 break;
         }
     }
@@ -186,14 +229,9 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
         }
     }
 
-    // ------------------ DIBUJO ------------------
     void DibujarRayos(AtaqueContext ctx, bool advertencia)
     {
-        if (GrosorActual <= 0.0001f)
-        {
-            OcultarRayos();
-            return;
-        }
+        if (GrosorActual <= 0.0001f) { OcultarRayos(); return; }
 
         int total = Mathf.Max(1, Config.cantidadCañones);
         AsegurarRayos(total);
@@ -218,15 +256,13 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
             if (mat != null) r.lr.material = mat;
             r.lr.startWidth = r.lr.endWidth = GrosorActual;
             r.lr.startColor = r.lr.endColor = color;
-            r.lr.textureMode = Config.textureMode;    // ⭐ por si se cambia en runtime
+            r.lr.textureMode = Config.textureMode;
 
-            // Puntos en local del LineRenderer
             Transform rt = r.lr.transform;
             var local = new Vector3[puntosMundo.Count];
             for (int p = 0; p < puntosMundo.Count; p++)
                 local[p] = rt.InverseTransformPoint(puntosMundo[p]);
 
-            // Orden para el LineRenderer (invertido si se pide)
             if (Config.invertirDireccionMaterial)
             {
                 var invertido = new Vector3[local.Length];
@@ -241,7 +277,6 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 r.lr.SetPositions(local);
             }
 
-            // El collider no usa UV: da igual el orden, pero usamos el original
             r.col.points = ToVec2Array(local);
             r.col.edgeRadius = edgeRadius;
             r.col.enabled = damageEnabled;
@@ -255,8 +290,7 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
         }
     }
 
-    void CalcularOrigenYDir(AtaqueContext ctx, int i, int total,
-                            out Vector3 pos, out Vector2 dir)
+    void CalcularOrigenYDir(AtaqueContext ctx, int i, int total, out Vector3 pos, out Vector2 dir)
     {
         if (total < 1) total = 1;
         Vector3 basePos = ctx.origen != null ? ctx.origen.position : ctx.owner.position;
@@ -309,7 +343,7 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
             var lr = go.AddComponent<LineRenderer>();
             lr.useWorldSpace = false;
             lr.sortingLayerName = Config.sortingLayerName;
-            lr.textureMode = Config.textureMode;      // ⭐ aplica el modo configurado
+            lr.textureMode = Config.textureMode;
             lr.enabled = false;
 
             var col = go.AddComponent<EdgeCollider2D>();
@@ -328,5 +362,17 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
         var r = new Vector2[v.Length];
         for (int i = 0; i < v.Length; i++) r[i] = v[i];
         return r;
+    }
+
+    static AudioMixerGroup ResolverGrupo(string nombre)
+    {
+        if (string.IsNullOrEmpty(nombre)) return null;
+        var assets = Resources.FindObjectsOfTypeAll<AudioMixer>();
+        foreach (var m in assets)
+        {
+            var grupos = m.FindMatchingGroups(nombre);
+            if (grupos != null && grupos.Length > 0) return grupos[0];
+        }
+        return null;
     }
 }

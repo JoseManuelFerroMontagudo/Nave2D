@@ -15,13 +15,16 @@ MonoBehaviour:
   cadencia: 25
   costoCalor: 0
   costoEnergia: 1
-  costoMunicion: 0
   nombreVisible: Laser
   icono: {fileID: -2967136927400764835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
   descripcion: TEST
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 1
+  sonidoDisparo: {fileID: 8300000, guid: 5d3813b2ea7595f40993e2c869382d0d, type: 3}
+  volumenDisparo: 1
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
   tagRayo: Attack2
   longitud: 25
   sortingLayerName: Elementos_Juego
@@ -47,3 +50,5 @@ MonoBehaviour:
   danoMinimo: 0
   danoMaximo: 300
   danoEnAdvertencia: 0
+  sonidoCarga: {fileID: 0}
+  volumenCarga: 0.5

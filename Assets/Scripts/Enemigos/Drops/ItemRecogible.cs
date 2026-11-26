@@ -39,6 +39,23 @@ public class ItemRecogible : MonoBehaviour
     [Tooltip("Tag del objeto al que se acerca.")]
     public string tagObjetivo = "Player";
 
+    [Header("Arma almacenada")]
+    [Tooltip("Arma que otorga este item al recogerse.")]
+    public AtaqueBase armaAlmacenada;
+
+    [Tooltip("Puntos que otorga si el arma ya estaba desbloqueada.")]
+    public int puntosSiDuplicada = 50;
+
+    [Header("Victoria (opcional)")]
+    [Tooltip("Prefab del menú de victoria. Si se asigna, se instancia al recoger este item.")]
+    public GameObject prefabMenuVictoria;
+
+    [Tooltip("Si es true, al recoger este item se muestra el menú de victoria.")]
+    public bool esItemDeVictoria = false;
+
+    // Flag para evitar doble recogida
+    [HideInInspector] public bool recogido = false;
+
     Rigidbody2D rb;
     Camera cam;
     Transform objetivo;
@@ -117,5 +134,15 @@ public class ItemRecogible : MonoBehaviour
 
         v -= 2f * Vector2.Dot(v, normalHaciaFuera) * normalHaciaFuera;
         rb.linearVelocity = v;
+    }
+
+    /// <summary>
+    /// Intenta marcar el item como recogido. Devuelve false si ya lo estaba.
+    /// </summary>
+    public bool IntentarRecoger()
+    {
+        if (recogido) return false;
+        recogido = true;
+        return true;
     }
 }

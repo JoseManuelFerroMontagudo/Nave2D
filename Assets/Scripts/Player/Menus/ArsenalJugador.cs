@@ -37,8 +37,10 @@ public class ArsenalJugador : ScriptableObject
 
     public void Desbloquear(AtaqueBase atk)
     {
-        if (atk == null) return;
+        if (atk == null) { Debug.LogWarning("[Arsenal] Desbloquear: atk null"); return; }
+        Debug.Log($"[Arsenal] Desbloquear '{atk.name}'. Antes: {desbloqueados.Count}");
         if (!desbloqueados.Contains(atk)) desbloqueados.Add(atk);
+        Debug.Log($"[Arsenal] Desbloquear '{atk.name}'. Después: {desbloqueados.Count}");
         AutoRellenarSiVacio();
     }
 
@@ -64,5 +66,10 @@ public class ArsenalJugador : ScriptableObject
     {
         if (slot == 0) equipadaPrimaria = null;
         else equipadaSecundaria = null;
+    }
+    public bool EstaDesbloqueada(AtaqueBase atk)
+    {
+        if (atk == null || desbloqueados == null) return false;
+        return desbloqueados.Contains(atk); // List<T>.Contains, sin LINQ
     }
 }

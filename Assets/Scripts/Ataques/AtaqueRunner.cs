@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AtaqueRunner
 {
@@ -10,6 +11,8 @@ public class AtaqueRunner
     public Stats stats;
     public bool auto;
 
+    public string mixerGroupSFX = "SFX";
+
     readonly MonoBehaviour host;
 
     bool held;
@@ -17,10 +20,39 @@ public class AtaqueRunner
     AtaqueBase ataqueAnterior;
     GameObject instPermanente;
 
-    bool enRafaga;                // ← ráfaga en curso
-    Coroutine rafagaActual;       // ← handle para poder cancelarla
+    bool enRafaga;
+    Coroutine rafagaActual;
 
-    public AtaqueRunner(MonoBehaviour host) { this.host = host; }
+    AudioSource holdSource;
+
+    const int SHOT_POOL_SIZE = 8;
+    readonly AudioSource[] shotPool = new AudioSource[SHOT_POOL_SIZE];
+    int shotPoolIdx;
+
+    AudioMixerGroup grupoSFX;
+
+    public AtaqueRunner(MonoBehaviour host)
+    {
+        this.host = host;
+
+        grupoSFX = ResolverGrupo(mixerGroupSFX);
+
+        for (int i = 0; i < SHOT_POOL_SIZE; i++)
+        {
+            var s = host.gameObject.AddComponent<AudioSource>();
+            s.playOnAwake = false;
+            s.loop = false;
+            s.spatialBlend = 0f;
+            s.outputAudioMixerGroup = grupoSFX;
+            shotPool[i] = s;
+        }
+
+        holdSource = host.gameObject.AddComponent<AudioSource>();
+        holdSource.loop = true;
+        holdSource.playOnAwake = false;
+        holdSource.spatialBlend = 0f;
+        holdSource.outputAudioMixerGroup = grupoSFX;
+    }
 
     public AtaqueBase AtaqueActual => ataque;
     public void SetHeld(bool v) => held = v;
@@ -28,7 +60,8 @@ public class AtaqueRunner
     public void SetAtaque(AtaqueBase nuevo)
     {
         if (ataque == nuevo) return;
-        DetenerRafaga();          // ← cancela también la ráfaga en curso
+        DetenerRafaga();
+        DetenerSonidoHold();
         DestruirPermanente();
         ataque = nuevo;
         ataqueAnterior = null;
@@ -39,12 +72,10 @@ public class AtaqueRunner
     {
         if (ataque == null || ataque.EsPermanente) return false;
 
-        // ⭐ Si hay ráfaga en curso, NO la reiniciamos
         if (!ignorarCooldown && enRafaga) return false;
         if (!ignorarCooldown && Time.time < cooldown) return false;
         if (!PuedePagar()) return false;
 
-        // Force-fire (p. ej. Animator) sí cancela la ráfaga anterior
         if (ignorarCooldown) DetenerRafaga();
 
         Pagar();
@@ -74,13 +105,14 @@ public class AtaqueRunner
         if (ataque == null) return;
         if (ataque != ataqueAnterior) ActivarPermanente();
         if (ataque.EsPermanente) { ProcesarPermanente(); return; }
+
         if (auto || held) TryFire();
     }
 
-    // ---- resto igual que antes ----
     void ActivarPermanente()
     {
         DestruirPermanente();
+        DetenerSonidoHold();
         ataqueAnterior = ataque;
         if (ataque != null && ataque.EsPermanente)
             instPermanente = ataque.Activar(CrearContexto());
@@ -96,6 +128,31 @@ public class AtaqueRunner
             ataque.Tick(CrearContexto(), instPermanente, boost);
         }
         ataque.Actualizar(CrearContexto(), instPermanente, boost);
+
+        ActualizarSonidoHold(boost);
+    }
+
+    void ActualizarSonidoHold(bool activo)
+    {
+        if (ataque == null || ataque.UsaAudioPropio || ataque.sonidoHold == null)
+        {
+            DetenerSonidoHold();
+            return;
+        }
+
+        if (activo)
+        {
+            if (holdSource.clip != ataque.sonidoHold)
+                holdSource.clip = ataque.sonidoHold;
+            holdSource.volume = ataque.volumenHold;
+            if (!holdSource.isPlaying) holdSource.Play();
+        }
+        else DetenerSonidoHold();
+    }
+
+    void DetenerSonidoHold()
+    {
+        if (holdSource != null && holdSource.isPlaying) holdSource.Stop();
     }
 
     void DestruirPermanente()
@@ -110,7 +167,7 @@ public class AtaqueRunner
             ? ((Vector2)(objetivo.position - originPos)).normalized
             : (Vector2)owner.up;
 
-        return new AtaqueContext
+        var ctx = new AtaqueContext
         {
             owner = owner,
             origen = origen,
@@ -118,6 +175,25 @@ public class AtaqueRunner
             forward = fwd,
             stats = stats
         };
+
+        // El sonido de disparo suena una vez por cada bala instanciada vía ctx.Disparar
+        if (ataque != null && ataque.sonidoDisparo != null)
+            ctx.sonidoDisparo = ReproducirDisparo;
+
+        return ctx;
+    }
+
+    void ReproducirDisparo()
+    {
+        if (ataque == null || ataque.sonidoDisparo == null) return;
+
+        var s = shotPool[shotPoolIdx];
+        shotPoolIdx = (shotPoolIdx + 1) % SHOT_POOL_SIZE;
+
+        s.Stop();
+        s.clip = ataque.sonidoDisparo;
+        s.volume = ataque.volumenDisparo;
+        s.Play();
     }
 
     bool PuedePagar()
@@ -125,7 +201,6 @@ public class AtaqueRunner
         if (stats == null || ataque == null) return true;
         if (ataque.costoCalor > 0 && stats.Recalentado) return false;
         if (ataque.costoEnergia > 0 && stats.energia < ataque.costoEnergia) return false;
-        if (ataque.costoMunicion > 0 && stats.municion < ataque.costoMunicion) return false;
         return true;
     }
 
@@ -133,7 +208,18 @@ public class AtaqueRunner
     {
         if (stats == null || ataque == null) return;
         if (ataque.costoEnergia > 0) stats.DrenarEnergia(ataque.costoEnergia);
-        if (ataque.costoMunicion > 0) stats.ConsumirMunicion(ataque.costoMunicion);
         if (ataque.costoCalor > 0) stats.AñadirCalor(ataque.costoCalor);
+    }
+
+    static AudioMixerGroup ResolverGrupo(string nombre)
+    {
+        if (string.IsNullOrEmpty(nombre)) return null;
+        var assets = Resources.FindObjectsOfTypeAll<AudioMixer>();
+        foreach (var m in assets)
+        {
+            var grupos = m.FindMatchingGroups(nombre);
+            if (grupos != null && grupos.Length > 0) return grupos[0];
+        }
+        return null;
     }
 }

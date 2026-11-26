@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6754300361dd74ea892a0dbff3067f, type: 3}
+  m_Name: Drop Boss 1
+  m_EditorClassIdentifier: Assembly-CSharp::TablaDrops
+  entradas:
+  - prefab: {fileID: 1758116811068251401, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
+    cantidadMin: 1
+    cantidadMax: 1
+  - prefab: {fileID: 8594354345092268609, guid: 321c641c59b746c4f93660cf88b2dc70, type: 3}
+    cantidadMin: 15
+    cantidadMax: 20
+  - prefab: {fileID: 5330201909345936686, guid: fdee56152472b5f49abc8b4c952259cc, type: 3}
+    cantidadMin: 15
+    cantidadMax: 20
+  fuerzaMin: 2
+  fuerzaMax: 5

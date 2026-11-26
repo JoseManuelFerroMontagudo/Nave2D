@@ -15,14 +15,18 @@ MonoBehaviour:
   cadencia: 10
   costoCalor: 0
   costoEnergia: 0
-  costoMunicion: 0
   nombreVisible: 
   icono: {fileID: 0}
   descripcion: 
   "cantidadCa\xF1ones": 4
   separacion: 0.5
   modoSeparacion: 0
+  sonidoDisparo: {fileID: 8300000, guid: 4f16bae99c66ce8449732bc0ff08186f, type: 3}
+  volumenDisparo: 0.8
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
   prefab: {fileID: 1647063897390558238, guid: 9218515626db4784db7e776d0a904a59, type: 3}
+  simultaneo: 0
   oleadas: 1
   intervaloOleada: 0.3
   intervaloBala: 0

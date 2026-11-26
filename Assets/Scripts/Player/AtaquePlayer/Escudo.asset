@@ -15,11 +15,14 @@ MonoBehaviour:
   cadencia: 25
   costoCalor: 0
   costoEnergia: 1
-  costoMunicion: 0
   nombreVisible: Escudo
   icono: {fileID: 3191601095360900734, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
   descripcion: "Escudo Basico\nNo causa da\xF1o alguno"
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 0
+  sonidoDisparo: {fileID: 0}
+  volumenDisparo: 1
+  sonidoHold: {fileID: 8300000, guid: 1a3658521db16a245a0df2a2505f94a1, type: 3}
+  volumenHold: 1
   prefab: {fileID: 3594308605153596223, guid: c688fa585eda1f640941933e302e4986, type: 3}

@@ -15,6 +15,12 @@ MonoBehaviour:
   entradas:
   - prefab: {fileID: 1758116811068251401, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
     cantidadMin: 1
-    cantidadMax: 15
+    cantidadMax: 1
+  - prefab: {fileID: 4417200320074140329, guid: 2b28a780839f23241a02b3fa32ab2764, type: 3}
+    cantidadMin: 0
+    cantidadMax: 1
+  - prefab: {fileID: 8594354345092268609, guid: 321c641c59b746c4f93660cf88b2dc70, type: 3}
+    cantidadMin: 6
+    cantidadMax: 8
   fuerzaMin: 1
   fuerzaMax: 2

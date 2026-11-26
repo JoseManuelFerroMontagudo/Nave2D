@@ -15,7 +15,6 @@ MonoBehaviour:
   cadencia: 2
   costoCalor: 0
   costoEnergia: 5
-  costoMunicion: 0
   nombreVisible: Plasma
   icono: {fileID: -3911416680466541835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
   descripcion: 'Absorbe balas
@@ -24,6 +23,10 @@ MonoBehaviour:
   "cantidadCa\xF1ones": 2
   separacion: 2
   modoSeparacion: 0
+  sonidoDisparo: {fileID: 8300000, guid: 285bdf5c432d9534abf6d6b8d27775b2, type: 3}
+  volumenDisparo: 1
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
   prefab: {fileID: 4685093840455365156, guid: 006d8a741e2d135498b77dbfdb4b1fd2, type: 3}
   simultaneo: 0
   oleadas: 1

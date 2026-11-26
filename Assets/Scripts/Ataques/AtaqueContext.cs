@@ -8,6 +8,9 @@ public class AtaqueContext
     public Vector2 forward;
     public Stats stats;
 
+    // Callback opcional de audio (lo inyecta AtaqueRunner)
+    public System.Action sonidoDisparo;
+
     Vector3 GetOrigen() => origen != null ? origen.position : owner.position;
 
     public void Disparar(GameObject prefab, int i, int total, float separacion, ModoSeparacion modo)
@@ -25,6 +28,8 @@ public class AtaqueContext
 
         if (go.TryGetComponent(out Projectile p)) p.Initialize(dir);
         else if (go.TryGetComponent(out Bullet b)) b.Configurar(dir);
+
+        sonidoDisparo?.Invoke();   // ← suena una vez por bala instanciada
     }
 
     void ObtenerOrigenYDir(int i, int total, float sep, ModoSeparacion modo,
