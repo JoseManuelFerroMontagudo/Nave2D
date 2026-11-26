@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a50c561c16132408448151d76e7767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorAnomalia
-  tiempoParaTransicion: 52
+  tiempoParaTransicion: 5
   segundoInicioFrenesiAsteroides: 5
   segundoInicioSecuenciaLasers: 15
   tiempoAlarmaInestable: 10
@@ -6134,7 +6134,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9984353, y: 1.9984353, z: 1.9984353}
+  m_LocalScale: {x: 1.0008407, y: 1.0008407, z: 1.0008407}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1113569027}
@@ -6188,7 +6188,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 6.27
+  m_Radius: 2.23
 --- !u!114 &699765855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6932,7 +6932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.629892
+      value: 0.99915504
       objectReference: {fileID: 0}
     - target: {fileID: 7399300822234287611, guid: 3c71e996090769f4e801fc3a424e2ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
