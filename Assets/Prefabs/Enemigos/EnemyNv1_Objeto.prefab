@@ -237,6 +237,7 @@ MonoBehaviour:
   relleno: {fileID: 6061508199995304498}
   offset: {x: 0, y: 0, z: -1.5}
   mirarCamara: 1
+  fijarAPantalla: 0
   "soloVisibleAlDa\xF1ar": 1
   duracionVisible: 2
   velocidadFade: 8
@@ -499,7 +500,7 @@ MonoBehaviour:
   ataque: {fileID: 11400000, guid: d39a6a4f4498b144eb99b4d633fca21b, type: 2}
   dispararSinAnimator: 0
   puedeAtacar: 1
-  prefabVida: {fileID: 1758116811068251401, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
+  tablaDrops: {fileID: 11400000, guid: 2c11348d0bec73b4f93a449a49ff0091, type: 2}
 --- !u!114 &7325573772557519336
 MonoBehaviour:
   m_ObjectHideFlags: 0

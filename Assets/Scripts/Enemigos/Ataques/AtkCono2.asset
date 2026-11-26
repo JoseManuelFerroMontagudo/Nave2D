@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8325bf83ccef5c44be1e8a7cfa15cf1, type: 3}
+  m_Name: AtkCono2
+  m_EditorClassIdentifier: Assembly-CSharp::AtaqueCono
+  cadencia: 0.5
+  costoCalor: 0
+  costoEnergia: 0
+  nombreVisible: Ataque Cono
+  icono: {fileID: 1109653005361908914, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
+  descripcion: Test
+  "cantidadCa\xF1ones": 2
+  separacion: 18
+  modoSeparacion: 1
+  sonidoDisparo: {fileID: 0}
+  volumenDisparo: 1
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
+  prefab: {fileID: 6523491484519321021, guid: 0007a31b263d89440a60c3913579e628, type: 3}
+  simultaneo: 0
+  oleadas: 6
+  intervaloOleada: 0.4
+  intervaloBala: 0
