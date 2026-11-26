@@ -3,47 +3,85 @@ using UnityEngine.InputSystem;
 
 public class UIActions : MonoBehaviour
 {
-    [Header("Menú superpuesto")]
-    [SerializeField] GameObject menuPrefab;
-    [SerializeField] GameObject inventoryPrefab;
+    [Header("Paneles (ya en escena, desactivados)")]
+    [SerializeField] GameObject menuPanel;
+    [SerializeField] GameObject inventoryPanel;
     [SerializeField] Minimap minimap;
 
     [Header("Input del juego")]
-    [SerializeField] PlayerInput gameplayInput;   // el PlayerInput del Player
+    [SerializeField] PlayerInput gameplayInput;
 
-    GameObject menuInstance;
-    GameObject invInstance;
+    void Awake()
+    {
+        // Aseguramos estado inicial: ambos cerrados
+        if (menuPanel) menuPanel.SetActive(false);
+        if (inventoryPanel) inventoryPanel.SetActive(false);
+    }
 
     void Start()
     {
-        menuInstance = Instantiate(menuPrefab);
-        menuInstance.SetActive(false);
-        invInstance = Instantiate(inventoryPrefab);
-        invInstance.SetActive(false);
+        RefreshPause();
     }
 
     void RefreshPause()
     {
-        bool anyOpen = menuInstance.activeSelf || invInstance.activeSelf;
-        if (anyOpen) gameplayInput.DeactivateInput();
-        else gameplayInput.ActivateInput();
+        bool anyOpen = (menuPanel && menuPanel.activeSelf) || (inventoryPanel && inventoryPanel.activeSelf);
+        if (gameplayInput)
+        {
+            if (anyOpen) gameplayInput.DeactivateInput();
+            else gameplayInput.ActivateInput();
+        }
         Time.timeScale = anyOpen ? 0f : 1f;
     }
 
+    // ---- Invocado por botón de UI ----
     public void OnMenu()
     {
-        if (invInstance.activeSelf) { invInstance.SetActive(false); RefreshPause(); return; }
-        if (menuInstance.activeSelf) { menuInstance.SetActive(false); RefreshPause(); return; }
-        menuInstance.SetActive(true); RefreshPause();
+        if (inventoryPanel && inventoryPanel.activeSelf)
+        {
+            inventoryPanel.SetActive(false);
+            RefreshPause();
+            return;
+        }
+        if (menuPanel && menuPanel.activeSelf)
+        {
+            menuPanel.SetActive(false);
+            RefreshPause();
+            return;
+        }
+        if (menuPanel) menuPanel.SetActive(true);
+        RefreshPause();
     }
 
     public void OnInventory()
     {
-        if (menuInstance.activeSelf) return;   // menú modal: bloquea el inventario
+        if (menuPanel && menuPanel.activeSelf) return;
 
-        invInstance.SetActive(!invInstance.activeSelf);
+        if (inventoryPanel) inventoryPanel.SetActive(!inventoryPanel.activeSelf);
         RefreshPause();
     }
 
-    public void OnMinimap() => minimap.ToggleMode();
+    public void OnMinimap()
+    {
+        if (minimap) minimap.ToggleMode();
+    }
+
+    // ---- Cierre explícito (para botones "Volver") ----
+    public void CloseMenu()
+    {
+        if (menuPanel && menuPanel.activeSelf)
+        {
+            menuPanel.SetActive(false);
+            RefreshPause();
+        }
+    }
+
+    public void CloseInventory()
+    {
+        if (inventoryPanel && inventoryPanel.activeSelf)
+        {
+            inventoryPanel.SetActive(false);
+            RefreshPause();
+        }
+    }
 }
