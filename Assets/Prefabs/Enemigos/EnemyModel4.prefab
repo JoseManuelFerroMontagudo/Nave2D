@@ -85,6 +85,10 @@ PrefabInstance:
       value: EnemyModel4
       objectReference: {fileID: 0}
     - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
+      propertyPath: ataque
+      value: 
+      objectReference: {fileID: 11400000, guid: 339c434588258884f9566f11136c46eb, type: 2}
+    - target: {fileID: 8525747350769505959, guid: 98acf9208f1e82e44a294db73fcdf8b6, type: 3}
       propertyPath: tablaDrops
       value: 
       objectReference: {fileID: 11400000, guid: 2c11348d0bec73b4f93a449a49ff0091, type: 2}
