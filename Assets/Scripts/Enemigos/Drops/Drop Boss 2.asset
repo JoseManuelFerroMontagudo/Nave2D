@@ -19,11 +19,11 @@ MonoBehaviour:
   - prefab: {fileID: 8169705661563560738, guid: 0bf12099186caeb4bbabe9d025b2d3b9, type: 3}
     cantidadMin: 15
     cantidadMax: 20
-  - prefab: {fileID: 5230862968608632449, guid: fd058f3ffdb0c564e93f2e30a5c83cb8, type: 3}
+  - prefab: {fileID: 5330201909345936686, guid: fdee56152472b5f49abc8b4c952259cc, type: 3}
     cantidadMin: 1
     cantidadMax: 1
-  - prefab: {fileID: 8850035255446524344, guid: cd085a570c2332c4282a76f41037ba5c, type: 3}
-    cantidadMin: 0
+  - prefab: {fileID: 201327377359977054, guid: 33ab685c3ac75ec4b9131bac42eeb512, type: 3}
+    cantidadMin: 1
     cantidadMax: 1
-  fuerzaMin: 2
-  fuerzaMax: 5
+  fuerzaMin: 0.1
+  fuerzaMax: 2
