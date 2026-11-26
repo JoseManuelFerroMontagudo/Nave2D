@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3911692069502617977}
   - component: {fileID: 2023619946383593357}
   m_Layer: 0
-  m_Name: LootBoss1
+  m_Name: LootBoss- Laser
   m_TagString: AmmoPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   velocidadAtraccion: 8
   tagObjetivo: Player
   armaAlmacenada: {fileID: 11400000, guid: 1f8a77915f8b414419794d8fac51bad6, type: 2}
-  puntosSiDuplicada: 50
+  puntosSiDuplicada: 500
   prefabMenuVictoria: {fileID: 0}
   esItemDeVictoria: 0
   recogido: 0

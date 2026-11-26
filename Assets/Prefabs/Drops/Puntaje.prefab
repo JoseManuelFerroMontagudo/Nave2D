@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puntaje
       objectReference: {fileID: 0}
+    - target: {fileID: 1758116811068251401, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
+      propertyPath: m_TagString
+      value: AmmoPickup
+      objectReference: {fileID: 0}
     - target: {fileID: 3061066635468561939, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0
@@ -28,6 +32,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1452822860, guid: 8d4adfc8aa88424409e6274593426de8, type: 3}
+    - target: {fileID: 8010217770393954601, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
+      propertyPath: armaAlmacenada
+      value: 
+      objectReference: {fileID: 11400000, guid: a40ac8c792febc8469b33eb50933d579, type: 2}
+    - target: {fileID: 8010217770393954601, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
+      propertyPath: puntosSiDuplicada
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8987875364315857441, guid: c2bcffa76d910fc40ac0a7e1b654847e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

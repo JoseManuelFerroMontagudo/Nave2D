@@ -20,7 +20,10 @@ MonoBehaviour:
     cantidadMin: 1
     cantidadMax: 1
   - prefab: {fileID: 8594354345092268609, guid: 321c641c59b746c4f93660cf88b2dc70, type: 3}
-    cantidadMin: 10
-    cantidadMax: 15
+    cantidadMin: 6
+    cantidadMax: 6
+  - prefab: {fileID: 8169705661563560738, guid: 0bf12099186caeb4bbabe9d025b2d3b9, type: 3}
+    cantidadMin: 2
+    cantidadMax: 2
   fuerzaMin: 2
   fuerzaMax: 5
