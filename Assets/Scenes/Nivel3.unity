@@ -265,6 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControladorAnomalia
   tiempoParaTransicion: 52
+  segundoInicioFrenesiAsteroides: 5
+  segundoInicioSecuenciaLasers: 15
   tiempoAlarmaInestable: 10
   laserAnomalia: {fileID: 726250899}
   maquinaLasers: {fileID: 409678349}
@@ -5555,6 +5557,7 @@ MonoBehaviour:
   velocidadRotacion: 22
   tiempoAdvertencia: 1
   duracionDisparo: 5
+  prefabImpactoLaser: {fileID: 0}
   materialLaser: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   sortingLayerName: Elementos_Juego
   grosorAdvertencia: 3
@@ -6552,6 +6555,12 @@ MonoBehaviour:
   tiempoAdvertencia: 0.8
   duracionDisparo: 0.4
   danoPorImpacto: 25
+  prefabMiniAgujero: {fileID: 7698369970264882517, guid: b4665665a1ffba5438adb458da397b8d, type: 3}
+  prefabPortalHijos: {fileID: 0}
+  retrasoAparicionHijos: 0.4
+  distanciaOrbitaHijos: 18
+  anguloFlancosHijos: 48
+  prefabImpactoLaser: {fileID: 0}
   materialAdvertencia: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   materialDisparo: {fileID: 2100000, guid: cee7a024652a91041844d8c1e94a5e22, type: 2}
   grosorAdvertencia: 2
@@ -6564,9 +6573,6 @@ MonoBehaviour:
   anguloAbanico: 18
   segmentosZigZag: 10
   amplitudZigZag: 1.5
-  prefabMiniAgujero: {fileID: 7698369970264882517, guid: b4665665a1ffba5438adb458da397b8d, type: 3}
-  distanciaOrbitaHijos: 18
-  anguloFlancosHijos: 48
 --- !u!1 &759091202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12087,7 +12093,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9803600998c48b140b2f7038d0fc2eb1, type: 2}
+  - {fileID: 2100000, guid: 4778856aab888f640b0ae081d3c3ca47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12644,6 +12650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerAnomalia
   prefabAsteroide: {fileID: 3955418798240587005, guid: 18bb600265b4a4a4fa29f69b9f5b8404, type: 3}
+  prefabPortalSpawn: {fileID: 0}
+  retrasoSalidaAsteroide: 0.35
   radioSpawn: 58
   intervaloSpawn: 0.5
   velocidadSuccion: 13
