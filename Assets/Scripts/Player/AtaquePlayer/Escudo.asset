@@ -15,9 +15,10 @@ MonoBehaviour:
   cadencia: 25
   costoCalor: 0
   costoEnergia: 1
-  nombreVisible: Escudo
+  nombreVisible: Barrera Aegis
   icono: {fileID: 3191601095360900734, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: "Escudo Basico\nNo causa da\xF1o alguno"
+  descripcion: "Campo deflector que absorbe impactos. Consume energ\xEDa del n\xFAcleo
+    mientras est\xE1 activo; se agota r\xE1pido bajo fuego intenso."
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 0

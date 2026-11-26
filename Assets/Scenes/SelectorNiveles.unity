@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Planeta
+  nombreMostrado: Nivel Infinto
   descripcion: "Un lugar inh\xF3spito..."
   escenaDestino: Nivel4
   numeroNivel: 4
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Planeta
+  nombreMostrado: Nivel 2
   descripcion: "Un lugar inh\xF3spito..."
   escenaDestino: Nivel2
   numeroNivel: 2
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Planeta 1
+  nombreMostrado: Nivel 1
   descripcion: "Un lugar inh\xF3spito..."
   escenaDestino: Nivel1
   numeroNivel: 1
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af16f9898e65fe4792da4d5a32446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Planeta
-  nombreMostrado: Planeta
+  nombreMostrado: Nivel 3
   descripcion: "Un lugar inh\xF3spito..."
   escenaDestino: Nivel3
   numeroNivel: 3

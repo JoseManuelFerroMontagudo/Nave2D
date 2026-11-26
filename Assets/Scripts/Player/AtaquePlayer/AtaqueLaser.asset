@@ -15,9 +15,10 @@ MonoBehaviour:
   cadencia: 25
   costoCalor: 0
   costoEnergia: 1
-  nombreVisible: Laser
+  nombreVisible: "L\xE1ser Nova"
   icono: {fileID: -2967136927400764835, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: TEST
+  descripcion: "Haz continuo de alta intensidad que barre objetivos. Drena energ\xEDa
+    r\xE1pidamente mientras se mantiene el disparo; requiere carga previa"
   "cantidadCa\xF1ones": 1
   separacion: 0
   modoSeparacion: 1

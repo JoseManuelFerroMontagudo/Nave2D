@@ -15,10 +15,20 @@ MonoBehaviour:
   cadencia: 0.5
   costoCalor: 0
   costoEnergia: 20
-  costoMunicion: 0
-  nombreVisible: Espectro
+  nombreVisible: Eco Espectral
   icono: {fileID: 965411896615525002, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: "Invoca una copia\nDa\xF1o basico "
+  descripcion: "Proyecta un duplicado hologr\xE1fico del piloto que dispara balas
+    normales de forma aut\xF3noma. Consume energ\xEDa mientras el eco permanece activo;
+    se desvanece al agotarse la reserva o tras un tiempo l\xEDmite. "
+  "cantidadCa\xF1ones": 1
+  separacion: 0
+  modoSeparacion: 0
+  sonidoDisparo: {fileID: 0}
+  volumenDisparo: 1
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
   prefab: {fileID: 4557198877208420223, guid: 4bfdc87b0fd6cb341ac0f9a10ebfcbde, type: 3}
-  velocidad: 0
-  "desdeCa\xF1ones": 0
+  simultaneo: 0
+  oleadas: 1
+  intervaloOleada: 0.3
+  intervaloBala: 0
