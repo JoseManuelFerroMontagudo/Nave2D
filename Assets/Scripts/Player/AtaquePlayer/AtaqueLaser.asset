@@ -23,8 +23,8 @@ MonoBehaviour:
   modoSeparacion: 1
   sonidoDisparo: {fileID: 8300000, guid: 5d3813b2ea7595f40993e2c869382d0d, type: 3}
   volumenDisparo: 1
-  sonidoHold: {fileID: 0}
-  volumenHold: 1
+  sonidoHold: {fileID: 8300000, guid: 6406b19fc017bf6f09e6773a080e0ddb, type: 3}
+  volumenHold: 0.5
   tagRayo: Attack2
   longitud: 25
   sortingLayerName: Elementos_Juego
@@ -50,5 +50,3 @@ MonoBehaviour:
   danoMinimo: 0
   danoMaximo: 300
   danoEnAdvertencia: 0
-  sonidoCarga: {fileID: 0}
-  volumenCarga: 0.5

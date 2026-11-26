@@ -46,14 +46,8 @@ public class AtaqueLaser : AtaqueBase
     public int danoMinimo = 0;
     public int danoMaximo = 50;
     public bool danoEnAdvertencia = false;
-
-
-    [Tooltip("Opcional: loop durante el Estado.Advertencia (carga).")]
-    public AudioClip sonidoCarga;
-    [Range(0f, 1f)] public float volumenCarga = 0.5f;
-
     public override bool EsPermanente => true;
-    public override bool UsaAudioPropio => true;   // el runtime gestiona su audio
+    public override bool UsaAudioPropio => true;
 
     public int DanioEnAdvertencia(float t01)
         => Mathf.RoundToInt(Mathf.Lerp(danoMinimo, danoMaximo, Mathf.Clamp01(t01)));

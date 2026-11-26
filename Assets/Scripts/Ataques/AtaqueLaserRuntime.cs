@@ -136,7 +136,8 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
                 DanioActual = Config.danoEnAdvertencia ? Config.DanioEnAdvertencia(t01) : 0;
                 GrosorActual = Mathf.Lerp(0f, Config.grosorDisparo, t01);
                 DibujarRayos(ctx, advertencia: true);
-                ActualizarAudio(cargando: Config.sonidoCarga != null, disparando: false);
+                // ⭐ sonidoHold de AtaqueBase = loop de carga
+                ActualizarAudio(cargando: Config.sonidoHold != null, disparando: false);
 
                 if (timer >= Config.tiempoAdvertencia)
                 {
@@ -167,14 +168,16 @@ public class AtaqueLaserRuntime : MonoBehaviour, IPermanenteHandler
     {
         if (Config == null) return;
 
+        // CARGA (Estado.Advertencia) → usa sonidoHold de AtaqueBase
         if (cargando)
         {
-            if (audioCarga.clip != Config.sonidoCarga) audioCarga.clip = Config.sonidoCarga;
-            audioCarga.volume = Config.volumenCarga;
+            if (audioCarga.clip != Config.sonidoHold) audioCarga.clip = Config.sonidoHold;
+            audioCarga.volume = Config.volumenHold;
             if (!audioCarga.isPlaying) audioCarga.Play();
         }
         else if (audioCarga.isPlaying) audioCarga.Stop();
 
+        // DISPARO (Estado.Disparo) → usa sonidoDisparo del láser
         if (disparando)
         {
             if (audioDisparo.clip != Config.sonidoDisparo) audioDisparo.clip = Config.sonidoDisparo;
