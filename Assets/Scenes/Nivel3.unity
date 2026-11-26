@@ -5549,6 +5549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaquinaLasers
   cantidadRayos: 12
+  sonidoDisparo: {fileID: 8300000, guid: 9bf40ea6550ab582d96e1d17b7d6af39, type: 3}
+  volumenDisparo: 0.55
   longitudRayos: 60
   velocidadRotacion: 22
   tiempoAdvertencia: 1
@@ -6545,6 +6547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserAnomalia
   distanciaMax: 60
+  sonidoDisparo: {fileID: 8300000, guid: 9bf40ea6550ab582d96e1d17b7d6af39, type: 3}
+  volumenDisparo: 0.55
   tiempoAdvertencia: 0.8
   duracionDisparo: 0.4
   danoPorImpacto: 25

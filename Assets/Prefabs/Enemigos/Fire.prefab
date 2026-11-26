@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 76471740112854401, guid: 56b09b3957acc4f4693e8b6089f91cdd, type: 3}
+    - target: {fileID: 6192812014058191320, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192812014058191320, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 6406b19fc017bf6f09e6773a080e0ddb, type: 3}
     - target: {fileID: 7238110645245677718, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
       propertyPath: m_Name
       value: Fire
