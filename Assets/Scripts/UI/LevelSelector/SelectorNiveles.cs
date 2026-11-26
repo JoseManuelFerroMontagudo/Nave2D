@@ -118,7 +118,13 @@ public class SelectorNiveles : MonoBehaviour
         modoActual = Modo.Planeta;
 
         if (textoNombre != null) textoNombre.text = p.nombreMostrado;
-        if (textoDescripcion != null) textoDescripcion.text = p.descripcion;
+
+        if (textoDescripcion != null)
+        {
+            int record = p.Record;
+            string lineaRecord = record > 0 ? $"Récord: {record}" : "Récord: —";
+            textoDescripcion.text = $"{p.descripcion}\n\n{lineaRecord}";
+        }
 
         if (imagenSeleccion != null)
         {

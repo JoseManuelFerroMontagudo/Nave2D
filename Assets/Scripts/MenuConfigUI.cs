@@ -1,89 +1,97 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class MenuConfigUI : MonoBehaviour
 {
     [Header("Audio")]
-    [SerializeField] Slider sliderMaster;
-    [SerializeField] Slider sliderMusica;
-    [SerializeField] AudioMixer mixer;              // opcional si aún no lo tienes
-
-    [Header("Minimapa")]
-    [SerializeField] Toggle toggleModo;
-    [SerializeField] Minimap minimap;
+    [SerializeField] Slider sliderEfects;      // Ahora: Efectos (SFX)
+    [SerializeField] Slider sliderMusica;      // Música
+    [SerializeField] Toggle toggleModo;        // Ahora: Silenciar todo
+    [SerializeField] AudioMixer mixer;
 
     [Header("Escenas")]
     [SerializeField] string mainMenuScene = "MainMenu";
 
-    // Referencias al UIActions del Canvas principal
     UIActions ui;
+    float _lastSfxVolume = 0.8f; // Para restaurar al desactivar silencio
 
     void Awake()
     {
         ui = FindObjectOfType<UIActions>();
-        if (!minimap) minimap = FindObjectOfType<Minimap>();
 
-        // Cargar valores actuales (o PlayerPrefs si ya existen)
-        sliderMaster.value = PlayerPrefs.GetFloat("vol_master", 0.8f);
+        // Cargar valores
+        sliderEfects.value = PlayerPrefs.GetFloat("vol_sfx", 0.8f);
+        _lastSfxVolume = sliderEfects.value;
         sliderMusica.value = PlayerPrefs.GetFloat("vol_musica", 0.8f);
-        if (minimap) toggleModo.isOn = minimap.CenterOnPlayer;
+        toggleModo.isOn = PlayerPrefs.GetInt("mute_all", 0) == 1;
 
         // Cablear eventos
-        sliderMaster.onValueChanged.AddListener(OnMasterChanged);
+        sliderEfects.onValueChanged.AddListener(OnSfxChanged);
         sliderMusica.onValueChanged.AddListener(OnMusicaChanged);
-        toggleModo.onValueChanged.AddListener(OnModoChanged);
-        if (mixer)
-        {
-            mixer.SetFloat("MasterVol", Mathf.Log10(Mathf.Max(sliderMaster.value, 0.0001f)) * 20f);
-            mixer.SetFloat("MusicVol", Mathf.Log10(Mathf.Max(sliderMusica.value, 0.0001f)) * 20f);
-        }
-    }
-    void OnEnable()
-    {
-        if (!minimap) minimap = FindObjectOfType<Minimap>();
-        if (minimap && toggleModo)
-            toggleModo.SetIsOnWithoutNotify(minimap.CenterOnPlayer);
-    }
-    void Update()
-    {
-        if (minimap && toggleModo.isOn != minimap.CenterOnPlayer)
-            toggleModo.SetIsOnWithoutNotify(minimap.CenterOnPlayer);
+        toggleModo.onValueChanged.AddListener(OnMuteAllChanged);
+
+        // Aplicar estado inicial
+        ApplySfxVolume(sliderEfects.value);
+        ApplyMusicVolume(sliderMusica.value);
+        ApplyMuteState(toggleModo.isOn, savePrefs: false);
     }
 
     // ---- Audio ----
-    void OnMasterChanged(float v)
+    void OnSfxChanged(float v)
     {
-        if (mixer) mixer.SetFloat("MasterVol", Mathf.Log10(Mathf.Max(v, 0.0001f)) * 20f);
-        PlayerPrefs.SetFloat("vol_master", v);
+        _lastSfxVolume = v;
+        ApplySfxVolume(v);
+        PlayerPrefs.SetFloat("vol_sfx", v);
+        // Si el usuario mueve el slider de efectos estando silenciado, desactivar silencio automáticamente
+        if (toggleModo.isOn)
+        {
+            toggleModo.SetIsOnWithoutNotify(false);
+            ApplyMuteState(false, savePrefs: true);
+        }
     }
 
     void OnMusicaChanged(float v)
     {
-        if (mixer) mixer.SetFloat("MusicVol", Mathf.Log10(Mathf.Max(v, 0.0001f)) * 20f);
+        ApplyMusicVolume(v);
         PlayerPrefs.SetFloat("vol_musica", v);
     }
 
-    // ---- Minimapa ----
-    void OnModoChanged(bool on)
+    void OnMuteAllChanged(bool muted)
     {
-        if (minimap) minimap.SetMode(on);
+        ApplyMuteState(muted, savePrefs: true);
+    }
+
+    void ApplySfxVolume(float v)
+    {
+        if (mixer) mixer.SetFloat("SFXVol", Mathf.Log10(Mathf.Max(v, 0.0001f)) * 20f);
+    }
+
+    void ApplyMusicVolume(float v)
+    {
+        if (mixer) mixer.SetFloat("MusicVol", Mathf.Log10(Mathf.Max(v, 0.0001f)) * 20f);
+    }
+
+    void ApplyMuteState(bool muted, bool savePrefs)
+    {
+        if (mixer)
+        {
+            // Silenciar todo: Master a -80dB (silencio), o restaurar
+            mixer.SetFloat("MasterVol", muted ? -80f : 0f);
+        }
+        if (savePrefs) PlayerPrefs.SetInt("mute_all", muted ? 1 : 0);
     }
 
     // ---- Botones ----
     public void Guardar()
     {
-        // Placeholder: por ahora PlayerPrefs ya guarda audio.
-        // Aquí irá tu sistema de guardado real.
         PlayerPrefs.Save();
-        Debug.Log("[MenuConfig] Guardado (placeholder)");
+        Debug.Log("[MenuConfig] Guardado");
     }
 
     public void Controles()
     {
-        Debug.Log("[MenuConfig] Controles (placeholder)");
-        // Futuro: abrir submenú o panel de controles
+        Debug.Log("[MenuConfig] Abrir panel de controles");
     }
 
     public void SalirAlMenuPrincipal()
@@ -94,12 +102,13 @@ public class MenuConfigUI : MonoBehaviour
 
     public void Volver()
     {
-        if (ui) ui.OnMenu();                 // reusa la misma lógica abrir/cerrar
+        if (ui) ui.OnMenu();
         else gameObject.SetActive(false);
     }
+
     public void SalirDelJuego()
     {
-        Time.timeScale = 1f;                     // por si acaso, salir limpio
+        Time.timeScale = 1f;
         if (SceneLoader.Instance) SceneLoader.Instance.Salir();
         else Application.Quit();
     }

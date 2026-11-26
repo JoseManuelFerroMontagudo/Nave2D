@@ -12,6 +12,10 @@ public class MenuUI : MonoBehaviour
     public Button botonNuevaPartida;
     public TMP_Text textoBotonNuevaPartida;
     public Button botonNiveles;
+    public Button botonConfiguracion;
+
+    [Header("Panel de configuración (ya en escena, desactivado)")]
+    public GameObject panelConfiguracion;
 
     [Header("Niveles (índice 0 = nivel 1)")]
     public string[] escenasNivel = { "Nivel1", "Nivel2", "Nivel3", "Nivel4" };
@@ -30,6 +34,12 @@ public class MenuUI : MonoBehaviour
                 PlayerPrefs.GetInt(ProgressManager.KEY_DEBUG_UNLOCK, 0) > 0);
             toggleDebugUnlock.onValueChanged.AddListener(OnDebugToggleChanged);
         }
+
+        if (botonConfiguracion != null)
+            botonConfiguracion.onClick.AddListener(ToggleConfiguracion);
+
+        if (panelConfiguracion != null)
+            panelConfiguracion.SetActive(false);
     }
 
     int MaxEfectivo()
@@ -43,18 +53,28 @@ public class MenuUI : MonoBehaviour
     {
         int max = MaxEfectivo();
 
-        // "Nueva Partida" vs "Continuar"
         bool continuar = max > 1;
         if (textoBotonNuevaPartida != null)
             textoBotonNuevaPartida.text = continuar ? "Continuar" : "Nueva Partida";
 
-        // "Niveles": solo si hay algo más que el nivel 1
         if (botonNiveles != null)
             botonNiveles.interactable = max > 1;
     }
 
-    // ---------- Botones ----------
+    // ---------- Configuración ----------
+    public void ToggleConfiguracion()
+    {
+        if (panelConfiguracion == null) return;
+        panelConfiguracion.SetActive(!panelConfiguracion.activeSelf);
+    }
 
+    public void CloseConfiguracion()
+    {
+        if (panelConfiguracion != null)
+            panelConfiguracion.SetActive(false);
+    }
+
+    // ---------- Botones ----------
     public void NuevaPartida()
     {
         int maxReal = PlayerPrefs.GetInt(ProgressManager.KEY_NIVEL_MAX, 0);

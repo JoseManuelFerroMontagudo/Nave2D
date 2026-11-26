@@ -7,11 +7,16 @@ public class ConvoyFollower : MonoBehaviour
     [Header("Cuerpo")]
     public Transform head;
     public Transform[] segmentVariants;
-    public Transform neckPrefab, tailPrefab;
     public int bodyCount = 10;
     public float spacing = 0.5f;
-    public bool randomVariants = true, avoidConsecutiveRepeats = true;
-    public int randomSeed;
+
+    [Header("Cola (escala progresiva)")]
+    [Tooltip("Cantidad de segmentos finales que se irán reduciendo.")]
+    public int tailSegments = 3;
+    [Tooltip("Escala del primer segmento de cola (respecto a 1).")]
+    public float tailScaleStart = 0.85f;
+    [Tooltip("Escala del último segmento.")]
+    public float tailScaleEnd = 0.35f;
 
     [Header("Movimiento")]
     public float sampleDistance = 0.05f, followSmooth = 15f;
@@ -28,7 +33,6 @@ public class ConvoyFollower : MonoBehaviour
     SpriteRenderer[] bodyRenderers;
     SpriteRenderer headRenderer;
     readonly List<Vector2> path = new List<Vector2>();
-    System.Random rng;
 
     void Awake()
     {
@@ -47,40 +51,40 @@ public class ConvoyFollower : MonoBehaviour
         foreach (Transform c in transform) if (c.name.StartsWith("Body_")) old.Add(c.gameObject);
         old.ForEach(g => { if (Application.isPlaying) Destroy(g); else DestroyImmediate(g); });
 
-        rng = randomSeed == 0 ? new System.Random() : new System.Random(randomSeed);
         bodyParts = new Transform[bodyCount];
         bodyRenderers = new SpriteRenderer[bodyCount];
-        int prev = -1;
 
         for (int i = 0; i < bodyCount; i++)
         {
-            var src = PickSegment(i, ref prev) ?? segmentVariants[0];
+            // Orden secuencial desde la lista
+            var src = segmentVariants[i % segmentVariants.Length];
             var clone = Instantiate(src, head.position - head.up * spacing * (i + 1), head.rotation, transform);
             clone.gameObject.SetActive(true);
             clone.name = $"Body_{i:00}";
+
+            // Escala progresiva en la cola
+            clone.localScale = Vector3.one * GetTailScale(i);
+
             bodyParts[i] = clone;
             bodyRenderers[i] = clone.GetComponentInChildren<SpriteRenderer>(true);
         }
 
         foreach (var v in segmentVariants) if (v && v.gameObject.scene.IsValid()) v.gameObject.SetActive(false);
-        if (neckPrefab && neckPrefab.gameObject.scene.IsValid()) neckPrefab.gameObject.SetActive(false);
-        if (tailPrefab && tailPrefab.gameObject.scene.IsValid()) tailPrefab.gameObject.SetActive(false);
 
         headRenderer = head.GetComponentInChildren<SpriteRenderer>(true);
     }
 
-    Transform PickSegment(int i, ref int prev)
+    float GetTailScale(int index)
     {
-        if (i == 0 && neckPrefab) return neckPrefab;
-        if (i == bodyCount - 1 && tailPrefab) return tailPrefab;
-        if (!randomVariants) return segmentVariants[prev = i % segmentVariants.Length];
+        int tailCount = Mathf.Clamp(tailSegments, 0, bodyCount);
+        if (tailCount == 0) return 1f;
 
-        int n = segmentVariants.Length;
-        int skip = (avoidConsecutiveRepeats && n > 1 && prev >= 0) ? 1 : 0;
-        int pick = rng.Next(n - skip);
-        if (skip == 1 && pick >= prev) pick++;
-        prev = pick;
-        return segmentVariants[pick];
+        int tailStart = bodyCount - tailCount;
+        if (index < tailStart) return 1f;
+
+        // t: 0 en el primer segmento de cola, 1 en el último
+        float t = tailCount == 1 ? 1f : (index - tailStart) / (float)(tailCount - 1);
+        return Mathf.Lerp(tailScaleStart, tailScaleEnd, t);
     }
 
     void LateUpdate()

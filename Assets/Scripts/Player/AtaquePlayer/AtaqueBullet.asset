@@ -15,15 +15,17 @@ MonoBehaviour:
   cadencia: 10
   costoCalor: 1
   costoEnergia: 0
-  costoMunicion: 0
-  nombreVisible: Balas de uranio
+  nombreVisible: "Proyectil Cin\xE9tico MK-1"
   icono: {fileID: 7329226186007742641, guid: 97b89a4f5410b0049b765a5e6c0321d2, type: 3}
-  descripcion: 'Alta Cadencia
-
-    Sobrecalentamiento'
+  descripcion: "Munici\xF3n est\xE1ndar de tungsteno. R\xE1faga constante que acumula
+    calor en el ca\xF1\xF3n; requiere enfriamiento tras uso prolongado."
   "cantidadCa\xF1ones": 2
   separacion: 1
   modoSeparacion: 0
+  sonidoDisparo: {fileID: 8300000, guid: 3bc11f77b7b2dde488613bc1d83b8882, type: 3}
+  volumenDisparo: 0.256
+  sonidoHold: {fileID: 0}
+  volumenHold: 1
   prefab: {fileID: 6726210710938124827, guid: 10911b734017e4b45b63758b2c39adad, type: 3}
   simultaneo: 1
   oleadas: 1

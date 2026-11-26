@@ -140,7 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   vidaUtil: 1.5
-  "da\xF1o": 5
+  "da\xF1o": 10
+  velocidad: 20
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 1
   giroPorSegundo: 0
@@ -151,17 +152,6 @@ MonoBehaviour:
   etiquetasObjetivo:
   - Enemy
   - Boss
-  etiquetasIgnoradas:
-  - Player
-  - Shield
-  - Bullet
-  - Bullet1
-  - Bullet2
-  - Bullet3
-  - Asteroide
-  - Sierra
-  - Attack1
-  - Attack2
 --- !u!50 &2663360736587392929
 Rigidbody2D:
   serializedVersion: 5

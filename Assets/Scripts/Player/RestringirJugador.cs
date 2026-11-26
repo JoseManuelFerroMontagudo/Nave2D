@@ -4,11 +4,13 @@ public class RestringirJugador : MonoBehaviour
 {
     Rigidbody2D rb;
     ShipController nave;
+    ItemRecogible item;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         nave = GetComponent<ShipController>();
+        item = GetComponent<ItemRecogible>();
     }
 
     void LateUpdate()
@@ -26,6 +28,7 @@ public class RestringirJugador : MonoBehaviour
         transform.position = centro + (Vector3)(normal * radioMaximo);
 
         if (nave != null) nave.Rebotar(normal);
+        else if (item != null) item.Rebotar(normal);
         else if (rb != null)
         {
             Vector2 v = rb.linearVelocity;

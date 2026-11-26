@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: velocidad
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2728598229786517776, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
       propertyPath: destruirAlImpactar
@@ -164,7 +164,12 @@ PrefabInstance:
       propertyPath: multiplicadorDiametroAtraccion
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8765551654173183821, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8765551654173183821, guid: 76f5dc3ac573dfd43a78b92bc7391a71, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

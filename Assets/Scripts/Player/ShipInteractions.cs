@@ -17,6 +17,10 @@ public class ShipInteractions : MonoBehaviour
     public int cantidadEnergia = 25;
 
     float siguienteDañoContactoPermitido;
+    [Header("Dependencias")]
+    [SerializeField] private ShipWeapons shipWeapons;
+
+    private ArsenalJugador arsenal => shipWeapons != null ? shipWeapons.arsenalJugador : null;
     Sierra sierra;
 
     // -------- Detección de armas permanentes --------
@@ -55,6 +59,11 @@ public class ShipInteractions : MonoBehaviour
     {
         if (estadisticas == null) estadisticas = GetComponentInParent<Stats>();
         if (escudo == null) escudo = BuscarEnJerarquia<Shield>();
+        if (shipWeapons == null)
+            shipWeapons = GetComponent<ShipWeapons>();
+
+        if (shipWeapons == null || shipWeapons.arsenalJugador == null)
+            Debug.LogError("[ShipInteractions] Falta ShipWeapons o su arsenal.", this);
     }
 
     // ============ TRIGGERS (ataques y recogidas) ============
@@ -75,7 +84,17 @@ public class ShipInteractions : MonoBehaviour
         }
 
         if (otro.CompareTag("HealthPickup")) { estadisticas.Curar(curacionBotiquin); Destruir(otro); return; }
-        if (otro.CompareTag("AmmoPickup")) { estadisticas.AñadirMunicion(cantidadMunicion); Destruir(otro); return; }
+        if (otro.CompareTag("AmmoPickup"))
+        {
+            var item = otro.GetComponent<ItemRecogible>();
+            if (item != null && !item.recogido)
+            {
+                item.recogido = true;
+                RecogerArma(item);
+            }
+            Destruir(otro);
+            return;
+        }
         if (otro.CompareTag("EnergyPickup")) { estadisticas.AñadirEnergia(cantidadEnergia); Destruir(otro); return; }
     }
 
@@ -103,4 +122,16 @@ public class ShipInteractions : MonoBehaviour
     }
 
     void Destruir(Collider2D c) => Destroy(c.transform.root.gameObject);
+    void RecogerArma(ItemRecogible item)
+    {
+        if (item.armaAlmacenada == null) return;
+        if (arsenal == null) { Debug.LogError("[Pickup] arsenal null"); return; }
+
+        bool yaDesbloqueada = arsenal != null && arsenal.EstaDesbloqueada(item.armaAlmacenada);
+        if (!yaDesbloqueada) arsenal.Desbloquear(item.armaAlmacenada);
+        else estadisticas.AñadirPuntos(item.puntosSiDuplicada);
+
+        if (item.esItemDeVictoria && item.prefabMenuVictoria != null)
+            Instantiate(item.prefabMenuVictoria);
+    }
 }

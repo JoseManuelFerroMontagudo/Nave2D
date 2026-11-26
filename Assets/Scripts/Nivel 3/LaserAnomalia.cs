@@ -6,6 +6,8 @@ public class LaserAnomalia : MonoBehaviour
 {
     [Header("Configuración General")]
     public float distanciaMax = 30f;
+    public AudioClip sonidoDisparo;           // Laser1
+    [Range(0f, 1f)] public float volumenDisparo = 0.55f;
     public float tiempoAdvertencia = 1.25f;
     public float duracionDisparo = 0.5f;
     public int danoPorImpacto = 25;
@@ -199,6 +201,12 @@ public class LaserAnomalia : MonoBehaviour
         yield return new WaitForSeconds(tiempoAdvertencia);
 
         // FASE 2: DISPARO REAL
+        if (sonidoDisparo != null)
+        {
+            var sfx = new GameObject("SFX_Laser").AddComponent<AudioSource>();
+            sfx.clip = sonidoDisparo; sfx.volume = volumenDisparo; sfx.spatialBlend = 0f;
+            sfx.Play(); Destroy(sfx.gameObject, sonidoDisparo.length + 0.1f);
+        }
         for (int i = 0; i < trayectoriasPuntos.Count; i++)
         {
             LineRenderer lr = poolRayos[i];

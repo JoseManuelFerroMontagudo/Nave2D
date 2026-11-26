@@ -131,6 +131,7 @@ public class Shield : MonoBehaviour, IPermanenteHandler
         {
             var asteroide = otro.GetComponentInParent<Asteroide>();
             if (asteroide != null) asteroide.Explotar();
+            return;
         }
         Destroy(otro.transform.root.gameObject);
     }

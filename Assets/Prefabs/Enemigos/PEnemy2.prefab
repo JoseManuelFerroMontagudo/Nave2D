@@ -88,6 +88,14 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6192812014058191320, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192812014058191320, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bf40ea6550ab582d96e1d17b7d6af39, type: 3}
     - target: {fileID: 7238110645245677718, guid: 17a4d97f0e40ce54ba65a041d5c40c0c, type: 3}
       propertyPath: m_Name
       value: PEnemy2

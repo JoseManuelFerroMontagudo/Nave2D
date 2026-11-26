@@ -13,10 +13,6 @@ public class Stats : MonoBehaviour
     public int energia;
     public int regeneracionEnergia = 10;   // puntos por segundo
 
-    [Header("Munición (solo acciones especiales: bombas, bullet hell, etc.)")]
-    public int municionMaxima = 3;
-    public int municion;
-
     [Header("Calor (evita fuego continuo)")]
     public float calorMaximo = 100f;
     public float calorActual;
@@ -26,9 +22,6 @@ public class Stats : MonoBehaviour
     [Range(0f, 1f)]
     [Tooltip("Baja a este % del máximo para salir del estado recalentado")]
     public float umbralSalidaRecalentamiento = 0f;
-
-    [Header("Poder (modifica cadencia y/o nº de cañones)")]
-    public int poder = 1;
 
     [Header("Puntos")]
     public int puntos;
@@ -43,9 +36,7 @@ public class Stats : MonoBehaviour
     {
         vida = vidaMaxima;
         energia = energiaMaxima;
-        municion = municionMaxima;
         puntos = 0;
-        poder = Mathf.Max(1, poder);
 
         animador = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
@@ -118,21 +109,6 @@ public class Stats : MonoBehaviour
 
     public bool TieneEnergia => energia > 0;
 
-    // ---------------- MUNICIÓN ----------------
-    public bool ConsumirMunicion(int cantidad = 1)
-    {
-        if (cantidad <= 0) return true;
-        if (municion < cantidad) return false;
-        municion -= cantidad;
-        return true;
-    }
-
-    public void AñadirMunicion(int cantidad)
-    {
-        if (cantidad <= 0) return;
-        municion = Mathf.Min(municionMaxima, municion + cantidad);
-    }
-
     // ---------------- CALOR ----------------
     public bool Recalentado => recalentado;
 
@@ -158,17 +134,15 @@ public class Stats : MonoBehaviour
             recalentado = false;
     }
 
-    // ---------------- PODER ----------------
-    public void AñadirPoder(int cantidad)
-    {
-        poder = Mathf.Max(1, poder + cantidad);
-    }
-
     // ---------------- PUNTOS ----------------
     public void AñadirPuntos(int cantidad)
     {
         if (cantidad <= 0) return;
         puntos += cantidad;
+    }
+    public void ReiniciarPuntos()
+    {
+        puntos = 0;
     }
 
     public void Morir()

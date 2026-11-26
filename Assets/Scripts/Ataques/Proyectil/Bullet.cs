@@ -8,12 +8,15 @@ public class Bullet : MonoBehaviour, IDamageDealer
     public float velocidad = 6f;
     public float vidaUtil = 4f;
 
+    [Header("Colisión")]
+    public string[] etiquetasObjetivo = { "Player" };
+
     [Header("Retorno al origen")]
     public bool volverAlOrigen = false;
 
     [Header("Trayectoria ondulada")]
-    public float amplitudOnda = 0f;      // 0 = desactivado
-    public float frecuenciaOnda = 0f;    // ciclos/segundo
+    public float amplitudOnda = 0f;
+    public float frecuenciaOnda = 0f;
 
     Vector3 origen, forward;
     float vidaTotal, t;
@@ -37,7 +40,6 @@ public class Bullet : MonoBehaviour, IDamageDealer
         Vector3 dir = volviendo ? -forward : forward;
         Vector3 perp = new Vector3(-dir.y, dir.x, 0f);
 
-        // avance recto desde el origen + offset perpendicular senoidal
         Vector3 pos = origen + dir * velocidad * tTramo;
         pos += perp * amplitudOnda * Mathf.Sin(2f * Mathf.PI * frecuenciaOnda * t);
 
@@ -46,6 +48,13 @@ public class Bullet : MonoBehaviour, IDamageDealer
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Player")) Destroy(gameObject);
+        if (Contiene(etiquetasObjetivo, otro.tag)) Destroy(gameObject);
+    }
+
+    static bool Contiene(string[] arr, string t)
+    {
+        if (arr == null) return false;
+        for (int i = 0; i < arr.Length; i++) if (arr[i] == t) return true;
+        return false;
     }
 }

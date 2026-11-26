@@ -7,6 +7,9 @@ public class MaquinaLasers : MonoBehaviour
     [Header("Configuración de Rayos")]
     [Range(1, 12)]
     public int cantidadRayos = 4;             // Ej: 4 rayos forman una cruz giratoria
+    [Header("Audio")]
+    public AudioClip sonidoDisparo;           // Laser1
+    [Range(0f, 1f)] public float volumenDisparo = 0.55f;
     public float longitudRayos = 25f;
     public float velocidadRotacion = 45f;     // Grados por segundo (positivo = antihorario, negativo = horario)
 
@@ -115,6 +118,12 @@ public class MaquinaLasers : MonoBehaviour
         ConfigurarVisualRayos(grosorDisparo, colorDisparo, true);
         haciendoDano = true;
         timerInmunidadJugador = 0f;
+        if (sonidoDisparo != null)
+        {
+            var sfx = new GameObject("SFX_Laser").AddComponent<AudioSource>();
+            sfx.clip = sonidoDisparo; sfx.volume = volumenDisparo; sfx.spatialBlend = 0f;
+            sfx.Play(); Destroy(sfx.gameObject, sonidoDisparo.length + 0.1f);
+        }
 
         float tiempoActivo = 0f;
         while (tiempoActivo < duracionDisparo)

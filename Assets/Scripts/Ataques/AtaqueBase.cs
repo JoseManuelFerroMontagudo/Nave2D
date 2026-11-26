@@ -9,7 +9,6 @@ public abstract class AtaqueBase : ScriptableObject
     public float cadencia = 10f;
     public float costoCalor = 0f;
     public int costoEnergia = 0;
-    public int costoMunicion = 0;
 
     [Header("UI")]
     public string nombreVisible;
@@ -23,7 +22,16 @@ public abstract class AtaqueBase : ScriptableObject
     public float separacion = 0f;
     public ModoSeparacion modoSeparacion = ModoSeparacion.Distancia;
 
+    [Header("Audio")]
+    public AudioClip sonidoDisparo;        // one-shot en cada disparo (no permanentes)
+    [Range(0f, 1f)] public float volumenDisparo = 1f;
+
+    [Header("Audio (permanentes / hold)")]
+    public AudioClip sonidoHold;           // loop mientras se mantiene el ataque
+    [Range(0f, 1f)] public float volumenHold = 1f;
+
     public virtual bool EsPermanente => false;
+    public virtual bool UsaAudioPropio => false;   // si true, el runtime gestiona su audio
 
     public virtual IEnumerator Ejecutar(AtaqueContext ctx) { yield break; }
     public virtual GameObject Activar(AtaqueContext ctx) => null;

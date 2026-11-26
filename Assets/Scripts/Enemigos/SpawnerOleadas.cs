@@ -54,6 +54,26 @@ public class SpawnerOleadas : MonoBehaviour
     public float distanciaMinimaBorde = 14f;
     public int intentosMaximos = 40;
 
+    [Header("Anuncios (TMP hijo del spawner)")]
+    [Tooltip("TextMeshProUGUI que mostrará 'Nivel #', 'Oleada #' y 'Jefe Detectado!'.")]
+    public TMPro.TextMeshProUGUI textoAnuncio;
+
+    [Tooltip("Duración total del anuncio en segundos.")]
+    public float duracionAnuncio = 2f;
+
+    [Tooltip("Tiempo de fade in/out.")]
+    public float fadeAnuncio = 0.35f;
+
+    [Tooltip("Escala máxima del 'pop'.")]
+    public float escalaMaxAnuncio = 1.15f;
+
+    [Header("Menú de victoria")]
+    [Tooltip("Segundos tras la muerte del jefe antes de abrir el menú. 10 = deja recoger items.")]
+    public float retardoAperturaMenu = 10f;
+
+    [Tooltip("Botón de UI ya presente en el nivel (oculto por defecto) para reabrir el menú.")]
+    public GameObject botonReabrirMenu;
+
     // -------- Estado público para UI --------
     public int NumeroOleadaActual { get; private set; }
     public int TotalOleadas => oleadas.Count;
@@ -70,6 +90,20 @@ public class SpawnerOleadas : MonoBehaviour
     Vector3 centro;
     Rect bounds;
     float minJugSqr, minEnemSqr;
+
+    Stats estadisticasCache;
+
+    public Stats EstadisticasJugador
+    {
+        get
+        {
+            if (estadisticasCache != null) return estadisticasCache;
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null)
+                estadisticasCache = p.GetComponentInParent<Stats>() ?? p.GetComponentInChildren<Stats>(true);
+            return estadisticasCache;
+        }
+    }
 
     IEnumerator Start()
     {
@@ -100,11 +134,20 @@ public class SpawnerOleadas : MonoBehaviour
             yield return null;
         }
 
+        if (numeroNivel > 0)
+        {
+            MostrarAnuncio($"Nivel {numeroNivel}");
+            yield return new WaitForSeconds(duracionAnuncio * 0.8f);
+        }
+
         for (int i = 0; i < oleadas.Count; i++)
         {
             NumeroOleadaActual = i + 1;
             var o = oleadas[i];
+
+            MostrarAnuncio($"Oleada {NumeroOleadaActual}");
             if (o.retardoAntes > 0) yield return new WaitForSeconds(o.retardoAntes);
+
             yield return SpawnearOleada(o);
             yield return new WaitUntil(() => vivos.Count == 0);
             if (o.retardoDespues > 0) yield return new WaitForSeconds(o.retardoDespues);
@@ -141,8 +184,6 @@ public class SpawnerOleadas : MonoBehaviour
         var wrapper = new GameObject($"EnemyWrapper_{prefab.name}").transform;
         wrapper.position = destino;
 
-        // FIX: el wrapper vive en la escena del nivel, no en la escena activa.
-        // Así, al descargar el nivel, sus enemigos se van con él.
         SceneManager.MoveGameObjectToScene(wrapper.gameObject, gameObject.scene);
 
         wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
@@ -170,11 +211,10 @@ public class SpawnerOleadas : MonoBehaviour
     {
         if (prefabJefe == null) { Debug.LogError("[SpawnerOleadas] Sin prefabJefe."); return; }
         EnFaseJefe = true;
-
+        MostrarAnuncio("¡Jefe Detectado!");
         var wrapper = new GameObject("BossWrapper").transform;
         wrapper.position = centro;
 
-        // FIX: mismo motivo que en SpawnUno.
         SceneManager.MoveGameObjectToScene(wrapper.gameObject, gameObject.scene);
 
         wrapper.gameObject.AddComponent<EnemyTracker>().Init(this);
@@ -195,7 +235,8 @@ public class SpawnerOleadas : MonoBehaviour
     {
         OnJefeDerrotado?.Invoke();
 
-        // Desbloquear el siguiente nivel
+        MostrarAnuncio("¡Victoria!");
+
         if (numeroNivel > 0 && ProgressManager.Instance != null)
             ProgressManager.Instance.CompletarNivel(numeroNivel);
 
@@ -206,28 +247,21 @@ public class SpawnerOleadas : MonoBehaviour
         }
         jefeActual = null;
 
-        if (!string.IsNullOrEmpty(escenaAlDerrotarJefe))
-            StartCoroutine(CambiarEscena());
+        StartCoroutine(AbrirMenuTrasRetardo());
     }
 
-    IEnumerator CambiarEscena()
+    IEnumerator AbrirMenuTrasRetardo()
     {
-        if (retardoCambioEscena > 0f)
-            yield return new WaitForSeconds(retardoCambioEscena);
+        if (retardoAperturaMenu > 0f)
+            yield return new WaitForSecondsRealtime(retardoAperturaMenu);
 
-        if (SceneLoader.Instance != null)
-        {
-            if (usarLoadSingle)
-                SceneLoader.Instance.LoadSingleQuick(escenaAlDerrotarJefe);
-            else
-                SceneLoader.Instance.LoadLevel(escenaAlDerrotarJefe);
-        }
-        else
-        {
-            SceneManager.LoadScene(
-                escenaAlDerrotarJefe,
-                usarLoadSingle ? LoadSceneMode.Single : LoadSceneMode.Additive);
-        }
+        MenuVictoriaController.Abrir(this, botonReabrirMenu);
+    }
+
+    /// Reabre el menú de victoria (lo llama el botón externo del nivel).
+    public void ReabrirMenuVictoria()
+    {
+        MenuVictoriaController.ReabrirExistente();
     }
 
     static VidaPersonaje FindBossVida(GameObject root)
@@ -369,6 +403,66 @@ public class SpawnerOleadas : MonoBehaviour
         Vector3 s = Vector3.zero;
         foreach (var p in puntos) s += p;
         return s / puntos.Count;
+    }
+
+    Coroutine anuncioActual;
+
+    public void MostrarAnuncio(string mensaje)
+    {
+        if (textoAnuncio == null) return;
+        if (anuncioActual != null) StopCoroutine(anuncioActual);
+        anuncioActual = StartCoroutine(AnunciarRutina(mensaje));
+    }
+
+    IEnumerator AnunciarRutina(string mensaje)
+    {
+        textoAnuncio.text = mensaje;
+        textoAnuncio.gameObject.SetActive(true);
+
+        var rt = textoAnuncio.rectTransform;
+        Color c = textoAnuncio.color;
+
+        // Fade in + pop
+        float t = 0f;
+        while (t < fadeAnuncio)
+        {
+            t += Time.unscaledDeltaTime;
+            float k = Mathf.Clamp01(t / fadeAnuncio);
+            c.a = k;
+            textoAnuncio.color = c;
+            float s = Mathf.Lerp(0.7f, escalaMaxAnuncio, k);
+            rt.localScale = Vector3.one * s;
+            yield return null;
+        }
+
+        // Volver a escala 1
+        t = 0f;
+        float popDur = 0.15f;
+        while (t < popDur)
+        {
+            t += Time.unscaledDeltaTime;
+            float k = Mathf.Clamp01(t / popDur);
+            rt.localScale = Vector3.one * Mathf.Lerp(escalaMaxAnuncio, 1f, k);
+            yield return null;
+        }
+
+        // Mantener visible
+        float hold = Mathf.Max(0.1f, duracionAnuncio - fadeAnuncio * 2f);
+        yield return new WaitForSecondsRealtime(hold);
+
+        // Fade out
+        t = 0f;
+        while (t < fadeAnuncio)
+        {
+            t += Time.unscaledDeltaTime;
+            float k = Mathf.Clamp01(t / fadeAnuncio);
+            c.a = 1f - k;
+            textoAnuncio.color = c;
+            yield return null;
+        }
+
+        textoAnuncio.gameObject.SetActive(false);
+        anuncioActual = null;
     }
 }
 

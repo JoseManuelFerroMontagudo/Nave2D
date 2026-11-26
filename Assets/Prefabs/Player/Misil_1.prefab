@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   vidaUtil: 6
   "da\xF1o": 100
+  velocidad: 20
   prefabEfectoImpacto: {fileID: 0}
   destruirAlImpactar: 1
   giroPorSegundo: 60
@@ -124,15 +125,6 @@ MonoBehaviour:
   etiquetasObjetivo:
   - Enemy
   - Boss
-  etiquetasIgnoradas:
-  - Player
-  - Shield
-  - Bullet
-  - Bullet1
-  - Bullet2
-  - Bullet3
-  - Asteroide
-  - Sierra
 --- !u!96 &5186286795562749960
 TrailRenderer:
   serializedVersion: 4

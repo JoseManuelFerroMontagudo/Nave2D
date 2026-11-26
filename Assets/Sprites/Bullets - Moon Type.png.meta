@@ -1,0 +1,2080 @@
+fileFormatVersion: 2
+guid: 97e5d9f4522454946808a19cccf3f986
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -690906584173284057
+    second: Bullets - Moon Type_0
+  - first:
+      213: 6516070493839016850
+    second: Bullets - Moon Type_1
+  - first:
+      213: 4551291657638980068
+    second: Bullets - Moon Type_2
+  - first:
+      213: 4456884540654514906
+    second: Bullets - Moon Type_3
+  - first:
+      213: -163056432021951118
+    second: Bullets - Moon Type_4
+  - first:
+      213: -4456543141525516446
+    second: Bullets - Moon Type_5
+  - first:
+      213: -8361015889714601677
+    second: Bullets - Moon Type_6
+  - first:
+      213: 5903978463868844235
+    second: Bullets - Moon Type_7
+  - first:
+      213: -4559687352009333013
+    second: Bullets - Moon Type_8
+  - first:
+      213: 3034394258286120665
+    second: Bullets - Moon Type_9
+  - first:
+      213: -472799842866664774
+    second: Bullets - Moon Type_10
+  - first:
+      213: -7562601745996032113
+    second: Bullets - Moon Type_11
+  - first:
+      213: -6985714811743829083
+    second: Bullets - Moon Type_12
+  - first:
+      213: -6506972225549673059
+    second: Bullets - Moon Type_13
+  - first:
+      213: -5491049598944742002
+    second: Bullets - Moon Type_14
+  - first:
+      213: -2050362446065342711
+    second: Bullets - Moon Type_15
+  - first:
+      213: -8699188559842151349
+    second: Bullets - Moon Type_16
+  - first:
+      213: -7819002240983572364
+    second: Bullets - Moon Type_17
+  - first:
+      213: 1837485296752855431
+    second: Bullets - Moon Type_18
+  - first:
+      213: 3852720479100402272
+    second: Bullets - Moon Type_19
+  - first:
+      213: -8475363343176502311
+    second: Bullets - Moon Type_20
+  - first:
+      213: 1662226494075618356
+    second: Bullets - Moon Type_21
+  - first:
+      213: -2602341820681419636
+    second: Bullets - Moon Type_22
+  - first:
+      213: 6437487270407981561
+    second: Bullets - Moon Type_23
+  - first:
+      213: 3688027318613968135
+    second: Bullets - Moon Type_24
+  - first:
+      213: 7126005120201983568
+    second: Bullets - Moon Type_25
+  - first:
+      213: -1487757217585902287
+    second: Bullets - Moon Type_26
+  - first:
+      213: -5239499635091447246
+    second: Bullets - Moon Type_27
+  - first:
+      213: 2939878219573925349
+    second: Bullets - Moon Type_28
+  - first:
+      213: -6785640020309350160
+    second: Bullets - Moon Type_29
+  - first:
+      213: -1813813135084849140
+    second: Bullets - Moon Type_30
+  - first:
+      213: -5700915855685835111
+    second: Bullets - Moon Type_31
+  - first:
+      213: -4337774465007124563
+    second: Bullets - Moon Type_32
+  - first:
+      213: -242574487995478556
+    second: Bullets - Moon Type_33
+  - first:
+      213: 8396382628415148448
+    second: Bullets - Moon Type_34
+  - first:
+      213: -7858254967525949311
+    second: Bullets - Moon Type_35
+  - first:
+      213: 6569643429683445868
+    second: Bullets - Moon Type_36
+  - first:
+      213: -8455120099640936250
+    second: Bullets - Moon Type_37
+  - first:
+      213: -170737980662174710
+    second: Bullets - Moon Type_38
+  - first:
+      213: -1032976089646864111
+    second: Bullets - Moon Type_39
+  - first:
+      213: 413312043674013651
+    second: Bullets - Moon Type_40
+  - first:
+      213: 237498187133366479
+    second: Bullets - Moon Type_41
+  - first:
+      213: -4432162638395878695
+    second: Bullets - Moon Type_42
+  - first:
+      213: -5970240779510802255
+    second: Bullets - Moon Type_43
+  - first:
+      213: -2905795522952050099
+    second: Bullets - Moon Type_44
+  - first:
+      213: 1332387414200813928
+    second: Bullets - Moon Type_45
+  - first:
+      213: 540801892087161783
+    second: Bullets - Moon Type_46
+  - first:
+      213: -454524340781107409
+    second: Bullets - Moon Type_47
+  - first:
+      213: 3720182616456182994
+    second: Bullets - Moon Type_48
+  - first:
+      213: -7993597105543258859
+    second: Bullets - Moon Type_49
+  - first:
+      213: -5977296252405004624
+    second: Bullets - Moon Type_50
+  - first:
+      213: 4473686967353363363
+    second: Bullets - Moon Type_51
+  - first:
+      213: 1860096300856621485
+    second: Bullets - Moon Type_52
+  - first:
+      213: -4405044054288962289
+    second: Bullets - Moon Type_53
+  - first:
+      213: 2011610178244815038
+    second: Bullets - Moon Type_54
+  - first:
+      213: 3729547749075130098
+    second: Bullets - Moon Type_55
+  - first:
+      213: -1600424384089405796
+    second: Bullets - Moon Type_56
+  - first:
+      213: -2235266012826089888
+    second: Bullets - Moon Type_57
+  - first:
+      213: 8175183072088146730
+    second: Bullets - Moon Type_58
+  - first:
+      213: -203911320204226954
+    second: Bullets - Moon Type_59
+  - first:
+      213: -5646069644919576760
+    second: Bullets - Moon Type_60
+  - first:
+      213: 8994064040238569543
+    second: Bullets - Moon Type_61
+  - first:
+      213: -5909623894761343234
+    second: Bullets - Moon Type_62
+  - first:
+      213: 403706443038907082
+    second: Bullets - Moon Type_63
+  - first:
+      213: 1962033003624418005
+    second: Bullets - Moon Type_64
+  - first:
+      213: -7975120822573457088
+    second: Bullets - Moon Type_65
+  - first:
+      213: -2221728951053816564
+    second: Bullets - Moon Type_66
+  - first:
+      213: 7781541377960398170
+    second: Bullets - Moon Type_67
+  - first:
+      213: -9101856495214732408
+    second: Bullets - Moon Type_68
+  - first:
+      213: -4745868663960952061
+    second: Bullets - Moon Type_69
+  - first:
+      213: -1132935965155905841
+    second: Bullets - Moon Type_70
+  - first:
+      213: 3368365905293204182
+    second: Bullets - Moon Type_71
+  - first:
+      213: 6572339525169874857
+    second: Bullets - Moon Type_72
+  - first:
+      213: 8251181034913820553
+    second: Bullets - Moon Type_73
+  - first:
+      213: 587446636143012439
+    second: Bullets - Moon Type_74
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bullets - Moon Type_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1663
+        width: 121
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7257f5d4f186966f0800000000000000
+      internalID: -690906584173284057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1672
+        width: 135
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293cdac279bbd6a50800000000000000
+      internalID: 6516070493839016850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1655
+        width: 149
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e925ca16af692f30800000000000000
+      internalID: 4551291657638980068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_3
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1850
+        width: 15
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad274aa40e80add30800000000000000
+      internalID: 4456884540654514906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_4
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1676
+        width: 141
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d2dfaf905bcbdf0800000000000000
+      internalID: -163056432021951118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_5
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1880
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f0b23ef9d2722c0800000000000000
+      internalID: -4456543141525516446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1676
+        width: 149
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3312a2cc854b7fb80800000000000000
+      internalID: -8361015889714601677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_7
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1651
+        width: 142
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8757cd1252fe150800000000000000
+      internalID: 5903978463868844235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_8
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1658
+        width: 142
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be664a8f28cb8b0c0800000000000000
+      internalID: -4559687352009333013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_9
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1666
+        width: 144
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de01a140855c1a20800000000000000
+      internalID: 3034394258286120665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_10
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1667
+        width: 147
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba62144c074079f0800000000000000
+      internalID: -472799842866664774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_11
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1674
+        width: 141
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f875828c7cd3c0790800000000000000
+      internalID: -7562601745996032113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_12
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1839
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a303dff361cd0f90800000000000000
+      internalID: -6985714811743829083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1806
+        width: 13
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d57cc7c3792b5a0800000000000000
+      internalID: -6506972225549673059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_14
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1804
+        width: 20
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85f8da8b7fdbc3b0800000000000000
+      internalID: -5491049598944742002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_15
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1749
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9076975f736ab83e0800000000000000
+      internalID: -2050362446065342711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1655
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4477785816464780800000000000000
+      internalID: -8699188559842151349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_17
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1662
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470e03083e25d7390800000000000000
+      internalID: -7819002240983572364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_18
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1679
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78905f8542f008910800000000000000
+      internalID: 1837485296752855431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1334
+        width: 117
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06af6a7fcdc977530800000000000000
+      internalID: 3852720479100402272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_20
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1337
+        width: 135
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3f89b91f5716a80800000000000000
+      internalID: -8475363343176502311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_21
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1337
+        width: 138
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434ce93803a611710800000000000000
+      internalID: 1662226494075618356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_22
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1332
+        width: 139
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c840422e6ef92ebd0800000000000000
+      internalID: -2602341820681419636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_23
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1329
+        width: 143
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f944cea09c865950800000000000000
+      internalID: 6437487270407981561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_24
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1328
+        width: 133
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7050ce76e418e2330800000000000000
+      internalID: 3688027318613968135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_25
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1328
+        width: 135
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0560141d6e7a4e260800000000000000
+      internalID: 7126005120201983568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_26
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1324
+        width: 136
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13dc4cd61bc6a5be0800000000000000
+      internalID: -1487757217585902287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_27
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1511
+        width: 14
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 232e59987de8947b0800000000000000
+      internalID: -5239499635091447246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_28
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1332
+        width: 140
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e59c902aab8cc820800000000000000
+      internalID: 2939878219573925349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_29
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1333
+        width: 142
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f869c77a5094d1a0800000000000000
+      internalID: -6785640020309350160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_30
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1386
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08745a409a04d6e0800000000000000
+      internalID: -1813813135084849140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_31
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1329
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9962477eb3742e0b0800000000000000
+      internalID: -5700915855685835111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_32
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1005
+        width: 121
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf7d794b112dc3c0800000000000000
+      internalID: -4337774465007124563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_33
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1012
+        width: 130
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed0573d9c332acf0800000000000000
+      internalID: -242574487995478556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_34
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 688
+        width: 136
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a112fcb381f58470800000000000000
+      internalID: 8396382628415148448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_35
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1008
+        width: 136
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180ca2aedbed1f290800000000000000
+      internalID: -7858254967525949311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_36
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1009
+        width: 128
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60c24f44ef0c2b50800000000000000
+      internalID: 6569643429683445868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_37
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1017
+        width: 134
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c8f2a7011169aa80800000000000000
+      internalID: -8455120099640936250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_38
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1014
+        width: 137
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ca6f016ba61adf0800000000000000
+      internalID: -170737980662174710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_39
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1016
+        width: 140
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119602b28b12aa1f0800000000000000
+      internalID: -1032976089646864111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_40
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1009
+        width: 148
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df84982d116cb500800000000000000
+      internalID: 413312043674013651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_41
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1008
+        width: 145
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc032e6c753cb4300800000000000000
+      internalID: 237498187133366479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_42
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 685
+        width: 120
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2d7af109bcd72c0800000000000000
+      internalID: -4432162638395878695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_43
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 684
+        width: 132
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b815b984a1752da0800000000000000
+      internalID: -5970240779510802255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_44
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 687
+        width: 149
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ac5801e5a8ca7d0800000000000000
+      internalID: -2905795522952050099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_45
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 688
+        width: 146
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86904ae3b479d7210800000000000000
+      internalID: 1332387414200813928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_46
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 700
+        width: 135
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3e6bf9470518700800000000000000
+      internalID: 540801892087161783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_47
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 710
+        width: 137
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2739fd258431b9f0800000000000000
+      internalID: -454524340781107409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_48
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 701
+        width: 137
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc3479116eb0a330800000000000000
+      internalID: 3720182616456182994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_49
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 845
+        width: 10
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51dd08ec8c9011190800000000000000
+      internalID: -7993597105543258859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_50
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 699
+        width: 147
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6402e3ab06c0da0800000000000000
+      internalID: -5977296252405004624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_51
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 706
+        width: 144
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab446d189ab51e30800000000000000
+      internalID: 4473686967353363363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_52
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 793
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9b39cfab360d910800000000000000
+      internalID: 1860096300856621485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_53
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 702
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0de82485c32ed2c0800000000000000
+      internalID: -4405044054288962289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_54
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 699
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8a7d49cccaaeb10800000000000000
+      internalID: 2011610178244815038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_55
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 378
+        width: 115
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f61b74fae302c330800000000000000
+      internalID: 3729547749075130098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_56
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 376
+        width: 144
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c964a7880862ac9e0800000000000000
+      internalID: -1600424384089405796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_57
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 376
+        width: 137
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0664ffe776dbaf0e0800000000000000
+      internalID: -2235266012826089888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_58
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 375
+        width: 148
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23c999a0b5147170800000000000000
+      internalID: 8175183072088146730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_59
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 380
+        width: 122
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ecb811cbf8b2df0800000000000000
+      internalID: -203911320204226954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_60
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 377
+        width: 134
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847e375729125a1b0800000000000000
+      internalID: -5646069644919576760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_61
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 378
+        width: 128
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748d88d879551dc70800000000000000
+      internalID: 8994064040238569543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_62
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 378
+        width: 135
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6f694d06cccfda0800000000000000
+      internalID: -5909623894761343234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_63
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 378
+        width: 139
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acadedafed04a9500800000000000000
+      internalID: 403706443038907082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_64
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 376
+        width: 142
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da40aa1f9a8a3b10800000000000000
+      internalID: 1962033003624418005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_65
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 47
+        width: 114
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04120b9addda25190800000000000000
+      internalID: -7975120822573457088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_66
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 46
+        width: 129
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d6c3d4a45da21e0800000000000000
+      internalID: -2221728951053816564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_67
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 48
+        width: 135
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d4556a7a69dfb60800000000000000
+      internalID: 7781541377960398170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_68
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 48
+        width: 140
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88bd426cdb5bfa180800000000000000
+      internalID: -9101856495214732408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_69
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 48
+        width: 136
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30323f54899432eb0800000000000000
+      internalID: -4745868663960952061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_70
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 46
+        width: 147
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce2e930eb00740f0800000000000000
+      internalID: -1132935965155905841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_71
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 47
+        width: 136
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dad98ac1f6debe20800000000000000
+      internalID: 3368365905293204182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_72
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 45
+        width: 137
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a78205f9f3a53b50800000000000000
+      internalID: 6572339525169874857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_73
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 57
+        width: 140
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f6a734f65128270800000000000000
+      internalID: 8251181034913820553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullets - Moon Type_74
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 49
+        width: 146
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a6dc76a97072800800000000000000
+      internalID: 587446636143012439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bullets - Moon Type_0: -690906584173284057
+      Bullets - Moon Type_1: 6516070493839016850
+      Bullets - Moon Type_10: -472799842866664774
+      Bullets - Moon Type_11: -7562601745996032113
+      Bullets - Moon Type_12: -6985714811743829083
+      Bullets - Moon Type_13: -6506972225549673059
+      Bullets - Moon Type_14: -5491049598944742002
+      Bullets - Moon Type_15: -2050362446065342711
+      Bullets - Moon Type_16: -8699188559842151349
+      Bullets - Moon Type_17: -7819002240983572364
+      Bullets - Moon Type_18: 1837485296752855431
+      Bullets - Moon Type_19: 3852720479100402272
+      Bullets - Moon Type_2: 4551291657638980068
+      Bullets - Moon Type_20: -8475363343176502311
+      Bullets - Moon Type_21: 1662226494075618356
+      Bullets - Moon Type_22: -2602341820681419636
+      Bullets - Moon Type_23: 6437487270407981561
+      Bullets - Moon Type_24: 3688027318613968135
+      Bullets - Moon Type_25: 7126005120201983568
+      Bullets - Moon Type_26: -1487757217585902287
+      Bullets - Moon Type_27: -5239499635091447246
+      Bullets - Moon Type_28: 2939878219573925349
+      Bullets - Moon Type_29: -6785640020309350160
+      Bullets - Moon Type_3: 4456884540654514906
+      Bullets - Moon Type_30: -1813813135084849140
+      Bullets - Moon Type_31: -5700915855685835111
+      Bullets - Moon Type_32: -4337774465007124563
+      Bullets - Moon Type_33: -242574487995478556
+      Bullets - Moon Type_34: 8396382628415148448
+      Bullets - Moon Type_35: -7858254967525949311
+      Bullets - Moon Type_36: 6569643429683445868
+      Bullets - Moon Type_37: -8455120099640936250
+      Bullets - Moon Type_38: -170737980662174710
+      Bullets - Moon Type_39: -1032976089646864111
+      Bullets - Moon Type_4: -163056432021951118
+      Bullets - Moon Type_40: 413312043674013651
+      Bullets - Moon Type_41: 237498187133366479
+      Bullets - Moon Type_42: -4432162638395878695
+      Bullets - Moon Type_43: -5970240779510802255
+      Bullets - Moon Type_44: -2905795522952050099
+      Bullets - Moon Type_45: 1332387414200813928
+      Bullets - Moon Type_46: 540801892087161783
+      Bullets - Moon Type_47: -454524340781107409
+      Bullets - Moon Type_48: 3720182616456182994
+      Bullets - Moon Type_49: -7993597105543258859
+      Bullets - Moon Type_5: -4456543141525516446
+      Bullets - Moon Type_50: -5977296252405004624
+      Bullets - Moon Type_51: 4473686967353363363
+      Bullets - Moon Type_52: 1860096300856621485
+      Bullets - Moon Type_53: -4405044054288962289
+      Bullets - Moon Type_54: 2011610178244815038
+      Bullets - Moon Type_55: 3729547749075130098
+      Bullets - Moon Type_56: -1600424384089405796
+      Bullets - Moon Type_57: -2235266012826089888
+      Bullets - Moon Type_58: 8175183072088146730
+      Bullets - Moon Type_59: -203911320204226954
+      Bullets - Moon Type_6: -8361015889714601677
+      Bullets - Moon Type_60: -5646069644919576760
+      Bullets - Moon Type_61: 8994064040238569543
+      Bullets - Moon Type_62: -5909623894761343234
+      Bullets - Moon Type_63: 403706443038907082
+      Bullets - Moon Type_64: 1962033003624418005
+      Bullets - Moon Type_65: -7975120822573457088
+      Bullets - Moon Type_66: -2221728951053816564
+      Bullets - Moon Type_67: 7781541377960398170
+      Bullets - Moon Type_68: -9101856495214732408
+      Bullets - Moon Type_69: -4745868663960952061
+      Bullets - Moon Type_7: 5903978463868844235
+      Bullets - Moon Type_70: -1132935965155905841
+      Bullets - Moon Type_71: 3368365905293204182
+      Bullets - Moon Type_72: 6572339525169874857
+      Bullets - Moon Type_73: 8251181034913820553
+      Bullets - Moon Type_74: 587446636143012439
+      Bullets - Moon Type_8: -4559687352009333013
+      Bullets - Moon Type_9: 3034394258286120665
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
